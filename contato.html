@@ -77,29 +77,7 @@
         </div>
         
         <div class="contact-form-container card animate-on-scroll delay-100">
-          <form id="contact-form" class="contact-form">
-            <div class="form-group">
-              <label for="name">Nome Completo</label>
-              <input type="text" id="name" name="name" required="" class="form-control">
-            </div>
-            
-            <div class="form-group">
-              <label for="email">Email Corporativo</label>
-              <input type="email" id="email" name="email" required="" class="form-control">
-            </div>
-            
-            <div class="form-group">
-              <label for="company">Empresa</label>
-              <input type="text" id="company" name="company" class="form-control">
-            </div>
-            
-            <div class="form-group">
-              <label for="message">Como podemos ajudar?</label>
-              <textarea id="message" name="message" rows="5" required="" class="form-control"></textarea>
-            </div>
-            
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensagem</button>
-          </form>
+          <script data-b24-form="inline/15/7a624j" data-skip-moving="true">(function(w,d,u){var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})(window,document,'https://cdn.bitrix24.com.br/b36067137/crm/form/loader_15.js');</script>
         </div>
       </div>
     </section>
@@ -149,28 +127,7 @@
   </footer>
 
   <script type="module" src="/js/main.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const form = document.getElementById('contact-form');
-      if (form) {
-        form.addEventListener('submit', (e) => {
-          e.preventDefault();
-          
-          // Show loading state
-          const btn = form.querySelector('button[type="submit"]');
-          const originalText = btn.textContent;
-          btn.textContent = 'Enviando...';
-          btn.disabled = true;
 
-          // Aqui entraria a integração com o backend/Formspree/RD Station.
-          // Como é estático, vamos simular um delay e redirecionar para a página de obrigado.
-          setTimeout(() => {
-            window.location.href = '/obrigado.html';
-          }, 800);
-        });
-      }
-    });
-  </script>
 
 
 </body></html>
