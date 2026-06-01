@@ -147,13 +147,13 @@
               const type = m.type || (url.match(/\\.(mp4|webm)$/i) ? 'video' : 'image');
               
               if (type === 'video') {
-                return \`
+                return `
                   <div class="gallery-video-wrapper animate-on-scroll" style="width: 100%; border-radius: 8px; overflow: hidden; margin-bottom: 2rem;">
-                    <video src="\${url}" autoplay loop muted playsinline style="width: 100%; height: auto; display: block;"></video>
+                    <video src="${url}" autoplay loop muted playsinline style="width: 100%; height: auto; display: block;"></video>
                   </div>
-                \`;
+                `;
               } else {
-                return \`<img src="\${url}" alt="\${projeto.title} - Mídia \${i+1}" class="gallery-image animate-on-scroll" loading="lazy" />\`;
+                return `<img src="${url}" alt="${projeto.title} - Mídia ${i+1}" class="gallery-image animate-on-scroll" loading="lazy" />`;
               }
             }).join('')}
           </div>
