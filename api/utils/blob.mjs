@@ -57,6 +57,7 @@ export async function saveDbData(type, data) {
     const blob = await put(`db/${type}.json`, jsonString, {
       access: 'private',
       addRandomSuffix: false,
+      allowOverwrite: true,
     });
     return blob;
   } catch (error) {
