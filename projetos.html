@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio | Arcaffo®</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+  <link rel="stylesheet" href="/css/pages/projetos.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="/" class="logo"><img src="/images/brand/logo-white.png" alt="Arcaffo" style="height: 32px;" /></a>
+      <nav class="nav-links">
+        <a href="/sobre.html">Sobre</a>
+        <a href="https://advisor.arcaffo.com" target="_blank" rel="noopener">Assessoria</a>
+        <div class="nav-dropdown">
+          <span class="nav-dropdown-trigger">Formação Empresarial</span>
+          <div class="nav-dropdown-menu">
+            <a href="https://enm.arcaffo.com" target="_blank" rel="noopener">Escola de Negócios</a>
+            <a href="https://ordo.arcaffo.com" target="_blank" rel="noopener">Clube Empresarial</a>
+          </div>
+        </div>
+        <a href="/projetos.html" class="active">Projetos</a>
+        <a href="/artigos.html">Artigos</a>
+        <a href="/contato.html">Contato</a>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Menu" style="display: none; background: none; border: none; color: white; font-size: 1.5rem;">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header text-center" style="padding-top: 150px; padding-bottom: 3rem;">
+      <div class="container">
+        <h1 class="animate-on-scroll">Portfólio</h1>
+        <p class="section-subtitle animate-on-scroll delay-100">Marcas estruturadas com propósito e verdade.</p>
+        
+        <!-- Filtros (Serão gerados via JS) -->
+        <div class="filters animate-on-scroll delay-200" id="portfolio-filters">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <!-- As tags serão inseridas aqui dinamicamente -->
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-section" style="padding-top: 0;">
+      <div class="container">
+        <div class="grid-2" id="portfolio-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="/" class="logo" style="display: block; margin-bottom: 1rem;"><img src="/images/brand/logo-white.png" alt="Arcaffo" style="height: 32px;" /></a>
+          <p style="margin-top: 1rem; color: var(--color-text-secondary); font-size: 0.9rem;">
+            Formamos empresários, estruturamos negócios e elevamos a cultura.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="/sobre.html">Sobre</a></li>
+            <li><a href="https://advisor.arcaffo.com" target="_blank" rel="noopener">Assessoria</a></li>
+            <li><a href="/projetos.html">Projetos</a></li>
+            <li><a href="/contato.html">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ecossistema</h4>
+          <ul>
+            <li><a href="https://advisor.arcaffo.com" target="_blank">Assessoria</a></li>
+            <li><a href="https://enm.arcaffo.com" target="_blank">Escola de Negócios</a></li>
+            <li><a href="https://ordo.arcaffo.com" target="_blank">Ordo Legatum</a></li>
+            <li><a href="/vagas.html">Trabalhe Conosco</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Social</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/arcaffo/" target="_blank">Instagram</a></li>
+            <li><a href="https://www.instagram.com/madebyarcaffo/" target="_blank">MadebyArcaffo</a></li>
+            <li><a href="https://www.linkedin.com/company/arcaffo" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/@arcaffo" target="_blank">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Arcaffo – Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/main.js"></script>
+  <script type="module">
+    import { fetchProjetos } from '/js/components/portfolio-grid.js';
+    
+    document.addEventListener('DOMContentLoaded', async () => {
+      const projetos = await fetchProjetos();
+      const grid = document.getElementById('portfolio-grid');
+      const filtersContainer = document.getElementById('portfolio-filters');
+      
+      // Extrair todas as tags únicas
+      const tagsUnicas = new Set();
+      projetos.forEach(p => {
+        if(p.tags) p.tags.forEach(tag => tagsUnicas.add(tag));
+      });
+      
+      // Criar botões de filtro
+      const tagsOrdenadas = Array.from(tagsUnicas).sort();
+      tagsOrdenadas.forEach(tag => {
+        const btn = document.createElement('button');
+        btn.className = 'filter-btn';
+        btn.dataset.filter = tag;
+        btn.textContent = tag;
+        filtersContainer.appendChild(btn);
+      });
+      
+      // Função para renderizar grid
+      function renderGrid(filter = 'all') {
+        let filtered = projetos;
+        if (filter !== 'all') {
+          filtered = projetos.filter(p => p.tags && p.tags.includes(filter));
+        }
+        
+        grid.innerHTML = filtered.map((projeto, i) => {
+          let imgUrl = projeto.cover || (projeto.images && projeto.images.length > 0 ? projeto.images[0].url : '');
+          if (!imgUrl) imgUrl = 'https://via.placeholder.com/800x450/111115/C8A96E?text=' + encodeURIComponent(projeto.title);
+          const tagPrincipal = projeto.tags && projeto.tags.length > 0 ? projeto.tags[0] : 'Branding';
+          
+          return `
+            <a href="/projeto.html?id=${projeto.slug}" class="project-card animate-on-scroll delay-${(i % 2) * 100} ${projeto.tags ? projeto.tags.join(' ') : ''}">
+              <img src="${imgUrl}" alt="${projeto.title}" loading="lazy" />
+              <div class="project-overlay">
+                <h3 class="project-title">${projeto.title}</h3>
+                <span class="project-tags">${tagPrincipal}</span>
+              </div>
+            </a>
+          `;
+        }).join('');
+        
+        // Reinicializar animações para os novos elementos
+        import('/js/animations.js').then(module => {
+          module.initAnimations();
+        });
+      }
+      
+      // Inicializar
+      renderGrid();
+      
+      // Event Listeners para os filtros
+      filtersContainer.addEventListener('click', (e) => {
+        if(e.target.tagName === 'BUTTON') {
+          document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          e.target.classList.add('active');
+          renderGrid(e.target.dataset.filter);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

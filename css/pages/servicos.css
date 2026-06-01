@@ -1,0 +1,47 @@
+/* Services Page Styles */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.service-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  padding: 3rem;
+  border-radius: 4px;
+  transition: all 0.4s ease;
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-accent);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.service-icon {
+  font-family: var(--font-accent);
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  opacity: 0.5;
+}
+
+.service-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  color: var(--color-text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}

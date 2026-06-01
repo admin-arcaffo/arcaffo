@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arcaffo® | Branding & Posicionamento de Marca</title>
+  
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Estilos Globais -->
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+  <link rel="stylesheet" href="/css/pages/home.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="/" class="logo"><img src="/images/brand/logo-white.png" alt="Arcaffo" style="height: 32px;" /></a>
+      <nav class="nav-links">
+        <a href="/sobre.html">Sobre</a>
+        <a href="https://advisor.arcaffo.com" target="_blank" rel="noopener">Assessoria</a>
+        <div class="nav-dropdown">
+          <span class="nav-dropdown-trigger">Formação Empresarial</span>
+          <div class="nav-dropdown-menu">
+            <a href="https://enm.arcaffo.com" target="_blank" rel="noopener">Escola de Negócios</a>
+            <a href="https://ordo.arcaffo.com" target="_blank" rel="noopener">Clube Empresarial</a>
+          </div>
+        </div>
+        <a href="/projetos.html">Projetos</a>
+        <a href="/artigos.html">Artigos</a>
+        <a href="/contato.html">Contato</a>
+      </nav>
+      <!-- Hamburger Menu Button for Mobile -->
+      <button class="mobile-menu-btn" aria-label="Menu" style="display: none; background: none; border: none; color: white; font-size: 1.5rem;">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero parallax-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('/images/brand/wp4196517.webp');">
+      <div class="container hero-content">
+        <h1 class="animate-on-scroll">Grupo empresarial dedicado ao <span class="font-accent text-accent">crescimento pessoal, familiar e empresarial.</span></h1>
+        <p class="hero-subtitle animate-on-scroll delay-100">Unimos branding, negócios, filosofia, teologia, psicologia e antropologia para orientar empresários e marcas na construção de empresas sólidas, coerentes e com propósito claro.</p>
+        <div class="hero-ctas animate-on-scroll delay-200">
+          <a href="/contato.html" class="btn btn-primary">Preciso de ajuda no meu negócio</a>
+          <a href="/projetos.html" class="btn btn-outline">Ver Projetos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Numbers Strip -->
+    <section class="numbers-strip" style="background-color: var(--color-bg-secondary); padding: 5rem 0; border-top: 1px solid rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.03); position: relative; z-index: 10;">
+      <div class="container">
+        <h2 class="sr-only">Nossos Números</h2>
+        <div class="grid-3 animate-on-scroll" style="gap: 4rem;">
+          <div>
+            <h3 style="font-size: clamp(3rem, 5vw, 4rem); font-weight: 300; letter-spacing: -2px; margin-bottom: 1rem; color: var(--color-text-primary); line-height: 1;">10 anos</h3>
+            <p style="color: var(--color-text-secondary); font-size: 1.05rem; line-height: 1.6;">Atuamos desde 2016 e somos pioneiros em Branding no MS.</p>
+          </div>
+          <div>
+            <h3 style="font-size: clamp(3rem, 5vw, 4rem); font-weight: 300; letter-spacing: -2px; margin-bottom: 1rem; color: var(--color-text-primary); line-height: 1;">NPS 97</h3>
+            <p style="color: var(--color-text-secondary); font-size: 1.05rem; line-height: 1.6;">Desenvolvemos uma metodologia própria de construção de marcas com mais de 97 pts de aprovação (NPS).</p>
+          </div>
+          <div>
+            <h3 style="font-size: clamp(3rem, 5vw, 4rem); font-weight: 300; letter-spacing: -2px; margin-bottom: 1rem; color: var(--color-text-primary); line-height: 1;">+400 Marcas</h3>
+            <p style="color: var(--color-text-secondary); font-size: 1.05rem; line-height: 1.6;">ajudadas em 8 estados brasileiros e 4 países.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facade Image -->
+    <section class="facade-section animate-on-scroll" style="width: 100%; height: 75vh; min-height: 500px; position: relative; overflow: hidden; padding: 0;">
+      <img src="/images/fachada.webp" alt="Arcaffo Fachada" style="width: 100%; height: 100%; object-fit: cover; object-position: center; filter: grayscale(100%) contrast(1.1) brightness(0.6);" />
+      <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, var(--color-bg-primary) 0%, transparent 15%, transparent 85%, var(--color-bg-primary) 100%); pointer-events: none;"></div>
+    </section>
+
+    <!-- Quem Somos / Filosofia -->
+    <section class="philosophy-section">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <h2 class="section-title">Nossa Filosofia</h2>
+          <p class="section-subtitle font-accent">"Tudo o que fazemos, fazemos primeiro para o outro."</p>
+        </div>
+        <div class="grid-3 animate-on-scroll delay-100">
+          <div class="card text-center hover-scale">
+            <h3 class="text-accent">Pessoas</h3>
+            <p>Desenvolvemos pessoas com profundidade, entendendo suas dores e valores.</p>
+          </div>
+          <div class="card text-center hover-scale">
+            <h3 class="text-accent">Valores</h3>
+            <p>Conectamo-nos pelos valores que temos em comum, construindo relações verdadeiras.</p>
+          </div>
+          <div class="card text-center hover-scale">
+            <h3 class="text-accent">Negócios & Marcas</h3>
+            <p>Estratégias que fortalecem negócios e impactam a cultura de forma sustentável.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ecossistema -->
+    <section class="ecosystem-section" style="background-color: var(--color-bg-secondary);">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <h2 class="section-title">Nosso Ecossistema</h2>
+          <p class="section-subtitle">Frentes de atuação para elevar a cultura no Brasil</p>
+        </div>
+        <div class="grid-3 animate-on-scroll delay-100">
+          <a href="https://advisor.arcaffo.com" target="_blank" rel="noopener" class="card ecosystem-card" style="--brand-color: #3b82f6; display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center; min-height: 250px;">
+            <img src="/images/ecossistema/advisor_logo_fp_png.webp" alt="Advisor" style="max-height: 55px; margin-bottom: 1.5rem;" />
+            <p style="font-size: 0.95rem;">Assessoria estratégica e branding corporativo.</p>
+          </a>
+          
+          <a href="https://enm.arcaffo.com" target="_blank" rel="noopener" class="card ecosystem-card" style="--brand-color: #a8a29e; display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center; min-height: 250px;">
+            <img src="/images/ecossistema/enm_Arcaffo_ENM_Logo_w_b_w_h_b_v_1_1_png.webp" alt="Escola de Negócios em Arcas" style="max-height: 75px; margin-bottom: 1.5rem;" />
+            <p style="font-size: 0.95rem;">Escola de formação empresarial.</p>
+          </a>
+          
+          <a href="https://ordo.arcaffo.com" target="_blank" rel="noopener" class="card ecosystem-card" style="--brand-color: #c8a96e; display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center; min-height: 250px;">
+            <img src="/images/ecossistema/ordo_Arcaffo_FFOL_Logos__Vertical_D_V1_png.webp" alt="Ordo Legatum" style="max-height: 85px; margin-bottom: 1.5rem;" />
+            <p style="font-size: 0.95rem;">Clube exclusivo para líderes comprometidos.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projetos Recentes -->
+    <section class="recent-projects">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <h2 class="section-title">Portfólio</h2>
+          <p class="section-subtitle">Marcas estruturadas com propósito e verdade.</p>
+        </div>
+        <div class="grid-2 animate-on-scroll delay-100" id="featured-projects">
+          <!-- Populated by JS -->
+        </div>
+        <div class="text-center animate-on-scroll delay-200" style="margin-top: 3rem;">
+          <a href="/projetos.html" class="btn btn-outline">Veja todos os projetos</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="/" class="logo" style="display: block; margin-bottom: 1rem;"><img src="/images/brand/logo-white.png" alt="Arcaffo" style="height: 32px;" /></a>
+          <p style="margin-top: 1rem; color: var(--color-text-secondary); font-size: 0.9rem;">
+            Formamos empresários, estruturamos negócios e elevamos a cultura.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="/sobre.html">Sobre</a></li>
+            <li><a href="https://advisor.arcaffo.com" target="_blank" rel="noopener">Assessoria</a></li>
+            <li><a href="/projetos.html">Projetos</a></li>
+            <li><a href="/contato.html">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ecossistema</h4>
+          <ul>
+            <li><a href="https://advisor.arcaffo.com" target="_blank">Assessoria</a></li>
+            <li><a href="https://enm.arcaffo.com" target="_blank">Escola de Negócios</a></li>
+            <li><a href="https://ordo.arcaffo.com" target="_blank">Ordo Legatum</a></li>
+            <li><a href="/vagas.html">Trabalhe Conosco</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Social</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/arcaffo/" target="_blank">Instagram</a></li>
+            <li><a href="https://www.instagram.com/madebyarcaffo/" target="_blank">MadebyArcaffo</a></li>
+            <li><a href="https://www.linkedin.com/company/arcaffo" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/@arcaffo" target="_blank">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Arcaffo – Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/main.js"></script>
+  <script type="module">
+    import { carregarProjetosDestaque } from '/js/components/portfolio-grid.js';
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      carregarProjetosDestaque('featured-projects', 4);
+    });
+  </script>
+</body>
+</html>

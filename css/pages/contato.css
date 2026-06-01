@@ -1,0 +1,52 @@
+/* Contato Styles */
+
+.info-block {
+  margin-bottom: 2rem;
+}
+
+.info-block h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.info-block p, .info-block a {
+  color: var(--color-text-primary);
+  font-size: 1.1rem;
+}
+
+.contact-form-container {
+  padding: 3rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .contact-form-container {
+    padding: 2rem;
+  }
+}

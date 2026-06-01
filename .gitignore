@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Source assets (originals, too large for repo)
+_assets/
+
+# Temp/migration scripts output
+temp_json_block.json
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log

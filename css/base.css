@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'Span';
+  src: url('/fonts/Span-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Tonalidades Principais (Dark Mode Monocromático) */
+  --color-bg-primary: #000000; /* Mortem in Mundum base */
+  --color-bg-secondary: #0A0A0A;
+  --color-bg-card: #141414;
+  --color-bg-glass: rgba(20, 20, 20, 0.7);
+
+  /* Acentos (Branco - Puritas) */
+  --color-accent: #FFFFFF; 
+  --color-accent-light: #E0E0E0;
+  --color-accent-muted: rgba(255, 255, 255, 0.15);
+
+  /* Texto */
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #9B9B9B;
+  --color-text-muted: #6B6B6B;
+
+  /* Bordas */
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-border-hover: rgba(255, 255, 255, 0.30);
+  
+  /* Fontes */
+  --font-heading: 'Span', 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-accent: 'Span', 'Playfair Display', Georgia, serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Utilitários */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.font-accent {
+  font-family: var(--font-accent);
+  font-style: italic;
+}

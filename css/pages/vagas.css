@@ -1,0 +1,72 @@
+/* Vagas Styles */
+
+.jobs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.job-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.job-card:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.job-title {
+  font-size: 1.5rem;
+  color: var(--color-accent);
+}
+
+.job-tag {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+}
+
+.job-body p {
+  margin-bottom: 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.job-body strong {
+  color: var(--color-text-primary);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.job-footer {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .job-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

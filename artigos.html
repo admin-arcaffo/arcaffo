@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artigos | Arcaffo®</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="/" class="logo"><img src="/images/brand/logo-white.png" alt="Arcaffo" style="height: 32px;" /></a>
+      <nav class="nav-links">
+        <a href="/sobre.html">Sobre</a>
+        <a href="https://advisor.arcaffo.com" target="_blank" rel="noopener">Assessoria</a>
+        <div class="nav-dropdown">
+          <span class="nav-dropdown-trigger">Formação Empresarial</span>
+          <div class="nav-dropdown-menu">
+            <a href="https://enm.arcaffo.com" target="_blank" rel="noopener">Escola de Negócios</a>
+            <a href="https://ordo.arcaffo.com" target="_blank" rel="noopener">Clube Empresarial</a>
+          </div>
+        </div>
+        <a href="/projetos.html">Projetos</a>
+        <a href="/artigos.html" class="active">Artigos</a>
+        <a href="/contato.html">Contato</a>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Menu" style="display: none; background: none; border: none; color: white; font-size: 1.5rem;">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header text-center" style="padding-top: 150px; padding-bottom: 3rem;">
+      <div class="container">
+        <h1 class="animate-on-scroll">Artigos e Insights</h1>
+        <p class="section-subtitle animate-on-scroll delay-100">Reflexões sobre branding, negócios e cultura.</p>
+      </div>
+    </section>
+
+    <section class="articles-section" style="padding-top: 0; min-height: 40vh;">
+      <div class="container animate-on-scroll delay-200">
+        <div id="articles-grid" style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 3rem;">
+          <!-- Articles will be loaded here dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .featured-article {
+        grid-column: span 12;
+        border-bottom: 1px solid var(--color-border);
+        padding-bottom: 4rem;
+        margin-bottom: 1rem;
+      }
+      .featured-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+      .featured-img-container {
+        height: 350px;
+      }
+      .article-card {
+        grid-column: span 12;
+      }
+      @media (min-width: 768px) {
+        .article-card { grid-column: span 6; }
+        .featured-img-container { height: 450px; }
+      }
+      @media (min-width: 1024px) {
+        .article-card { grid-column: span 4; }
+        .featured-flex { flex-direction: row; align-items: center; gap: 4rem; }
+        .featured-flex > div { flex: 1; }
+        .featured-img-container { height: 500px; }
+      }
+      
+      .article-card:hover .card-img-hover,
+      .featured-article:hover .card-img-hover {
+        transform: scale(1.05);
+      }
+    </style>
+
+    <script type="module">
+      import { initAnimations } from '/js/animations.js';
+      
+      async function loadArticles() {
+        try {
+          const response = await fetch('/data/artigos.json?v=' + Date.now());
+          if (!response.ok) throw new Error('Failed to load articles');
+          const articles = await response.json();
+          
+          const grid = document.getElementById('articles-grid');
+          grid.innerHTML = articles.map((article, index) => {
+            const dateStr = article.date ? new Date(article.date).toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' }) : 'Artigo Arcaffo';
+            
+            if (index === 0) {
+              return `
+                <a href="/artigo.html?slug=${article.slug}" class="featured-article animate-on-scroll" style="text-decoration: none; color: inherit; display: block;">
+                  <div class="featured-flex">
+                    <div class="featured-img-container" style="border-radius: 12px; overflow: hidden; position: relative;">
+                      <img src="${article.cover}" alt="${article.title}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;" class="card-img-hover" onerror="this.src='/vite.svg'" />
+                    </div>
+                    <div style="display: flex; flex-direction: column; justify-content: center;">
+                      <p style="color: var(--color-accent); text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; margin-bottom: 1rem;">Em Destaque &bull; ${dateStr}</p>
+                      <h2 class="font-accent" style="font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -1px;">${article.title}</h2>
+                      <p style="color: var(--color-text-secondary); font-size: 1.1rem; line-height: 1.6; margin-bottom: 2.5rem; max-width: 90%;">${article.excerpt || 'Leia a análise completa e aprofundada em nosso editorial.'}</p>
+                      <span class="btn btn-outline" style="align-self: flex-start;">Ler Artigo Completo</span>
+                    </div>
+                  </div>
+                </a>
+              `;
+            }
+            
+            return `
+              <a href="/artigo.html?slug=${article.slug}" class="article-card animate-on-scroll" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 1.5rem;">
+                <div style="width: 100%; height: 300px; overflow: hidden; border-radius: 8px;">
+                  <img src="${article.cover}" alt="${article.title}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;" class="card-img-hover" onerror="this.src='/vite.svg'" />
+                </div>
+                <div style="display: flex; flex-direction: column; flex: 1;">
+                  <p style="color: var(--color-text-secondary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.8rem;">${dateStr}</p>
+                  <h3 class="font-accent" style="font-size: 1.5rem; line-height: 1.2; letter-spacing: -0.5px; margin-bottom: 1.5rem; flex: 1; transition: color 0.3s ease;">${article.title}</h3>
+                  <span class="text-accent" style="font-size: 0.9rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase;">Ler artigo &rarr;</span>
+                </div>
+              </a>
+            `;
+          }).join('');
+          
+          setTimeout(initAnimations, 100);
+        } catch (error) {
+          console.error('Error loading articles:', error);
+          document.getElementById('articles-grid').innerHTML = '<p class="text-center" style="width: 100%; grid-column: 1/-1;">Erro ao carregar artigos. Tente novamente mais tarde.</p>';
+        }
+      }
+      
+      document.addEventListener('DOMContentLoaded', loadArticles);
+    </script>
+
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="/" class="logo" style="display: block; margin-bottom: 1rem;"><img src="/images/brand/logo-white.png" alt="Arcaffo" style="height: 32px;" /></a>
+          <p style="margin-top: 1rem; color: var(--color-text-secondary); font-size: 0.9rem;">
+            Formamos empresários, estruturamos negócios e elevamos a cultura.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="/sobre.html">Sobre</a></li>
+            <li><a href="https://advisor.arcaffo.com" target="_blank" rel="noopener">Assessoria</a></li>
+            <li><a href="/projetos.html">Projetos</a></li>
+            <li><a href="/contato.html">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ecossistema</h4>
+          <ul>
+            <li><a href="https://advisor.arcaffo.com" target="_blank">Assessoria</a></li>
+            <li><a href="https://enm.arcaffo.com" target="_blank">Escola de Negócios</a></li>
+            <li><a href="https://ordo.arcaffo.com" target="_blank">Ordo Legatum</a></li>
+            <li><a href="/vagas.html">Trabalhe Conosco</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Social</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/arcaffo/" target="_blank">Instagram</a></li>
+            <li><a href="https://www.instagram.com/madebyarcaffo/" target="_blank">MadebyArcaffo</a></li>
+            <li><a href="https://www.linkedin.com/company/arcaffo" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/@arcaffo" target="_blank">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Arcaffo – Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

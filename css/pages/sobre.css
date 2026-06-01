@@ -1,0 +1,129 @@
+/* Sobre Page Styles */
+
+.hero-page {
+  padding: 12rem 0 6rem;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-page h1 {
+  font-size: 3rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background-color: var(--color-border);
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50%;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.timeline-item:nth-child(even) {
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: 50%;
+}
+
+.timeline-item .year {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.timeline-item .content {
+  background-color: var(--color-bg-card);
+  padding: 2rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  width: 90%;
+  position: relative;
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+  }
+  .timeline-item, .timeline-item:nth-child(even) {
+    justify-content: flex-start;
+    padding-left: 60px;
+    padding-right: 0;
+  }
+  .timeline-item .year {
+    left: 20px;
+  }
+  .timeline-item .content {
+    width: 100%;
+  }
+}
+
+/* Pilares */
+.pillar {
+  padding: 2rem 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.pillar h4 {
+  font-family: var(--font-accent);
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+}
+
+/* Equipe */
+.member-photo {
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  aspect-ratio: 4/5;
+}
+
+.member-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  filter: grayscale(80%);
+}
+
+.team-member:hover .member-photo img {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+
+.team-member h4 {
+  margin-bottom: 0.2rem;
+  font-size: 1.2rem;
+}

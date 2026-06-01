@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serviços | Arcaffo®</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+  <link rel="stylesheet" href="/css/pages/servicos.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="/" class="logo"><img src="/images/brand/logo-white.png" alt="Arcaffo" style="height: 32px;" /></a>
+      <nav class="nav-links">
+        <a href="/sobre.html">Sobre</a>
+        <a href="https://advisor.arcaffo.com" target="_blank" rel="noopener" class="active">Assessoria</a>
+        <div class="nav-dropdown">
+          <span class="nav-dropdown-trigger">Formação Empresarial</span>
+          <div class="nav-dropdown-menu">
+            <a href="https://enm.arcaffo.com" target="_blank" rel="noopener">Escola de Negócios</a>
+            <a href="https://ordo.arcaffo.com" target="_blank" rel="noopener">Clube Empresarial</a>
+          </div>
+        </div>
+        <a href="/projetos.html">Projetos</a>
+        <a href="/artigos.html">Artigos</a>
+        <a href="/contato.html">Contato</a>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Menu" style="display: none; background: none; border: none; color: white; font-size: 1.5rem;">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-page parallax-bg" style="background-image: linear-gradient(rgba(10,10,12,0.8), rgba(10,10,12,0.9)), url('/assets/images/hero/servicos-hero.jpg');">
+      <div class="container text-center">
+        <h1 class="animate-on-scroll">O que fazemos por <span class="font-accent text-accent">sua marca.</span></h1>
+        <p class="hero-subtitle animate-on-scroll delay-100" style="margin: 0 auto;">
+          Nossa metodologia une estratégia e criatividade para construir marcas sólidas, coerentes e preparadas para o crescimento.
+        </p>
+      </div>
+    </section>
+
+    <section class="services-list-section">
+      <div class="container">
+        <div class="services-grid" id="services-container">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section text-center" style="background-color: var(--color-bg-secondary);">
+      <div class="container animate-on-scroll">
+        <h2 class="section-title">Pronto para estruturar sua marca?</h2>
+        <p class="section-subtitle" style="margin-bottom: 2rem;">Fale com um de nossos especialistas e descubra como podemos ajudar.</p>
+        <a href="/contato.html" class="btn btn-primary">Agendar Diagnóstico</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="/" class="logo" style="display: block; margin-bottom: 1rem;"><img src="/images/brand/logo-white.png" alt="Arcaffo" style="height: 32px;" /></a>
+          <p style="margin-top: 1rem; color: var(--color-text-secondary); font-size: 0.9rem;">
+            Formamos empresários, estruturamos negócios e elevamos a cultura.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="/sobre.html">Sobre</a></li>
+            <li><a href="https://advisor.arcaffo.com" target="_blank" rel="noopener">Assessoria</a></li>
+            <li><a href="/projetos.html">Projetos</a></li>
+            <li><a href="/contato.html">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ecossistema</h4>
+          <ul>
+            <li><a href="https://advisor.arcaffo.com" target="_blank">Assessoria</a></li>
+            <li><a href="https://enm.arcaffo.com" target="_blank">Escola de Negócios</a></li>
+            <li><a href="https://ordo.arcaffo.com" target="_blank">Ordo Legatum</a></li>
+            <li><a href="/vagas.html">Trabalhe Conosco</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Social</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/arcaffo/" target="_blank">Instagram</a></li>
+            <li><a href="https://www.instagram.com/madebyarcaffo/" target="_blank">MadebyArcaffo</a></li>
+            <li><a href="https://www.linkedin.com/company/arcaffo" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/@arcaffo" target="_blank">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Arcaffo – Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/main.js"></script>
+  <script type="module">
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        const response = await fetch('/data/servicos.json');
+        const servicos = await response.json();
+        const container = document.getElementById('services-container');
+        
+        container.innerHTML = servicos.map((s, i) => `
+          <div class="service-card animate-on-scroll delay-${(i % 3) * 100}">
+            <div class="service-icon text-accent">0${i + 1}</div>
+            <h3>${s.title}</h3>
+            <p>${s.description}</p>
+          </div>
+        `).join('');
+      } catch (e) {
+        console.error('Erro ao carregar serviços', e);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artigos | Arcaffo®</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="/" class="logo"><img src="/images/brand/logo-white.png" alt="Arcaffo" style="height: 32px;" /></a>
+      <nav class="nav-links">
+        <a href="/sobre.html">Sobre</a>
+        <a href="https://advisor.arcaffo.com" target="_blank" rel="noopener">Assessoria</a>
+        <div class="nav-dropdown">
+          <span class="nav-dropdown-trigger">Formação Empresarial</span>
+          <div class="nav-dropdown-menu">
+            <a href="https://enm.arcaffo.com" target="_blank" rel="noopener">Escola de Negócios</a>
+            <a href="https://ordo.arcaffo.com" target="_blank" rel="noopener">Clube Empresarial</a>
+          </div>
+        </div>
+        <a href="/projetos.html">Projetos</a>
+        <a href="/artigos.html" class="active">Artigos</a>
+        <a href="/contato.html">Contato</a>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Menu" style="display: none; background: none; border: none; color: white; font-size: 1.5rem;">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <article class="article-container" style="padding-top: 150px; padding-bottom: 5rem;">
+      <div class="container" style="max-width: 800px; margin: 0 auto;">
+        
+        <a href="/artigos.html" class="btn-link" style="display: inline-block; margin-bottom: 2rem;">&larr; Voltar para Artigos</a>
+        
+        <header class="article-header" style="margin-bottom: 3rem;">
+          <p id="article-date" style="color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; font-size: 0.9rem;">Carregando...</p>
+          <h1 id="article-title" class="font-accent" style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 2rem;">Carregando...</h1>
+        </header>
+
+        <div id="article-cover-container" style="margin-bottom: 3rem; display: none; width: 100%; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+          <img id="article-cover" src="" alt="" style="width: 100%; height: auto; display: block;" />
+        </div>
+
+        <div id="article-content" class="article-content" style="font-size: 1.1rem; line-height: 1.8;">
+          <div class="skeleton-loader" style="height: 20px; width: 100%; background: #eee; margin-bottom: 10px;"></div>
+          <div class="skeleton-loader" style="height: 20px; width: 90%; background: #eee; margin-bottom: 10px;"></div>
+          <div class="skeleton-loader" style="height: 20px; width: 95%; background: #eee; margin-bottom: 10px;"></div>
+        </div>
+
+      </div>
+    </article>
+
+    <script type="module">
+      import { initAnimations } from '/js/animations.js';
+      
+      async function loadArticle() {
+        try {
+          const urlParams = new URLSearchParams(window.location.search);
+          const slug = urlParams.get('slug');
+          
+          if (!slug) {
+            window.location.href = '/artigos.html';
+            return;
+          }
+
+          const response = await fetch('/data/artigos.json?v=' + Date.now());
+          if (!response.ok) throw new Error('Failed to load articles');
+          const articles = await response.json();
+          
+          const article = articles.find(a => a.slug === slug);
+          
+          if (!article) {
+            document.getElementById('article-title').textContent = 'Artigo não encontrado';
+            document.getElementById('article-date').textContent = 'Erro 404';
+            document.getElementById('article-content').innerHTML = '<p>O artigo que você procura não existe ou foi removido.</p>';
+            return;
+          }
+
+          document.title = `${article.title} | Arcaffo®`;
+          document.getElementById('article-title').textContent = article.title;
+          document.getElementById('article-date').textContent = article.date || 'Blog';
+          
+          if (article.cover) {
+            document.getElementById('article-cover').src = article.cover;
+            document.getElementById('article-cover').alt = article.title;
+            document.getElementById('article-cover-container').style.display = 'block';
+          }
+
+          // Inject content
+          document.getElementById('article-content').innerHTML = article.content;
+          
+          // Re-init animations
+          setTimeout(initAnimations, 100);
+          
+        } catch (error) {
+          console.error('Error loading article:', error);
+          document.getElementById('article-content').innerHTML = '<p>Erro ao carregar o artigo. Tente novamente mais tarde.</p>';
+        }
+      }
+      
+      document.addEventListener('DOMContentLoaded', loadArticle);
+    </script>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="/" class="logo" style="display: block; margin-bottom: 1rem;"><img src="/images/brand/logo-white.png" alt="Arcaffo" style="height: 32px;" /></a>
+          <p style="margin-top: 1rem; color: var(--color-text-secondary); font-size: 0.9rem;">
+            Formamos empresários, estruturamos negócios e elevamos a cultura.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="/sobre.html">Sobre</a></li>
+            <li><a href="https://advisor.arcaffo.com" target="_blank" rel="noopener">Assessoria</a></li>
+            <li><a href="/projetos.html">Projetos</a></li>
+            <li><a href="/contato.html">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ecossistema</h4>
+          <ul>
+            <li><a href="https://advisor.arcaffo.com" target="_blank">Assessoria</a></li>
+            <li><a href="https://enm.arcaffo.com" target="_blank">Escola de Negócios</a></li>
+            <li><a href="https://ordo.arcaffo.com" target="_blank">Ordo Legatum</a></li>
+            <li><a href="/vagas.html">Trabalhe Conosco</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Social</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/arcaffo/" target="_blank">Instagram</a></li>
+            <li><a href="https://www.instagram.com/madebyarcaffo/" target="_blank">MadebyArcaffo</a></li>
+            <li><a href="https://www.linkedin.com/company/arcaffo" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/@arcaffo" target="_blank">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Arcaffo – Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>
