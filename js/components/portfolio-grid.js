@@ -3,7 +3,13 @@ export async function fetchProjetos() {
     const response = await fetch('/data/projetos.json?v=' + Date.now());
     if (!response.ok) throw new Error('Falha ao carregar projetos');
     const data = await response.json();
-    return data.filter(p => p.status !== 'draft');
+    return data
+      .filter(p => p.status !== 'draft')
+      .sort((a, b) => {
+        const dateA = new Date(a.createdAt || a.date || 0).getTime();
+        const dateB = new Date(b.createdAt || b.date || 0).getTime();
+        return dateB - dateA;
+      });
   } catch (error) {
     console.error('Erro:', error);
     return [];

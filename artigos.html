@@ -96,7 +96,13 @@
           const response = await fetch('/data/artigos.json?v=' + Date.now());
           if (!response.ok) throw new Error('Failed to load articles');
           const articles = await response.json();
-          const publishedArticles = articles.filter(a => a.status !== 'draft');
+          const publishedArticles = articles
+            .filter(a => a.status !== 'draft')
+            .sort((a, b) => {
+              const dateA = new Date(a.createdAt || a.date || 0).getTime();
+              const dateB = new Date(b.createdAt || b.date || 0).getTime();
+              return dateB - dateA;
+            });
           
           const grid = document.getElementById('articles-grid');
           grid.innerHTML = publishedArticles.map((article, index) => {
