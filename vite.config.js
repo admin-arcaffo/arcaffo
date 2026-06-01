@@ -15,6 +15,7 @@ export default defineConfig({
         admin: resolve(__dirname, 'admin/index.html'),
         vagas: resolve(__dirname, 'vagas.html'),
         contato: resolve(__dirname, 'contato.html'),
+        obrigado: resolve(__dirname, 'obrigado.html'),
       },
     },
   },

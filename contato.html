@@ -149,6 +149,28 @@
   </footer>
 
   <script type="module" src="/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('contact-form');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          
+          // Show loading state
+          const btn = form.querySelector('button[type="submit"]');
+          const originalText = btn.textContent;
+          btn.textContent = 'Enviando...';
+          btn.disabled = true;
+
+          // Aqui entraria a integração com o backend/Formspree/RD Station.
+          // Como é estático, vamos simular um delay e redirecionar para a página de obrigado.
+          setTimeout(() => {
+            window.location.href = '/obrigado.html';
+          }, 800);
+        });
+      }
+    });
+  </script>
 
 
 </body></html>
