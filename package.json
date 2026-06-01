@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/sync-db.js && vite build",
+    "build": "node scripts/sync-db.mjs && vite build",
     "preview": "vite preview"
   },
   "keywords": [],
