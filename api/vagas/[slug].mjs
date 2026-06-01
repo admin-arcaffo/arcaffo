@@ -1,5 +1,5 @@
-import { verifyAuth } from '../utils/auth.js';
-import { getDbData, saveDbData } from '../utils/blob.js';
+import { verifyAuth } from '../utils/auth.mjs';
+import { getDbData, saveDbData } from '../utils/blob.mjs';
 
 export default async function handler(req, res) {
   const auth = verifyAuth(req);

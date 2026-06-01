@@ -1,5 +1,4 @@
 // Auth utility for client-side
-import { Crypto } from '/js/main.js'; // Wait, I don't have crypto in client. I will just do a simple SHA-256
 
 export function getToken() {
   return sessionStorage.getItem('admin_token');

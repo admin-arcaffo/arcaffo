@@ -1,4 +1,4 @@
-const jwt = require('jsonwebtoken');
+import jwt from 'jsonwebtoken';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -9,9 +9,8 @@ export default async function handler(req, res) {
     const { username, password } = req.body;
     
     // In Vercel environment, we store the hashes of the credentials
-    // For local dev, we provide a fallback hash for the default credentials
-    // Default username hash: 4rc4ff0
-    // Default password hash: Pvnm@5426
+    // Default username: 4rc4ff0 → SHA-256
+    // Default password: Pvnm@5426 → SHA-256
     const validUserHash = process.env.ADMIN_USERNAME || 'ad556a3d8ecbe7fe21b80a174095edcc1944a3b7c5854b50d83380b0a221511f'; 
     const validPassHash = process.env.ADMIN_PASSWORD || '40dfbd16e4a1ef1c055c5027e8843b336d63b7cf9a98ea1fa3f9f19dffc04b86';
 
