@@ -12,8 +12,8 @@ export default async function handler(req, res) {
     // For local dev, we provide a fallback hash for the default credentials
     // Default username hash: 4rc4ff0
     // Default password hash: Pvnm@5426
-    const validUserHash = process.env.ADMIN_USERNAME || '13c9e3fa62615bc5c65dc48ab8d4e9f73111f1636c7cfccfa01ee63cb28cc887'; 
-    const validPassHash = process.env.ADMIN_PASSWORD || '5a709bebd6b334beab2fce128de1610e1cb2ab84a1e944f77c8e29a982142278';
+    const validUserHash = process.env.ADMIN_USERNAME || 'ad556a3d8ecbe7fe21b80a174095edcc1944a3b7c5854b50d83380b0a221511f'; 
+    const validPassHash = process.env.ADMIN_PASSWORD || '40dfbd16e4a1ef1c055c5027e8843b336d63b7cf9a98ea1fa3f9f19dffc04b86';
 
     if (username === validUserHash && password === validPassHash) {
       const secret = process.env.JWT_SECRET || 'fallback_secret_for_local_dev_only';
