@@ -1,5 +1,5 @@
 import { handleUpload } from '@vercel/blob/client';
-import { verifyAuth } from './utils/auth.mjs';
+import jwt from 'jsonwebtoken';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -10,11 +10,18 @@ export default async function handler(req, res) {
     const jsonResponse = await handleUpload({
       body: req.body,
       request: req,
-      onBeforeGenerateToken: async (pathname) => {
-        // Verify authentication before allowing upload
-        const auth = verifyAuth(req);
-        if (!auth) {
-          throw new Error('Unauthorized');
+      onBeforeGenerateToken: async (pathname, clientPayload) => {
+        // The client sends the JWT token as clientPayload
+        // We verify it here instead of using verifyAuth (which reads Authorization header)
+        if (!clientPayload) {
+          throw new Error('Unauthorized: No token provided');
+        }
+
+        try {
+          const secret = process.env.JWT_SECRET || 'fallback_secret_for_local_dev_only';
+          jwt.verify(clientPayload, secret);
+        } catch (e) {
+          throw new Error('Unauthorized: Invalid token');
         }
 
         return {
@@ -25,12 +32,9 @@ export default async function handler(req, res) {
             'image/gif',
             'video/mp4'
           ],
-          // Optionally limit max file size here
-          // maximumSizeInBytes: 10 * 1024 * 1024,
         };
       },
-      onUploadCompleted: async ({ blob, tokenPayload }) => {
-        // Optional: record the upload in your database
+      onUploadCompleted: async ({ blob }) => {
         console.log('Upload completed:', blob.url);
       },
     });
