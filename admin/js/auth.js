@@ -57,10 +57,12 @@ export function initAuth() {
         const data = await res.json();
         setToken(data.token);
         
-        document.getElementById('login-view').classList.add('hidden');
-        document.getElementById('app-layout').classList.remove('hidden');
+        // Initialize the admin panel (router, sidebar, etc.)
+        if (window._bootstrapAdmin) {
+          window._bootstrapAdmin();
+        }
         
-        // Trigger hash change to load dashboard
+        // Navigate to dashboard
         if (!window.location.hash || window.location.hash === '#/login') {
           window.location.hash = '#/';
         } else {

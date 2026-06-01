@@ -41,7 +41,7 @@ export function createUploader(containerId, initialImage, onUploadSuccess) {
 
     try {
       const newBlob = await upload(file.name, file, {
-        access: 'public',
+        access: 'private',
         handleUploadUrl: '/api/upload',
         clientPayload: token // Pass token to authorize upload
       });

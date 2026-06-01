@@ -7,19 +7,38 @@ export async function getDbData(type) {
     if (blobs.length > 0) {
       // Sort by uploadedAt descending to get the latest
       blobs.sort((a, b) => new Date(b.uploadedAt) - new Date(a.uploadedAt));
-      // Private blobs need a download URL with token
-      const downloadUrl = await getDownloadUrl(blobs[0].url);
-      const response = await fetch(downloadUrl);
-      if (response.ok) {
-        return await response.json();
+      const blobUrl = blobs[0].url;
+      
+      // Try getDownloadUrl for private blobs
+      try {
+        const downloadUrl = await getDownloadUrl(blobUrl);
+        const response = await fetch(downloadUrl);
+        if (response.ok) {
+          return await response.json();
+        }
+      } catch (e) {
+        console.log(`getDownloadUrl failed for ${type}, trying direct fetch...`);
+      }
+      
+      // Fallback: direct fetch with token in header
+      try {
+        const response = await fetch(blobUrl, {
+          headers: {
+            'Authorization': `Bearer ${process.env.BLOB_READ_WRITE_TOKEN}`
+          }
+        });
+        if (response.ok) {
+          return await response.json();
+        }
+      } catch (e2) {
+        console.error(`Direct fetch also failed for ${type}:`, e2.message);
       }
     }
   } catch (error) {
-    console.error(`Error fetching ${type} from blob:`, error);
+    console.error(`Error fetching ${type} from blob:`, error.message);
   }
   
   // Fallback to local file if blob fails or doesn't exist yet
-  // In Vercel serverless, we can read from the deployed files using a full URL
   try {
     const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:5173';
     const response = await fetch(`${baseUrl}/data/${type}.json`);
@@ -27,7 +46,7 @@ export async function getDbData(type) {
       return await response.json();
     }
   } catch (err) {
-    console.error(`Error fetching local fallback for ${type}:`, err);
+    console.error(`Error fetching local fallback for ${type}:`, err.message);
   }
   return [];
 }
@@ -37,7 +56,7 @@ export async function saveDbData(type, data) {
     const jsonString = JSON.stringify(data, null, 2);
     const blob = await put(`db/${type}.json`, jsonString, {
       access: 'private',
-      addRandomSuffix: false, // Overwrite the same file to keep it clean
+      addRandomSuffix: false,
     });
     return blob;
   } catch (error) {

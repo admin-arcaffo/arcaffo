@@ -7,13 +7,13 @@ import { renderVagas, renderEditorVaga } from './pages/vagas.js';
 const routes = {
   '/': { title: 'Dashboard', render: renderDashboard, nav: 'dashboard' },
   '/artigos': { title: 'Artigos', render: renderArtigos, nav: 'artigos' },
-  '/artigos/novo': { title: 'Novo Artigo', render: () => renderEditorArtigo(), nav: 'artigos' },
+  '/artigos/novo': { title: 'Novo Artigo', render: (c, p) => renderEditorArtigo(c, p), nav: 'artigos' },
   '/artigos/editar/:slug': { title: 'Editar Artigo', render: renderEditorArtigo, nav: 'artigos' },
   '/projetos': { title: 'Projetos', render: renderProjetos, nav: 'projetos' },
-  '/projetos/novo': { title: 'Novo Projeto', render: () => renderEditorProjeto(), nav: 'projetos' },
+  '/projetos/novo': { title: 'Novo Projeto', render: (c, p) => renderEditorProjeto(c, p), nav: 'projetos' },
   '/projetos/editar/:slug': { title: 'Editar Projeto', render: renderEditorProjeto, nav: 'projetos' },
   '/vagas': { title: 'Vagas', render: renderVagas, nav: 'vagas' },
-  '/vagas/novo': { title: 'Nova Vaga', render: () => renderEditorVaga(), nav: 'vagas' },
+  '/vagas/novo': { title: 'Nova Vaga', render: (c, p) => renderEditorVaga(c, p), nav: 'vagas' },
   '/vagas/editar/:slug': { title: 'Editar Vaga', render: renderEditorVaga, nav: 'vagas' },
 };
 

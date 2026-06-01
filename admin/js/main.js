@@ -16,13 +16,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3000);
   };
 
-  initAuth();
-  
-  if (checkAuth()) {
+  // Expose post-login bootstrap so auth.js can call it after a fresh login
+  window._bootstrapAdmin = () => {
     document.getElementById('login-view').classList.add('hidden');
     document.getElementById('app-layout').classList.remove('hidden');
     initSidebar();
     initRouter();
+  };
+
+  initAuth();
+  
+  if (checkAuth()) {
+    window._bootstrapAdmin();
   } else {
     document.getElementById('login-view').classList.remove('hidden');
     document.getElementById('app-layout').classList.add('hidden');
