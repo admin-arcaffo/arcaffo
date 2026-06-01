@@ -1,25 +1,44 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html><html lang="pt-BR"><head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projeto | Arcaffo®</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="/css/base.css" />
-  <link rel="stylesheet" href="/css/components.css" />
-  <link rel="stylesheet" href="/css/layout.css" />
-  <link rel="stylesheet" href="/css/animations.css" />
-  <link rel="stylesheet" href="/css/pages/projetos.css" />
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/pages/projetos.css">
+
+  <!-- SEO & Open Graph (Generated) -->
+  <meta name="description" content="Arcaffo Branding. Transformamos marcas com estratégias personalizadas de branding, comunicação e design. Crie uma identidade autêntica e impactante para o seu negócio.">
+  <meta property="og:title" content="Arcaffo® | Branding &amp; Posicionamento de Marca">
+  <meta property="og:description" content="Arcaffo Branding. Transformamos marcas com estratégias personalizadas de branding, comunicação e design.">
+  <meta property="og:image" content="https://www.arcaffo.com/images/brand/og-image.jpg">
+  <meta property="og:url" content="https://www.arcaffo.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Arcaffo® | Branding &amp; Posicionamento de Marca">
+  <meta name="twitter:description" content="Arcaffo Branding. Transformamos marcas com estratégias personalizadas de branding, comunicação e design.">
+  <meta name="twitter:image" content="https://www.arcaffo.com/images/brand/og-image.jpg">
+  
+  <!-- Google Analytics -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-3FVJTG0EF4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3FVJTG0EF4');
+  </script>
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-container">
-      <a href="/" class="logo"><img src="/images/brand/logo-white.png" alt="Arcaffo" style="height: 32px;" /></a>
+      <a href="/" class="logo"><img src="/images/brand/logo-white.png" alt="Arcaffo" style="height: 32px;"></a>
       <nav class="nav-links">
         <a href="/sobre.html">Sobre</a>
         <a href="/servicos.html">Serviços</a>
@@ -42,7 +61,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <a href="/" class="logo" style="display: block; margin-bottom: 1rem;"><img src="/images/brand/logo-white.png" alt="Arcaffo" style="height: 32px;" /></a>
+          <a href="/" class="logo" style="display: block; margin-bottom: 1rem;"><img src="/images/brand/logo-white.png" alt="Arcaffo" style="height: 32px;"></a>
           <p style="margin-top: 1rem; color: var(--color-text-secondary); font-size: 0.9rem;">
             Formamos empresários, estruturamos negócios e elevamos a cultura.
           </p>
@@ -109,6 +128,43 @@
       let imgUrl = projeto.cover || (projeto.images && projeto.images.length > 0 ? projeto.images[0].url : '');
       if (!imgUrl) imgUrl = 'https://via.placeholder.com/1920x1080/111115/C8A96E?text=' + encodeURIComponent(projeto.title);
 
+      // SEO & Meta tags update
+      const projectUrl = `https://www.arcaffo.com/projeto.html?id=${projeto.slug}`;
+      const projectExcerpt = projeto.description.replace(/<[^>]*>?/gm, '').substring(0, 160);
+      
+      document.querySelector('meta[name="description"]')?.setAttribute('content', projectExcerpt);
+      document.querySelector('meta[property="og:title"]')?.setAttribute('content', projeto.title);
+      document.querySelector('meta[property="og:description"]')?.setAttribute('content', projectExcerpt);
+      document.querySelector('meta[property="og:image"]')?.setAttribute('content', imgUrl);
+      document.querySelector('meta[property="og:url"]')?.setAttribute('content', projectUrl);
+      document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', projeto.title);
+      document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', projectExcerpt);
+      document.querySelector('meta[name="twitter:image"]')?.setAttribute('content', imgUrl);
+      
+      // Add Canonical
+      const canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      canonical.href = projectUrl;
+      document.head.appendChild(canonical);
+
+      // Add JSON-LD Structured Data
+      const scriptSchema = document.createElement('script');
+      scriptSchema.type = 'application/ld+json';
+      scriptSchema.text = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": projeto.title,
+        "description": projectExcerpt,
+        "image": [ imgUrl ],
+        "url": projectUrl,
+        "datePublished": projeto.createdAt || projeto.date || new Date().toISOString(),
+        "creator": {
+          "@type": "Organization",
+          "name": "Arcaffo"
+        }
+      });
+      document.head.appendChild(scriptSchema);
+
       const html = `
         <section class="project-detail-hero" style="background-image: url('${imgUrl}');">
           <div class="container project-detail-header">
@@ -174,5 +230,6 @@
       });
     });
   </script>
-</body>
-</html>
+
+
+</body></html>

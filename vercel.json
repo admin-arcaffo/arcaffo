@@ -27,5 +27,312 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/quem-somos",
+      "destination": "/sobre.html",
+      "permanent": true
+    },
+    {
+      "source": "/contato",
+      "destination": "/contato.html",
+      "permanent": true
+    },
+    {
+      "source": "/artigos",
+      "destination": "/artigos.html",
+      "permanent": true
+    },
+    {
+      "source": "/projetos-portfolio",
+      "destination": "/projetos.html",
+      "permanent": true
+    },
+    {
+      "source": "/trabalhe-conosco",
+      "destination": "/vagas.html",
+      "permanent": true
+    },
+    {
+      "source": "/links",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ordo-legatum",
+      "destination": "https://ordo.arcaffo.com",
+      "permanent": true
+    },
+    {
+      "source": "/privacidade",
+      "destination": "/sobre.html",
+      "permanent": true
+    },
+    {
+      "source": "/agentesessenciais",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/posicionamentodemarcabyarcaffo-2",
+      "destination": "/servicos.html",
+      "permanent": true
+    },
+    {
+      "source": "/posicionamentodemarcabyarcaffo1",
+      "destination": "/servicos.html",
+      "permanent": true
+    },
+    {
+      "source": "/arquetiposdemarca",
+      "destination": "/artigos.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/arquitetura-de-marca-estruturando-o-sucesso-empresarial",
+      "destination": "/artigo.html?slug=arquitetura-de-marca-estruturando-o-sucesso-empresarial",
+      "permanent": true
+    },
+    {
+      "source": "/post/n%C3%A3o-a-coca-cola-n%C3%A3o-vende-para-todo-mundo",
+      "destination": "/artigo.html?slug=na-o-a-coca-cola-na-o-vende-para-todo-mundo",
+      "permanent": true
+    },
+    {
+      "source": "/post/mapeando-a-jornada-do-cliente-como-atrair-reter-e-fidelizar",
+      "destination": "/artigo.html?slug=mapeando-a-jornada-do-cliente-como-atrair-reter-e-fidelizar",
+      "permanent": true
+    },
+    {
+      "source": "/post/o-segredo-do-marketing-empresarial-como-alinhar-sua-verdade-%C3%A0-convers%C3%A3o-de-vendas",
+      "destination": "/artigo.html?slug=o-segredo-do-marketing-empresarial-como-alinhar-sua-verdade-a-conversa-o-de-vendas",
+      "permanent": true
+    },
+    {
+      "source": "/post/cren%C3%A7as-limitantes-e-empresas-travadas-a-verdade-que-ningu%C3%A9m-quer-ouvir",
+      "destination": "/artigo.html?slug=crenc-as-limitantes-e-empresas-travadas-a-verdade-que-ningue-m-quer-ouvir",
+      "permanent": true
+    },
+    {
+      "source": "/post/engajamento-funcionarios-lealdade-marca",
+      "destination": "/artigos.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/a-arte-da-comunica%C3%A7%C3%A3o-leve-e-profunda-das-marcas",
+      "destination": "/artigo.html?slug=a-arte-da-comunicac-a-o-leve-e-profunda-das-marcas",
+      "permanent": true
+    },
+    {
+      "source": "/post/marcas-e-a-sinaliza%C3%A7%C3%A3o-de-virtudes",
+      "destination": "/artigo.html?slug=marcas-e-a-sinalizac-a-o-de-virtudes",
+      "permanent": true
+    },
+    {
+      "source": "/post/aprendizados-de-uma-palestra-do-ministro-da-economia-paulo-guedes",
+      "destination": "/artigo.html?slug=aprendizados-de-uma-palestra-do-ministro-da-economia-paulo-guedes",
+      "permanent": true
+    },
+    {
+      "source": "/post/como-tirar-boas-fotografias-com-o-celular",
+      "destination": "/artigo.html?slug=como-tirar-boas-fotografias-com-o-celular",
+      "permanent": true
+    },
+    {
+      "source": "/post/como-alinhar-a-cultura-organizacional-e-os-objetivos-dos-funcion%C3%A1rios-nas-pmes",
+      "destination": "/artigo.html?slug=como-alinhar-a-cultura-organizacional-e-os-objetivos-dos-funciona-rios-nas-pmes",
+      "permanent": true
+    },
+    {
+      "source": "/post/entre-o-brilho-da-liberdade-e-a-sombra-do-poder",
+      "destination": "/artigo.html?slug=entre-o-brilho-da-liberdade-e-a-sombra-do-poder",
+      "permanent": true
+    },
+    {
+      "source": "/post/fit-cultural-o-segredo-para-atrair-reter-e-valorizar-talentos-na-sua-empresa",
+      "destination": "/artigo.html?slug=fit-cultural-o-segredo-para-atrair-reter-e-valorizar-talentos-na-sua-empresa",
+      "permanent": true
+    },
+    {
+      "source": "/post/o-mi-nimo-necessa-rio-para-na-o-afundar-sua-marca",
+      "destination": "/artigo.html?slug=o-mi-nimo-necessa-rio-para-na-o-afundar-sua-marca",
+      "permanent": true
+    },
+    {
+      "source": "/post/arqu%C3%A9tipos-e-a-simb%C3%B3lica",
+      "destination": "/artigo.html?slug=arque-tipos-e-a-simbo-lica",
+      "permanent": true
+    },
+    {
+      "source": "/post/como-o-branding-pode-transformar-a-cultura-organizacional-da-sua-empresa",
+      "destination": "/artigo.html?slug=como-o-branding-pode-transformar-a-cultura-organizacional-da-sua-empresa",
+      "permanent": true
+    },
+    {
+      "source": "/post/o-quanto-voc%C3%AA-est%C3%A1-disposto-a-investir-na-sua-marca-%C3%A9-o-valor-que-voc%C3%AA-d%C3%A1-a-ela",
+      "destination": "/artigo.html?slug=o-quanto-voce-esta-disposto-a-investir-na-sua-marca-e-o-valor-que-voce-da-a-ela",
+      "permanent": true
+    },
+    {
+      "source": "/post/a-import%C3%A2ncia-do-branding-no-brasil-a-evolu%C3%A7%C3%A3o-e-a-relev%C3%A2ncia-do-conceito",
+      "destination": "/artigo.html?slug=a-importa-ncia-do-branding-no-brasil-a-evoluc-a-o-e-a-releva-ncia-do-conceito",
+      "permanent": true
+    },
+    {
+      "source": "/post/como-planejar-seus-anuncios",
+      "destination": "/artigos.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/atraia-talentos-como-contar-a-hist%C3%B3ria-da-sua-empresa-pode-atrair-bons-profissionais",
+      "destination": "/artigo.html?slug=atraia-talentos-como-contar-a-histo-ria-da-sua-empresa-pode-atrair-bons-profissionais",
+      "permanent": true
+    },
+    {
+      "source": "/post/o-poder-do-posicionamento-e-arquitetura-de-marca-em-mercados-competitivos",
+      "destination": "/artigo.html?slug=o-poder-do-posicionamento-e-arquitetura-de-marca-em-mercados-competitivos",
+      "permanent": true
+    },
+    {
+      "source": "/post/os-riscos-e-preju%C3%ADzos-de-n%C3%A3o-registrar-sua-marca",
+      "destination": "/artigo.html?slug=os-riscos-e-prejui-zos-de-na-o-registrar-sua-marca",
+      "permanent": true
+    },
+    {
+      "source": "/post/introducao-a-gestao-de-projetos",
+      "destination": "/artigo.html?slug=introduc-a-o-a-gesta-o-de-projetos",
+      "permanent": true
+    },
+    {
+      "source": "/post/nem-todo-publicit%C3%A1rio-merece-os-parab%C3%A9ns-no-dia-de-hoje",
+      "destination": "/artigo.html?slug=nem-todo-publicita-rio-merece-os-parabe-ns-no-dia-de-hoje",
+      "permanent": true
+    },
+    {
+      "source": "/post/que-a-tua-vida-n%C3%A3o-seja-uma-vida-est%C3%A9ril",
+      "destination": "/artigo.html?slug=que-a-tua-vida-na-o-seja-uma-vida-este-ril",
+      "permanent": true
+    },
+    {
+      "source": "/post/nao-transforme-qualidade-em-vaidade",
+      "destination": "/artigos.html",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/ana-santarelli",
+      "destination": "/projeto.html?id=ana-santarelli",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/on-joias",
+      "destination": "/projeto.html?id=on-joias",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/cia-do-vidro",
+      "destination": "/projeto.html?id=cia-do-vidro",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/torque%C2%AE-solu%C3%A7%C3%B5es-automotivas",
+      "destination": "/projetos.html",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/iclay",
+      "destination": "/projeto.html?id=iclay",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/instituto-construindo-um-artista",
+      "destination": "/projeto.html?id=instituto-construindo-um-artista",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/futura",
+      "destination": "/projeto.html?id=futura",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/kassar",
+      "destination": "/projeto.html?id=kassar",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/casa-santa-thereza",
+      "destination": "/projeto.html?id=casa-santa-thereza",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/beco",
+      "destination": "/projeto.html?id=beco",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/calixto-sandes-e-zabaleta",
+      "destination": "/projeto.html?id=calixto-sandes-e-zabaleta",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/indreco",
+      "destination": "/projeto.html?id=indreco",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/rafael-a-obra",
+      "destination": "/projeto.html?id=rafael-a-obra",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/liana-godoy",
+      "destination": "/projeto.html?id=liana-godoy",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/trigou",
+      "destination": "/projeto.html?id=trigou",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/sweet",
+      "destination": "/projeto.html?id=sweet",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/arkete",
+      "destination": "/projeto.html?id=arkete",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/tassia-brito",
+      "destination": "/projeto.html?id=tassia-brito",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/archdesign",
+      "destination": "/projeto.html?id=archdesign",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/sacralita",
+      "destination": "/projeto.html?id=sacralita",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/profive",
+      "destination": "/projeto.html?id=profive",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/la-parisienne",
+      "destination": "/projeto.html?id=la-parisienne",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/cake67",
+      "destination": "/projeto.html?id=cake67",
+      "permanent": true
+    }
   ]
 }
