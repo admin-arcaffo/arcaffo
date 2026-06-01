@@ -2,7 +2,8 @@ export async function fetchProjetos() {
   try {
     const response = await fetch('/data/projetos.json?v=' + Date.now());
     if (!response.ok) throw new Error('Falha ao carregar projetos');
-    return await response.json();
+    const data = await response.json();
+    return data.filter(p => p.status !== 'draft');
   } catch (error) {
     console.error('Erro:', error);
     return [];

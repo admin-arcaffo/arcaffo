@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arcaffo Admin</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/admin/css/admin.css">
+</head>
+<body>
+  
+  <div id="toast-container"></div>
+  
+  <div id="login-view" class="view hidden">
+    <div class="login-card">
+      <img src="/images/brand/logo-white.png" alt="Arcaffo" class="login-logo">
+      <h2>Administração</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <label>Usuário</label>
+          <input type="text" id="login-username" required>
+        </div>
+        <div class="form-group">
+          <label>Senha</label>
+          <input type="password" id="login-password" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100" id="login-btn">Entrar</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="app-layout" class="hidden">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img src="/images/brand/logo-white.png" alt="Arcaffo" class="sidebar-logo">
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#/" class="nav-item" data-route="dashboard">Dashboard</a>
+        <a href="#/artigos" class="nav-item" data-route="artigos">Artigos</a>
+        <a href="#/projetos" class="nav-item" data-route="projetos">Projetos</a>
+        <a href="#/vagas" class="nav-item" data-route="vagas">Vagas</a>
+      </nav>
+      <div class="sidebar-footer">
+        <button id="publish-site-btn" class="btn btn-primary w-100 mb-2">Publicar Site</button>
+        <button id="logout-btn" class="btn btn-outline w-100">Sair</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <h1 id="page-title">Dashboard</h1>
+      </header>
+      
+      <div id="router-view" class="content-area">
+        <!-- Renderizado dinamicamente pelo router.js -->
+      </div>
+    </main>
+  </div>
+
+  <!-- Templates -->
+  <template id="tpl-dashboard">
+    <div class="dashboard-grid">
+      <div class="stat-card">
+        <h3>Artigos</h3>
+        <p class="stat-number" id="stat-artigos">...</p>
+      </div>
+      <div class="stat-card">
+        <h3>Projetos</h3>
+        <p class="stat-number" id="stat-projetos">...</p>
+      </div>
+      <div class="stat-card">
+        <h3>Vagas</h3>
+        <p class="stat-number" id="stat-vagas">...</p>
+      </div>
+    </div>
+  </template>
+
+  <!-- Scripts -->
+  <script type="module" src="/admin/js/main.js"></script>
+</body>
+</html>

@@ -12,6 +12,7 @@ export default defineConfig({
         projeto: resolve(__dirname, 'projeto.html'),
         artigos: resolve(__dirname, 'artigos.html'),
         artigo: resolve(__dirname, 'artigo.html'),
+        admin: resolve(__dirname, 'admin/index.html'),
         vagas: resolve(__dirname, 'vagas.html'),
         contato: resolve(__dirname, 'contato.html'),
       },

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/sync-db.js && vite build",
     "preview": "vite preview"
   },
   "keywords": [],
@@ -17,6 +17,8 @@
     "vite": "^5.2.0"
   },
   "dependencies": {
+    "@vercel/blob": "^2.4.0",
+    "jsonwebtoken": "^9.0.3",
     "sharp": "^0.34.5"
   }
 }

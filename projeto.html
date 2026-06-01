@@ -121,7 +121,7 @@
           <div class="container grid-2">
             <div class="project-description animate-on-scroll">
               <h2 class="section-title">O Desafio</h2>
-              <p>${projeto.description.replace(/\n/g, '<br>') || 'Detalhes do projeto em breve.'}</p>
+              <div>${projeto.description.includes('<') ? projeto.description : projeto.description.replace(/\\n/g, '<br>')}</div>
             </div>
             <div class="project-meta animate-on-scroll delay-100">
               ${projeto.team ? `
@@ -142,9 +142,20 @@
 
         <section class="project-gallery">
           <div class="container">
-            ${(projeto.images || []).map((img, i) => `
-              <img src="${img.url}" alt="${projeto.title} - Imagem ${i+1}" class="gallery-image animate-on-scroll" loading="lazy" />
-            `).join('')}
+            ${(projeto.media && projeto.media.length > 0 ? projeto.media : (projeto.images || [])).map((m, i) => {
+              const url = m.url || m; // in case old format is used
+              const type = m.type || (url.match(/\\.(mp4|webm)$/i) ? 'video' : 'image');
+              
+              if (type === 'video') {
+                return \`
+                  <div class="gallery-video-wrapper animate-on-scroll" style="width: 100%; border-radius: 8px; overflow: hidden; margin-bottom: 2rem;">
+                    <video src="\${url}" autoplay loop muted playsinline style="width: 100%; height: auto; display: block;"></video>
+                  </div>
+                \`;
+              } else {
+                return \`<img src="\${url}" alt="\${projeto.title} - Mídia \${i+1}" class="gallery-image animate-on-scroll" loading="lazy" />\`;
+              }
+            }).join('')}
           </div>
         </section>
 

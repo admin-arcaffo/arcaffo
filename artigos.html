@@ -96,9 +96,10 @@
           const response = await fetch('/data/artigos.json?v=' + Date.now());
           if (!response.ok) throw new Error('Failed to load articles');
           const articles = await response.json();
+          const publishedArticles = articles.filter(a => a.status !== 'draft');
           
           const grid = document.getElementById('articles-grid');
-          grid.innerHTML = articles.map((article, index) => {
+          grid.innerHTML = publishedArticles.map((article, index) => {
             const dateStr = article.date ? new Date(article.date).toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' }) : 'Artigo Arcaffo';
             
             if (index === 0) {

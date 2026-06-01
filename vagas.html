@@ -97,7 +97,8 @@
     document.addEventListener('DOMContentLoaded', async () => {
       try {
         const response = await fetch('/data/vagas.json');
-        const vagas = await response.json();
+        const allVagas = await response.json();
+        const vagas = allVagas.filter(v => v.status !== 'draft');
         const container = document.getElementById('jobs-container');
         
         if (vagas.length === 0) {
