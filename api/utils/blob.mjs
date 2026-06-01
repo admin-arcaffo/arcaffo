@@ -1,37 +1,15 @@
-import { put, list, getDownloadUrl } from '@vercel/blob';
+import { put, list } from '@vercel/blob';
 
 // We store our JSON "database" in Vercel Blob under a specific prefix
 export async function getDbData(type) {
   try {
     const { blobs } = await list({ prefix: `db/${type}.json` });
     if (blobs.length > 0) {
-      // Sort by uploadedAt descending to get the latest
       blobs.sort((a, b) => new Date(b.uploadedAt) - new Date(a.uploadedAt));
-      const blobUrl = blobs[0].url;
-      
-      // Try getDownloadUrl for private blobs
-      try {
-        const downloadUrl = await getDownloadUrl(blobUrl);
-        const response = await fetch(downloadUrl);
-        if (response.ok) {
-          return await response.json();
-        }
-      } catch (e) {
-        console.log(`getDownloadUrl failed for ${type}, trying direct fetch...`);
-      }
-      
-      // Fallback: direct fetch with token in header
-      try {
-        const response = await fetch(blobUrl, {
-          headers: {
-            'Authorization': `Bearer ${process.env.BLOB_READ_WRITE_TOKEN}`
-          }
-        });
-        if (response.ok) {
-          return await response.json();
-        }
-      } catch (e2) {
-        console.error(`Direct fetch also failed for ${type}:`, e2.message);
+      // Public blobs can be fetched directly by URL
+      const response = await fetch(blobs[0].url);
+      if (response.ok) {
+        return await response.json();
       }
     }
   } catch (error) {
@@ -55,7 +33,7 @@ export async function saveDbData(type, data) {
   try {
     const jsonString = JSON.stringify(data, null, 2);
     const blob = await put(`db/${type}.json`, jsonString, {
-      access: 'private',
+      access: 'public',
       addRandomSuffix: false,
       allowOverwrite: true,
     });

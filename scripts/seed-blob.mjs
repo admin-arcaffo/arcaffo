@@ -27,7 +27,7 @@ function readJson(name) {
 
 async function uploadToBlob(key, data) {
   const json = JSON.stringify(data, null, 2);
-  const blob = await put(key, json, { access: 'private', addRandomSuffix: false, token });
+  const blob = await put(key, json, { access: 'public', addRandomSuffix: false, allowOverwrite: true, token });
   console.log(`  ✅  ${key}  →  ${blob.url}  (${data.length} itens)`);
 }
 

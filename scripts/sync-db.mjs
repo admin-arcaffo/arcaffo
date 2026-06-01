@@ -4,7 +4,6 @@ import path from 'path';
 
 // This script runs before vite build on Vercel to fetch the latest DB data
 async function syncDb() {
-  // If no BLOB token, we are likely local and not connected to blob, skip.
   if (!process.env.BLOB_READ_WRITE_TOKEN) {
     console.log('No BLOB_READ_WRITE_TOKEN found. Skipping DB sync.');
     return;
@@ -17,40 +16,15 @@ async function syncDb() {
       const { blobs } = await list({ prefix: `db/${type}.json` });
       if (blobs.length > 0) {
         blobs.sort((a, b) => new Date(b.uploadedAt) - new Date(a.uploadedAt));
-        const blobUrl = blobs[0].url;
-        
-        // For private blobs, try getDownloadUrl first, then direct fetch with token
-        let data = null;
-        
-        try {
-          const { getDownloadUrl } = await import('@vercel/blob');
-          const downloadUrl = await getDownloadUrl(blobUrl);
-          const response = await fetch(downloadUrl);
-          if (response.ok) {
-            data = await response.json();
-          }
-        } catch (e) {
-          console.log(`getDownloadUrl failed for ${type}, trying direct fetch...`);
-        }
-        
-        // Fallback: direct fetch with authorization header
-        if (!data) {
-          const response = await fetch(blobUrl, {
-            headers: {
-              'Authorization': `Bearer ${process.env.BLOB_READ_WRITE_TOKEN}`
-            }
-          });
-          if (response.ok) {
-            data = await response.json();
-          }
-        }
-        
-        if (data) {
+        // Public blobs can be fetched directly
+        const response = await fetch(blobs[0].url);
+        if (response.ok) {
+          const data = await response.json();
           const targetPath = path.join(process.cwd(), `public/data/${type}.json`);
           fs.writeFileSync(targetPath, JSON.stringify(data, null, 2));
           console.log(`✅ Synced ${type}.json from Blob (${data.length} items)`);
         } else {
-          console.warn(`⚠️  Could not fetch ${type}.json from Blob. Using local fallback.`);
+          console.warn(`⚠️  Could not fetch ${type}.json (status ${response.status})`);
         }
       } else {
         console.log(`No blob found for ${type}.json. Using local fallback.`);
