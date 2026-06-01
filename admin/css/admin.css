@@ -1,13 +1,14 @@
 :root {
-  --bg-dark: #0A0A0C;
-  --bg-card: #141416;
-  --border-color: #1E1E22;
+  --bg-dark: #000000;
+  --bg-card: #141414;
+  --border-color: rgba(255, 255, 255, 0.12);
   --text-main: #FFFFFF;
-  --text-muted: #8E8E93;
-  --accent: #C8A96E;
-  --accent-hover: #DFBD7B;
+  --text-muted: #9B9B9B;
+  --accent: #FFFFFF;
+  --accent-hover: #E0E0E0;
   --danger: #FF453A;
   --success: #32D74B;
+  --font-heading: 'Span', 'Playfair Display', Georgia, serif;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -61,7 +62,7 @@ body {
   text-align: center;
 }
 .login-logo { height: 32px; margin-bottom: 1rem; }
-.login-card h2 { margin-bottom: 2rem; font-weight: 500; }
+.login-card h2 { margin-bottom: 2rem; font-weight: 500; font-family: var(--font-heading); }
 .form-group { margin-bottom: 1.5rem; text-align: left; }
 .form-group label { display: block; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem; }
 .form-group input, .form-group textarea, .form-group select {
@@ -111,6 +112,10 @@ body {
   padding: 1.5rem 2rem;
   border-bottom: 1px solid var(--border-color);
   background: var(--bg-dark);
+}
+.topbar h1 {
+  font-family: var(--font-heading);
+  font-weight: 500;
 }
 .content-area {
   flex: 1;

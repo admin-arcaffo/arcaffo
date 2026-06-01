@@ -16,8 +16,8 @@ async function syncDb() {
       const { blobs } = await list({ prefix: `db/${type}.json` });
       if (blobs.length > 0) {
         blobs.sort((a, b) => new Date(b.uploadedAt) - new Date(a.uploadedAt));
-        // Public blobs can be fetched directly
-        const response = await fetch(blobs[0].url);
+        // Public blobs can be fetched directly. We append ?ts= to bypass CDN cache.
+        const response = await fetch(blobs[0].url + '?ts=' + Date.now(), { cache: 'no-store' });
         if (response.ok) {
           const data = await response.json();
           const targetPath = path.join(process.cwd(), `public/data/${type}.json`);

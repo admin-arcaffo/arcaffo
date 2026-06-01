@@ -6,8 +6,8 @@ export async function getDbData(type) {
     const { blobs } = await list({ prefix: `db/${type}.json` });
     if (blobs.length > 0) {
       blobs.sort((a, b) => new Date(b.uploadedAt) - new Date(a.uploadedAt));
-      // Public blobs can be fetched directly by URL
-      const response = await fetch(blobs[0].url);
+      // Public blobs can be fetched directly by URL with a cache-buster
+      const response = await fetch(blobs[0].url + '?ts=' + Date.now(), { cache: 'no-store' });
       if (response.ok) {
         return await response.json();
       }
