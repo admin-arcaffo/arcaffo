@@ -1,4 +1,4 @@
-import { put, list } from '@vercel/blob';
+import { put, list, getDownloadUrl } from '@vercel/blob';
 
 // We store our JSON "database" in Vercel Blob under a specific prefix
 export async function getDbData(type) {
@@ -7,7 +7,9 @@ export async function getDbData(type) {
     if (blobs.length > 0) {
       // Sort by uploadedAt descending to get the latest
       blobs.sort((a, b) => new Date(b.uploadedAt) - new Date(a.uploadedAt));
-      const response = await fetch(blobs[0].url);
+      // Private blobs need a download URL with token
+      const downloadUrl = await getDownloadUrl(blobs[0].url);
+      const response = await fetch(downloadUrl);
       if (response.ok) {
         return await response.json();
       }
@@ -34,7 +36,7 @@ export async function saveDbData(type, data) {
   try {
     const jsonString = JSON.stringify(data, null, 2);
     const blob = await put(`db/${type}.json`, jsonString, {
-      access: 'public',
+      access: 'private',
       addRandomSuffix: false, // Overwrite the same file to keep it clean
     });
     return blob;

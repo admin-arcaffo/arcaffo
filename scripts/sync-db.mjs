@@ -1,4 +1,4 @@
-import { list } from '@vercel/blob';
+import { list, getDownloadUrl } from '@vercel/blob';
 import fs from 'fs';
 import path from 'path';
 
@@ -17,7 +17,8 @@ async function syncDb() {
       const { blobs } = await list({ prefix: `db/${type}.json` });
       if (blobs.length > 0) {
         blobs.sort((a, b) => new Date(b.uploadedAt) - new Date(a.uploadedAt));
-        const response = await fetch(blobs[0].url);
+        const downloadUrl = await getDownloadUrl(blobs[0].url);
+        const response = await fetch(downloadUrl);
         if (response.ok) {
           const data = await response.json();
           const targetPath = path.join(process.cwd(), `public/data/${type}.json`);
