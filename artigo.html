@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/base.css" fetchpriority="high">
   <link rel="stylesheet" href="/css/components.css">
   <link rel="stylesheet" href="/css/layout.css">
   <link rel="stylesheet" href="/css/animations.css">
@@ -68,7 +68,7 @@
         </header>
 
         <div id="article-cover-container" style="margin-bottom: 3rem; display: none; width: 100%; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
-          <img id="article-cover" src="" alt="" style="width: 100%; height: auto; display: block;">
+          <img loading="lazy" id="article-cover" src="" alt="" style="width: 100%; height: auto; display: block;">
         </div>
 
         <div id="article-content" class="article-content" style="font-size: 1.1rem; line-height: 1.8; color: var(--color-text-primary);">
@@ -168,7 +168,7 @@
             const authorBlock = document.createElement('div');
             authorBlock.style.cssText = 'margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--color-border); display: flex; align-items: center; gap: 1.5rem;';
             authorBlock.innerHTML = `
-              ${article.author.photo ? `<img src="${article.author.photo}" alt="${article.author.name}" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">` : ''}
+              ${article.author.photo ? `<img loading="lazy" src="${article.author.photo}" alt="${article.author.name}" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">` : ''}
               <div>
                 <h4 style="margin-bottom: 0.2rem; font-size: 1.2rem;">${article.author.name}</h4>
                 <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin: 0;">${article.author.role || ''}</p>
