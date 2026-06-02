@@ -63,17 +63,12 @@
   <meta name="twitter:description" content="Arcaffo Branding. Transformamos marcas com estratégias personalizadas de branding, comunicação e design.">
   <meta name="twitter:image" content="https://www.arcaffo.com/images/brand/og-image.jpg">
   
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-3FVJTG0EF4');
-  </script>
+    
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-container">
-      <a href="/" class="logo"><img src="/images/brand/logo-white.png" alt="Arcaffo" width="128" height="32" style="height: 32px;"></a>
+      <a href="/" class="logo"><img src="/images/brand/logo-white.png" alt="Arcaffo" width="128" height="32" fetchpriority="high" style="height: 32px;"></a>
       <nav class="nav-links">
         <a href="/sobre.html">Sobre</a>
         <a href="https://advisor.arcaffo.com" target="_blank" rel="noopener">Assessoria</a>
@@ -133,7 +128,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <a href="/" class="logo" style="display: block; margin-bottom: 1rem;"><img src="/images/brand/logo-white.png" alt="Arcaffo" width="128" height="32" style="height: 32px;"></a>
+          <a href="/" class="logo" style="display: block; margin-bottom: 1rem;"><img src="/images/brand/logo-white.png" alt="Arcaffo" width="128" height="32" fetchpriority="high" style="height: 32px;"></a>
 <p style="margin-top: 1rem; color: var(--color-text-secondary); font-size: 0.9rem;">
             Formamos empresários, estruturamos negócios e elevamos a cultura.
           </p>
@@ -246,5 +241,20 @@
 
 
   <!-- Google Analytics -->
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-3FVJTG0EF4"></script>
+  
+
+  <!-- Google Analytics Delayed -->
+  <script>
+    setTimeout(() => {
+      let script = document.createElement('script');
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-3FVJTG0EF4";
+      script.async = true;
+      document.body.appendChild(script);
+      
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3FVJTG0EF4');
+    }, 3500);
+  </script>
 </body></html>

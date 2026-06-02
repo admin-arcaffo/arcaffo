@@ -64,12 +64,7 @@
   <meta name="twitter:description" content="Obrigado por entrar em contato com a Arcaffo. Em breve nossa equipe retornará." />
   <meta name="twitter:image" content="https://www.arcaffo.com/images/brand/og-image.jpg" />
   
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-3FVJTG0EF4');
-  </script>
+    
 
   <style>
     .thank-you-section {
@@ -250,5 +245,20 @@
   <script type="module" src="/js/main.js"></script>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FVJTG0EF4"></script>
+
+  <!-- Google Analytics Delayed -->
+  <script>
+    setTimeout(() => {
+      let script = document.createElement('script');
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-3FVJTG0EF4";
+      script.async = true;
+      document.body.appendChild(script);
+      
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3FVJTG0EF4');
+    }, 3500);
+  </script>
 </body>
 </html>
