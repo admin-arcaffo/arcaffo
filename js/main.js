@@ -33,8 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
       ticking = true;
     }
   });
-  });
-
   // Highlight current nav item
   const currentPath = window.location.pathname;
   const navLinks = document.querySelectorAll('.nav-links a');
