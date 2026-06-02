@@ -331,3 +331,21 @@
   position: relative;
   z-index: 2;
 }
+
+/* Nav CTA Button */
+.nav-cta {
+  background-color: var(--color-text-primary) !important;
+  color: var(--color-bg-primary) !important;
+  padding: 0.5rem 1.2rem !important;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-cta:hover {
+  background-color: var(--color-text-secondary) !important;
+  transform: translateY(-2px);
+  color: var(--color-bg-primary) !important;
+}
