@@ -20,8 +20,8 @@
 
   /* Texto */
   --color-text-primary: #FFFFFF;
-  --color-text-secondary: #9B9B9B;
-  --color-text-muted: #6B6B6B;
+  --color-text-secondary: #CCCCCC;
+  --color-text-muted: #999999;
 
   /* Bordas */
   --color-border: rgba(255, 255, 255, 0.12);
@@ -101,7 +101,7 @@ ul {
   
   --color-text-primary: #1A1A1A;
   --color-text-secondary: #555555;
-  --color-text-muted: #888888;
+  --color-text-muted: #757575;
   
   --color-border: rgba(0, 0, 0, 0.1);
   --color-border-hover: rgba(0, 0, 0, 0.2);
@@ -374,7 +374,7 @@ ul {
   margin-bottom: 3rem;
 }
 
-.footer-col h4 {
+.footer-col h3 {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
   color: var(--color-accent);
