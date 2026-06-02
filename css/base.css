@@ -91,3 +91,38 @@ ul {
   font-family: var(--font-accent);
   font-style: italic;
 }
+
+/* Tema Claro (Light Theme) para Leitura */
+.light-theme {
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F7F7F7;
+  --color-bg-card: #FFFFFF;
+  --color-bg-glass: rgba(255, 255, 255, 0.9);
+  
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #555555;
+  --color-text-muted: #888888;
+  
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-border-hover: rgba(0, 0, 0, 0.2);
+  
+  /* Accent mantém-se legível? Vamos testar um acento mais escuro se necessário, 
+     mas como o acento era branco na dark mode, no light mode vamos usar um acento preto/dourado 
+     O dourado principal da arcaffo é C8A96E? Vamos deixar o --color-accent preto para botões/links no modo claro, ou um cinza muito escuro */
+  --color-accent: #111111; 
+  --color-accent-light: #333333;
+}
+
+.light-theme-surface {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  border-radius: 8px;
+  padding: 4rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 768px) {
+  .light-theme-surface {
+    padding: 2rem 1.5rem;
+  }
+}
