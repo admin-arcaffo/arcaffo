@@ -26,14 +26,14 @@ function generateSitemap() {
 
   // Articles
   for (const artigo of artigos) {
-    const date = artigo.createdAt || artigo.date || new Date().toISOString();
-    xml += `  <url>\n    <loc>${domain}/artigo.html?slug=${artigo.slug}</loc>\n    <lastmod>${new Date(date).toISOString().split('T')[0]}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>\n`;
+    const date = artigo.updatedAt || artigo.createdAt || artigo.date || new Date().toISOString();
+    xml += `  <url>\n    <loc>${domain}/artigos/${artigo.slug}.html</loc>\n    <lastmod>${new Date(date).toISOString().split('T')[0]}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>\n`;
   }
 
   // Projects
   for (const projeto of projetos) {
-    const date = projeto.createdAt || projeto.date || new Date().toISOString();
-    xml += `  <url>\n    <loc>${domain}/projeto.html?id=${projeto.slug}</loc>\n    <lastmod>${new Date(date).toISOString().split('T')[0]}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>\n`;
+    const date = projeto.updatedAt || projeto.createdAt || projeto.date || new Date().toISOString();
+    xml += `  <url>\n    <loc>${domain}/projetos/${projeto.slug}.html</loc>\n    <lastmod>${new Date(date).toISOString().split('T')[0]}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>\n`;
   }
 
   xml += `</urlset>`;

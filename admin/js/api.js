@@ -50,6 +50,10 @@ export const api = {
   updateVaga: (slug, data) => fetchApi(`/vagas/${slug}`, { method: 'PUT', body: JSON.stringify(data) }),
   deleteVaga: (slug) => fetchApi(`/vagas/${slug}`, { method: 'DELETE' }),
 
+  // Site content (homepage/sobre/servicos editable copy)
+  getSiteContent: () => fetchApi('/site-content'),
+  updateSiteContent: (data) => fetchApi('/site-content', { method: 'PUT', body: JSON.stringify(data) }),
+
   // Publish
   publishSite: () => fetchApi('/publish', { method: 'POST' }),
   

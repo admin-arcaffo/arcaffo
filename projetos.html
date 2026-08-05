@@ -50,15 +50,15 @@
 
   <link rel="canonical" href="https://www.arcaffo.com/projetos">
   <!-- SEO & Open Graph (Generated) -->
-  <meta name="description" content="Arcaffo Branding. Transformamos marcas com estratégias personalizadas de branding, comunicação e design. Crie uma identidade autêntica e impactante para o seu negócio.">
-  <meta property="og:title" content="Arcaffo® | Branding &amp; Posicionamento de Marca">
-  <meta property="og:description" content="Arcaffo Branding. Transformamos marcas com estratégias personalizadas de branding, comunicação e design.">
+  <meta name="description" content="Portfólio de marcas que a Arcaffo ajudou a construir: identidade visual, posicionamento e arquitetura de marca para empresas em Mato Grosso do Sul e em todo o Brasil.">
+  <meta property="og:title" content="Portfólio | Arcaffo®">
+  <meta property="og:description" content="Portfólio de marcas que a Arcaffo ajudou a construir: identidade visual, posicionamento e arquitetura de marca para empresas em Mato Grosso do Sul e em todo o Brasil.">
   <meta property="og:image" content="https://www.arcaffo.com/images/brand/og-image.jpg">
-  <meta property="og:url" content="https://www.arcaffo.com">
+  <meta property="og:url" content="https://www.arcaffo.com/projetos">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Arcaffo® | Branding &amp; Posicionamento de Marca">
-  <meta name="twitter:description" content="Arcaffo Branding. Transformamos marcas com estratégias personalizadas de branding, comunicação e design.">
+  <meta name="twitter:title" content="Portfólio | Arcaffo®">
+  <meta name="twitter:description" content="Portfólio de marcas que a Arcaffo ajudou a construir: identidade visual, posicionamento e arquitetura de marca para empresas em Mato Grosso do Sul e em todo o Brasil.">
   <meta name="twitter:image" content="https://www.arcaffo.com/images/brand/og-image.jpg">
   
     
@@ -207,7 +207,7 @@
           const tagPrincipal = projeto.tags && projeto.tags.length > 0 ? projeto.tags[0] : 'Branding';
           
           return `
-            <a href="/projeto.html?id=${projeto.slug}" class="project-card animate-on-scroll delay-${(i % 2) * 100} ${projeto.tags ? projeto.tags.join(' ') : ''}">
+            <a href="/projetos/${projeto.slug}.html" class="project-card animate-on-scroll delay-${(i % 2) * 100} ${projeto.tags ? projeto.tags.join(' ') : ''}">
               <img src="${imgUrl}" alt="${projeto.title}" loading="lazy" />
               <div class="project-overlay">
                 <h3 class="project-title">${projeto.title}</h3>

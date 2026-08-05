@@ -47,15 +47,15 @@
 
   <link rel="canonical" href="https://www.arcaffo.com/artigos">
   <!-- SEO & Open Graph (Generated) -->
-  <meta name="description" content="Arcaffo Branding. Transformamos marcas com estratégias personalizadas de branding, comunicação e design. Crie uma identidade autêntica e impactante para o seu negócio.">
-  <meta property="og:title" content="Arcaffo® | Branding &amp; Posicionamento de Marca">
-  <meta property="og:description" content="Arcaffo Branding. Transformamos marcas com estratégias personalizadas de branding, comunicação e design.">
+  <meta name="description" content="Artigos da Arcaffo sobre branding, posicionamento de marca, cultura organizacional e gestão de negócios — conteúdo para empresários que querem construir marcas fortes.">
+  <meta property="og:title" content="Artigos | Arcaffo®">
+  <meta property="og:description" content="Artigos da Arcaffo sobre branding, posicionamento de marca, cultura organizacional e gestão de negócios — conteúdo para empresários que querem construir marcas fortes.">
   <meta property="og:image" content="https://www.arcaffo.com/images/brand/og-image.jpg">
-  <meta property="og:url" content="https://www.arcaffo.com">
+  <meta property="og:url" content="https://www.arcaffo.com/artigos">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Arcaffo® | Branding &amp; Posicionamento de Marca">
-  <meta name="twitter:description" content="Arcaffo Branding. Transformamos marcas com estratégias personalizadas de branding, comunicação e design.">
+  <meta name="twitter:title" content="Artigos | Arcaffo®">
+  <meta name="twitter:description" content="Artigos da Arcaffo sobre branding, posicionamento de marca, cultura organizacional e gestão de negócios — conteúdo para empresários que querem construir marcas fortes.">
   <meta name="twitter:image" content="https://www.arcaffo.com/images/brand/og-image.jpg">
   
     
@@ -91,7 +91,7 @@
     </section>
 
     <section class="articles-section" style="padding-top: 0; min-height: 40vh;">
-      <div class="container animate-on-scroll delay-200">
+      <div class="container">
         <div id="articles-grid" style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 3rem;">
           <!-- Articles will be loaded here dynamically -->
         </div>
@@ -146,7 +146,8 @@
             .sort((a, b) => {
               const dateA = new Date(a.createdAt || a.date || 0).getTime();
               const dateB = new Date(b.createdAt || b.date || 0).getTime();
-              return dateB - dateA;
+              if (dateB !== dateA) return dateB - dateA;
+              return (a.title || '').localeCompare(b.title || '');
             });
           
           const grid = document.getElementById('articles-grid');
@@ -155,7 +156,7 @@
             
             if (index === 0) {
               return `
-                <a href="/artigo.html?slug=${article.slug}" class="featured-article animate-on-scroll" style="text-decoration: none; color: inherit; display: block;">
+                <a href="/artigos/${article.slug}.html" class="featured-article animate-on-scroll" style="text-decoration: none; color: inherit; display: block;">
                   <div class="featured-flex">
                     <div class="featured-img-container" style="border-radius: 12px; overflow: hidden; position: relative;">
                       <img loading="lazy" src="${article.cover}" alt="${article.title}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;" class="card-img-hover" onerror="this.src='/vite.svg'" />
@@ -172,7 +173,7 @@
             }
             
             return `
-              <a href="/artigo.html?slug=${article.slug}" class="article-card animate-on-scroll" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 1.5rem;">
+              <a href="/artigos/${article.slug}.html" class="article-card animate-on-scroll" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 1.5rem;">
                 <div style="width: 100%; height: 300px; overflow: hidden; border-radius: 8px;">
                   <img loading="lazy" src="${article.cover}" alt="${article.title}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;" class="card-img-hover" onerror="this.src='/vite.svg'" />
                 </div>

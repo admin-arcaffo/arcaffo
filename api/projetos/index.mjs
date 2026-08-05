@@ -1,5 +1,6 @@
 import { verifyAuth } from '../utils/auth.mjs';
 import { getDbData, saveDbData } from '../utils/blob.mjs';
+import { sanitizeSlug } from '../utils/slug.mjs';
 import crypto from 'crypto';
 
 export default async function handler(req, res) {
@@ -29,6 +30,7 @@ export default async function handler(req, res) {
       if (!newProjeto.id) {
         newProjeto.id = crypto.randomUUID();
       }
+      newProjeto.slug = sanitizeSlug(newProjeto.slug);
       newProjeto.createdAt = newProjeto.createdAt || new Date().toISOString();
       newProjeto.updatedAt = new Date().toISOString();
       

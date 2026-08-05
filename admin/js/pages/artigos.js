@@ -27,7 +27,16 @@ export async function renderArtigos(container) {
   `;
 
   try {
-    const artigos = await api.getArtigos();
+    let artigos = await api.getArtigos();
+    
+    // Ensure newest articles appear first
+    artigos.sort((a, b) => {
+      const dateA = new Date(a.createdAt || a.date || 0).getTime();
+      const dateB = new Date(b.createdAt || b.date || 0).getTime();
+      if (dateB !== dateA) return dateB - dateA;
+      return (a.title || '').localeCompare(b.title || '');
+    });
+
     const tbody = container.querySelector('#artigos-list');
     
     if (artigos.length === 0) {
@@ -209,9 +218,12 @@ export async function renderEditorArtigo(container, params) {
 
   // Save handling
   document.getElementById('btn-save').addEventListener('click', async () => {
+    // Helper inline to sanitize manually entered slugs
+    const sanitizeSlug = (raw) => raw.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+
     const dataToSave = {
       title: document.getElementById('f-title').value,
-      slug: document.getElementById('f-slug').value,
+      slug: sanitizeSlug(document.getElementById('f-slug').value),
       date: document.getElementById('f-date').value,
       status: document.getElementById('f-status').value,
       content: richEditor.getContent(),

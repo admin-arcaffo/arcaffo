@@ -44,5 +44,18 @@ document.addEventListener('DOMContentLoaded', () => {
       link.classList.add('active');
     }
   });
+
+  // Track WhatsApp/e-mail clicks as conversions, queued into dataLayer so
+  // gtag.js (loaded a few seconds later on purpose) picks them up once ready.
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href^="https://wa.me"], a[href^="mailto:"]');
+    if (!link) return;
+    window.dataLayer = window.dataLayer || [];
+    const isWhatsapp = link.href.startsWith('https://wa.me');
+    window.dataLayer.push(['event', isWhatsapp ? 'whatsapp_click' : 'email_click', {
+      event_category: 'contato',
+      event_label: link.href,
+    }]);
+  });
 });
 

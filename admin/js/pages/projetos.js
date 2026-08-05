@@ -232,9 +232,12 @@ export async function renderEditorProjeto(container, params) {
 
   // Save
   document.getElementById('btn-save').addEventListener('click', async () => {
+    // Helper inline to sanitize manually entered slugs
+    const sanitizeSlug = (raw) => raw.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+
     const dataToSave = {
       title: document.getElementById('f-title').value,
-      slug: document.getElementById('f-slug').value,
+      slug: sanitizeSlug(document.getElementById('f-slug').value),
       status: document.getElementById('f-status').value,
       description: richEditor.getContent(),
       cover: currentCover,

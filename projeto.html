@@ -3,6 +3,7 @@
   <meta charset="UTF-8">
   <link rel="icon" type="image/svg+xml" href="/vite.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, follow">
   <title>Projeto | Arcaffo®</title>
   
   <link rel="preload" href="https://fonts.gstatic.com/s/intertight/v7/NGSoV5eHAnDrM-hqGGMG_G1N1u_aAroXlwM2d1Q9n27f5Hj-w-SydXzW1s-9Zc_Ww_s.woff2" as="font" type="font/woff2" crossorigin>
@@ -136,7 +137,8 @@
 
       // SEO & Meta tags update
       const projectUrl = `https://www.arcaffo.com/projeto.html?id=${projeto.slug}`;
-      const projectExcerpt = projeto.description.replace(/<[^>]*>?/gm, '').substring(0, 160);
+      const descText = projeto.description || '';
+      const projectExcerpt = descText.replace(/<[^>]*>?/gm, '').substring(0, 160);
       
       document.querySelector('meta[name="description"]')?.setAttribute('content', projectExcerpt);
       document.querySelector('meta[property="og:title"]')?.setAttribute('content', projeto.title);
@@ -183,7 +185,7 @@
           <div class="container grid-2">
             <div class="project-description animate-on-scroll">
               <h2 class="section-title">O Desafio</h2>
-              <div>${projeto.description.includes('<') ? projeto.description : projeto.description.replace(/\\n/g, '<br>')}</div>
+              <div>${(projeto.description || '').includes('<') ? (projeto.description || '') : (projeto.description || '').replace(/\\n/g, '<br>')}</div>
             </div>
             <div class="project-meta animate-on-scroll delay-100">
               ${projeto.team ? `

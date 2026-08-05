@@ -1,5 +1,6 @@
 import { verifyAuth } from '../utils/auth.mjs';
 import { getDbData, saveDbData } from '../utils/blob.mjs';
+import { sanitizeSlug } from '../utils/slug.mjs';
 
 export default async function handler(req, res) {
   const auth = verifyAuth(req);
@@ -7,12 +8,12 @@ export default async function handler(req, res) {
     return res.status(401).json({ error: 'Unauthorized' });
   }
 
-  const { slug } = req.query;
+  const slug = decodeURIComponent(req.query.slug);
 
   try {
     if (req.method === 'GET') {
       const artigos = await getDbData('artigos');
-      const artigo = artigos.find(a => a.slug === slug);
+      const artigo = artigos.find(a => sanitizeSlug(a.slug) === sanitizeSlug(slug));
       
       if (!artigo) {
         return res.status(404).json({ error: 'Artigo not found' });
@@ -23,17 +24,18 @@ export default async function handler(req, res) {
 
     if (req.method === 'PUT') {
       const artigos = await getDbData('artigos');
-      const index = artigos.findIndex(a => a.slug === slug);
+      const index = artigos.findIndex(a => sanitizeSlug(a.slug) === sanitizeSlug(slug));
       
       if (index === -1) {
         return res.status(404).json({ error: 'Artigo not found' });
       }
       
       const updatedArtigo = { ...artigos[index], ...req.body, id: artigos[index].id };
+      if (updatedArtigo.slug) updatedArtigo.slug = sanitizeSlug(updatedArtigo.slug);
       updatedArtigo.updatedAt = new Date().toISOString();
       
-      if (updatedArtigo.slug !== slug) {
-        if (artigos.some(a => a.slug === updatedArtigo.slug)) {
+      if (updatedArtigo.slug !== sanitizeSlug(slug)) {
+        if (artigos.some(a => sanitizeSlug(a.slug) === updatedArtigo.slug)) {
           return res.status(400).json({ error: 'New slug already exists' });
         }
       }
@@ -46,7 +48,7 @@ export default async function handler(req, res) {
 
     if (req.method === 'DELETE') {
       const artigos = await getDbData('artigos');
-      const filtered = artigos.filter(a => a.slug !== slug);
+      const filtered = artigos.filter(a => sanitizeSlug(a.slug) !== sanitizeSlug(slug));
       
       if (filtered.length === artigos.length) {
         return res.status(404).json({ error: 'Artigo not found' });

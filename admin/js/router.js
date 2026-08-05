@@ -3,6 +3,7 @@ import { renderDashboard } from './pages/dashboard.js';
 import { renderArtigos, renderEditorArtigo } from './pages/artigos.js';
 import { renderProjetos, renderEditorProjeto } from './pages/projetos.js';
 import { renderVagas, renderEditorVaga } from './pages/vagas.js';
+import { renderSiteContent } from './pages/site-content.js';
 
 const routes = {
   '/': { title: 'Dashboard', render: renderDashboard, nav: 'dashboard' },
@@ -15,6 +16,8 @@ const routes = {
   '/vagas': { title: 'Vagas', render: renderVagas, nav: 'vagas' },
   '/vagas/novo': { title: 'Nova Vaga', render: (c, p) => renderEditorVaga(c, p), nav: 'vagas' },
   '/vagas/editar/:slug': { title: 'Editar Vaga', render: renderEditorVaga, nav: 'vagas' },
+  '/conteudo': { title: 'Conteúdo do Site', render: renderSiteContent, nav: 'conteudo' },
+  '/conteudo/:slug': { title: 'Conteúdo do Site', render: renderSiteContent, nav: 'conteudo' },
 };
 
 function matchRoute(hash) {

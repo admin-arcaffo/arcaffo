@@ -21,3 +21,8 @@ temp_json_block.json
 # Logs
 *.log
 .vercel
+.env*
+
+# Local tooling artifacts
+.claude/
+.impeccable/

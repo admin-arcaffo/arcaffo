@@ -1,5 +1,6 @@
 import { verifyAuth } from '../utils/auth.mjs';
 import { getDbData, saveDbData } from '../utils/blob.mjs';
+import { sanitizeSlug } from '../utils/slug.mjs';
 import crypto from 'crypto';
 
 export default async function handler(req, res) {
@@ -19,6 +20,7 @@ export default async function handler(req, res) {
       if (!novaVaga.id) {
         novaVaga.id = crypto.randomUUID();
       }
+      novaVaga.slug = sanitizeSlug(novaVaga.slug);
       novaVaga.createdAt = novaVaga.createdAt || new Date().toISOString();
       novaVaga.updatedAt = new Date().toISOString();
       

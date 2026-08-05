@@ -8,7 +8,8 @@ export async function fetchProjetos() {
       .sort((a, b) => {
         const dateA = new Date(a.createdAt || a.date || 0).getTime();
         const dateB = new Date(b.createdAt || b.date || 0).getTime();
-        return dateB - dateA;
+        if (dateB !== dateA) return dateB - dateA;
+        return (a.title || '').localeCompare(b.title || '');
       });
   } catch (error) {
     console.error('Erro:', error);
@@ -35,7 +36,7 @@ export async function carregarProjetosDestaque(containerId, limit = 4) {
     const tagPrincipal = projeto.tags && projeto.tags.length > 0 ? projeto.tags[0] : 'Branding';
 
     return `
-      <a href="/projeto.html?id=${projeto.slug}" class="project-card delay-100">
+      <a href="/projetos/${projeto.slug}.html" class="project-card delay-100">
         <img src="${imgUrl}" alt="${projeto.title}" loading="lazy" />
         <div class="project-overlay">
           <h3 class="project-title">${projeto.title}</h3>

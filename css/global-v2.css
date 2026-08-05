@@ -160,6 +160,12 @@ ul {
   color: var(--color-text-primary);
 }
 
+.logo img {
+  width: auto !important;
+  height: 32px !important;
+  object-fit: contain;
+}
+
 .logo span {
   color: var(--color-accent);
   font-size: 0.8em;
