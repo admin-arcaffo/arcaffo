@@ -1,0 +1,20 @@
+{
+  "global": {
+    "footer_tagline": "Formamos empresários, estruturamos negócios e elevamos a cultura.",
+    "prefooter_title_lead": "Pronto para construir um ",
+    "prefooter_title_accent": "legado?",
+    "prefooter_body": "Agende uma reunião com nossos estrategistas e descubra como podemos elevar o patamar do seu negócio e da sua marca.",
+    "prefooter_cta_label": "Falar com um Estrategista"
+  },
+  "home": {
+    "hero_title_lead": "Formamos empresários, estruturamos negócios e ",
+    "hero_title_accent": "elevamos a cultura.",
+    "hero_subtitle": "Construímos marcas que ditam as regras do mercado. Saia da guerra de preços e do modo apaga-fogo através de um posicionamento sólido e ancorado na verdade.",
+    "hero_cta_primary_label": "Conheça o Ecossistema Arcaffo",
+    "hero_cta_secondary_label": "Ver Projetos",
+    "philosophy_title": "Nossa Filosofia",
+    "ecosystem_title": "Nosso Ecossistema",
+    "projects_title": "Portfólio",
+    "problem_solution_title": "A exaustão de entregar muito e cobrar pouco."
+  }
+}

@@ -9,7 +9,7 @@ async function syncDb() {
     return;
   }
 
-  const types = ['artigos', 'projetos', 'vagas'];
+  const types = ['artigos', 'projetos', 'vagas', 'site-content'];
   
   for (const type of types) {
     try {
@@ -22,7 +22,8 @@ async function syncDb() {
           const data = await response.json();
           const targetPath = path.join(process.cwd(), `public/data/${type}.json`);
           fs.writeFileSync(targetPath, JSON.stringify(data, null, 2));
-          console.log(`✅ Synced ${type}.json from Blob (${data.length} items)`);
+          const count = Array.isArray(data) ? `${data.length} items` : 'ok';
+          console.log(`✅ Synced ${type}.json from Blob (${count})`);
         } else {
           console.warn(`⚠️  Could not fetch ${type}.json (status ${response.status})`);
         }

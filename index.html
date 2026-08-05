@@ -61,6 +61,46 @@
               "@type": "Answer",
               "text": "Nossa sede fica em Campo Grande, MS, no Jardim dos Estados. Atendemos clientes em todo o Mato Grosso do Sul, no Brasil inteiro e também internacionalmente."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "Quais serviços a Arcaffo oferece?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Posicionamento de Marca, Arquitetura de Marca, Análise de Stakeholders e Diagnóstico Estratégico — sempre unindo a estratégia de negócio à construção da marca."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O que é posicionamento de marca?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "É o processo de definir com clareza o que uma marca representa, para quem ela existe e por que ela é diferente das demais — a base para que toda comunicação e decisão de negócio sigam coerentes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O que é arquitetura de marca?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "É a forma como um grupo empresarial organiza suas marcas, submarcas e linhas de negócio entre si, definindo como elas se relacionam e são percebidas pelo mercado. É especialmente relevante para empresas em expansão ou com múltiplas frentes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O que compõe o ecossistema Arcaffo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Além da agência de branding, o grupo Arcaffo inclui uma assessoria contínua para empresários (advisor.arcaffo.com), uma escola de negócios (enm.arcaffo.com) e um clube empresarial, o Ordo Legatum (ordo.arcaffo.com)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como entro em contato com a Arcaffo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pelo WhatsApp (+55 67 98222-6166), pelo e-mail contato@arcaffo.com, ou pelo formulário na página de Contato — nossa equipe agenda uma conversa inicial com um estrategista."
+            }
           }
         ]
       }
@@ -112,11 +152,11 @@
     <!-- Hero Section -->
     <section class="hero parallax-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('/images/brand/wp4196517.webp');">
       <div class="container hero-content">
-        <h1 class="animate-on-scroll">Grupo empresarial dedicado ao <span class="font-accent text-accent">crescimento pessoal, familiar e empresarial.</span></h1>
-        <p class="hero-subtitle animate-on-scroll delay-100">Unimos branding, negócios, filosofia, teologia, psicologia e antropologia para orientar empresários e marcas na construção de empresas sólidas, coerentes e com propósito claro.</p>
+        <h1 class="animate-on-scroll"><span data-cms="home.hero_title_lead">Formamos empresários, estruturamos negócios e </span><span class="font-accent text-accent" data-cms="home.hero_title_accent">elevamos a cultura.</span></h1>
+        <p class="hero-subtitle animate-on-scroll delay-100" data-cms="home.hero_subtitle">Construímos marcas que ditam as regras do mercado. Saia da guerra de preços e do modo apaga-fogo através de um posicionamento sólido e ancorado na verdade.</p>
         <div class="hero-ctas animate-on-scroll delay-200">
-          <a href="/contato.html" class="btn btn-primary">Preciso de ajuda no meu negócio</a>
-          <a href="/projetos.html" class="btn btn-outline">Ver Projetos</a>
+          <a href="#ecossistema" class="btn btn-primary" data-cms="home.hero_cta_primary_label">Conheça o Ecossistema Arcaffo</a>
+          <a href="/projetos.html" class="btn btn-outline" data-cms="home.hero_cta_secondary_label">Ver Projetos</a>
         </div>
       </div>
     </section>
@@ -152,7 +192,7 @@
     <section class="philosophy-section">
       <div class="container">
         <div class="section-header animate-on-scroll">
-          <h2 class="section-title">Nossa Filosofia</h2>
+          <h2 class="section-title" data-cms="home.philosophy_title">Nossa Filosofia</h2>
           <p class="section-subtitle font-accent">"Tudo o que fazemos, fazemos primeiro para o outro."</p>
         </div>
         <div class="grid-3 animate-on-scroll delay-100">
@@ -172,27 +212,47 @@
       </div>
     </section>
 
+    <!-- Problema vs Solução -->
+    <section class="problem-solution-section" style="padding: 6rem 0; background-color: var(--color-bg-primary);">
+      <div class="container">
+        <div class="grid-2 animate-on-scroll" style="gap: 4rem; align-items: center;">
+          <div class="problem-content">
+            <h2 style="font-size: clamp(2rem, 3vw, 2.5rem); font-weight: 400; margin-bottom: 1.5rem; color: var(--color-text-primary); line-height: 1.2;" data-cms="home.problem_solution_title">A exaustão de entregar muito e cobrar pouco.</h2>
+            <p style="color: var(--color-text-secondary); margin-bottom: 1rem; font-size: 1.1rem; line-height: 1.6;">O amadorismo custa caro. Quando a sua marca não reflete a excelência do que você faz, a comunicação se torna confusa. O resultado? Você atrai clientes desalinhados, entra na guerra de preços e vive no "modo apaga-fogo", sacrificando o seu tempo e o futuro da sua empresa.</p>
+          </div>
+          <div class="solution-content" style="background: var(--color-bg-secondary); padding: 3rem; border: 1px solid rgba(255,255,255,0.05); border-radius: 4px;">
+            <h3 style="font-size: 1.5rem; color: var(--color-text-primary); margin-bottom: 1rem; font-weight: 500;">A Estrutura do Legado</h3>
+            <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">A solução não está em modismos ou fórmulas mágicas, mas na ordem. Alinhamos seu Posicionamento, Comunicação e Imagem para construir uma marca magnânima. Uma marca que fala por si mesma, afasta aventureiros e exige o valor justo pelo seu trabalho.</p>
+            <a href="https://advisor.arcaffo.com" target="_blank" rel="noopener" style="color: var(--color-text-primary); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid var(--color-text-primary); padding-bottom: 2px;">Descubra como estruturar sua marca <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Ecossistema -->
-    <section class="ecosystem-section" style="background-color: var(--color-bg-secondary);">
+    <section id="ecossistema" class="ecosystem-section" style="background-color: var(--color-bg-secondary);">
       <div class="container">
         <div class="section-header animate-on-scroll">
-          <h2 class="section-title">Nosso Ecossistema</h2>
-          <p class="section-subtitle">Frentes de atuação para elevar a cultura no Brasil</p>
+          <h2 class="section-title" data-cms="home.ecosystem_title">Nosso Ecossistema</h2>
+          <p class="section-subtitle">O que entregamos para você construir a sua história</p>
         </div>
         <div class="grid-3 animate-on-scroll delay-100">
-          <a href="https://advisor.arcaffo.com" target="_blank" rel="noopener" class="card ecosystem-card" style="--brand-color: #3b82f6; display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center; min-height: 250px;">
-            <img loading="lazy" src="/images/ecossistema/advisor-v2.webp" alt="Advisor" style="max-height: 55px; margin-bottom: 1.5rem;">
-            <p style="font-size: 0.95rem;">Assessoria estratégica e branding corporativo.</p>
+          <a href="https://advisor.arcaffo.com" target="_blank" rel="noopener" class="card ecosystem-card" style="--brand-color: #3b82f6; display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: flex-start; min-height: 320px; padding: 2.5rem 1.5rem;">
+            <img loading="lazy" src="/images/ecossistema/advisor-v2.webp" alt="Arcaffo Advisor" style="max-height: 55px; margin-bottom: 1.5rem;">
+            <h3 style="font-size: 1.25rem; font-weight: 500; margin-bottom: 0.75rem; color: var(--color-text-primary);">Arcaffo Advisor</h3>
+            <p style="font-size: 0.95rem; color: var(--color-text-secondary); line-height: 1.5; margin-bottom: 0;">Assessoria estratégica para quem quer evoluir de forma diligente. Foco em Estruturação e Branding para construir a Bíblia da sua Marca.</p>
           </a>
           
-          <a href="https://enm.arcaffo.com" target="_blank" rel="noopener" class="card ecosystem-card" style="--brand-color: #a8a29e; display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center; min-height: 250px;">
-            <img loading="lazy" src="/images/ecossistema/enm-v2.webp" alt="Escola de Negócios em Arcas" style="max-height: 75px; margin-bottom: 1.5rem;">
-            <p style="font-size: 0.95rem;">Escola de formação empresarial.</p>
+          <a href="https://enm.arcaffo.com" target="_blank" rel="noopener" class="card ecosystem-card" style="--brand-color: #a8a29e; display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: flex-start; min-height: 320px; padding: 2.5rem 1.5rem;">
+            <img loading="lazy" src="/images/ecossistema/enm-v2.webp" alt="Escola de Negócios e Marcas" style="max-height: 75px; margin-bottom: 1.5rem;">
+            <h3 style="font-size: 1.25rem; font-weight: 500; margin-bottom: 0.75rem; color: var(--color-text-primary);">Escola de Negócios e Marcas</h3>
+            <p style="font-size: 0.95rem; color: var(--color-text-secondary); line-height: 1.5; margin-bottom: 0;">Imersões e educação. Conhecimento dinâmico e validado para treinar você e sua equipe, tirando sua operação do amadorismo.</p>
           </a>
           
-          <a href="https://ordo.arcaffo.com" target="_blank" rel="noopener" class="card ecosystem-card" style="--brand-color: #c8a96e; display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center; min-height: 250px;">
+          <a href="https://ordo.arcaffo.com" target="_blank" rel="noopener" class="card ecosystem-card" style="--brand-color: #c8a96e; display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: flex-start; min-height: 320px; padding: 2.5rem 1.5rem;">
             <img loading="lazy" src="/images/ecossistema/ordo_Arcaffo_FFOL_Logos__Vertical_D_V1_png.webp" alt="Ordo Legatum" style="max-height: 85px; margin-bottom: 1.5rem;">
-            <p style="font-size: 0.95rem;">Clube exclusivo para líderes comprometidos.</p>
+            <h3 style="font-size: 1.25rem; font-weight: 500; margin-bottom: 0.75rem; color: var(--color-text-primary);">Ordo Legatum</h3>
+            <p style="font-size: 0.95rem; color: var(--color-text-secondary); line-height: 1.5; margin-bottom: 0;">Clube Empresarial exclusivo. Um ambiente para líderes comprometidos a ordenar suas vidas, afastar a solidão do topo e deixar um legado de valor.</p>
           </a>
         </div>
       </div>
@@ -202,7 +262,7 @@
     <section class="recent-projects">
       <div class="container">
         <div class="section-header animate-on-scroll">
-          <h2 class="section-title">Portfólio</h2>
+          <h2 class="section-title" data-cms="home.projects_title">Portfólio</h2>
           <p class="section-subtitle">Marcas estruturadas com propósito e verdade.</p>
         </div>
         <div class="grid-2 animate-on-scroll delay-100" id="featured-projects">
@@ -220,9 +280,9 @@
   <!-- Pre-Footer CTA -->
   <section class="pre-footer-cta" style="background-color: var(--color-bg-secondary); padding: 5rem 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
     <div class="container animate-on-scroll">
-      <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; letter-spacing: -1px; margin-bottom: 1rem; color: var(--color-text-primary);">Pronto para construir um <span class="font-accent text-accent">legado?</span></h2>
-      <p style="color: var(--color-text-secondary); max-width: 600px; margin: 0 auto 2rem auto; font-size: 1.1rem; line-height: 1.6;">Agende uma reunião com nossos estrategistas e descubra como podemos elevar o patamar do seu negócio e da sua marca.</p>
-      <a href="/contato.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Falar com um Estrategista</a>
+      <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; letter-spacing: -1px; margin-bottom: 1rem; color: var(--color-text-primary);"><span data-cms="global.prefooter_title_lead">Pronto para construir um </span><span class="font-accent text-accent" data-cms="global.prefooter_title_accent">legado?</span></h2>
+      <p style="color: var(--color-text-secondary); max-width: 600px; margin: 0 auto 2rem auto; font-size: 1.1rem; line-height: 1.6;" data-cms="global.prefooter_body">Agende uma reunião com nossos estrategistas e descubra como podemos elevar o patamar do seu negócio e da sua marca.</p>
+      <a href="/contato.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;" data-cms="global.prefooter_cta_label">Falar com um Estrategista</a>
     </div>
   </section>
 
@@ -231,7 +291,7 @@
       <div class="footer-grid">
         <div class="footer-col">
           <a href="/" class="logo" style="display: block; margin-bottom: 1rem;"><img src="/images/brand/logo-arcaffo-v2.png" alt="Arcaffo" width="128" height="32" fetchpriority="high" style="height: 32px;"></a>
-<p style="margin-top: 1rem; color: var(--color-text-secondary); font-size: 0.9rem;">
+<p style="margin-top: 1rem; color: var(--color-text-secondary); font-size: 0.9rem;" data-cms="global.footer_tagline">
             Formamos empresários, estruturamos negócios e elevamos a cultura.
           </p>
           <div style="margin-top: 1.5rem; color: var(--color-text-secondary); font-size: 0.85rem; line-height: 1.6;">
