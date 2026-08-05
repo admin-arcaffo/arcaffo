@@ -76,6 +76,83 @@ body {
   font-size: 1rem;
 }
 .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); }
+.form-group input[aria-invalid="true"] { border-color: var(--danger); }
+.form-hint, .form-error {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+.form-hint { color: var(--text-muted); }
+.form-error { color: var(--danger); min-height: 1.15em; }
+.panel-description { color: var(--text-muted); font-size: 0.9rem; margin-top: 0.35rem; }
+.button-link-editor {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+.button-link-editor + .button-link-editor { margin-top: 1rem; }
+.button-link-editor legend {
+  padding: 0 0.4rem;
+  color: var(--text-main);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.button-link-fields {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 1rem;
+}
+.button-link-fields .form-group { min-width: 0; margin-bottom: 0; }
+@media (max-width: 760px) {
+  body { height: auto; min-height: 100dvh; overflow: auto; }
+  #app-layout { min-height: 100dvh; height: auto; flex-direction: column; }
+  .sidebar {
+    width: 100%;
+    flex: none;
+    border-right: 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .sidebar-header { padding: 1rem 1rem 0.5rem; }
+  .sidebar-logo { height: 22px; }
+  .sidebar-nav {
+    display: flex;
+    gap: 0.35rem;
+    padding: 0.5rem 1rem 1rem;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: thin;
+  }
+  .nav-item {
+    flex: none;
+    margin-bottom: 0;
+    padding: 0.65rem 0.8rem;
+    white-space: nowrap;
+  }
+  .nav-item.active {
+    border-left: 0;
+    border-bottom: 2px solid var(--accent);
+    border-radius: 6px 6px 0 0;
+  }
+  .sidebar-footer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem;
+    padding: 0 1rem 1rem;
+    border-top: 0;
+  }
+  .sidebar-footer .btn { width: auto; margin-bottom: 0; }
+  .main-content { flex: none; min-width: 0; overflow: visible; }
+  .topbar { padding: 1rem; }
+  .topbar h1 { font-size: 1.5rem; }
+  .content-area { padding: 1rem; overflow: visible; }
+  .header-actions { flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.25rem; }
+  .header-actions h2 { font-size: 1.25rem; }
+  .header-actions .btn { min-height: 44px; }
+  .panel { padding: 1rem; }
+  .button-link-fields { grid-template-columns: 1fr; }
+}
 
 /* Layout */
 #app-layout { display: flex; height: 100vh; }

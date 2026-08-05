@@ -10,8 +10,26 @@ const PAGES = {
           { key: 'hero_title_lead', label: 'Título — primeira parte', type: 'text' },
           { key: 'hero_title_accent', label: 'Título — parte destacada', type: 'text' },
           { key: 'hero_subtitle', label: 'Subtítulo', type: 'textarea' },
-          { key: 'hero_cta_primary_label', label: 'Botão principal', type: 'text' },
-          { key: 'hero_cta_secondary_label', label: 'Botão secundário', type: 'text' },
+        ],
+      },
+      {
+        title: 'Botões do Hero',
+        description: 'Edite o texto exibido e para onde cada botão leva.',
+        fields: [
+          {
+            type: 'button-link',
+            label: 'Botão principal',
+            labelKey: 'hero_cta_primary_label',
+            hrefKey: 'hero_cta_primary_href',
+            defaultHref: '#ecossistema',
+          },
+          {
+            type: 'button-link',
+            label: 'Botão secundário',
+            labelKey: 'hero_cta_secondary_label',
+            hrefKey: 'hero_cta_secondary_href',
+            defaultHref: '/projetos.html',
+          },
         ],
       },
       {
@@ -40,30 +58,117 @@ const PAGES = {
           { key: 'prefooter_title_lead', label: 'Título — primeira parte', type: 'text' },
           { key: 'prefooter_title_accent', label: 'Título — parte destacada', type: 'text' },
           { key: 'prefooter_body', label: 'Texto', type: 'textarea' },
-          { key: 'prefooter_cta_label', label: 'Botão', type: 'text' },
+          {
+            type: 'button-link',
+            label: 'Botão',
+            labelKey: 'prefooter_cta_label',
+            hrefKey: 'prefooter_cta_href',
+            defaultHref: '/contato.html',
+          },
         ],
       },
     ],
   },
 };
 
-function fieldHtml(namespace, field, value) {
+function escapeHtml(value) {
+  return String(value ?? '').replace(/[&<>"']/g, (character) => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#039;',
+  })[character]);
+}
+
+function inputFieldHtml(namespace, field) {
   const id = `f-${namespace}-${field.key}`;
-  const safeValue = (value || '').replace(/</g, '&lt;');
   if (field.type === 'textarea') {
     return `
       <div class="form-group">
         <label for="${id}">${field.label}</label>
-        <textarea id="${id}" rows="3">${safeValue}</textarea>
+        <textarea id="${id}" rows="3"></textarea>
       </div>
     `;
   }
+
+  if (field.type === 'link') {
+    const hintId = `${id}-hint`;
+    const errorId = `${id}-error`;
+    return `
+      <div class="form-group">
+        <label for="${id}">${field.label}</label>
+        <input
+          type="text"
+          id="${id}"
+          inputmode="url"
+          autocomplete="url"
+          spellcheck="false"
+          placeholder="${escapeHtml(field.placeholder || '/pagina.html ou https://site.com')}"
+          aria-describedby="${hintId} ${errorId}"
+        >
+        <small class="form-hint" id="${hintId}">Aceita página interna, âncora, URL completa, e-mail ou telefone.</small>
+        <small class="form-error" id="${errorId}" aria-live="polite"></small>
+      </div>
+    `;
+  }
+
   return `
     <div class="form-group">
       <label for="${id}">${field.label}</label>
-      <input type="text" id="${id}" value="${safeValue}">
+      <input type="text" id="${id}">
     </div>
   `;
+}
+
+function fieldHtml(namespace, field) {
+  if (field.type !== 'button-link') return inputFieldHtml(namespace, field);
+
+  return `
+    <fieldset class="button-link-editor">
+      <legend>${field.label}</legend>
+      <div class="button-link-fields">
+        ${inputFieldHtml(namespace, { key: field.labelKey, label: 'Texto do botão', type: 'text' })}
+        ${inputFieldHtml(namespace, {
+          key: field.hrefKey,
+          label: 'Destino do link',
+          type: 'link',
+          placeholder: field.defaultHref,
+        })}
+      </div>
+    </fieldset>
+  `;
+}
+
+function getInputFields(field) {
+  if (field.type !== 'button-link') return [field];
+  return [
+    { key: field.labelKey, type: 'text' },
+    { key: field.hrefKey, type: 'link', defaultValue: field.defaultHref },
+  ];
+}
+
+function forEachInputField(page, callback) {
+  page.sections.forEach((section) => {
+    section.fields.forEach((field) => {
+      getInputFields(field).forEach(callback);
+    });
+  });
+}
+
+function validateLink(value) {
+  const link = value.trim();
+  if (!link) return '';
+  if (/^(?:https?:\/\/|mailto:|tel:)/i.test(link)) return '';
+  if (link.startsWith('#')) return '';
+  if (link.startsWith('/') && !link.startsWith('//')) return '';
+  return 'Use um link iniciado por /, #, http://, https://, mailto: ou tel:.';
+}
+
+function setLinkError(input, message) {
+  const error = document.getElementById(`${input.id}-error`);
+  input.setAttribute('aria-invalid', message ? 'true' : 'false');
+  if (error) error.textContent = message;
 }
 
 export async function renderSiteContent(container, params) {
@@ -77,8 +182,9 @@ export async function renderSiteContent(container, params) {
   const sectionsHtml = page.sections.map((section) => `
     <div class="panel">
       <h3>${section.title}</h3>
+      ${section.description ? `<p class="panel-description">${section.description}</p>` : ''}
       <hr style="border:0; border-top:1px solid var(--border-color); margin:1rem 0;">
-      ${section.fields.map((f) => fieldHtml(slug, f, '')).join('')}
+      ${section.fields.map((field) => fieldHtml(slug, field)).join('')}
     </div>
   `).join('');
 
@@ -104,21 +210,37 @@ export async function renderSiteContent(container, params) {
   }
 
   const namespaceData = siteContent[slug] || {};
-  page.sections.forEach((section) => {
-    section.fields.forEach((field) => {
-      const el = document.getElementById(`f-${slug}-${field.key}`);
-      if (el) el.value = namespaceData[field.key] || '';
-    });
+  forEachInputField(page, (field) => {
+    const el = document.getElementById(`f-${slug}-${field.key}`);
+    if (el) el.value = namespaceData[field.key] ?? field.defaultValue ?? '';
+
+    if (field.type === 'link' && el) {
+      el.addEventListener('input', () => setLinkError(el, ''));
+      el.addEventListener('blur', () => setLinkError(el, validateLink(el.value)));
+    }
   });
 
   document.getElementById('btn-save').addEventListener('click', async () => {
     const payload = { [slug]: {} };
-    page.sections.forEach((section) => {
-      section.fields.forEach((field) => {
-        const el = document.getElementById(`f-${slug}-${field.key}`);
-        payload[slug][field.key] = el ? el.value : '';
-      });
+    let firstInvalidInput = null;
+
+    forEachInputField(page, (field) => {
+      const el = document.getElementById(`f-${slug}-${field.key}`);
+      const value = el ? el.value.trim() : '';
+      payload[slug][field.key] = value;
+
+      if (field.type === 'link' && el) {
+        const error = validateLink(value);
+        setLinkError(el, error);
+        if (error && !firstInvalidInput) firstInvalidInput = el;
+      }
     });
+
+    if (firstInvalidInput) {
+      firstInvalidInput.focus();
+      window.showToast('Revise o destino do link antes de salvar.', 'error');
+      return;
+    }
 
     const btn = document.getElementById('btn-save');
     btn.disabled = true;

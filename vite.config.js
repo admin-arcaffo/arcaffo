@@ -16,6 +16,14 @@ function generatedPageInputs(dir, prefix) {
   );
 }
 
+function isSafeCmsHref(value) {
+  const link = String(value || '').trim();
+  if (!link) return false;
+  if (/^(?:https?:\/\/|mailto:|tel:)/i.test(link)) return true;
+  if (link.startsWith('#')) return true;
+  return link.startsWith('/') && !link.startsWith('//');
+}
+
 // Injects admin-editable copy (public/data/site-content.json) into elements
 // marked with data-cms="<namespace>.<field>" — runs on both `vite dev` and
 // `vite build`, so the source HTML files are never written to on disk.
@@ -43,6 +51,14 @@ function siteContentPlugin() {
           const value = siteContent?.[namespace]?.[field];
           if (value != null && value !== '') {
             $(el).text(value);
+          }
+        });
+        $('[data-cms-href]').each((_, el) => {
+          const key = $(el).attr('data-cms-href');
+          const [namespace, field] = key.split('.');
+          const value = siteContent?.[namespace]?.[field];
+          if (isSafeCmsHref(value)) {
+            $(el).attr('href', value.trim());
           }
         });
         return $.html();
