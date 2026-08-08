@@ -79,11 +79,15 @@ Paleta estritamente monocromática: duas cores de marca (preto e branco) mais um
 - **Tone 3** (`#333333`): bordas fortes, divisores, estados desabilitados.
 - **Tone 4** (`#666666`): texto terciário/muted — usar com cautela, contraste baixo em fundo preto (~3.3:1); nunca em texto de leitura corrida.
 - **Tone 5** (`#a6a6a6`): texto secundário em fundo escuro quando `#CCCCCC` não está disponível.
-- **Tone 6** (`#e6e6e6`): quase-branco, para textos secundários em fundo escuro ou fundos quase-brancos no tema claro (artigos).
+- **Tone 6** (`#e6e6e6`): quase-branco, para textos secundários em fundo escuro ou fundos quase-brancos no tema claro (ver Alternation Rule abaixo).
+
+### Semantic (não-decorativo)
+- **Erro de formulário** (`#ff8f8f` em fundo escuro / `#B3261E` em `.light-theme`): única exceção à escala preto→branco, reservada a estado de erro de campo/validação — nunca usada como acento decorativo.
 
 ### Named Rules
 **The No-Accent Rule.** Nenhum elemento usa cor fora da escala preto→branco. Se uma seção "precisa" de destaque, o destaque vem de tom, tamanho, peso ou luz — nunca de introduzir uma cor nova.
-**The Contrast Floor Rule.** Texto secundário em fundo escuro nunca fica abaixo de `#CCCCCC`/tone-6 (~11:1) para leitura corrida; tons mais escuros (tone-3/4/5) ficam reservados para bordas, superfícies e estados inativos.
+**The Contrast Floor Rule.** Texto secundário em fundo escuro nunca fica abaixo de `#CCCCCC`/tone-6 (~11:1) para leitura corrida; tons mais escuros (tone-3/4/5) ficam reservados para bordas, superfícies e estados inativos. No tema claro, o piso equivalente é `#555555` (texto secundário) — tone-4/tone-5 direto em texto ficam fracos em fundo branco.
+**The Alternation Rule.** Preto não é o único fundo — é o padrão. `.light-theme` (`css/global-v2.css`) inverte os tokens (`--color-bg-*`, `--color-text-*`, `--color-border*`, `--color-accent*`) para uma seção inteira virar clara sem precisar de um segundo sistema de cores; hoje usado nas páginas de artigo e, a partir desta leva, em seções escolhidas de `index`/`sobre`/`servicos`/`vagas` para criar ritmo (nunca a página inteira — hero e rodapé continuam pretos como moldura). Onde um componente precisa continuar escuro dentro de uma seção clara (ex. o 2º `.service-card`, `.job-card`) ou claro dentro de uma seção escura (ex. `.contact-form-inner` em `contato.html`), ele redefine localmente os mesmos tokens (`--color-bg-card`, `--color-text-primary` etc.) em vez de introduzir cor nova — é a mesma escala, só invertida num escopo menor. Exceção testada e revertida: `.ecosystem-card` em `index.html` chegou a usar esse mesmo mecanismo (card quase-preto dentro da seção clara), mas na prática lia como bloco pesado caído sobre o branco — virou tom sobre tom em vez de inversão total (`.light-theme .ecosystem-card` usa `--arcaffo-white`, um degrau acima do `#F7F7F7` da seção, com elevação por sombra suave em vez de escurecer o card). Nem todo componente dentro de seção clara precisa inverter — às vezes o contraste de tom já é suficiente, e inverter sólido fica pesado demais.
 
 ## Typography
 
@@ -101,11 +105,16 @@ Paleta estritamente monocromática: duas cores de marca (preto e branco) mais um
 
 ### Named Rules
 **The Never-Bold-Heading Rule.** `h1`–`h6` nunca usam `font-weight` acima de 400 — hierarquia é tamanho + caixa (uppercase nos h2–h6), nunca peso. Isso vale mesmo quando o instinto normal seria "deixar mais forte".
-**The One-Family-Per-Role Rule.** Instrument Serif só aparece em títulos display (h1/`.arcaffo-display`). Nunca usar a serifa em corpo de texto, botão ou rótulo — e nunca usar Inter Tight/Inter no título principal.
+**The One-Family-Per-Role Rule.** Instrument Serif só aparece em títulos display (h1) ou na variante âncora de h2 (`.section-title--anchor`, ver abaixo) — e mesmo aí, só numa palavra via `.font-accent`, nunca no h2 inteiro. Nunca usar a serifa em corpo de texto, botão ou rótulo — e nunca usar Inter Tight/Inter no título principal.
+
+**The Anchor-Title Exception.** Regra base: h1 = serifa, h2–h6 = Inter Tight uppercase, sem exceção — já é assim em todo o CSS (`h1 { font-family: var(--arcaffo-font-display) }`, `h2..h6 { text-transform: uppercase }`), não é preciso reforçar isso em lugar nenhum. Mas repetir "Inter Tight uppercase" em toda `.section-title` da página (10+ ocorrências no site) lê como monótono quando a serifa é o elemento de maior personalidade da marca. Pra isso, `.section-title--anchor` quebra o uppercase de UM h2 por seção (peso 300, `letter-spacing: -1px`, caixa normal) e uma palavra dentro dele ganha `.font-accent.text-accent` (serifa itálica) — o mesmo tratamento que o h2 do CTA final ("Pronto para construir um *legado?*") já usava informalmente. Usar só nos títulos que carregam o peso emocional da seção (ex.: "Nossa Essência", "Liderança") — nunca nos rótulos utilitários ("Portfólio", "Pilares Culturais"), senão o contraste que dá a personalidade desaparece.
 
 ## Layout
 
 Container padrão até 1200–1360px conforme a seção, com padding lateral fluido. Grid de 12 colunas para blocos assimétricos (ex. projetos em destaque na home), grid simples 2–4 colunas para listagens de cards. Breakpoints principais em 768px (mobile) e 899–1024px (tablet/coluna dupla). Recomendado para a próxima leva de páginas: migrar tamanhos de fonte fixos (`rem`) para `clamp()` fluido nos títulos display, como na referência de qualidade (`entrega_encontro_3/html/styles.css`) — reduz a quantidade de overrides por breakpoint.
+
+### Named Rules
+**The Centered-Header Rule.** `.section-header` (título + subtítulo de abertura de seção) é sempre centralizado — é o padrão em uso em toda seção com título/subtítulo próprio (Filosofia, Ecossistema, Portfólio etc.). O conteúdo abaixo (grids de card, colunas de texto) fica alinhado à esquerda por padrão, e só centraliza quando o próprio conteúdo pede isso explicitamente (cards curtos e simétricos, como os do Ecossistema e da Filosofia; CTAs isolados). Não alternar por seção sem motivo — a regra evita que cada seção nova decida isso de novo.
 
 ## Elevation & Depth
 
@@ -113,6 +122,18 @@ Sem sombras tradicionais (`box-shadow` escuro) como recurso primário de profund
 
 ### Named Rules
 **The Light-Not-Shadow Rule.** Profundidade vem de um glow branco sutil no topo da superfície + borda hairline, nunca de `box-shadow` preto. Uma superfície "elevada" é mais clara no topo, não mais escura embaixo.
+
+## Motion
+
+**Arquétipo: Premium** (skill `motion-design`) — elegante, minimal, sem overshoot. É a única leitura compatível com uma marca monocromática que se sustenta em tom, luz e tipografia, não em efeito. Constantes da identidade de motion (`css/global-v2.css :root`):
+- **Curva assinatura:** `--arcaffo-ease` = `cubic-bezier(0.4, 0, 0.2, 1)` — usada em ~80% das transições do site.
+- **Paleta de duração:** `--arcaffo-dur-quick` (150ms, feedback de hover/estado), `--arcaffo-dur-standard` (350ms, cards/painéis), `--arcaffo-dur-slow` (550ms, imagens grandes/revelações dramáticas).
+- **Entrada de texto/hero:** `.animate-on-scroll` continua em 800ms — reservado para momentos de título/hero, não para grades de cards.
+- **Entrada de grid:** `.card-reveal` (350ms, `--arcaffo-ease`) — usa a duração "standard", com stagger calculado via JS (`Math.min(i * 40, 400)`ms), nunca por classe `.delay-N` fixa (não escala além de poucos itens).
+
+### Named Rules
+**The Three-Layer Hover Rule.** Todo hover de card relevante (`.project-card`) combina camada primária (imagem escalando), secundária (moldura/borda do overlay reagindo) e ambiente (glow sutil no topo, mesma receita de luz da Elevation Rule) — hover de uma camada só lê como incompleto.
+**The Reduced-Motion Rule.** `@media (prefers-reduced-motion: reduce)` zera a duração das transições de entrada e do hover em camadas — quem pede menos movimento recebe o estado final direto, nunca a jornada.
 
 ## Shapes
 

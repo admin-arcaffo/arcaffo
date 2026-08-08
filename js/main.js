@@ -33,6 +33,27 @@ document.addEventListener('DOMContentLoaded', () => {
       ticking = true;
     }
   });
+  // Menu mobile: o botão hamburguer só tinha CSS (display:none, sem nenhum
+  // toggle) — em telas <=768px o .nav-links inteiro ficava inacessível.
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  const navLinksEl = document.querySelector('.nav-links');
+  if (mobileMenuBtn && navLinksEl) {
+    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    mobileMenuBtn.addEventListener('click', () => {
+      const isOpen = navLinksEl.classList.toggle('open');
+      mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
+      mobileMenuBtn.textContent = isOpen ? '✕' : '☰';
+    });
+
+    // O submenu "Formação Empresarial" abre no hover no desktop; em touch
+    // não existe hover, então o toque no rótulo alterna um estado aberto.
+    document.querySelectorAll('.nav-dropdown-trigger').forEach((trigger) => {
+      trigger.addEventListener('click', () => {
+        trigger.closest('.nav-dropdown')?.classList.toggle('open');
+      });
+    });
+  }
+
   // Highlight current nav item
   const currentPath = window.location.pathname;
   const navLinks = document.querySelectorAll('.nav-links a');

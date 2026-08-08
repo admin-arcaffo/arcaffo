@@ -83,7 +83,7 @@ function generateArtigos() {
 
     const $ = cheerio.load(template);
 
-    setCommonMeta($, { title: `${artigo.title} | Arcaffo®`, description, url, image, type: 'article' });
+    setCommonMeta($, { title: `${artigo.title} | Arcaffo GROUP®`, description, url, image, type: 'article' });
 
     writeJsonLd($, {
       '@context': 'https://schema.org',
@@ -96,8 +96,8 @@ function generateArtigos() {
       author: { '@type': 'Person', name: authorName },
       publisher: {
         '@type': 'Organization',
-        name: 'Arcaffo',
-        logo: { '@type': 'ImageObject', url: `${DOMAIN}/images/brand/logo-arcaffo-v2.png` },
+        name: 'Arcaffo GROUP',
+        logo: { '@type': 'ImageObject', url: `${DOMAIN}/images/brand/logo-arcaffo-group-w.svg` },
       },
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     });
@@ -179,7 +179,7 @@ function generateProjetos() {
 
     const $ = cheerio.load(template);
 
-    setCommonMeta($, { title: `${projeto.title} | Arcaffo®`, description, url, image, type: 'website' });
+    setCommonMeta($, { title: `${projeto.title} | Arcaffo GROUP®`, description, url, image, type: 'website' });
 
     writeJsonLd($, {
       '@context': 'https://schema.org',
@@ -189,7 +189,7 @@ function generateProjetos() {
       image: [image],
       url,
       datePublished: dateISO,
-      creator: { '@type': 'Organization', name: 'Arcaffo' },
+      creator: { '@type': 'Organization', name: 'Arcaffo GROUP' },
     });
 
     writeJsonLd($, {
@@ -214,7 +214,7 @@ function generateProjetos() {
         </div>
       </section>
 
-      <section class="project-detail-info">
+      <section class="project-detail-info light-theme">
         <div class="container grid-2">
           <div class="project-description animate-on-scroll">
             <h2 class="section-title">O Desafio</h2>

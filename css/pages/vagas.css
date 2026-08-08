@@ -11,14 +11,13 @@
 .job-card {
   background-color: var(--color-bg-card);
   border: 1px solid var(--color-border);
-  border-radius: 4px;
+  border-radius: var(--arcaffo-radius);
   padding: 2.5rem;
   transition: all 0.3s ease;
 }
 
 .job-card:hover {
   border-color: var(--color-border-hover);
-  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
 }
 
 .job-header {
@@ -39,7 +38,7 @@
   background-color: var(--color-bg-secondary);
   border: 1px solid var(--color-border);
   padding: 0.3rem 0.8rem;
-  border-radius: 20px;
+  border-radius: var(--arcaffo-radius-sm);
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -69,4 +68,16 @@
     flex-direction: column;
     gap: 1rem;
   }
+}
+
+/* Inverso do padrão da home: aqui os cards ficam escuros sobre fundo claro —
+   mesmo vocabulário de mistura, resultado visual diferente por página. */
+.light-theme .job-card {
+  --color-bg-primary: var(--arcaffo-tone-1);
+  --color-bg-card: var(--arcaffo-tone-2);
+  --color-bg-secondary: var(--arcaffo-tone-1);
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-text-primary: var(--arcaffo-white);
+  --color-text-secondary: #CCCCCC;
+  --color-accent: var(--arcaffo-white);
 }

@@ -35,8 +35,10 @@ const PAGES = {
       {
         title: 'Títulos de seção',
         fields: [
-          { key: 'philosophy_title', label: 'Título — Nossa Filosofia', type: 'text' },
-          { key: 'ecosystem_title', label: 'Título — Nosso Ecossistema', type: 'text' },
+          { key: 'philosophy_title_lead', label: 'Título Filosofia — primeira parte', type: 'text' },
+          { key: 'philosophy_title_accent', label: 'Título Filosofia — parte destacada', type: 'text' },
+          { key: 'ecosystem_title_lead', label: 'Título Ecossistema — primeira parte', type: 'text' },
+          { key: 'ecosystem_title_accent', label: 'Título Ecossistema — parte destacada', type: 'text' },
           { key: 'projects_title', label: 'Título — Portfólio', type: 'text' },
           { key: 'problem_solution_title', label: 'Título — Problema/Solução', type: 'text' },
         ],

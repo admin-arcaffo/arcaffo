@@ -14,8 +14,28 @@
   font-size: 1.1rem;
 }
 
+/* Double-Bezel: invólucro externo escuro translúcido (mantém o clima da
+   .page-header) + núcleo interno claro pro formulário — a mistura clara-dentro-
+   de-escuro que complementa os cartões escuros usados em fundo claro alhures. */
 .contact-form-container {
-  padding: 3rem;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--arcaffo-radius);
+  padding: 10px;
+}
+
+.contact-form-inner {
+  background-color: var(--color-bg-primary);
+  border-radius: var(--arcaffo-radius-sm);
+  padding: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .contact-form-inner {
+    padding: 1.5rem 1rem;
+  }
 }
 
 .form-group {
@@ -36,7 +56,7 @@
   border: 1px solid var(--color-border);
   color: var(--color-text-primary);
   font-family: var(--font-body);
-  border-radius: 4px;
+  border-radius: var(--arcaffo-radius-sm);
   transition: all 0.3s ease;
 }
 
@@ -57,7 +77,7 @@
   display: none;
   margin: -0.5rem 0 1.5rem;
   padding: 0.75rem 1rem;
-  border-radius: 4px;
+  border-radius: var(--arcaffo-radius-sm);
   font-size: 0.9rem;
 }
 
@@ -65,6 +85,24 @@
   color: #ff8f8f;
   background: rgba(255, 80, 80, 0.1);
   border: 1px solid rgba(255, 80, 80, 0.25);
+}
+
+/* #ff8f8f é ilegível em fundo claro (núcleo do Double-Bezel) — vermelho mais
+   escuro pro mesmo papel de erro. */
+.light-theme .form-feedback.is-error,
+.light-theme .arcaffo-load-error,
+.light-theme .arcaffo-error {
+  color: #B3261E;
+}
+
+.light-theme .form-feedback.is-error {
+  background: rgba(179, 38, 30, 0.08);
+  border: 1px solid rgba(179, 38, 30, 0.25);
+}
+
+.light-theme .arcaffo-field[data-invalid] .arcaffo-control input,
+.light-theme .arcaffo-field[data-invalid] .arcaffo-control textarea {
+  border-color: #B3261E;
 }
 
 @media (max-width: 768px) {
@@ -128,7 +166,7 @@
   color: var(--color-text-primary);
   font-family: var(--font-body);
   font-size: 1rem;
-  border-radius: 4px;
+  border-radius: var(--arcaffo-radius-sm);
   transition: all 0.3s ease;
 }
 
@@ -164,7 +202,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 0.8rem 2rem;
-  border-radius: 24px;
+  border-radius: var(--arcaffo-radius-sm);
 }
 
 .arcaffo-embed .arcaffo-actions button[type="submit"] {
@@ -194,7 +232,16 @@
 
 .arcaffo-embed .arcaffo-actions button[type="button"]:hover:not(:disabled) {
   border-color: var(--color-accent);
-  background-color: rgba(255, 255, 255, 0.05);
+  /* 0.05 sobre preto pousava quase exatamente em tone-1, sem contraste real. */
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.light-theme .arcaffo-embed .arcaffo-actions button[type="submit"]:hover:not(:disabled) {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.light-theme .arcaffo-embed .arcaffo-actions button[type="button"]:hover:not(:disabled) {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .arcaffo-embed .arcaffo-status {

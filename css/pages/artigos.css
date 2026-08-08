@@ -1,0 +1,87 @@
+/* Artigos — listagem */
+
+/* Grid de 12 colunas só faz sentido a partir de onde algum item realmente
+   usa menos que os 12 (article-card span 6/4). Abaixo de 768px tudo é
+   span 12 = uma coluna só, mas o navegador reserva os 11 gaps internos de
+   qualquer forma — com gap: 3rem isso sozinho já passa de 500px e estoura a
+   viewport num celular, sem nenhum conteúdo culpado. */
+#articles-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  #articles-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 3rem;
+  }
+}
+
+/* Antes o card claro era um retângulo de canto vivo caído sobre o fundo
+   preto, sem raio nem respiro — lia como um recorte quebrado, não como um
+   card intencional. Agora ele segue a mesma linguagem de --arcaffo-radius +
+   padding usada em .card no resto do site, com a imagem cortada pelo próprio
+   raio do card (por isso o border-radius:12px que estava direto na imagem
+   saiu do HTML — ficaria um vinco duplicado no meio do card no layout row). */
+.featured-article {
+  grid-column: span 12;
+  min-width: 0;
+  border-radius: var(--arcaffo-radius);
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.featured-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.featured-img-container {
+  height: 350px;
+}
+
+.featured-flex > div:last-child {
+  padding: 2rem 2rem 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .featured-flex > div:last-child {
+    padding: 3rem 3rem 3rem 0;
+  }
+}
+
+.article-card {
+  grid-column: span 12;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .article-card { grid-column: span 6; }
+  .featured-img-container { height: 450px; }
+}
+
+@media (min-width: 1024px) {
+  .article-card { grid-column: span 4; }
+  .featured-flex { flex-direction: row; align-items: center; gap: 4rem; }
+  .featured-flex > div { flex: 1; }
+  .featured-img-container { height: 500px; }
+}
+
+/* Hover em duas camadas: imagem escalando (primária) + título mudando de tom
+   (secundária) — antes só a imagem reagia, o h3 já tinha a transition de
+   color preparada mas nunca era acionada. */
+.card-img-hover {
+  transition: transform var(--arcaffo-dur-slow) var(--arcaffo-ease);
+}
+
+.article-card:hover .card-img-hover,
+.featured-article:hover .card-img-hover {
+  transform: scale(1.05);
+}
+
+.article-card:hover h3,
+.featured-article:hover h2 {
+  color: var(--color-accent);
+}

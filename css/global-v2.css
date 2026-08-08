@@ -40,6 +40,13 @@
   --font-heading: var(--arcaffo-font-heading);
   --font-body: var(--arcaffo-font-body);
   --font-accent: var(--arcaffo-font-display);
+
+  /* Motion — arquétipo Premium (skill motion-design): uma curva assinatura,
+     três durações, sem overshoot. Documentado em DESIGN.md § Motion. */
+  --arcaffo-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --arcaffo-dur-quick: 150ms;
+  --arcaffo-dur-standard: 350ms;
+  --arcaffo-dur-slow: 550ms;
 }
 
 *, *::before, *::after {
@@ -86,6 +93,42 @@ h2, h3, h4, h5, h6 {
   color: rgba(255, 255, 255, 0.45);
 }
 
+/* Marca de registro — elemento assinatura da Arcaffo GROUP: a cruzeta de
+   alinhamento que uma gráfica usa pra conferir registro de cor antes de
+   rodar a impressão. É o vocabulário do próprio ofício de um estúdio de
+   branding, não uma referência decorativa importada. Usar com moderação —
+   nunca como textura repetida ou padrão de fundo. */
+.arcaffo-regmark {
+  color: rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.arcaffo-regmark circle,
+.arcaffo-regmark line {
+  stroke: currentColor;
+  stroke-width: 1;
+  fill: none;
+  vector-effect: non-scaling-stroke;
+}
+
+/* Ancorada num canto, sangrando levemente pra fora da borda — como uma marca
+   de registro real, cortada pela guilhotina no acabamento da peça impressa.
+   Usar só dentro de um contêiner com position:relative. */
+.arcaffo-regmark--corner {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: 3;
+}
+
+.arcaffo-regmark--corner.is-bottom-right {
+  top: auto;
+  left: auto;
+  bottom: -10px;
+  right: -10px;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -123,6 +166,51 @@ ul {
   font-style: italic;
 }
 
+.text-center {
+  text-align: center;
+}
+
+/* Escondido da tela, mas presente pra leitor de tela — padrão "visually
+   hidden" (não usar display:none, que some pra tecnologia assistiva também).
+   Usado em landmarks de seção que não precisam de título visível na tela. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.hover-scale {
+  transition: transform var(--arcaffo-dur-standard) var(--arcaffo-ease);
+}
+
+.hover-scale:hover {
+  transform: scale(1.03);
+}
+
+/* Números da dobra "Nossos Números" (index.html) — clamp reduzido de 4rem pra
+   3.75rem e gap de 4rem pra 3rem: "+400 Marcas" precisava de 351px mas a
+   coluna só tinha 336px (3 colunas, gap 4rem), por isso quebrava em 2 linhas
+   enquanto os outros dois números ficavam em 1 — desalinhava os parágrafos
+   abaixo. Tracking -2px também era um desvio isolado do -1px usado em todo
+   resto do site pro mesmo tratamento (peso baixo + tracking negativo); e
+   text-transform:none porque a regra base de h3 é uppercase e esses números
+   deveriam ler como escritos ("10 anos", não "10 ANOS"). */
+.numbers-strip-grid {
+  gap: 3rem;
+}
+
+.numbers-strip-grid h3 {
+  font-size: clamp(3rem, 5vw, 3.75rem);
+  letter-spacing: -1px;
+  text-transform: none;
+}
+
 /* Tema Claro (Light Theme) para Leitura */
 .light-theme {
   --color-bg-primary: var(--arcaffo-white);
@@ -140,12 +228,78 @@ ul {
   /* Acento vira preto no tema claro (o acento é branco no dark mode) */
   --color-accent: var(--arcaffo-tone-1);
   --color-accent-light: var(--arcaffo-tone-3);
+  --color-accent-muted: rgba(0, 0, 0, 0.15);
+
+  /* `color`/`background-color` são propriedades herdadas — se só as custom
+     properties fossem redefinidas aqui, qualquer elemento sem `color`
+     explícito (a maioria dos h2/h3) continuaria herdando o branco já resolvido
+     lá no <body>, em vez de recalcular a variável neste novo escopo. Redeclarar
+     as duas aqui garante que a inversão realmente alcance os filhos. */
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+/* Contrapartes claras dos elementos que usam rgba(255,255,255,…) fixo em vez de
+   token — sem isso eles ficam invisíveis dentro de uma seção .light-theme. */
+/* Skeleton loader do fallback ao vivo de artigo.html (?slug=...) — as
+   páginas geradas estaticamente já chegam com o conteúdo pronto e nunca
+   mostram isto. Antes era #eee fixo dentro de uma superfície .light-theme já
+   branca — quase invisível. Pulso lento (sem bounce) segue o arquétipo
+   Premium do motion system. */
+.skeleton-loader {
+  background: var(--color-border);
+  border-radius: var(--arcaffo-radius-sm);
+  animation: skeleton-pulse 1.8s var(--arcaffo-ease) infinite;
+}
+
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.light-theme .arcaffo-eyebrow {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.light-theme .arcaffo-regmark {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+.light-theme .card,
+.light-theme .service-card {
+  background-image: radial-gradient(120% 100% at 50% -10%, rgba(0, 0, 0, 0.05), transparent 60%);
+}
+
+.light-theme .card::before,
+.light-theme .service-card::before {
+  background: radial-gradient(
+    800px circle at var(--mouse-x, 0) var(--mouse-y, 0),
+    rgba(0, 0, 0, 0.25),
+    transparent 40%
+  );
+}
+
+.light-theme .card::after,
+.light-theme .service-card::after {
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 0) var(--mouse-y, 0),
+    rgba(0, 0, 0, 0.04),
+    transparent 40%
+  );
+}
+
+.light-theme .btn-outline:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.light-theme .btn-primary:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .light-theme-surface {
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
-  border-radius: 8px;
+  border-radius: var(--arcaffo-radius);
   padding: 4rem;
   box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
@@ -189,9 +343,13 @@ ul {
   color: var(--color-text-primary);
 }
 
+/* A marca "GROUP" faz parte da mesma peça de arte que "arcaffo" (um só SVG,
+   viewBox único) — não dá pra aumentar um lado sem o outro sem recortar um
+   ativo novo. Em 32px o "GROUP" ficava pequeno demais pra ler; 40px resolve
+   sem risco, o .nav-container tem 80px de altura com folga de sobra. */
 .logo img {
   width: auto !important;
-  height: 32px !important;
+  height: 40px !important;
   object-fit: contain;
 }
 
@@ -264,7 +422,9 @@ ul {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  /* Sombra preta sobre menu já quase-preto (rgba(10,10,11,.95)) não tinha
+     "mais escuro" pra simular — borda hairline mais clara faz a separação. */
+  border-color: rgba(255, 255, 255, 0.18);
   z-index: 1000;
 }
 
@@ -288,7 +448,9 @@ ul {
 
 .nav-dropdown-menu a:hover {
   opacity: 1;
-  background-color: rgba(255,255,255,0.05);
+  /* 0.05 sobre o fundo quase-preto do menu (rgba(10,10,11,.95)) pousava quase
+     exatamente em tone-1 — empate com um tom já usado, não dava pra notar. */
+  background-color: rgba(255,255,255,0.12);
   color: var(--color-accent);
 }
 
@@ -329,7 +491,8 @@ ul {
 
 .btn-outline:hover {
   border-color: var(--color-accent);
-  background-color: rgba(255,255,255,0.05);
+  /* 0.05 sobre preto = tone-1 quase exato, mudança nula na prática. */
+  background-color: rgba(255,255,255,0.12);
 }
 
 /* Cards com Spotlight Hover — glow estático no topo (receita .arcaffo-surface)
@@ -398,17 +561,29 @@ ul {
   transform: translateY(-2px); /* Efeito suave 2026 */
 }
 
+/* .hover-scale:hover e .card:hover têm a mesma especificidade (uma classe +
+   :hover) — empate resolvido por ordem no arquivo, e .card:hover vem depois,
+   então ganhava sempre e o scale nunca aparecia nos cards que são .card E
+   .hover-scale ao mesmo tempo (ex. os cards da seção Filosofia). Regra com
+   duas classes tem especificidade maior, resolve o empate de propósito. */
+.card.hover-scale:hover {
+  transform: scale(1.03);
+}
+
 /* Footer */
+/* Sem margin-top: a .pre-footer-cta que vem logo antes já fecha com seu
+   próprio padding — a margem extra só expunha uma faixa do preto puro do
+   <body> entre as duas seções, lendo como um espaço em branco (bug), não
+   como respiro intencional. */
 .site-footer {
   background-color: var(--color-bg-secondary);
   padding: 4rem 0 2rem;
   border-top: 1px solid var(--color-border);
-  margin-top: 4rem;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
 }
@@ -423,16 +598,44 @@ ul {
   margin-bottom: 0.8rem;
 }
 
+/* Hover em duas camadas: cor (já existia) + sublinhado que entra da esquerda,
+   mesmo vocabulário de transição do resto do site (--arcaffo-dur-standard).
+   position:relative fica só no <a>, não na <li>, pra não vazar o ::after
+   sobre outros itens da lista. */
 .footer-col ul li a {
+  position: relative;
+  display: inline-block;
   color: var(--color-text-secondary);
+  transition: color var(--arcaffo-dur-quick) var(--arcaffo-ease);
+}
+
+.footer-col ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--arcaffo-dur-standard) var(--arcaffo-ease);
 }
 
 .footer-col ul li a:hover {
   color: var(--color-accent);
 }
 
+.footer-col ul li a:hover::after {
+  transform: scaleX(1);
+}
+
 .footer-bottom {
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
   padding-top: 2rem;
   border-top: 1px solid var(--color-border);
   color: var(--color-text-muted);
@@ -440,9 +643,81 @@ ul {
 }
 
 @media (max-width: 768px) {
+  /* Menu mobile — antes disto o .nav-links só desaparecia (display:none) e
+     o botão hamburguer ficava com display:none inline, sem nenhum JS pra
+     abri-lo: em qualquer tela <=768px o menu inteiro ficava inacessível.
+     Agora o botão aparece e .nav-links vira um painel que abre por toque
+     (classe .open, alternada em js/main.js). */
+  .mobile-menu-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
   .nav-links {
     display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    background-color: rgba(5, 5, 6, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--color-border);
+    padding: 0.5rem 0 1.5rem;
   }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a,
+  .nav-dropdown-trigger {
+    opacity: 1;
+    width: 100%;
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-links .nav-cta {
+    margin: 1rem 1.5rem 0;
+    width: auto;
+    text-align: center;
+  }
+
+  .nav-dropdown {
+    display: block;
+    width: 100%;
+  }
+
+  .nav-dropdown-menu {
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  .nav-dropdown.open .nav-dropdown-menu {
+    display: block;
+  }
+
+  .nav-dropdown-menu a {
+    text-align: left;
+    padding: 0.85rem 2.5rem;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -453,14 +728,18 @@ ul {
   }
 }
 
-.article-content img.article-image { max-width: 100%; height: auto; border-radius: 8px; margin: 2rem 0; }
+.article-content img.article-image { max-width: 100%; height: auto; border-radius: var(--arcaffo-radius-sm); margin: 2rem 0; }
 
 /* Ecossistema - Premium Glassmorphism with Brand Colored Glows */
+/* rgba(20,20,22,0.4) sobre o preto puro do <body> (uso em sobre.html, que não
+   tem .light-theme na seção) dava ≈rgb(8,8,8) — mais escuro que qualquer tom
+   nomeado do sistema, os cards ficavam invisíveis. --color-bg-card (tone-2,
+   #1a1a1a sólido) é o mesmo token que .card/.service-card já usam em fundo
+   escuro — sai o "vidro" que não tinha nada atrás pra borrar, entra contraste
+   real. */
 .ecosystem-card {
   position: relative;
-  background-color: rgba(20, 20, 22, 0.4) !important;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background-color: var(--color-bg-card) !important;
   border: 1px solid rgba(255, 255, 255, 0.05) !important;
   border-radius: var(--arcaffo-radius) !important;
   color: var(--color-text-primary) !important;
@@ -474,7 +753,9 @@ ul {
   position: absolute;
   top: 0; left: 0; right: 0; height: 100%;
   background: radial-gradient(circle at center top, var(--brand-color, rgba(255,255,255,0.1)), transparent 60%);
-  opacity: 0.15;
+  /* Opacidade efetiva era alpha-do-gradiente(0.1) × opacity(0.15) ≈ 0.015 em
+     repouso — praticamente nulo. Dobrado pra ficar perceptível de verdade. */
+  opacity: 0.3;
   transition: opacity 0.5s ease, transform 0.5s ease;
   z-index: 0;
   pointer-events: none;
@@ -482,12 +763,14 @@ ul {
 
 .ecosystem-card:hover {
   transform: translateY(-8px) !important;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6) !important;
+  /* Sombra preta sobre card já escuro não tem "mais escuro que preto" pra
+     simular — trocado pelo glow (::before, amplificado abaixo) + borda mais
+     clara, a mesma "Light-Not-Shadow Rule" que o DESIGN.md já documenta. */
   border-color: rgba(255, 255, 255, 0.15) !important;
 }
 
 .ecosystem-card:hover::before {
-  opacity: 0.4;
+  opacity: 0.6;
   transform: scale(1.1) translateY(-10px);
 }
 
@@ -500,13 +783,43 @@ ul {
   z-index: 2;
 }
 
+/* Card preto sólido dentro da seção clara do Ecossistema (index.html) lia
+   pesado demais — um bloco opaco caído sobre o branco, não um painel. Tom
+   sobre tom: o card fica branco puro (--arcaffo-white), um degrau acima do
+   #F7F7F7 da seção ao redor — a mesma lógica de elevação por luz que
+   .light-theme .card já usa, só que aplicada aqui em vez de forçada pro
+   preto. Os tokens de texto NÃO são mais redefinidos: herdam naturalmente
+   de .light-theme (tone-1 pro título, #555555 pro corpo, dentro do piso de
+   contraste do DESIGN.md), porque o card deixou de ser uma superfície escura
+   independente da seção.  */
+.light-theme .ecosystem-card {
+  background-color: var(--arcaffo-white) !important;
+  border-color: var(--color-border) !important;
+}
+
+.light-theme .ecosystem-card::before {
+  /* O glow branco de .ecosystem-card::before some num card já branco — vira
+     uma sombra suave no topo em vez de luz, mesmo princípio de profundidade
+     (superfície mais "carregada" longe da borda), só invertido pro claro. */
+  background: radial-gradient(circle at center top, rgba(0, 0, 0, 0.05), transparent 60%);
+}
+
+.light-theme .ecosystem-card:hover {
+  /* A Light-Not-Shadow Rule (DESIGN.md) parte de superfície escura elevada
+     por glow branco; num card branco não existe "mais claro que branco", o
+     equivalente é uma sombra bem suave — não a rgba(0,0,0,.6) do card escuro,
+     que era pesada demais mesmo lá. */
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1) !important;
+  border-color: var(--color-border-hover) !important;
+}
+
 /* Nav CTA Button - Ghost Style High-End */
 .nav-cta {
   background-color: transparent !important;
   color: var(--color-text-primary) !important;
   padding: 0.5rem 1.2rem !important;
   border: 1px solid rgba(255,255,255,0.4) !important;
-  border-radius: 4px;
+  border-radius: var(--arcaffo-radius-sm);
   font-weight: 400;
   letter-spacing: 1px;
   transition: all 0.3s ease;
@@ -522,42 +835,49 @@ ul {
 }
 
 /* Minimalist Glassmorphism for Filter Buttons */
+/* Repouso em 0.03/0.08 sobre fundo preto era quase invisível (Δ13/Δ20 de
+   255) — os 9 botões inativos só apareciam quando o mouse já estava em cima.
+   Existia uma segunda definição de .filter-btn em projetos.css com fundo
+   branco sólido no hover, mas como esta regra usa !important em tudo, a
+   outra nunca rodava — código morto, removido de lá. Esta é a versão real,
+   só com valores amplificados o suficiente pra sair da faixa "empate com o
+   fundo". */
 .filter-btn {
-  background: rgba(255, 255, 255, 0.03) !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
   color: var(--color-text-secondary) !important;
   transition: all 0.3s ease !important;
 }
 .filter-btn:hover {
-  background: rgba(255, 255, 255, 0.08) !important;
-  border-color: rgba(255, 255, 255, 0.2) !important;
+  background: rgba(255, 255, 255, 0.14) !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
   color: var(--color-text-primary) !important;
 }
 .filter-btn.active {
   background: var(--color-text-primary) !important;
   color: var(--color-bg-primary) !important;
   border-color: var(--color-text-primary) !important;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
 }
 
-/* Layout Grid Systems */
+/* Layout Grid Systems — minmax(0, 1fr), não 1fr puro: sem isso, qualquer
+   imagem (largura intrínseca) dentro de uma coluna força a trilha inteira a
+   crescer além do container ("grid blowout" clássico) em vez de encolher e
+   deixar a imagem se ajustar via max-width:100%. */
 .grid-2 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
 }
 
 .grid-3 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
 }
 
 .grid-4 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.5rem;
 }
 
@@ -578,6 +898,20 @@ section {
   margin-bottom: 1rem;
 }
 
+/* Versão "âncora" de .section-title — pra seções que são o ponto emocional
+   da página (não rótulo utilitário como "Portfólio" ou "Pilares Culturais").
+   Sai do uppercase Inter Tight padrão pro mesmo tratamento que o h2 do CTA
+   final já usava sem nome (peso 300, tracking negativo, caixa normal) — aqui
+   vira padrão nomeado, combinado com uma palavra da frase em .font-accent
+   pra trazer a serifa de volta ao texto grande sem virar regra geral. Usar
+   com moderação: se toda .section-title virar âncora, o contraste que dá
+   personalidade à página desaparece. */
+.section-title--anchor {
+  font-weight: 300;
+  text-transform: none;
+  letter-spacing: -1px;
+}
+
 .section-subtitle {
   color: var(--color-text-secondary);
   font-size: 1.1rem;
@@ -586,7 +920,7 @@ section {
 /* Responsividade Básica */
 @media (max-width: 1024px) {
   .grid-4 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -639,6 +973,23 @@ section {
 .delay-300 { transition-delay: 300ms; }
 .delay-400 { transition-delay: 400ms; }
 
+/* Entrada de grid (cards) — mesmo padrão do .animate-on-scroll, mas na
+   duração "standard" do arquétipo Premium em vez da "slow" (800ms é para
+   momentos de hero/título de seção; grade densa de cards fica lenta nessa
+   duração). O delay de stagger vem inline via JS (Math.min(i*40, 400)), não
+   por classe — grids têm mais de 4 itens e .delay-100..400 não escala. */
+.card-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--arcaffo-dur-standard) var(--arcaffo-ease),
+              transform var(--arcaffo-dur-standard) var(--arcaffo-ease);
+}
+
+.card-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Parallax Container */
 .parallax-bg {
   background-attachment: fixed;
@@ -664,5 +1015,37 @@ section {
 .text-reveal.is-visible span {
   transform: translateY(0);
   opacity: 1;
+}
+
+/* Quem pede menos movimento recebe o estado final direto, sem a jornada —
+   as animações de entrada (.animate-on-scroll/.card-reveal/.text-reveal) e o
+   hover em camadas dos cards viram troca quase instantânea de estado. */
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll,
+  .card-reveal,
+  .text-reveal span {
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+
+  .project-card img,
+  .project-card::before,
+  .project-overlay,
+  .footer-col ul li a::after,
+  .hover-scale,
+  .card,
+  .service-card,
+  .ecosystem-card {
+    transition-duration: 0.01ms !important;
+  }
+
+  .project-card:hover img {
+    transform: none;
+  }
+
+  .skeleton-loader {
+    animation: none;
+    opacity: 0.8;
+  }
 }
 

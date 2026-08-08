@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="pt-BR"><head>
-  <link rel="preload" href="/images/brand/logo-arcaffo-v2.png" as="image" fetchpriority="high">
+  <link rel="preload" href="/images/brand/logo-arcaffo-group-w.svg" as="image" fetchpriority="high">
   <meta charset="UTF-8">
   <link rel="icon" type="image/svg+xml" href="/vite.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, follow">
-  <title>Artigos | Arcaffo®</title>
+  <title>Artigos | Arcaffo GROUP®</title>
   
   <link rel="preload" href="https://fonts.gstatic.com/s/intertight/v7/NGSoV5eHAnDrM-hqGGMG_G1N1u_aAroXlwM2d1Q9n27f5Hj-w-SydXzW1s-9Zc_Ww_s.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,15 +13,15 @@
   
   <link rel="stylesheet" href="/css/global-v2.css" fetchpriority="high">
   <!-- SEO & Open Graph (Generated) -->
-  <meta name="description" content="Arcaffo Branding. Transformamos marcas com estratégias personalizadas de branding, comunicação e design. Crie uma identidade autêntica e impactante para o seu negócio.">
-  <meta property="og:title" content="Arcaffo® | Branding &amp; Posicionamento de Marca">
-  <meta property="og:description" content="Arcaffo Branding. Transformamos marcas com estratégias personalizadas de branding, comunicação e design.">
+  <meta name="description" content="Arcaffo GROUP Branding. Transformamos marcas com estratégias personalizadas de branding, comunicação e design. Crie uma identidade autêntica e impactante para o seu negócio.">
+  <meta property="og:title" content="Arcaffo GROUP® | Branding &amp; Posicionamento de Marca">
+  <meta property="og:description" content="Arcaffo GROUP Branding. Transformamos marcas com estratégias personalizadas de branding, comunicação e design.">
   <meta property="og:image" content="https://www.arcaffo.com/images/brand/og-image.jpg">
   <meta property="og:url" content="https://www.arcaffo.com">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Arcaffo® | Branding &amp; Posicionamento de Marca">
-  <meta name="twitter:description" content="Arcaffo Branding. Transformamos marcas com estratégias personalizadas de branding, comunicação e design.">
+  <meta name="twitter:title" content="Arcaffo GROUP® | Branding &amp; Posicionamento de Marca">
+  <meta name="twitter:description" content="Arcaffo GROUP Branding. Transformamos marcas com estratégias personalizadas de branding, comunicação e design.">
   <meta name="twitter:image" content="https://www.arcaffo.com/images/brand/og-image.jpg">
   
     
@@ -29,9 +29,10 @@
 <body>
   <header class="site-header">
     <div class="container nav-container">
-      <a href="/" class="logo"><img src="/images/brand/logo-arcaffo-v2.png" alt="Arcaffo" width="128" height="32" fetchpriority="high" style="height: 32px;"></a>
+      <a href="/" class="logo"><img src="/images/brand/logo-arcaffo-group-w.svg" alt="Arcaffo GROUP" width="128" height="32" fetchpriority="high" style="height: 32px;"></a>
       <nav class="nav-links">
         <a href="/sobre.html">Sobre</a>
+        <a href="/servicos.html">Serviços</a>
         <a href="https://advisor.arcaffo.com" target="_blank" rel="noopener">Assessoria</a>
         <div class="nav-dropdown">
           <span class="nav-dropdown-trigger">Formação Empresarial</span>
@@ -64,9 +65,9 @@
         </div>
 
         <div id="article-content" class="article-content" style="font-size: 1.1rem; line-height: 1.8; color: var(--color-text-primary);">
-          <div class="skeleton-loader" style="height: 20px; width: 100%; background: #eee; margin-bottom: 10px;"></div>
-          <div class="skeleton-loader" style="height: 20px; width: 90%; background: #eee; margin-bottom: 10px;"></div>
-          <div class="skeleton-loader" style="height: 20px; width: 95%; background: #eee; margin-bottom: 10px;"></div>
+          <div class="skeleton-loader" style="height: 20px; width: 100%; margin-bottom: 10px;"></div>
+          <div class="skeleton-loader" style="height: 20px; width: 90%; margin-bottom: 10px;"></div>
+          <div class="skeleton-loader" style="height: 20px; width: 95%; margin-bottom: 10px;"></div>
         </div>
 
       </div>
@@ -98,7 +99,7 @@
             return;
           }
 
-          document.title = `${article.title} | Arcaffo®`;
+          document.title = `${article.title} | Arcaffo GROUP®`;
           document.getElementById('article-title').textContent = article.title;
           document.getElementById('article-date').textContent = article.date || 'Blog';
           
@@ -139,14 +140,14 @@
             "datePublished": article.createdAt || article.date || new Date().toISOString(),
             "author": {
               "@type": "Person",
-              "name": article.author?.name || "Equipe Arcaffo"
+              "name": article.author?.name || "Equipe Arcaffo GROUP"
             },
             "publisher": {
               "@type": "Organization",
-              "name": "Arcaffo",
+              "name": "Arcaffo GROUP",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.arcaffo.com/images/brand/logo-arcaffo-v2.png"
+                "url": "https://www.arcaffo.com/images/brand/logo-arcaffo-group-w.svg"
               }
             }
           });
@@ -196,27 +197,28 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-col">
-          <a href="/" class="logo" style="display: block; margin-bottom: 1rem;"><img src="/images/brand/logo-arcaffo-v2.png" alt="Arcaffo" width="128" height="32" fetchpriority="high" style="height: 32px;"></a>
+        <div class="footer-col card-reveal" style="transition-delay: 0ms;">
+          <a href="/" class="logo" style="display: block; margin-bottom: 1rem;"><img src="/images/brand/logo-arcaffo-group-w.svg" alt="Arcaffo GROUP" width="128" height="32" fetchpriority="high" style="height: 32px;"></a>
 <p style="margin-top: 1rem; color: var(--color-text-secondary); font-size: 0.9rem;">
             Formamos empresários, estruturamos negócios e elevamos a cultura.
           </p>
           <div style="margin-top: 1.5rem; color: var(--color-text-secondary); font-size: 0.85rem; line-height: 1.6;">
-            <p><strong>Arcaffo</strong></p>
+            <p><strong>Arcaffo GROUP</strong></p>
             <p>Rua Piratininga, 641<br>Jardim dos Estados<br>Campo Grande - MS, Brasil</p>
             <p style="margin-top: 0.5rem;"><a href="https://wa.me/5567982226166" target="_blank" style="color: var(--color-text-secondary); text-decoration: none;">+55 67 98222-6166</a></p>
           </div>
         </div>
-        <div class="footer-col">
+        <div class="footer-col card-reveal" style="transition-delay: 60ms;">
           <h3>Empresa</h3>
           <ul>
             <li><a href="/sobre.html">Sobre</a></li>
+            <li><a href="/servicos.html">Serviços</a></li>
             <li><a href="https://advisor.arcaffo.com" target="_blank" rel="noopener">Assessoria</a></li>
             <li><a href="/projetos.html">Projetos</a></li>
             <li><a href="/contato.html">Contato</a></li>
           </ul>
         </div>
-        <div class="footer-col">
+        <div class="footer-col card-reveal" style="transition-delay: 120ms;">
           <h3>Ecossistema</h3>
           <ul>
             <li><a href="https://advisor.arcaffo.com" target="_blank">Assessoria</a></li>
@@ -225,7 +227,7 @@
             <li><a href="/vagas.html">Trabalhe Conosco</a></li>
           </ul>
         </div>
-        <div class="footer-col">
+        <div class="footer-col card-reveal" style="transition-delay: 180ms;">
           <h3>Social</h3>
           <ul>
             <li><a href="https://www.instagram.com/arcaffo/" target="_blank">Instagram</a></li>
@@ -235,7 +237,8 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 Arcaffo – Todos os direitos reservados.</p>
+        <svg class="arcaffo-regmark" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="6"></circle><line x1="12" y1="0" x2="12" y2="24"></line><line x1="0" y1="12" x2="24" y2="12"></line></svg>
+        <p>© 2026 Arcaffo GROUP – Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>

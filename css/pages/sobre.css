@@ -10,7 +10,7 @@
 }
 
 .hero-page h1 {
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 2rem + 4vw, 5rem);
   max-width: 800px;
   margin: 0 auto 2rem;
 }
@@ -57,7 +57,7 @@
   border: 1px solid var(--color-accent);
   color: var(--color-accent);
   padding: 0.5rem 1rem;
-  border-radius: 20px;
+  border-radius: var(--arcaffo-radius-sm);
   font-weight: 600;
   z-index: 2;
 }
@@ -66,7 +66,7 @@
   background-color: var(--color-bg-card);
   padding: 2rem;
   border: 1px solid var(--color-border);
-  border-radius: 4px;
+  border-radius: var(--arcaffo-radius);
   width: 90%;
   position: relative;
   margin-top: 3rem;
@@ -96,15 +96,14 @@
 }
 
 .pillar h4 {
-  font-family: var(--font-accent);
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: var(--color-accent);
   margin-bottom: 1rem;
 }
 
 /* Equipe */
 .member-photo {
-  border-radius: 4px;
+  border-radius: var(--arcaffo-radius-sm);
   overflow: hidden;
   margin-bottom: 1.5rem;
   aspect-ratio: 4/5;
