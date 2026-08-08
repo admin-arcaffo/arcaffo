@@ -7,17 +7,82 @@
   position: relative;
   overflow: hidden;
   padding-top: 80px;
+  background-color: var(--arcaffo-black);
+}
+
+/* Fundo inspirado no hero do resend.com: preto sólido com 2 feixes de luz
+   diagonal bem suaves passando por baixo/ao redor do cubo, mais um brilho
+   suave e discreto perto do texto — recriado com CSS (gradientes próprios),
+   não é a imagem deles, só o mesmo resultado visual. */
+.hero-lightsweep {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-lightsweep-glow {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 55vw;
+  height: 55vw;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(10px);
+}
+
+.hero-lightsweep-band {
+  position: absolute;
+  left: -15%;
+  width: 130%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(232, 232, 238, 0.16) 42%, rgba(232, 232, 238, 0.2) 55%, rgba(255, 255, 255, 0) 100%);
+  filter: blur(14px);
+}
+
+.hero-lightsweep-band-1 {
+  top: 60%;
+  transform: rotate(-3.5deg);
+}
+
+.hero-lightsweep-band-2 {
+  top: 71%;
+  transform: rotate(-3.5deg);
+  opacity: 0.65;
+}
+
+/* Grão sutil por cima da aurora — textura fotográfica discreta em vez de um
+   degradê totalmente liso/plano. */
+.hero-grain {
+  position: absolute;
+  inset: -60px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-size: 180px 180px;
 }
 
 .hero-content {
   position: relative;
   z-index: 10;
   max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.hero-text {
+  max-width: 800px;
 }
 
 .hero h1 {
   font-size: 3.5rem;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 1.5rem;
   line-height: 1.1;
 }
@@ -52,7 +117,7 @@
 .project-card {
   position: relative;
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: var(--arcaffo-radius);
   aspect-ratio: 16/9;
   display: block;
 }
@@ -69,7 +134,7 @@
   bottom: 1rem;
   left: 1rem;
   right: 1rem;
-  border-radius: 12px;
+  border-radius: var(--arcaffo-radius-sm);
   background: rgba(10, 10, 10, 0.4);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);

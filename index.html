@@ -3,14 +3,13 @@
   <meta charset="UTF-8">
   <link rel="icon" type="image/svg+xml" href="/vite.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preload" as="image" href="/images/brand/wp4196517.webp" fetchpriority="high">
   <title>Arcaffo® | Branding &amp; Posicionamento de Marca</title>
   
   <!-- Fontes -->
   <link rel="preload" href="https://fonts.gstatic.com/s/intertight/v7/NGSoV5eHAnDrM-hqGGMG_G1N1u_aAroXlwM2d1Q9n27f5Hj-w-SydXzW1s-9Zc_Ww_s.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Inter:wght@400&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
   
   <!-- Estilos Globais -->
   <link rel="stylesheet" href="/css/global-v2.css" fetchpriority="high">
@@ -150,13 +149,21 @@
 
   <main>
     <!-- Hero Section -->
-    <section class="hero parallax-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('/images/brand/wp4196517.webp');">
+    <section class="hero">
+      <div class="hero-lightsweep" aria-hidden="true">
+        <span class="hero-lightsweep-glow"></span>
+        <span class="hero-lightsweep-band hero-lightsweep-band-1"></span>
+        <span class="hero-lightsweep-band hero-lightsweep-band-2"></span>
+      </div>
+      <div class="hero-grain" aria-hidden="true"></div>
       <div class="container hero-content">
-        <h1 class="animate-on-scroll"><span data-cms="home.hero_title_lead">Formamos empresários, estruturamos negócios e </span><span class="font-accent text-accent" data-cms="home.hero_title_accent">elevamos a cultura.</span></h1>
-        <p class="hero-subtitle animate-on-scroll delay-100" data-cms="home.hero_subtitle">Construímos marcas que ditam as regras do mercado. Saia da guerra de preços e do modo apaga-fogo através de um posicionamento sólido e ancorado na verdade.</p>
-        <div class="hero-ctas animate-on-scroll delay-200">
-          <a href="#ecossistema" class="btn btn-primary" data-cms="home.hero_cta_primary_label" data-cms-href="home.hero_cta_primary_href">Conheça o Ecossistema Arcaffo</a>
-          <a href="/projetos.html" class="btn btn-outline" data-cms="home.hero_cta_secondary_label" data-cms-href="home.hero_cta_secondary_href">Ver Projetos</a>
+        <div class="hero-text">
+          <h1 class="animate-on-scroll"><span data-cms="home.hero_title_lead">Formamos empresários, estruturamos negócios e </span><span class="font-accent text-accent" data-cms="home.hero_title_accent">elevamos a cultura.</span></h1>
+          <p class="hero-subtitle animate-on-scroll delay-100" data-cms="home.hero_subtitle">Construímos marcas que ditam as regras do mercado. Saia da guerra de preços e do modo apaga-fogo através de um posicionamento sólido e ancorado na verdade.</p>
+          <div class="hero-ctas animate-on-scroll delay-200">
+            <a href="#ecossistema" class="btn btn-primary" data-cms="home.hero_cta_primary_label" data-cms-href="home.hero_cta_primary_href">Conheça o Ecossistema Arcaffo</a>
+            <a href="/projetos.html" class="btn btn-outline" data-cms="home.hero_cta_secondary_label" data-cms-href="home.hero_cta_secondary_href">Ver Projetos</a>
+          </div>
         </div>
       </div>
     </section>

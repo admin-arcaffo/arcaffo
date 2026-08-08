@@ -1,36 +1,45 @@
-@font-face {
-  font-family: 'Span';
-  src: url('/fonts/Span-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
+  /* Design system Arcaffo GROUP — tons monocromáticos (fonte da verdade) */
+  --arcaffo-black: #000000;
+  --arcaffo-white: #ffffff;
+  --arcaffo-tone-1: #0d0d0d;
+  --arcaffo-tone-2: #1a1a1a;
+  --arcaffo-tone-3: #333333;
+  --arcaffo-tone-4: #666666;
+  --arcaffo-tone-5: #a6a6a6;
+  --arcaffo-tone-6: #e6e6e6;
+
+  --arcaffo-font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --arcaffo-font-heading: 'Inter Tight', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --arcaffo-font-display: 'Instrument Serif', Georgia, serif;
+
+  --arcaffo-radius: 16px;
+  --arcaffo-radius-sm: 10px;
+
   /* Tonalidades Principais (Dark Mode Monocromático) */
-  --color-bg-primary: #000000; /* Mortem in Mundum base */
-  --color-bg-secondary: #0A0A0A;
-  --color-bg-card: #141414;
+  --color-bg-primary: var(--arcaffo-black);
+  --color-bg-secondary: var(--arcaffo-tone-1);
+  --color-bg-card: var(--arcaffo-tone-2);
   --color-bg-glass: rgba(20, 20, 20, 0.7);
 
   /* Acentos (Branco - Puritas) */
-  --color-accent: #FFFFFF; 
+  --color-accent: var(--arcaffo-white);
   --color-accent-light: #E0E0E0;
   --color-accent-muted: rgba(255, 255, 255, 0.15);
 
   /* Texto */
-  --color-text-primary: #FFFFFF;
+  --color-text-primary: var(--arcaffo-white);
   --color-text-secondary: #CCCCCC;
   --color-text-muted: #999999;
 
   /* Bordas */
   --color-border: rgba(255, 255, 255, 0.12);
   --color-border-hover: rgba(255, 255, 255, 0.30);
-  
+
   /* Fontes */
-  --font-heading: 'Span', 'Playfair Display', Georgia, serif;
-  --font-body: 'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-accent: 'Span', 'Playfair Display', Georgia, serif;
+  --font-heading: var(--arcaffo-font-heading);
+  --font-body: var(--arcaffo-font-body);
+  --font-accent: var(--arcaffo-font-display);
 }
 
 *, *::before, *::after {
@@ -49,10 +58,32 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  font-weight: 500;
   line-height: 1.2;
   margin-bottom: 1rem;
+}
+
+/* Títulos (h1) usam a serifa display, caixa natural — camada "editorial"
+   trazida da atualização de Interface inspirada no resend.com. */
+h1 {
+  font-family: var(--arcaffo-font-display);
+  font-weight: 400;
+}
+
+/* Subtítulos seguem em Inter Tight, uppercase — mesmo tratamento dos
+   rótulos/eyebrows e botões. */
+h2, h3, h4, h5, h6 {
+  font-family: var(--arcaffo-font-heading);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.arcaffo-eyebrow {
+  font-family: var(--arcaffo-font-heading);
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.45);
 }
 
 a {
@@ -94,23 +125,21 @@ ul {
 
 /* Tema Claro (Light Theme) para Leitura */
 .light-theme {
-  --color-bg-primary: #FFFFFF;
+  --color-bg-primary: var(--arcaffo-white);
   --color-bg-secondary: #F7F7F7;
-  --color-bg-card: #FFFFFF;
+  --color-bg-card: var(--arcaffo-white);
   --color-bg-glass: rgba(255, 255, 255, 0.9);
-  
-  --color-text-primary: #1A1A1A;
+
+  --color-text-primary: var(--arcaffo-tone-1);
   --color-text-secondary: #555555;
   --color-text-muted: #757575;
-  
+
   --color-border: rgba(0, 0, 0, 0.1);
   --color-border-hover: rgba(0, 0, 0, 0.2);
-  
-  /* Accent mantém-se legível? Vamos testar um acento mais escuro se necessário, 
-     mas como o acento era branco na dark mode, no light mode vamos usar um acento preto/dourado 
-     O dourado principal da arcaffo é C8A96E? Vamos deixar o --color-accent preto para botões/links no modo claro, ou um cinza muito escuro */
-  --color-accent: #111111; 
-  --color-accent-light: #333333;
+
+  /* Acento vira preto no tema claro (o acento é branco no dark mode) */
+  --color-accent: var(--arcaffo-tone-1);
+  --color-accent-light: var(--arcaffo-tone-3);
 }
 
 .light-theme-surface {
@@ -230,7 +259,7 @@ ul {
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--color-border);
   min-width: 220px;
-  border-radius: 8px;
+  border-radius: var(--arcaffo-radius-sm);
   padding: 0.5rem 0;
   opacity: 0;
   visibility: hidden;
@@ -269,16 +298,16 @@ ul {
   align-items: center;
   justify-content: center;
   padding: 0.8rem 2rem;
-  font-family: var(--font-body);
+  font-family: var(--arcaffo-font-heading);
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   cursor: pointer;
   transition: all 0.3s ease;
   border: none;
   background: transparent;
-  border-radius: 24px;
+  border-radius: var(--arcaffo-radius-sm);
 }
 
 .btn-primary {
@@ -303,12 +332,16 @@ ul {
   background-color: rgba(255,255,255,0.05);
 }
 
-/* Cards com Spotlight Hover */
+/* Cards com Spotlight Hover — glow estático no topo (receita .arcaffo-surface)
+   + spotlight dinâmico por mouse (--mouse-x/y, js/main.js). São duas camadas
+   complementares: o glow estático fica no background-image, o spotlight
+   dinâmico continua nos pseudo-elementos ::before/::after abaixo. */
 .card, .service-card {
   position: relative;
   background-color: var(--color-bg-card);
+  background-image: radial-gradient(120% 100% at 50% -10%, rgba(255, 255, 255, 0.08), transparent 60%);
   border: 1px solid var(--color-border);
-  border-radius: 16px;
+  border-radius: var(--arcaffo-radius);
   padding: 2rem;
   overflow: hidden;
   transition: border-color 0.4s ease, background-color 0.4s ease, transform 0.4s ease;
@@ -318,7 +351,7 @@ ul {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 16px;
+  border-radius: var(--arcaffo-radius);
   padding: 1px;
   background: radial-gradient(
     800px circle at var(--mouse-x, 0) var(--mouse-y, 0),
@@ -429,7 +462,7 @@ ul {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.05) !important;
-  border-radius: 16px !important;
+  border-radius: var(--arcaffo-radius) !important;
   color: var(--color-text-primary) !important;
   overflow: hidden;
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
