@@ -1,0 +1,16 @@
+/* Web delivery of the official families. Latin subset covers Brazilian Portuguese.
+   Licenses and source URLs are recorded alongside the font files. */
+@font-face {
+  font-family: 'Newsreader';
+  src: url('/design-system/arcaffo-materia/fonts/newsreader-latin.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/design-system/arcaffo-materia/fonts/inter-latin.woff2') format('woff2');
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+}

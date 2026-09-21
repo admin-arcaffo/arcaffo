@@ -1,4 +1,5 @@
 import { api } from '../api.js';
+import { EDITORIAL_DEFAULTS, CHAPTERS } from '../../../shared/editorial-content.mjs';
 
 const PAGES = {
   home: {
@@ -21,14 +22,14 @@ const PAGES = {
             label: 'Botão principal',
             labelKey: 'hero_cta_primary_label',
             hrefKey: 'hero_cta_primary_href',
-            defaultHref: '#ecossistema',
+            defaultHref: '#mesa-de-trabalho',
           },
           {
             type: 'button-link',
             label: 'Botão secundário',
             labelKey: 'hero_cta_secondary_label',
             hrefKey: 'hero_cta_secondary_href',
-            defaultHref: '/projetos.html',
+            defaultHref: '/contato.html',
           },
         ],
       },
@@ -40,7 +41,8 @@ const PAGES = {
           { key: 'ecosystem_title_lead', label: 'Título Ecossistema — primeira parte', type: 'text' },
           { key: 'ecosystem_title_accent', label: 'Título Ecossistema — parte destacada', type: 'text' },
           { key: 'projects_title', label: 'Título — Portfólio', type: 'text' },
-          { key: 'problem_solution_title', label: 'Título — Problema/Solução', type: 'text' },
+          { key: 'problem_solution_title', label: 'Título — Mesa de trabalho', type: 'text' },
+          { key: 'mesa_subtitle', label: 'Introdução — Mesa de trabalho', type: 'textarea' },
         ],
       },
     ],
@@ -72,6 +74,19 @@ const PAGES = {
     ],
   },
 };
+
+PAGES.about = { label: 'Sobre e história', sections: [
+  { title: 'Apresentação', fields: [{key:'title',label:'Título',type:'text'},{key:'introduction',label:'Introdução',type:'textarea'}] },
+  ...CHAPTERS.map(year=>({title:`Capítulo ${year}`,description:'Use somente imagens relacionadas ao acontecimento. Sem imagem, o site apresenta a composição tipográfica do capítulo.',fields:[
+    {key:`year_${year}_title`,label:'Título',type:'text'},
+    {key:`year_${year}_body`,label:'Acontecimento',type:'textarea'},
+    {key:`year_${year}_image`,label:'URL da imagem (opcional)',type:'link'},
+    {key:`year_${year}_caption`,label:'Descrição e contexto da imagem',type:'text'},
+  ]})),
+]};
+const serviceLabels={title:'Título',introduction:'Introdução',bible_body:'Bíblia da Marca',behavior_body:'Comportamento',image_body:'Imagem',advisor_identity:'Advisor — Identidade',advisor_business:'Advisor — Negócios',advisor_marketing:'Advisor — Marketing',advisor_culture:'Advisor — Cultura',school_immersion:'Escola — Imersões',school_company:'Escola — In company',school_workshop:'Escola — Workshops'};
+PAGES.services={label:'Como atuamos',sections:[{title:'Conteúdo das áreas interativas',fields:Object.keys(EDITORIAL_DEFAULTS.services).map(key=>({key,label:serviceLabels[key],type:key==='title'?'text':'textarea'}))}]};
+PAGES.seo={label:'Busca e compartilhamento',sections:[{title:'Página inicial',description:'As demais páginas usam títulos, descrições e imagens do próprio conteúdo. Alterações aparecem no próximo build publicado.',fields:[{key:'home_title',label:'Título para buscadores',type:'text'},{key:'home_description',label:'Descrição para buscadores',type:'textarea'},{key:'social_image',label:'Imagem de compartilhamento (1200 × 630 px)',type:'link'}]}]};
 
 function escapeHtml(value) {
   return String(value ?? '').replace(/[&<>"']/g, (character) => ({
@@ -211,7 +226,7 @@ export async function renderSiteContent(container, params) {
     return;
   }
 
-  const namespaceData = siteContent[slug] || {};
+  const namespaceData = { ...EDITORIAL_DEFAULTS[slug], ...siteContent[slug] };
   forEachInputField(page, (field) => {
     const el = document.getElementById(`f-${slug}-${field.key}`);
     if (el) el.value = namespaceData[field.key] ?? field.defaultValue ?? '';

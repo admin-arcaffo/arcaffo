@@ -1,5 +1,7 @@
 import fs from 'fs';
 import path from 'path';
+import { sanitizeSlug } from '../api/utils/slug.mjs';
+import { validDate } from '../shared/seo.mjs';
 
 function generateSitemap() {
   const domain = 'https://www.arcaffo.com';
@@ -26,14 +28,14 @@ function generateSitemap() {
 
   // Articles
   for (const artigo of artigos) {
-    const date = artigo.updatedAt || artigo.createdAt || artigo.date || new Date().toISOString();
-    xml += `  <url>\n    <loc>${domain}/artigos/${artigo.slug}.html</loc>\n    <lastmod>${new Date(date).toISOString().split('T')[0]}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>\n`;
+    const date = validDate(artigo.updatedAt || artigo.createdAt || artigo.date);
+    xml += `  <url>\n    <loc>${domain}/artigos/${sanitizeSlug(artigo.slug)}.html</loc>\n${date ? `    <lastmod>${date.split('T')[0]}</lastmod>\n` : ''}  </url>\n`;
   }
 
   // Projects
   for (const projeto of projetos) {
-    const date = projeto.updatedAt || projeto.createdAt || projeto.date || new Date().toISOString();
-    xml += `  <url>\n    <loc>${domain}/projetos/${projeto.slug}.html</loc>\n    <lastmod>${new Date(date).toISOString().split('T')[0]}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>\n`;
+    const date = validDate(projeto.updatedAt || projeto.createdAt || projeto.date);
+    xml += `  <url>\n    <loc>${domain}/projetos/${sanitizeSlug(projeto.slug)}.html</loc>\n${date ? `    <lastmod>${date.split('T')[0]}</lastmod>\n` : ''}  </url>\n`;
   }
 
   xml += `</urlset>`;

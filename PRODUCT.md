@@ -33,13 +33,15 @@ O diferencial não é "fazer a identidade visual de uma empresa" — é a combin
 
 ## Brand Commitments
 
-- Nome público da marca passa a ser **Arcaffo GROUP** (confirmado com o cliente — o site atual ainda diz só "Arcaffo" em todo lugar; isso muda: header/logo, `<title>`, rodapé, meta tags).
-- Base monocromática obrigatória: só preto (`Mortem in Mundum` #000000) e branco (`Puritas` #FFFFFF), com uma escala de tons intermediários definida (`--arcaffo-tone-1` a `-6`, #0D0D0D → #E6E6E6) para hierarquia sem sair do sistema P&B. Nunca introduzir cor.
-- Tipografia obrigatória: `h1` em Instrument Serif (serifa display, caixa normal); `h2`–`h6` em Inter Tight (caixa alta, peso 400 sempre — nunca bold); corpo de texto em Inter (peso 400 sempre). Regra de marca, não limitação técnica da fonte (ambas são variable fonts 100–900).
-- Fonte da verdade dos tokens: `styles.css` do "Design System Arcaffo GROUP" (Google Drive, brand kit oficial v1.0 de 31.12.2024 + atualização de Interface inspirada em resend.com) — cores, radius (`--arcaffo-radius` 16px / `--arcaffo-radius-sm` 10px), botões (`.arcaffo-btn-primary/secondary/glow`), cards (`.arcaffo-card`), tiles de ícone (`.arcaffo-icon-tile`, stroke 1.4px) e o padrão `.arcaffo-surface` (fundo preto + glow radial sutil no topo) já estão especificados lá — não inventar variantes novas desses componentes.
-- Fotografia de marca: sempre preto e branco, mood escuro/atmosférico (nunca colorida ou "clean"/estúdio) — biblioteca em `photos/mood-*.jpg` no brand kit. Quando usada como fundo: overlay em gradiente preto (transparente no topo → opaco na base) para contraste de texto.
+- Nome público: **Arcaffo GROUP**.
+- Slogan institucional: **Pessoas, valores, Negócios & Marcas.**
+- Identidade vigente: **Matéria v2.0**, fornecida em 13/09/2026. Base de papel e espresso, neutros quentes, tinta e grafite para leitura e acento brasa contido. Substitui expressamente a identidade monocromática anterior.
+- Tipografia: Newsreader Light 300, caixa natural, para títulos; Inter para corpo e controles. Cantos retos, divisões por filetes e fotografia ampla. Especificação web em `DESIGN.md`.
+- Fonte da verdade: `public/design-system/arcaffo-materia/styles.css` e tokens oficiais; extensões web em `css/materia.css`.
+- Fotografia institucional segue o tratamento do pacote. **Decisão do usuário: preservar as cores originais dos trabalhos de clientes no portfólio.**
 - Logo: duas variações (wordmark "arcaffo" e símbolo reduzido "ff"), cada uma em preto e branco, SVG+PNG — arquivos atualizados em `logo/ArcaffoGroup_logo_*_1.1.*` no brand kit.
-- Referência de qualidade/estrutura (não de conteúdo — é de outro cliente): projeto entregue pela Codex em `Edna Nogueira/_assets/entrega_encontro_3/html` — usa os mesmos tokens do brand kit Arcaffo, com tipografia fluida (`clamp()`), grids com divisórias hairline entre blocos, cards com hover/shadow, seção de fluxo de processo com conector entre dois blocos, e um elemento gráfico assinatura próprio daquele cliente (não copiar o elemento em si, copiar o princípio de ter uma assinatura visual única).
+- Assinatura de experiência: mesa de trabalho editorial com três questões do negócio, navegação acessível e ligação com evidências reais.
+- Contato confirmado pelo usuário: solicitar uma conversa; equipe combina o horário. Preservar o formulário Forms existente e seus destinos; confirmação clara no site.
 
 ## Evidence on Hand
 
@@ -55,7 +57,7 @@ O diferencial não é "fazer a identidade visual de uma empresa" — é a combin
 
 1. Verdade antes de venda: a marca é construída sobre posicionamento real e verdade, não sobre truques de marketing — evitar copy hiperbólico ou promessas vazias.
 2. Uma marca, três frentes: todo o site deve deixar claro que branding, formação empresarial e assessoria são partes do mesmo produto, não serviços avulsos.
-3. Monocromia é a marca, não uma limitação: a ausência de cor é a assinatura visual (`Mortem in Mundum` / `Puritas`) — hierarquia se resolve com tom, tipografia e luz, nunca com cor.
+3. Sobriedade com calor humano: hierarquia por tom, tipografia, espaço e fotografia. A experiência deve convidar à participação e à conversa, preservando rapidez de resposta e autonomia de navegação.
 4. Fala com quem decide: o leitor-alvo é o dono/sócio de uma PME brasileira, não um departamento de marketing corporativo — linguagem direta, sem jargão de agência.
 5. Prova, não afirmação: usar os números reais (10 anos, NPS 97, +400 marcas) e os cases reais em vez de alegações genéricas de autoridade.
 

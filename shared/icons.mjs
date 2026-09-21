@@ -1,0 +1,2 @@
+const paths = { right:'M4 12h16m-6-6 6 6-6 6', left:'M20 12H4m6-6-6 6 6 6', up:'M12 20V4m-6 6 6-6 6 6', down:'M12 4v16m-6-6 6 6 6-6', diagonal:'M5 19 19 5M5 5h14v14', close:'m6 6 12 12M6 18 18 6', plus:'M12 5v14M5 12h14', minus:'M5 12h14' };
+export const icon = (name = 'right') => `<svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="square" aria-hidden="true" focusable="false"><path d="${paths[name] || paths.right}"/></svg>`;

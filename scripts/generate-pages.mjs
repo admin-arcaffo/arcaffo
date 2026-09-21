@@ -2,6 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import * as cheerio from 'cheerio';
 import { sanitizeSlug } from '../api/utils/slug.mjs';
+import { escapeHtml, richText } from './materia-site.mjs';
+import { absoluteUrl, validDate, jsonLd } from '../shared/seo.mjs';
 
 // Pre-renders one static HTML file per artigo/projeto so the real title,
 // description, content and JSON-LD ship in the initial HTML response —
@@ -28,13 +30,11 @@ function excerptFrom(html, len = 157) {
 }
 
 function toISODate(value) {
-  if (!value) return new Date().toISOString();
-  const d = new Date(value);
-  return isNaN(d) ? new Date().toISOString() : d.toISOString();
+  return validDate(value);
 }
 
 function writeJsonLd($, data) {
-  $('head').append(`<script type="application/ld+json">${JSON.stringify(data)}</script>\n`);
+  $('head').append(`<script type="application/ld+json">${jsonLd(data)}</script>\n`);
 }
 
 function setCommonMeta($, { title, description, url, image, type = 'website' }) {
@@ -76,7 +76,7 @@ function generateArtigos() {
   for (const artigo of artigos) {
     const slug = sanitizeSlug(artigo.slug);
     const url = `${DOMAIN}/artigos/${slug}.html`;
-    const image = artigo.cover ? `${DOMAIN}${artigo.cover}` : `${DOMAIN}/images/brand/og-image.jpg`;
+    const image = absoluteUrl(artigo.cover);
     const description = artigo.excerpt || excerptFrom(artigo.content || '', 157);
     const dateISO = toISODate(artigo.createdAt || artigo.date);
     const authorName = artigo.author?.name || 'Equipe Arcaffo';
@@ -93,11 +93,11 @@ function generateArtigos() {
       image: [image],
       datePublished: dateISO,
       dateModified: toISODate(artigo.updatedAt || artigo.createdAt || artigo.date),
-      author: { '@type': 'Person', name: authorName },
+      author: { '@type': /equipe|arcaffo group/i.test(authorName) ? 'Organization' : 'Person', name: authorName },
       publisher: {
         '@type': 'Organization',
         name: 'Arcaffo GROUP',
-        logo: { '@type': 'ImageObject', url: `${DOMAIN}/images/brand/logo-arcaffo-group-w.svg` },
+        logo: { '@type': 'ImageObject', url: `${DOMAIN}/icon-512.png` },
       },
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     });
@@ -117,27 +117,31 @@ function generateArtigos() {
 
     if (artigo.cover) {
       $('#article-cover').attr('src', artigo.cover).attr('alt', artigo.title);
-      const coverStyle = ($('#article-cover-container').attr('style') || '').replace('display: none;', 'display: block;');
-      $('#article-cover-container').attr('style', coverStyle);
+      $('#article-cover-container').removeAttr('hidden');
     }
 
-    $('#article-content').html(artigo.content || '');
+    $('#article-content').html(richText(artigo.content || ''));
+    $('#article-content h1').each((_,el) => $(el).replaceWith(`<h2>${$(el).html()}</h2>`));
 
     // Author byline (E-E-A-T signal)
     const authorBlock = `
-      <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--color-border); display: flex; align-items: center; gap: 1.5rem;">
-        ${artigo.author?.photo ? `<img loading="lazy" src="${artigo.author.photo}" alt="${authorName}" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">` : ''}
+      <div class="article-author">
+        ${artigo.author?.photo ? `<img loading="lazy" src="${escapeHtml(artigo.author.photo)}" alt="${escapeHtml(authorName)}" width="72" height="90">` : ''}
         <div>
-          <h4 style="margin-bottom: 0.2rem; font-size: 1.2rem;">${authorName}</h4>
-          <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin: 0;">${artigo.author?.role || 'Arcaffo'}</p>
+          <p class="author-name">${escapeHtml(authorName)}</p>
+          <p class="author-bio">${escapeHtml(artigo.author?.role || 'Arcaffo GROUP')}</p>
         </div>
       </div>`;
     $('#article-content').parent().append(authorBlock);
 
     // Content is now server-rendered; drop the client-side fetch/inject script.
     removeScriptsContaining($, 'loadArticle');
+    $('script[src="/js/legacy-detail.js"]').remove();
+    $('#article-content [style]').removeAttr('style');
+    $('#article-content h2, #article-content h3').each((_,el) => { if (!$(el).text().trim()) $(el).remove(); });
+    $('#article-content img').attr('loading','lazy');
 
-    fs.writeFileSync(path.join(outDir, `${slug}.html`), $.html());
+    fs.writeFileSync(path.join(outDir, `${slug}.html`), $.html().replace(/[ \t]+$/gm, ''));
   }
 
   console.log(`✅ Gerados ${artigos.length} artigos estáticos em /artigos`);
@@ -151,11 +155,11 @@ function mediaHtml(projeto) {
     const url = m.url || m;
     const type = m.type || (/\.(mp4|webm)$/i.test(url) ? 'video' : 'image');
     if (type === 'video') {
-      return `<div class="gallery-video-wrapper animate-on-scroll" style="width: 100%; border-radius: 8px; overflow: hidden; margin-bottom: 2rem;">
-        <video src="${url}" autoplay loop muted playsinline style="width: 100%; height: auto; display: block;"></video>
+      return `<div class="gallery-video-wrapper">
+        <video src="${escapeHtml(url)}" controls playsinline preload="metadata" aria-label="${escapeHtml(projeto.title)} — vídeo ${i + 1}"></video>
       </div>`;
     }
-    return `<img src="${url}" alt="${projeto.title} - Mídia ${i + 1}" class="gallery-image animate-on-scroll" loading="lazy" />`;
+    return `<a href="${escapeHtml(url)}" class="gallery-button" data-gallery-image aria-label="Ampliar imagem ${i + 1} de ${escapeHtml(projeto.title)}"><img src="${escapeHtml(url)}" alt="${escapeHtml(projeto.title)} — imagem ${i + 1}" class="gallery-image" loading="lazy" ${m.width && m.height ? `width="${Number(m.width)}" height="${Number(m.height)}"` : ''}></a>`;
   }).join('');
 }
 
@@ -203,34 +207,36 @@ function generateProjetos() {
     });
 
     const descHtml = (projeto.description || '').includes('<')
-      ? (projeto.description || '')
-      : (projeto.description || '').replace(/\n/g, '<br>');
+      ? richText(projeto.description || '')
+      : escapeHtml(projeto.description || '').replace(/\n/g, '<br>');
 
     const bodyHtml = `
-      <section class="project-detail-hero" style="background-image: url('${image}');">
+      <section class="project-detail-hero">
         <div class="container project-detail-header">
-          <h1 class="animate-on-scroll" style="font-size: 4rem;">${projeto.title}</h1>
-          <p class="section-subtitle animate-on-scroll delay-100 text-accent">${(projeto.tags || []).join(' • ')}</p>
+          <a class="text-link" href="/projetos.html">← Todos os projetos</a>
+          <h1>${escapeHtml(projeto.title)}</h1>
+          <p class="section-subtitle">${escapeHtml((projeto.tags || []).join(' · '))}</p>
         </div>
+        <img class="project-cover" src="${escapeHtml(image)}" alt="${escapeHtml(projeto.title)}" fetchpriority="high" width="1920" height="1280" style="view-transition-name: project-${slug}">
       </section>
 
       <section class="project-detail-info light-theme">
         <div class="container grid-2">
           <div class="project-description animate-on-scroll">
-            <h2 class="section-title">O Desafio</h2>
+            <h2 class="section-title">A história por trás da marca.</h2>
             <div>${descHtml}</div>
           </div>
           <div class="project-meta animate-on-scroll delay-100">
             ${projeto.team ? `
               <div class="meta-item">
                 <span class="meta-label">Equipe</span>
-                <span class="meta-value">${projeto.team}</span>
+                <span class="meta-value">${escapeHtml(projeto.team)}</span>
               </div>
             ` : ''}
             ${projeto.tags ? `
               <div class="meta-item">
                 <span class="meta-label">Entregas</span>
-                <span class="meta-value">${projeto.tags.join(', ')}</span>
+                <span class="meta-value">${escapeHtml(projeto.tags.join(', '))}</span>
               </div>
             ` : ''}
           </div>
@@ -243,14 +249,15 @@ function generateProjetos() {
         </div>
       </section>
 
-      <section class="cta-section text-center" style="background-color: var(--color-bg-secondary); padding: 4rem 0;">
+      <section class="cta-section text-center">
         <div class="container animate-on-scroll">
           <a href="/projetos.html" class="btn btn-outline">Voltar para o Portfólio</a>
         </div>
       </section>
     `;
 
-    $('#project-container').html(bodyHtml);
+    $('main').html(bodyHtml);
+    $('script[src="/js/legacy-detail.js"]').remove();
 
     // Content is now server-rendered; drop the client-side fetch/inject script.
     $('script').each((_, el) => {
@@ -258,7 +265,7 @@ function generateProjetos() {
       if (txt.includes('fetchProjetos')) $(el).remove();
     });
 
-    fs.writeFileSync(path.join(outDir, `${slug}.html`), $.html());
+    fs.writeFileSync(path.join(outDir, `${slug}.html`), $.html().replace(/[ \t]+$/gm, ''));
   }
 
   console.log(`✅ Gerados ${projetos.length} projetos estáticos em /projetos`);

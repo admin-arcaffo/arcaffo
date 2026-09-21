@@ -1,180 +1,80 @@
----
-name: Arcaffo GROUP
-description: Consultoria de branding e estruturação empresarial — identidade monocromática, tipografia editorial serifada sobre labels uppercase, camada de interface preta com glow inspirada em resend.com.
-colors:
-  arcaffo-black: "#000000"
-  arcaffo-white: "#ffffff"
-  arcaffo-tone-1: "#0d0d0d"
-  arcaffo-tone-2: "#1a1a1a"
-  arcaffo-tone-3: "#333333"
-  arcaffo-tone-4: "#666666"
-  arcaffo-tone-5: "#a6a6a6"
-  arcaffo-tone-6: "#e6e6e6"
-typography:
-  display:
-    fontFamily: "Instrument Serif, Georgia, serif"
-    fontWeight: 400
-    letterSpacing: "0"
-  heading:
-    fontFamily: "Inter Tight, sans-serif"
-    fontWeight: 400
-    letterSpacing: "0.04em"
-  body:
-    fontFamily: "Inter, sans-serif"
-    fontWeight: 400
-  eyebrow:
-    fontFamily: "Inter Tight, sans-serif"
-    fontSize: "13px"
-    letterSpacing: "0.06em"
-rounded:
-  sm: "10px"
-  md: "16px"
-components:
-  button-primary:
-    backgroundColor: "{colors.arcaffo-white}"
-    textColor: "{colors.arcaffo-black}"
-    rounded: "{rounded.sm}"
-    padding: "14px 28px"
-  button-secondary:
-    backgroundColor: "rgba(255,255,255,0.04)"
-    textColor: "{colors.arcaffo-white}"
-    rounded: "{rounded.sm}"
-    padding: "14px 28px"
-  card:
-    backgroundColor: "{colors.arcaffo-tone-2}"
-    textColor: "{colors.arcaffo-white}"
-    rounded: "{rounded.md}"
----
+# Arcaffo GROUP — Matéria, web v2
 
-# Design System: Arcaffo GROUP
+Direção vigente desde 13/09/2026. Substitui a identidade monocromática/Resend anterior.
 
-## Overview
+## Fonte da verdade
 
-**Creative North Star: "A Prova de Registro" (The Registration Mark)**
+Pacote fornecido pelo usuário em `Clientes/_Arcaffo/1. Institucional/1. Identidade Visual/_Estudos/Design System`, versão 2.0 Matéria. Cópia local em `public/design-system/arcaffo-materia/`; `css/materia.css` importa seu `styles.css`. Não alterar novamente para preto puro, Instrument Serif ou Inter Tight nos títulos.
 
-Arcaffo é um estúdio de branding que constrói marcas sobre verdade e precisão, não sobre efeito — "posicionamento sólido e ancorado na verdade". O sistema visual é a versão digital do próprio ofício do estúdio: pré-impressão, registro, alinhamento exato. Preto e branco não é uma limitação de paleta, é a declaração de que a marca não precisa de cor pra ter presença — ela se sustenta em tom, luz e tipografia.
+## Experiência
 
-A camada de fundo (superfícies pretas com glow radial sutil, cards com borda hairline + luz no topo) foi trazida da referência de interface do resend.com e aplicada sobre essa base monocromática já existente da marca. Títulos ganham peso editorial via serifa display (Instrument Serif); rótulos, botões e subtítulos ficam em caixa alta sans (Inter Tight); corpo de texto é sempre Inter regular. O elemento assinatura em desenvolvimento — marcas de registro/prova de prelo em traço fino, o dispositivo real usado por um estúdio gráfico pra alinhar uma prova antes de rodar a impressão — substitui o cubo 3D genérico removido desta base e dá à Arcaffo algo que não é "resend em preto e branco", é o vocabulário do próprio ofício da marca.
+Uma visita à mesa de trabalho da Arcaffo. Marca séria, próxima, sóbria e calorosa. A profundidade vem de conteúdo real, espaço e participação. Navegação rápida, rolagem nativa, ausência de espera cenográfica. Menu: Sobre, Como atuamos, Projetos, Artigos, Vamos conversar.
 
-Rejeições confirmadas: nenhuma cor de acento (só preto/branco/tons de cinza); nenhuma fonte bold em título (Inter Tight é sempre peso 400, mesmo em uppercase); nenhuma foto colorida ou "clean"/estúdio (fotografia de marca é sempre P&B, mood escuro e atmosférico).
+Home: recepção tipográfica/fotográfica → convicção → mesa de trabalho → projetos → pessoas → ecossistema → conversa. A mesa é uma exploração editorial de três questões, não um diagnóstico nem uma triagem de acesso.
 
-**Key Characteristics:**
-- Monocromático absoluto — hierarquia por tom, nunca por cor
-- Título serifado editorial + rótulos/botões em caixa alta sans — nunca a mesma família em ambos os papéis
-- Superfícies pretas com glow radial sutil no topo, não gradientes decorativos aleatórios
-- Bordas arredondadas consistentes (16px / 10px) em toda a interface, nunca radius ad-hoc
-- Fotografia real da marca (não stock), sempre P&B, com overlay em gradiente preto quando usada como fundo
+## Identidade
 
-## Colors
+- Slogan institucional: “Pessoas, valores, Negócios & Marcas.” Usar como assinatura de fechamento no rodapé e como dado estruturado da organização; não repetir em seções onde dispute atenção com mensagens principais.
+- Títulos: Newsreader 300, caixa natural. Corpo: Inter 400; utilidades 500. Fontes locais WOFF2 com licença OFL incluída.
+- Papel, areia, linho, tinta, grafite, espresso e brasa: somente tokens `--arcaffo-*` do pacote. Preto/branco puros somente nos arquivos de logotipo.
+- Cantos retos; filetes de separação; nenhuma sombra decorativa ou vidro.
+- Materialidade por imagem real, proporção e acabamento. Nenhuma fotografia gerada apresentada como registro da empresa.
+- Fotografias institucionais de pessoas recebem tratamento quente. A foto da fachada já é monocromática no original e recebe a temperatura do filtro de apresentação. Não há promessa de recuperar cores do original.
+- **Exceção autorizada pelo usuário: trabalhos de clientes preservam suas cores.** Nunca filtrar contêineres que contenham projetos. Logos de parceiros também preservam seus arquivos originais.
+- Luz âmbar discreta, indireta e estática na superfície espresso.
 
-Paleta estritamente monocromática: duas cores de marca (preto e branco) mais uma escala de seis tons intermediários só para hierarquia — nunca para decoração ou "acento".
+## Adaptações web
 
-### Primary
-- **Mortem in Mundum** (`#000000`, `--arcaffo-black`): fundo padrão de toda a interface — canvas, header, footer, seções escuras.
-- **Puritas** (`#ffffff`, `--arcaffo-white`): texto principal sobre fundo escuro, botão primário, logo em fundo preto.
+Decisões de implementação para tornar o sistema utilizável: corpo 16px; botões em caixa natural com fonte 12–13px e alvo mínimo 48px; rótulos editoriais seguem o eyebrow de 10,5px. Assim os controles não se tornam títulos em caixa alta. Interações e estados usam os mesmos tokens, com erros identificados também por texto e borda. Dimensão máxima 1280px e gutters fluidos para o site.
 
-### Neutral (escala de tons — hierarquia, não decoração)
-- **Tone 1** (`#0d0d0d`): fundo secundário, ligeiramente acima do preto puro (headers de seção, footer).
-- **Tone 2** (`#1a1a1a`): fundo de cards e superfícies elevadas.
-- **Tone 3** (`#333333`): bordas fortes, divisores, estados desabilitados.
-- **Tone 4** (`#666666`): texto terciário/muted — usar com cautela, contraste baixo em fundo preto (~3.3:1); nunca em texto de leitura corrida.
-- **Tone 5** (`#a6a6a6`): texto secundário em fundo escuro quando `#CCCCCC` não está disponível.
-- **Tone 6** (`#e6e6e6`): quase-branco, para textos secundários em fundo escuro ou fundos quase-brancos no tema claro (ver Alternation Rule abaixo).
+As classes antigas mantidas no conteúdo de Sobre/Serviços usam aliases temporários `--color-*` mapeados para Matéria. Os arquivos CSS v1 e scripts antigos permanecem no repositório para preservar o trabalho anterior, mas não são carregados pelas páginas públicas v2.
 
-### Semantic (não-decorativo)
-- **Erro de formulário** (`#ff8f8f` em fundo escuro / `#B3261E` em `.light-theme`): única exceção à escala preto→branco, reservada a estado de erro de campo/validação — nunca usada como acento decorativo.
+## Movimento
 
-### Named Rules
-**The No-Accent Rule.** Nenhum elemento usa cor fora da escala preto→branco. Se uma seção "precisa" de destaque, o destaque vem de tom, tamanho, peso ou luz — nunca de introduzir uma cor nova.
-**The Contrast Floor Rule.** Texto secundário em fundo escuro nunca fica abaixo de `#CCCCCC`/tone-6 (~11:1) para leitura corrida; tons mais escuros (tone-3/4/5) ficam reservados para bordas, superfícies e estados inativos. No tema claro, o piso equivalente é `#555555` (texto secundário) — tone-4/tone-5 direto em texto ficam fracos em fundo branco.
-**The Alternation Rule.** Preto não é o único fundo — é o padrão. `.light-theme` (`css/global-v2.css`) inverte os tokens (`--color-bg-*`, `--color-text-*`, `--color-border*`, `--color-accent*`) para uma seção inteira virar clara sem precisar de um segundo sistema de cores; hoje usado nas páginas de artigo e, a partir desta leva, em seções escolhidas de `index`/`sobre`/`servicos`/`vagas` para criar ritmo (nunca a página inteira — hero e rodapé continuam pretos como moldura). Onde um componente precisa continuar escuro dentro de uma seção clara (ex. o 2º `.service-card`, `.job-card`) ou claro dentro de uma seção escura (ex. `.contact-form-inner` em `contato.html`), ele redefine localmente os mesmos tokens (`--color-bg-card`, `--color-text-primary` etc.) em vez de introduzir cor nova — é a mesma escala, só invertida num escopo menor. Exceção testada e revertida: `.ecosystem-card` em `index.html` chegou a usar esse mesmo mecanismo (card quase-preto dentro da seção clara), mas na prática lia como bloco pesado caído sobre o branco — virou tom sobre tom em vez de inversão total (`.light-theme .ecosystem-card` usa `--arcaffo-white`, um degrau acima do `#F7F7F7` da seção, com elevação por sombra suave em vez de escurecer o card). Nem todo componente dentro de seção clara precisa inverter — às vezes o contraste de tom já é suficiente, e inverter sólido fica pesado demais.
+180ms para feedback; 350ms para troca de conteúdo; 550ms para acomodação editorial. Curva `cubic-bezier(.4,0,.2,1)`, sem elasticidade. Conteúdo visível por padrão, mesmo sem JavaScript. View Transitions entre páginas quando suportado; nenhum bloqueio de navegação. `prefers-reduced-motion` remove animações. Não existe loop de luz seguindo o mouse.
 
-## Typography
+## Arquitetura
 
-**Display Font:** Instrument Serif (com Georgia como fallback)
-**Heading/Label Font:** Inter Tight (com sans-serif do sistema como fallback) — sempre uppercase, sempre peso 400
-**Body Font:** Inter (com sans-serif do sistema como fallback) — sempre peso 400
+- `templates/header.html` e `templates/footer.html`: composição compartilhada pelo plugin do Vite.
+- `templates/home.html`, `contact.html`, `thanks.html`: fontes das três páginas. O plugin aplica essas fontes em desenvolvimento e no build; não editar suas cópias derivadas no HTML raiz.
+- `scripts/materia-site.mjs`: composição, conteúdo do painel, listagens completas renderizadas no build e normalização dos slugs.
+- `artigo.html`, `projeto.html`, `scripts/generate-pages.mjs`: fontes dos detalhes. Não editar os HTML de `artigos/` e `projetos/` diretamente.
+- `js/worktable.js`, `gallery.js`, `main.js`: interações por teclado/toque, menu, filtros, contato e eventos sem dados pessoais.
+- `shared/materia-content.mjs`: projeção versionada do conteúdo legado. Build/GET não escrevem no Blob. O próximo salvamento normal do painel persiste a versão 2 e conserva as cópias antigas em `legacyMateriaBackup`.
 
-**Character:** Serifa editorial de alto contraste para título, contra uma sans geométrica em caixa alta para tudo o que é rótulo/estrutura — o mesmo par que um estúdio gráfico usaria numa capa impressa: um título com peso autoral, cercado de metadados técnicos em caixa alta.
+## Contato
 
-### Hierarchy
-- **Display / h1** (peso 400, tamanho por página — ex. hero 3.5rem/clamp, título de projeto maior — caixa normal, `letter-spacing: 0`): título principal de cada página/seção-âncora. Nunca uppercase, nunca bold.
-- **Heading / h2–h6** (peso 400, caixa alta, `letter-spacing: 0.04em`): qualquer subtítulo estrutural. Nunca serifado, nunca bold — hierarquia entre h2/h3/h4 vem só do tamanho.
-- **Eyebrow** (`.arcaffo-eyebrow`, Inter Tight uppercase, 13px, `letter-spacing: 0.06em`, `color: rgba(255,255,255,.45)`): rótulo curto acima de um título, ou usado dentro de botões.
-- **Body** (Inter, peso 400): parágrafos e texto corrido.
+Decisão confirmada: solicitar conversa; equipe combina o horário. Formulário `a282b5b2-866d-4111-9e6b-ffa659de8cdf`, destino Forms Arcaffo, campos existentes Nome/E-mail/Telefone. A apresentação não promete campo de mensagem ou horário reservado.
 
-### Named Rules
-**The Never-Bold-Heading Rule.** `h1`–`h6` nunca usam `font-weight` acima de 400 — hierarquia é tamanho + caixa (uppercase nos h2–h6), nunca peso. Isso vale mesmo quando o instinto normal seria "deixar mais forte".
-**The One-Family-Per-Role Rule.** Instrument Serif só aparece em títulos display (h1) ou na variante âncora de h2 (`.section-title--anchor`, ver abaixo) — e mesmo aí, só numa palavra via `.font-accent`, nunca no h2 inteiro. Nunca usar a serifa em corpo de texto, botão ou rótulo — e nunca usar Inter Tight/Inter no título principal.
+`public/embed/arcaffo-form.js` é a cópia versionada do script público do próprio Forms, consultado em 13/09/2026. SHA-256 upstream: `d2a4b3757c3f1ee6259fa4c523be2dcd274da0615b39d398e8a1f2dd7d1e3c78`. Adaptações: destino da API fixado no Forms, associação explícita dos campos a seus rótulos e suporte ao atributo `data-success-redirect` para confirmação no próprio site. O formulário e os dados remotos não foram modificados. Atualizações futuras do Forms precisam ser reconciliadas nesta cópia e testadas antes da publicação.
 
-**The Anchor-Title Exception.** Regra base: h1 = serifa, h2–h6 = Inter Tight uppercase, sem exceção — já é assim em todo o CSS (`h1 { font-family: var(--arcaffo-font-display) }`, `h2..h6 { text-transform: uppercase }`), não é preciso reforçar isso em lugar nenhum. Mas repetir "Inter Tight uppercase" em toda `.section-title` da página (10+ ocorrências no site) lê como monótono quando a serifa é o elemento de maior personalidade da marca. Pra isso, `.section-title--anchor` quebra o uppercase de UM h2 por seção (peso 300, `letter-spacing: -1px`, caixa normal) e uma palavra dentro dele ganha `.font-accent.text-accent` (serifa itálica) — o mesmo tratamento que o h2 do CTA final ("Pronto para construir um *legado?*") já usava informalmente. Usar só nos títulos que carregam o peso emocional da seção (ex.: "Nossa Essência", "Liderança") — nunca nos rótulos utilitários ("Portfólio", "Pilares Culturais"), senão o contraste que dá a personalidade desaparece.
+O assunto escolhido na mesa aparece como contexto de leitura. Não se injeta resposta nem se coleta informação adicional silenciosamente. A confirmação vem depois do sucesso do provedor. O endereço direto do Forms, WhatsApp e e-mail permanecem disponíveis como alternativas.
 
-## Layout
+## Verificação e operação
 
-Container padrão até 1200–1360px conforme a seção, com padding lateral fluido. Grid de 12 colunas para blocos assimétricos (ex. projetos em destaque na home), grid simples 2–4 colunas para listagens de cards. Breakpoints principais em 768px (mobile) e 899–1024px (tablet/coluna dupla). Recomendado para a próxima leva de páginas: migrar tamanhos de fonte fixos (`rem`) para `clamp()` fluido nos títulos display, como na referência de qualidade (`entrega_encontro_3/html/styles.css`) — reduz a quantidade de overrides por breakpoint.
+- `npm run build:local`: gera páginas com o snapshot local, sem sincronizar dados remotos.
+- `npm run build`: sincroniza o conteúdo do Blob quando configurado, gera e compila.
+- `npm test`: migração idempotente, integridade de páginas/URLs, HTML estático e recursos do build.
+- `scripts/audit-materia-browser.mjs`: navegadores desktop/mobile, imagens, overflow, menu, teclado, filtros, galeria, formulário simulado, confirmação, movimento reduzido e conteúdo sem JS.
+- Dados pessoais e texto livre não entram no Analytics; previews não carregam GA.
+- A versão anterior da árvore de trabalho foi preservada em `/private/tmp/arcaffo-materia-backup.VPlmNL/site-before.tar.gz` antes da migração. O arquivo exclui `.git`, credenciais e dependências.
 
-### Named Rules
-**The Centered-Header Rule.** `.section-header` (título + subtítulo de abertura de seção) é sempre centralizado — é o padrão em uso em toda seção com título/subtítulo próprio (Filosofia, Ecossistema, Portfólio etc.). O conteúdo abaixo (grids de card, colunas de texto) fica alinhado à esquerda por padrão, e só centraliza quando o próprio conteúdo pede isso explicitamente (cards curtos e simétricos, como os do Ecossistema e da Filosofia; CTAs isolados). Não alternar por seção sem motivo — a regra evita que cada seção nova decida isso de novo.
+Prova de build não substitui envio real no provedor, teste em aparelho físico nem métricas de campo. Consultar o relatório da entrega para os resultados efetivamente obtidos.
 
-## Elevation & Depth
+## Revisão editorial — 15 de setembro de 2026
 
-Sem sombras tradicionais (`box-shadow` escuro) como recurso primário de profundidade — o sistema usa **luz**, não sombra: glow radial branco muito sutil no topo das superfícies (`.arcaffo-surface::before`) e dos cards (`.card`/`.arcaffo-card`), simulando uma fonte de luz incidindo de cima. Bordas hairline brancas a 10–12% de opacidade fazem o trabalho que uma sombra faria em separar camadas.
+`scripts/editorial-render.mjs` compõe Sobre, Serviços e os refinamentos da home durante a transformação HTML de `scripts/materia-site.mjs`. Editar esse módulo, não apenas os HTML de entrada. `css/chapters.css` concentra os novos layouts. `shared/editorial-content.mjs` define campos opcionais e defaults do CMS, sem sobrescrever dados remotos.
 
-### Named Rules
-**The Light-Not-Shadow Rule.** Profundidade vem de um glow branco sutil no topo da superfície + borda hairline, nunca de `box-shadow` preto. Uma superfície "elevada" é mais clara no topo, não mais escura embaixo.
+Liderança fica somente em Sobre. A história usa capítulos com palco fixo em desktop e leitura vertical em mobile/movimento reduzido; imagens históricas só entram quando identificadas pelo responsável. Essência é uma declaração; cultura, comportamentos exploráveis. Serviços usam painéis acessíveis com todas as informações disponíveis sem JavaScript.
 
-## Motion
+`shared/icons.mjs` padroniza setas SVG em todos os dispositivos. A galeria usa dialog nativo, navegação por teclado/toque e retorno de foco. `js/chapters.js` faz a melhoria progressiva; GSAP/ScrollTrigger em `js/scroll-scenes.js` só carrega perto das seções relevantes, sem substituir a rolagem nativa.
 
-**Arquétipo: Premium** (skill `motion-design`) — elegante, minimal, sem overshoot. É a única leitura compatível com uma marca monocromática que se sustenta em tom, luz e tipografia, não em efeito. Constantes da identidade de motion (`css/global-v2.css :root`):
-- **Curva assinatura:** `--arcaffo-ease` = `cubic-bezier(0.4, 0, 0.2, 1)` — usada em ~80% das transições do site.
-- **Paleta de duração:** `--arcaffo-dur-quick` (150ms, feedback de hover/estado), `--arcaffo-dur-standard` (350ms, cards/painéis), `--arcaffo-dur-slow` (550ms, imagens grandes/revelações dramáticas).
-- **Entrada de texto/hero:** `.animate-on-scroll` continua em 800ms — reservado para momentos de título/hero, não para grades de cards.
-- **Entrada de grid:** `.card-reveal` (350ms, `--arcaffo-ease`) — usa a duração "standard", com stagger calculado via JS (`Math.min(i * 40, 400)`ms), nunca por classe `.delay-N` fixa (não escala além de poucos itens).
+`scripts/site-seo.mjs` centraliza canonical, indexação, compartilhamento, ícones e JSON-LD. Datas não são inventadas. `scripts/prepare-editorial-assets.mjs` gera imagens responsivas reais e a família de ícones; é executado manualmente com o acervo local, não durante o build Vercel. Arquivos com hash têm cache longo; imagens de URL estável precisam revalidar.
 
-### Named Rules
-**The Three-Layer Hover Rule.** Todo hover de card relevante (`.project-card`) combina camada primária (imagem escalando), secundária (moldura/borda do overlay reagindo) e ambiente (glow sutil no topo, mesma receita de luz da Elevation Rule) — hover de uma camada só lê como incompleto.
-**The Reduced-Motion Rule.** `@media (prefers-reduced-motion: reduce)` zera a duração das transições de entrada e do hover em camadas — quem pede menos movimento recebe o estado final direto, nunca a jornada.
+Auditoria adicional: `scripts/audit-chapters-browser.mjs` testa Chrome, Firefox e WebKit. Relatórios em `.impeccable/qa/chapters/`. Referências visuais consultadas: Awwwards (Sperotto, Kurzform e Family Style), traduzidas para o sistema Matéria, sem copiar suas identidades.
 
-## Shapes
+## Refinamento após consultoria — 15 de setembro de 2026
 
-Dois raios em todo o sistema, sem exceção: `--arcaffo-radius` (16px, cards/superfícies grandes) e `--arcaffo-radius-sm` (10px, botões/tiles/elementos menores). Bordas sempre hairline (1px), nunca grossas. Ícones em stroke fino (1.4px), nunca preenchidos/sólidos.
+A home passa a usar ritmo regular nos três indicadores e uma grade de projetos em linhas alinhadas, sem stagger. O subtítulo inicial separa a frase de síntese, e o título do ecossistema incorpora a assinatura Arcaffo GROUP. Botões de ação recebem raio discreto de 3px para reforçar a affordance sem abandonar a sobriedade do sistema.
 
-## Components
-
-### Buttons
-- **Shape:** `--arcaffo-radius-sm` (10px), padding `14px 28px`.
-- **Primary:** fundo branco sólido, texto preto, tipografia Inter Tight uppercase 13px.
-- **Secondary:** fundo `rgba(255,255,255,.04)`, borda hairline `rgba(255,255,255,.14)`, texto branco.
-- **Glow (opcional):** `.arcaffo-btn-glow` — halo radial branco suave atrás do botão (`blur(10px)`, opacidade 0.6), reservado para CTAs de maior peso.
-
-### Cards / Containers
-- **Corner Style:** `--arcaffo-radius` (16px).
-- **Background:** `--arcaffo-tone-2` (#1A1A1A) ou gradiente sutil `rgba(255,255,255,.06)→.02`.
-- **Border:** hairline branco a 10% de opacidade.
-- **Elevation:** glow radial branco no topo (ver Elevation & Depth) — não confundir com o spotlight dinâmico por mouse (`--mouse-x/--mouse-y`, ver abaixo), que é uma camada adicional, não substituta.
-
-### Icon Tiles
-- **Style:** tile 64×64px, `--arcaffo-radius-sm`, fundo `rgba(255,255,255,.04)`, borda hairline 10%. Ícone SVG stroke 1.4px, `currentColor`, nunca preenchido.
-
-### Navigation
-- Header fixo, transparente até rolar; ao rolar, ganha fundo `--color-bg-glass` com `backdrop-filter: blur(20px)` e borda inferior hairline. Links em Inter Tight uppercase, opacidade reduzida (0.6) até hover/ativo.
-
-### Spotlight de Card (comportamento herdado — preservar)
-Cards têm um spotlight dinâmico que segue o mouse (`--mouse-x`/`--mouse-y` setados em `js/main.js`, aplicado via `::before`/`::after` com `radial-gradient`) — uma camada independente do glow estático de luz no topo. As duas camadas coexistem; uma não substitui a outra.
-
-### Registration Mark (proposto — assinatura visual, ainda não implementado nesta base)
-Elemento assinatura pendente de construção: marcas de registro/prova de prelo (cruzetas finas de alinhamento, como as usadas por gráficas para conferir registro de cor antes de rodar a impressão) em traço 1px, aparecendo com moderação — ex. como acento no hero, no canto de cards de destaque, ou como divisor entre seções. Objetivo: dar à Arcaffo um motivo gráfico que não é uma cópia do resend.com, e que vem do próprio ofício de um estúdio de branding/pré-impressão. Regra de uso: nunca decorativo/aleatório — cada marca de registro aparece num ponto que faz sentido estrutural (canto de alinhamento, início/fim de seção), nunca espalhada como textura.
-
-## Do's and Don'ts
-
-### Do:
-- **Do** usar `var(--arcaffo-*)` para toda cor, fonte e radius novos — nunca hex/px hardcoded.
-- **Do** preservar os atributos `data-cms="..."` existentes ao editar qualquer texto editável pelo admin.
-- **Do** usar fotografia real da marca (fachada real, fotos de projetos reais) antes de recorrer às fotos-mood genéricas do brand kit.
-- **Do** manter os dois raios (16px/10px) e nada além deles.
-
-### Don't:
-- **Don't** introduzir qualquer cor fora da escala preto→branco.
-- **Don't** deixar um `h1`–`h6` com `font-weight` acima de 400.
-- **Don't** usar `box-shadow` escuro como recurso primário de profundidade — usar glow claro no topo.
-- **Don't** editar `artigos/*.html` ou `projetos/*.html` gerados diretamente — editar os templates-fonte (`artigo.html`, `projeto.html`) e os arquivos em `public/data/*.json`.
+Em Sobre, o campo inicial da cronologia ganha mais presença; Fé, Família e Autoridade tornam-se princípios selecionáveis, mantendo a relação explícita entre palavra e texto e exibindo todo o conteúdo quando JavaScript não está disponível. Os três retratos usam o conjunto institucional de 2025, com Arthur Fava, Luiz Paulo Pacheco e Fabrício O. Rodrigues associados e alinhados corretamente.

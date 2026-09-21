@@ -1,0 +1,78 @@
+/* Arcaffo — tipografia
+   Display: Newsreader Light — serifa de leitura, baixo contraste, sem data.
+   Corpo e rótulo: Inter.
+   Inter Tight permanece disponível para lockups legados do logotipo. */
+
+:root {
+  --arcaffo-font-display: "Newsreader", Georgia, serif;
+  --arcaffo-font-body: "Inter", sans-serif;
+  --arcaffo-font-label: "Inter", sans-serif;
+  --arcaffo-font-legacy: "Inter Tight", sans-serif;
+
+  /* Escala display — grandiosa, fluida */
+  --arcaffo-size-display-1: clamp(52px, 8vw, 128px);
+  --arcaffo-size-display-2: clamp(40px, 5.6vw, 88px);
+  --arcaffo-size-display-3: clamp(30px, 3.4vw, 52px);
+  --arcaffo-size-display-4: 30px;
+
+  --arcaffo-size-lede: 19px;
+  --arcaffo-size-body: 15px;
+  --arcaffo-size-small: 13.5px;
+  --arcaffo-size-label: 10.5px;
+
+  --arcaffo-leading-display: 1.05;
+  --arcaffo-leading-body: 1.65;
+  --arcaffo-tracking-display: -0.008em;
+  --arcaffo-tracking-label: 0.18em;
+}
+
+body {
+  font-family: var(--arcaffo-font-body);
+  font-size: var(--arcaffo-size-body);
+  line-height: var(--arcaffo-leading-body);
+  color: var(--arcaffo-text-primary);
+  background: var(--arcaffo-surface-page);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+.arcaffo-display {
+  font-family: var(--arcaffo-font-display);
+  font-weight: 300;
+  letter-spacing: var(--arcaffo-tracking-display);
+  line-height: var(--arcaffo-leading-display);
+  text-transform: none;
+}
+
+h1 { font-size: var(--arcaffo-size-display-2); }
+h2 { font-size: var(--arcaffo-size-display-3); }
+h3 { font-size: var(--arcaffo-size-display-4); }
+
+p,
+.arcaffo-body {
+  font-family: var(--arcaffo-font-body);
+  font-weight: 400;
+}
+
+.arcaffo-lede {
+  font-size: var(--arcaffo-size-lede);
+  line-height: 1.55;
+  color: var(--arcaffo-text-secondary);
+  max-width: 46ch;
+}
+
+/* Rótulo — o único uso de caixa alta no sistema. Nunca como título. */
+.arcaffo-eyebrow {
+  font-family: var(--arcaffo-font-label);
+  font-size: var(--arcaffo-size-label);
+  font-weight: 500;
+  letter-spacing: var(--arcaffo-tracking-label);
+  text-transform: uppercase;
+  color: var(--arcaffo-text-accent);
+}
+.arcaffo-eyebrow-on-deep {
+  color: var(--arcaffo-text-accent-on-deep);
+}

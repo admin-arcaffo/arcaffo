@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
-import { existsSync, readdirSync, readFileSync } from 'fs';
-import * as cheerio from 'cheerio';
+import { existsSync, readdirSync } from 'fs';
+import { materiaSitePlugin } from './scripts/materia-site.mjs';
 
 // Artigos and projetos are pre-rendered to static HTML by
 // scripts/generate-pages.mjs (one file per slug) before this config loads,
@@ -16,60 +16,10 @@ function generatedPageInputs(dir, prefix) {
   );
 }
 
-function isSafeCmsHref(value) {
-  const link = String(value || '').trim();
-  if (!link) return false;
-  if (/^(?:https?:\/\/|mailto:|tel:)/i.test(link)) return true;
-  if (link.startsWith('#')) return true;
-  return link.startsWith('/') && !link.startsWith('//');
-}
-
-// Injects admin-editable copy (public/data/site-content.json) into elements
-// marked with data-cms="<namespace>.<field>" — runs on both `vite dev` and
-// `vite build`, so the source HTML files are never written to on disk.
-function siteContentPlugin() {
-  let siteContent = {};
-  return {
-    name: 'inject-site-content',
-    buildStart() {
-      const jsonPath = resolve(__dirname, 'public/data/site-content.json');
-      try {
-        siteContent = JSON.parse(readFileSync(jsonPath, 'utf8'));
-      } catch {
-        siteContent = {};
-      }
-    },
-    transformIndexHtml: {
-      order: 'pre',
-      handler(html) {
-        if (!html.includes('data-cms=')) return html;
-
-        const $ = cheerio.load(html);
-        $('[data-cms]').each((_, el) => {
-          const key = $(el).attr('data-cms');
-          const [namespace, field] = key.split('.');
-          const value = siteContent?.[namespace]?.[field];
-          if (value != null && value !== '') {
-            $(el).text(value);
-          }
-        });
-        $('[data-cms-href]').each((_, el) => {
-          const key = $(el).attr('data-cms-href');
-          const [namespace, field] = key.split('.');
-          const value = siteContent?.[namespace]?.[field];
-          if (isSafeCmsHref(value)) {
-            $(el).attr('href', value.trim());
-          }
-        });
-        return $.html();
-      },
-    },
-  };
-}
-
 export default defineConfig({
-  plugins: [siteContentPlugin()],
+  plugins: [materiaSitePlugin()],
   build: {
+    modulePreload: { polyfill: false },
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
@@ -83,6 +33,7 @@ export default defineConfig({
         vagas: resolve(__dirname, 'vagas.html'),
         contato: resolve(__dirname, 'contato.html'),
         obrigado: resolve(__dirname, 'obrigado.html'),
+        notFound: resolve(__dirname, '404.html'),
         ...generatedPageInputs('artigos', 'artigo-page'),
         ...generatedPageInputs('projetos', 'projeto-page'),
       },

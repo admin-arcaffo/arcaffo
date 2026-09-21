@@ -1,0 +1,144 @@
+/* Arcaffo — padrões
+   Classes utilitárias mínimas. O sistema evita caixa: quando a peça pede
+   contêiner, ele é areia sobre papel com filete — sem sombra, sem brilho. */
+
+.arcaffo-page {
+  max-width: var(--arcaffo-page-max);
+  margin: 0 auto;
+  padding: 0 var(--arcaffo-page-gutter);
+}
+
+/* Banda fotográfica full-bleed — a unidade de layout principal */
+.arcaffo-band {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  min-height: 380px;
+  color: var(--arcaffo-text-on-deep);
+}
+.arcaffo-band > img,
+.arcaffo-band > picture > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: var(--arcaffo-photo-warm);
+}
+.arcaffo-band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--arcaffo-veil);
+  pointer-events: none;
+}
+.arcaffo-band > .arcaffo-band-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+.arcaffo-band-mono > img { filter: var(--arcaffo-photo-mono); }
+.arcaffo-band-mono::after { background: var(--arcaffo-veil-mono); }
+
+/* Ladrilho de matéria — substitui o card com glow */
+.arcaffo-tile {
+  position: relative;
+  overflow: hidden;
+  background: var(--arcaffo-surface-raised);
+  aspect-ratio: 1 / 1;
+}
+.arcaffo-tile img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: var(--arcaffo-photo-warm);
+}
+.arcaffo-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 42%, rgba(34, 28, 22, 0.6) 100%);
+}
+.arcaffo-tile > figcaption,
+.arcaffo-tile > span {
+  position: absolute;
+  left: var(--arcaffo-space-3);
+  bottom: var(--arcaffo-space-3);
+  z-index: 1;
+  font-family: var(--arcaffo-font-label);
+  font-size: var(--arcaffo-size-label);
+  letter-spacing: var(--arcaffo-tracking-label);
+  text-transform: uppercase;
+  color: var(--arcaffo-text-on-deep);
+}
+
+/* Caixa — só quando inevitável */
+.arcaffo-card {
+  background: var(--arcaffo-surface-raised);
+  border: var(--arcaffo-hairline) solid var(--arcaffo-border);
+  border-radius: var(--arcaffo-radius);
+  padding: var(--arcaffo-space-4);
+}
+
+/* Superfície escura — espresso, com luz quente indireta e fora de eixo */
+.arcaffo-deep {
+  position: relative;
+  background: var(--arcaffo-surface-deep);
+  color: var(--arcaffo-text-on-deep);
+  overflow: hidden;
+}
+.arcaffo-deep::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -12%;
+  width: 70%;
+  height: 90%;
+  background: var(--arcaffo-glow);
+  filter: blur(24px);
+  pointer-events: none;
+}
+
+/* Botões */
+.arcaffo-btn {
+  display: inline-block;
+  font-family: var(--arcaffo-font-label);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  padding: 14px 26px;
+  border-radius: var(--arcaffo-radius);
+  border: var(--arcaffo-hairline) solid var(--arcaffo-ink);
+  background: var(--arcaffo-ink);
+  color: var(--arcaffo-paper);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+.arcaffo-btn:hover { background: var(--arcaffo-umber); border-color: var(--arcaffo-umber); }
+.arcaffo-btn-ghost {
+  background: transparent;
+  color: var(--arcaffo-ink);
+  border-color: rgba(34, 28, 22, 0.3);
+}
+.arcaffo-btn-ghost:hover { background: transparent; color: var(--arcaffo-umber); border-color: var(--arcaffo-umber); }
+.arcaffo-btn-on-deep {
+  background: var(--arcaffo-paper);
+  color: var(--arcaffo-ink);
+  border-color: var(--arcaffo-paper);
+}
+.arcaffo-btn-on-deep:hover { background: var(--arcaffo-ember); border-color: var(--arcaffo-ember); color: var(--arcaffo-ink); }
+
+/* Filete de seção */
+.arcaffo-rule {
+  border: 0;
+  border-top: var(--arcaffo-hairline) solid var(--arcaffo-border);
+  margin: 0;
+}
+
+a { color: var(--arcaffo-text-accent); text-decoration: none; }
+a:hover { color: var(--arcaffo-ink); text-decoration: underline; text-underline-offset: 3px; }

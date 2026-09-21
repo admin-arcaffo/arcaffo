@@ -1,5 +1,7 @@
 import { verifyAuth } from '../utils/auth.mjs';
 import { getDbData, saveDbData } from '../utils/blob.mjs';
+import { migrateMateriaContent } from '../../shared/materia-content.mjs';
+import { EDITORIAL_DEFAULTS, editorialContent } from '../../shared/editorial-content.mjs';
 
 const ALLOWED_FIELDS = {
   home: new Set([
@@ -11,7 +13,12 @@ const ALLOWED_FIELDS = {
     'hero_cta_secondary_label',
     'hero_cta_secondary_href',
     'philosophy_title',
+    'philosophy_title_lead',
+    'philosophy_title_accent',
     'ecosystem_title',
+    'ecosystem_title_lead',
+    'ecosystem_title_accent',
+    'mesa_subtitle',
     'projects_title',
     'problem_solution_title',
   ]),
@@ -30,6 +37,10 @@ const LINK_FIELDS = new Set([
   'hero_cta_secondary_href',
   'prefooter_cta_href',
 ]);
+for (const [namespace, defaults] of Object.entries(EDITORIAL_DEFAULTS)) {
+  ALLOWED_FIELDS[namespace] = new Set(Object.keys(defaults));
+  Object.keys(defaults).filter(key => key.endsWith('_image')).forEach(key => LINK_FIELDS.add(key));
+}
 
 function isRecord(value) {
   return value !== null && typeof value === 'object' && !Array.isArray(value);
@@ -42,7 +53,7 @@ function isSafeLink(value) {
   return value.startsWith('/') && !value.startsWith('//');
 }
 
-function validateUpdate(body) {
+export function validateUpdate(body) {
   if (!isRecord(body)) return 'Conteúdo inválido.';
 
   for (const [namespace, values] of Object.entries(body)) {
@@ -55,6 +66,7 @@ function validateUpdate(body) {
       if (typeof value !== 'string') return `O campo ${field} deve ser um texto.`;
       if (value.length > (LINK_FIELDS.has(field) ? 2048 : 5000)) return `O campo ${field} é muito longo.`;
       if (LINK_FIELDS.has(field) && !isSafeLink(value.trim())) return `O link informado em ${field} não é permitido.`;
+      if (field.endsWith('_image') && value && (!/^(https?:\/\/|\/(?!\/))/.test(value) || /[\s<>"\\]/.test(value))) return `Informe uma URL de imagem válida em ${field}.`;
     }
   }
 
@@ -70,12 +82,12 @@ export default async function handler(req, res) {
   try {
     if (req.method === 'GET') {
       const data = await getDbData('site-content');
-      return res.status(200).json(Array.isArray(data) ? {} : data);
+      return res.status(200).json({ ...migrateMateriaContent(data), ...editorialContent(data) });
     }
 
     if (req.method === 'PUT') {
       const existing = await getDbData('site-content');
-      const base = Array.isArray(existing) ? {} : existing;
+      const base = migrateMateriaContent(existing);
       const body = req.body || {};
       const validationError = validateUpdate(body);
       if (validationError) return res.status(400).json({ error: validationError });

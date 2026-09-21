@@ -1,0 +1,21 @@
+/* Arcaffo — espaço e forma
+   Corte reto: o sistema não tem cantos arredondados. A rotundidade grande
+   lia como produto de software; o corte reto lê como papel e madeira. */
+
+:root {
+  --arcaffo-space-1: 4px;
+  --arcaffo-space-2: 8px;
+  --arcaffo-space-3: 14px;
+  --arcaffo-space-4: 22px;
+  --arcaffo-space-5: 36px;
+  --arcaffo-space-6: 56px;
+  --arcaffo-space-7: 88px;
+  --arcaffo-space-8: 140px;
+
+  --arcaffo-measure: 54ch;
+  --arcaffo-page-max: 1160px;
+  --arcaffo-page-gutter: 32px;
+
+  --arcaffo-radius: 0px;
+  --arcaffo-hairline: 1px;
+}

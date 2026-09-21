@@ -1,0 +1,45 @@
+/* Arcaffo — cor
+   Primitivas: uma única escala quente, extraída da fotografia mood tratada.
+   Saturação baixa, temperatura quente. Nenhuma cor "de interface". */
+
+:root {
+  /* Primitivas — neutros quentes, do papel à tinta */
+  --arcaffo-paper: #f7f3ea;
+  --arcaffo-sand: #ede7dc;
+  --arcaffo-linen: #d8cfc0;
+  --arcaffo-stone: #b3a692;
+  --arcaffo-umber: #7a5c3e;
+  --arcaffo-graphite: #574f45;
+  --arcaffo-ink: #221c16;
+  --arcaffo-espresso: #17130f;
+
+  /* Acento — luz quente. Único tom com identidade; usar em filete,
+     rótulo e halo de luz. Nunca em área grande. */
+  --arcaffo-ember: #c99a63;
+
+  /* Reservadas ao logotipo e à impressão em uma cor. NÃO usar como
+     fundo ou texto de interface — ver README, "Preto puro". */
+  --arcaffo-logo-black: #000000;
+  --arcaffo-logo-white: #ffffff;
+
+  /* Semânticas — superfície */
+  --arcaffo-surface-page: var(--arcaffo-paper);
+  --arcaffo-surface-raised: var(--arcaffo-sand);
+  --arcaffo-surface-deep: var(--arcaffo-espresso);
+
+  /* Semânticas — texto */
+  --arcaffo-text-primary: var(--arcaffo-ink);
+  --arcaffo-text-secondary: var(--arcaffo-graphite);
+  --arcaffo-text-accent: var(--arcaffo-umber);
+  --arcaffo-text-on-deep: var(--arcaffo-paper);
+  --arcaffo-text-muted-on-deep: var(--arcaffo-stone);
+  --arcaffo-text-accent-on-deep: var(--arcaffo-ember);
+
+  /* Semânticas — linha */
+  --arcaffo-border: var(--arcaffo-linen);
+  --arcaffo-border-on-deep: rgba(247, 243, 234, 0.14);
+
+  /* Luz quente indireta — substitui o glow frio.
+     Baixa opacidade, âmbar, sempre desfocado e fora de eixo. */
+  --arcaffo-glow: radial-gradient(closest-side, rgba(201, 154, 99, 0.16), transparent 72%); /* @kind color */
+}

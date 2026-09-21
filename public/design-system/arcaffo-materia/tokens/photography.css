@@ -1,0 +1,20 @@
+/* Arcaffo — fotografia
+   Dois tratamentos convivem. A escolha é de assunto, não de gosto:
+
+   QUENTE  (--arcaffo-photo-warm)  — ambiente, matéria, pessoas, hospitalidade.
+                                     É o tratamento padrão do sistema.
+   MONO    (--arcaffo-photo-mono)  — arquitetura, fachada, institucional,
+                                     assinatura. Herança do guideline v1.0.
+
+   Nunca misturar os dois na mesma peça. */
+
+:root {
+  --arcaffo-photo-warm: sepia(0.48) contrast(0.96) brightness(1.02) saturate(0.72); /* @kind other */
+  --arcaffo-photo-mono: grayscale(1) contrast(1.06) brightness(0.94); /* @kind other */
+
+  /* Véu sobre foto — gradiente, nunca máscara chapada.
+     O preto do véu é tinta quente (#221C16), não #000. */
+  --arcaffo-veil: linear-gradient(180deg, rgba(34, 28, 22, 0.08) 0%, rgba(34, 28, 22, 0.68) 100%); /* @kind color */
+  --arcaffo-veil-deep: linear-gradient(180deg, rgba(34, 28, 22, 0.28) 0%, rgba(34, 28, 22, 0.86) 100%); /* @kind color */
+  --arcaffo-veil-mono: linear-gradient(180deg, rgba(10, 10, 10, 0.1) 0%, rgba(10, 10, 10, 0.74) 100%); /* @kind color */
+}

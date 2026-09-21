@@ -345,11 +345,12 @@ ul {
 
 /* A marca "GROUP" faz parte da mesma peça de arte que "arcaffo" (um só SVG,
    viewBox único) — não dá pra aumentar um lado sem o outro sem recortar um
-   ativo novo. Em 32px o "GROUP" ficava pequeno demais pra ler; 40px resolve
-   sem risco, o .nav-container tem 80px de altura com folga de sobra. */
+   ativo novo. 40px ainda lia pequeno pro usuário; 52px é um salto perceptível
+   de verdade e o .nav-container (80px de altura) ainda sobra folga confortável
+   dos dois lados. */
 .logo img {
   width: auto !important;
-  height: 40px !important;
+  height: 52px !important;
   object-fit: contain;
 }
 
