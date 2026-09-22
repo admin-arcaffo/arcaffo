@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import * as cheerio from 'cheerio';
+import sharp from 'sharp';
 import { sanitizeSlug } from '../api/utils/slug.mjs';
 import { escapeHtml, richText } from './materia-site.mjs';
 import { absoluteUrl, validDate, jsonLd } from '../shared/seo.mjs';
@@ -64,7 +65,15 @@ function removeScriptsContaining($, needle) {
 
 // ---------- Artigos ----------
 
-function generateArtigos() {
+async function localImageMetadata(url) {
+  if (!url?.startsWith('/')) return null;
+  const file = path.join(ROOT, 'public', url.slice(1));
+  if (!fs.existsSync(file)) return null;
+  const { width, height } = await sharp(file).metadata();
+  return width && height ? { width, height } : null;
+}
+
+async function generateArtigos() {
   const template = fs.readFileSync(path.join(ROOT, 'artigo.html'), 'utf8');
   const artigos = JSON.parse(fs.readFileSync(path.join(ROOT, 'public/data/artigos.json'), 'utf8'))
     .filter(a => a.status !== 'draft');
@@ -116,7 +125,18 @@ function generateArtigos() {
     $('#article-title').text(artigo.title);
 
     if (artigo.cover) {
-      $('#article-cover').attr('src', artigo.cover).attr('alt', artigo.title);
+      const dimensions = await localImageMetadata(artigo.cover);
+      $('#article-cover')
+        .attr('src', artigo.cover)
+        .attr('alt', artigo.title)
+        .attr('loading', 'eager')
+        .attr('fetchpriority', 'high')
+        .attr('decoding', 'async');
+      if (dimensions) {
+        $('#article-cover')
+          .attr('width', String(dimensions.width))
+          .attr('height', String(dimensions.height));
+      }
       $('#article-cover-container').removeAttr('hidden');
     }
 
@@ -271,5 +291,5 @@ function generateProjetos() {
   console.log(`✅ Gerados ${projetos.length} projetos estáticos em /projetos`);
 }
 
-generateArtigos();
+await generateArtigos();
 generateProjetos();
