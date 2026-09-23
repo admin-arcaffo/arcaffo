@@ -8,7 +8,9 @@
     "build": "node scripts/sync-db.mjs && node scripts/prepare-responsive-images.mjs && node scripts/generate-pages.mjs && node scripts/generate-sitemap.mjs && vite build",
     "build:local": "node scripts/prepare-responsive-images.mjs && node scripts/generate-pages.mjs && node scripts/generate-sitemap.mjs && vite build",
     "test": "node --test tests/*.test.mjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "social:generate": "node scripts/generate-instagram-assets.mjs",
+    "social:check": "node --test tests/social-content.test.mjs"
   },
   "keywords": [],
   "author": "",
