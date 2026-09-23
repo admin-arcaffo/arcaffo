@@ -56,3 +56,19 @@ test('all built public pages have icon family, canonical and parseable single sc
  assert.equal($('.project-card picture source[media="(max-width: 760px)"]').length,4);
  assert.equal($('.diagnostic-offer + .philosophy-section').length,1);
 });
+test('pilot articles preserve Article, BreadcrumbList and FAQPage schema in the final build',()=>{
+ const slugs=[
+  'rebranding-ou-redesign-como-saber-do-que-sua-empresa-precisa',
+  'sinais-de-que-a-marca-nao-acompanha-o-crescimento-da-empresa',
+  'como-escolher-agencia-de-branding-em-campo-grande',
+  'arquitetura-de-marca-como-organizar-produtos-servicos-e-submarcas'
+ ];
+ for(const slug of slugs){
+  const $=cheerio.load(readFileSync(`dist/artigos/${slug}.html`,'utf8'));
+  const graph=JSON.parse($('script[type="application/ld+json"]').text())['@graph'];
+  const types=graph.map(item=>item['@type']);
+  assert.ok(types.includes('Article'),slug);
+  assert.ok(types.includes('BreadcrumbList'),slug);
+  assert.ok(types.includes('FAQPage'),slug);
+ }
+});

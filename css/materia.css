@@ -234,6 +234,9 @@ input[type="search"] { width: min(100%,400px); background: transparent; color: v
 #article-content img { border-radius: 0 !important; height: auto; }
 #article-content a { text-decoration: underline; }
 #article-content blockquote { border-left: 1px solid var(--arcaffo-umber); padding: 16px 28px; margin-block: 32px; background: var(--arcaffo-sand); }
+#article-content .article-cta { margin-top: 56px; padding: clamp(28px,5vw,52px); background: var(--arcaffo-sand); border-top: 2px solid var(--arcaffo-umber); }
+#article-content .article-cta h2 { margin-top: 0; }
+#article-content .article-cta .btn { margin-top: 12px; text-decoration: none; }
 #article-content iframe { width: 100%; aspect-ratio: 16/9; height: auto; border: 0; }
 .job-body ul { color: var(--arcaffo-graphite); padding-left: 22px; }
 #article-content [type="empty-line"] { display: none; }

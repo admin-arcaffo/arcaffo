@@ -86,13 +86,14 @@ async function generateArtigos() {
     const slug = sanitizeSlug(artigo.slug);
     const url = `${DOMAIN}/artigos/${slug}.html`;
     const image = absoluteUrl(artigo.cover);
-    const description = artigo.excerpt || excerptFrom(artigo.content || '', 157);
+    const description = artigo.seo?.metaDescription || artigo.excerpt || excerptFrom(artigo.content || '', 157);
+    const pageTitle = artigo.seo?.metaTitle || artigo.title;
     const dateISO = toISODate(artigo.createdAt || artigo.date);
     const authorName = artigo.author?.name || 'Equipe Arcaffo';
 
     const $ = cheerio.load(template);
 
-    setCommonMeta($, { title: `${artigo.title} | Arcaffo GROUP®`, description, url, image, type: 'article' });
+    setCommonMeta($, { title: `${pageTitle} | Arcaffo GROUP®`, description, url, image, type: 'article' });
 
     writeJsonLd($, {
       '@context': 'https://schema.org',
@@ -120,6 +121,21 @@ async function generateArtigos() {
         { '@type': 'ListItem', position: 3, name: artigo.title, item: url },
       ],
     });
+
+    if (Array.isArray(artigo.faq) && artigo.faq.length > 0) {
+      writeJsonLd($, {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: artigo.faq.map(item => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.answer,
+          },
+        })),
+      });
+    }
 
     $('#article-date').text(artigo.date || 'Blog');
     $('#article-title').text(artigo.title);
