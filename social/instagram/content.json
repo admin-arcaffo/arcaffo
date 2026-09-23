@@ -1,72 +1,326 @@
 {
   "standardSince": "2026-09-23",
   "articles": {
+    "quanto-custa-um-projeto-de-branding-em-2026": {
+      "caption": "Quanto custa um projeto de branding em 2026? A resposta curta é: depende do problema, da profundidade e do que precisa continuar funcionando depois da entrega.\n\nDuas propostas podem usar o mesmo nome e incluir trabalhos completamente diferentes. Pesquisa, posicionamento, identidade verbal, sistema visual, aplicações e implantação mudam o investimento — e mudam o resultado.\n\nNo novo artigo da Matéria, reunimos referências públicas de preço, explicamos o que costuma existir em cada faixa e mostramos nove critérios para comparar propostas pelo escopo real.\n\nLeia em arcaffo.com/artigos.\n\n#Branding #ProjetoDeBranding #EstratégiaDeMarca #GestãoDeMarca #Arcaffo",
+      "fixedPost": {
+        "eyebrow": "GUIA 2026",
+        "title": "Quanto custa um projeto de branding?",
+        "body": "Faixas públicas, escopos e nove critérios para comparar propostas.",
+        "layout": "cover"
+      }
+    },
+    "o-que-inclui-um-projeto-de-branding": {
+      "caption": "O que deve existir dentro de um projeto de branding?\n\nDiagnóstico, pesquisa, posicionamento, identidade verbal, identidade visual, documentação e implantação formam uma sequência possível. Naming e arquitetura entram quando o problema exige. Site, campanha e registro no INPI não estão automaticamente incluídos.\n\nMais importante do que acumular entregáveis é garantir que cada etapa responda ao desafio real da empresa e deixe critérios que a equipe consiga usar depois.\n\nNo novo artigo, detalhamos etapas, responsabilidades e perguntas para avaliar um escopo.\n\nLeia em arcaffo.com/artigos.\n\n#Branding #EstratégiaDeMarca #IdentidadeVisual #Posicionamento #Arcaffo",
+      "fixedPost": {
+        "eyebrow": "POR DENTRO DO PROCESSO",
+        "title": "O que inclui um projeto de branding?",
+        "body": "Sete etapas, entregáveis e responsabilidades para a marca sair do papel.",
+        "layout": "cover"
+      }
+    },
+    "consultoria-de-branding-o-que-e-como-funciona": {
+      "caption": "Uma consultoria de branding ajuda a empresa a criar clareza onde existem muitas opiniões e pouca direção compartilhada.\n\nEla investiga percepção, posicionamento, públicos, portfólio, linguagem, experiência e cultura. Depois, transforma o diagnóstico em critérios, sistemas e prioridades que a organização consegue aplicar.\n\nO trabalho faz sentido quando a marca não acompanha o negócio, o diferencial não é percebido, o portfólio perdeu lógica ou uma mudança relevante está em curso.\n\nExplicamos como funciona, quem deve participar e quais sinais observar antes de contratar.\n\nLeia em arcaffo.com/artigos.\n\n#ConsultoriaDeBranding #Branding #PosicionamentoDeMarca #Estratégia #Arcaffo",
+      "fixedPost": {
+        "eyebrow": "DIREÇÃO DE MARCA",
+        "title": "Quando contratar uma consultoria de branding?",
+        "body": "O processo que aproxima estratégia, percepção e expressão.",
+        "layout": "cover"
+      }
+    },
+    "branding-identidade-visual-ou-logotipo-diferencas": {
+      "caption": "Logotipo identifica. Identidade visual dá unidade. Branding dá direção e busca coerência entre promessa, expressão e experiência.\n\nConfundir essas camadas leva empresas a contratar uma solução menor do que o problema — ou um projeto maior do que o momento exige.\n\nSe a questão é reconhecimento básico, o logotipo pode resolver. Se é inconsistência entre canais, a identidade visual entra. Se falta clareza, diferenciação ou alinhamento entre o que se promete e o que se entrega, o desafio é de branding.\n\nVeja a comparação completa no novo artigo da Matéria.\n\nLeia em arcaffo.com/artigos.\n\n#Branding #IdentidadeVisual #Logotipo #DesignDeMarca #Arcaffo",
+      "fixedPost": {
+        "eyebrow": "CONCEITOS SEM CONFUSÃO",
+        "title": "Branding, identidade visual ou logotipo?",
+        "body": "Descubra qual problema cada camada realmente resolve.",
+        "layout": "cover"
+      }
+    },
+    "branding-para-empresas-b2b": {
+      "caption": "No B2B, a marca ajuda uma empresa a demonstrar competência antes que o contrato comece.\n\nCompras complexas envolvem risco, vários decisores e um ciclo longo. Clareza, relevância, evidência e consistência reduzem a incerteza e tornam o valor mais fácil de defender internamente.\n\nBranding não substitui capacidade técnica, processo comercial ou entrega. Ele organiza os sinais que fazem essa capacidade ser percebida ao longo da descoberta, negociação, operação e renovação.\n\nNo novo artigo, reunimos um roteiro para construir confiança e percepção de valor em empresas B2B.\n\nLeia em arcaffo.com/artigos.\n\n#BrandingB2B #MarcaB2B #VendasB2B #Posicionamento #Arcaffo",
+      "fixedPost": {
+        "eyebrow": "MARCA NO B2B",
+        "title": "Confiança também é uma construção de marca.",
+        "body": "Como tornar competência, evidências e valor mais visíveis.",
+        "layout": "cover"
+      }
+    },
+    "naming-estrategico-como-criar-nome-de-marca": {
+      "caption": "Um nome de marca não nasce apenas de inspiração. Ele precisa atravessar estratégia, linguagem, contexto digital e análise jurídica.\n\nO processo de naming transforma posicionamento em critérios, explora territórios, gera alternativas, testa pronúncia e significado e faz verificações antes que a empresa invista no lançamento.\n\nDisponibilidade de domínio, CNPJ ou perfil social não significa disponibilidade jurídica. A busca preliminar no INPI reduz riscos, mas não substitui uma análise profissional de registrabilidade.\n\nCriamos um guia completo das oito etapas e dos erros que mais geram retrabalho.\n\nLeia em arcaffo.com/artigos.\n\n#Naming #NomeDeMarca #Branding #INPI #Arcaffo",
+      "fixedPost": {
+        "eyebrow": "NAMING ESTRATÉGICO",
+        "title": "Como criar e verificar um nome de marca?",
+        "body": "Oito etapas entre estratégia, criação e viabilidade.",
+        "layout": "cover"
+      }
+    },
     "rebranding-ou-redesign-como-saber-do-que-sua-empresa-precisa": {
       "caption": "Rebranding e redesign não são a mesma decisão.\n\nO redesign atualiza a expressão visual. O rebranding revê a direção estratégica que sustenta essa expressão. Confundir os dois pode levar a empresa a investir em uma mudança bonita que não resolve o problema real.\n\nAntes de discutir logotipo, vale observar três camadas: estratégia, percepção e expressão. Se a direção do negócio mudou, o trabalho precisa começar antes da forma.\n\nNo novo artigo da Arcaffo, mostramos os sinais de cada necessidade e como conduzir essa escolha com mais clareza.\n\nLeia em arcaffo.com/artigos — link na bio.\n\n#Branding #Rebranding #DesignDeMarca #PosicionamentoDeMarca #Arcaffo",
       "carousel": [
-        { "eyebrow": "DECISÃO DE MARCA", "title": "Rebranding ou redesign?", "body": "Como saber do que sua empresa realmente precisa.", "layout": "cover" },
-        { "number": "01", "title": "Comece pelo problema", "body": "Mudar a aparência não resolve, sozinho, um desalinhamento de posicionamento, portfólio ou percepção." },
-        { "number": "02", "title": "Redesign atualiza a expressão", "body": "É indicado quando a estratégia continua válida, mas a identidade perdeu qualidade, coerência ou capacidade de funcionar." },
-        { "number": "03", "title": "Rebranding revê a direção", "body": "Ele investiga posicionamento, públicos, proposta de valor, portfólio, narrativa e cultura. A forma vem como consequência.", "theme": "deep" },
-        { "number": "04", "title": "Observe três camadas", "body": "Estratégia: sabemos quem atendemos? Percepção: o mercado nos entende? Expressão: a identidade traduz a direção atual?" },
-        { "number": "05", "title": "A forma precisa ter uma razão", "body": "No projeto da Cia do Vidro, tipografia, formas e sistema visual traduzem sofisticação, segurança e proximidade.", "image": true },
-        { "eyebrow": "LEIA NA MATÉRIA", "title": "Sua marca precisa mudar ou ser compreendida melhor?", "body": "Leia o artigo completo em arcaffo.com/artigos", "layout": "cta", "theme": "deep" }
+        {
+          "eyebrow": "DECISÃO DE MARCA",
+          "title": "Rebranding ou redesign?",
+          "body": "Como saber do que sua empresa realmente precisa.",
+          "layout": "cover"
+        },
+        {
+          "number": "01",
+          "title": "Comece pelo problema",
+          "body": "Mudar a aparência não resolve, sozinho, um desalinhamento de posicionamento, portfólio ou percepção."
+        },
+        {
+          "number": "02",
+          "title": "Redesign atualiza a expressão",
+          "body": "É indicado quando a estratégia continua válida, mas a identidade perdeu qualidade, coerência ou capacidade de funcionar."
+        },
+        {
+          "number": "03",
+          "title": "Rebranding revê a direção",
+          "body": "Ele investiga posicionamento, públicos, proposta de valor, portfólio, narrativa e cultura. A forma vem como consequência.",
+          "theme": "deep"
+        },
+        {
+          "number": "04",
+          "title": "Observe três camadas",
+          "body": "Estratégia: sabemos quem atendemos? Percepção: o mercado nos entende? Expressão: a identidade traduz a direção atual?"
+        },
+        {
+          "number": "05",
+          "title": "A forma precisa ter uma razão",
+          "body": "No projeto da Cia do Vidro, tipografia, formas e sistema visual traduzem sofisticação, segurança e proximidade.",
+          "image": true
+        },
+        {
+          "eyebrow": "LEIA NA MATÉRIA",
+          "title": "Sua marca precisa mudar ou ser compreendida melhor?",
+          "body": "Leia o artigo completo em arcaffo.com/artigos",
+          "layout": "cta",
+          "theme": "deep"
+        }
       ],
       "stories": [
-        { "eyebrow": "NOVA LEITURA", "title": "Rebranding ou redesign?", "body": "A diferença muda todo o projeto.", "layout": "cover" },
-        { "eyebrow": "PERGUNTA", "title": "O problema está na direção ou na expressão?", "body": "Estratégia, percepção e identidade precisam ser observadas antes da decisão.", "theme": "deep", "sticker": "Enquete: Direção / Expressão" },
-        { "eyebrow": "ARTIGO COMPLETO", "title": "Evite uma mudança bonita, porém insuficiente.", "body": "Leia na Matéria da Arcaffo.", "layout": "cta", "link": "/artigos/rebranding-ou-redesign-como-saber-do-que-sua-empresa-precisa.html" }
+        {
+          "eyebrow": "NOVA LEITURA",
+          "title": "Rebranding ou redesign?",
+          "body": "A diferença muda todo o projeto.",
+          "layout": "cover"
+        },
+        {
+          "eyebrow": "PERGUNTA",
+          "title": "O problema está na direção ou na expressão?",
+          "body": "Estratégia, percepção e identidade precisam ser observadas antes da decisão.",
+          "theme": "deep",
+          "sticker": "Enquete: Direção / Expressão"
+        },
+        {
+          "eyebrow": "ARTIGO COMPLETO",
+          "title": "Evite uma mudança bonita, porém insuficiente.",
+          "body": "Leia na Matéria da Arcaffo.",
+          "layout": "cta",
+          "link": "/artigos/rebranding-ou-redesign-como-saber-do-que-sua-empresa-precisa.html"
+        }
       ]
     },
     "sinais-de-que-a-marca-nao-acompanha-o-crescimento-da-empresa": {
       "caption": "A empresa cresceu. A marca acompanhou?\n\nO desalinhamento costuma aparecer antes de uma crise: cada pessoa explica o negócio de um jeito, novos serviços ficam invisíveis, o diferencial termina em palavras genéricas e a identidade parece menor do que a entrega.\n\nEsses sinais não significam necessariamente que a marca é fraca. Muitas vezes, mostram justamente que o negócio evoluiu e sua expressão ficou presa à fase anterior.\n\nReunimos sete sinais para ajudar lideranças a reconhecer esse momento e decidir o que precisa ser revisto.\n\nLeia em arcaffo.com/artigos — link na bio.\n\n#Branding #GestãoDeMarca #CrescimentoEmpresarial #Posicionamento #Arcaffo",
       "carousel": [
-        { "eyebrow": "MARCA E NEGÓCIO", "title": "7 sinais de que sua marca ficou para trás", "body": "Mesmo quando a empresa continua crescendo.", "layout": "cover" },
-        { "number": "01", "title": "Cada pessoa explica a empresa de um jeito", "body": "Sem uma referência comum, propostas, campanhas e reuniões comerciais contam histórias diferentes." },
-        { "number": "02", "title": "O cliente conhece só uma parte", "body": "Novas competências existem, mas continuam invisíveis ou parecem pertencer a outro negócio." },
-        { "number": "03", "title": "A identidade parece menor do que a entrega", "body": "Materiais improvisados e inconsistentes criam ruído antes mesmo da conversa comercial.", "theme": "deep" },
-        { "number": "04", "title": "O diferencial termina em palavras genéricas", "body": "Qualidade, confiança e inovação podem ser verdadeiras — mas raramente tornam uma empresa reconhecível." },
-        { "number": "05–07", "title": "Público, cultura e legitimidade mudaram", "body": "Novos decisores exigem outras provas. O discurso se afasta da experiência. A própria equipe evita apresentar a marca.", "image": true },
-        { "eyebrow": "LEIA NA MATÉRIA", "title": "A marca deve crescer junto com a empresa.", "body": "Conheça os sete sinais em arcaffo.com/artigos", "layout": "cta", "theme": "deep" }
+        {
+          "eyebrow": "MARCA E NEGÓCIO",
+          "title": "7 sinais de que sua marca ficou para trás",
+          "body": "Mesmo quando a empresa continua crescendo.",
+          "layout": "cover"
+        },
+        {
+          "number": "01",
+          "title": "Cada pessoa explica a empresa de um jeito",
+          "body": "Sem uma referência comum, propostas, campanhas e reuniões comerciais contam histórias diferentes."
+        },
+        {
+          "number": "02",
+          "title": "O cliente conhece só uma parte",
+          "body": "Novas competências existem, mas continuam invisíveis ou parecem pertencer a outro negócio."
+        },
+        {
+          "number": "03",
+          "title": "A identidade parece menor do que a entrega",
+          "body": "Materiais improvisados e inconsistentes criam ruído antes mesmo da conversa comercial.",
+          "theme": "deep"
+        },
+        {
+          "number": "04",
+          "title": "O diferencial termina em palavras genéricas",
+          "body": "Qualidade, confiança e inovação podem ser verdadeiras — mas raramente tornam uma empresa reconhecível."
+        },
+        {
+          "number": "05–07",
+          "title": "Público, cultura e legitimidade mudaram",
+          "body": "Novos decisores exigem outras provas. O discurso se afasta da experiência. A própria equipe evita apresentar a marca.",
+          "image": true
+        },
+        {
+          "eyebrow": "LEIA NA MATÉRIA",
+          "title": "A marca deve crescer junto com a empresa.",
+          "body": "Conheça os sete sinais em arcaffo.com/artigos",
+          "layout": "cta",
+          "theme": "deep"
+        }
       ],
       "stories": [
-        { "eyebrow": "DIAGNÓSTICO", "title": "A empresa cresceu. A marca acompanhou?", "body": "Há sinais que aparecem antes da perda comercial.", "layout": "cover" },
-        { "eyebrow": "UM SINAL CLARO", "title": "Cada pessoa explica a empresa de um jeito.", "body": "Quando não existe uma referência comum, o cliente precisa montar sozinho o que a empresa faz.", "theme": "deep", "sticker": "Enquete: Acontece aqui / Temos clareza" },
-        { "eyebrow": "ARTIGO COMPLETO", "title": "Reconheça os sete sinais.", "body": "Leia na Matéria da Arcaffo.", "layout": "cta", "link": "/artigos/sinais-de-que-a-marca-nao-acompanha-o-crescimento-da-empresa.html" }
+        {
+          "eyebrow": "DIAGNÓSTICO",
+          "title": "A empresa cresceu. A marca acompanhou?",
+          "body": "Há sinais que aparecem antes da perda comercial.",
+          "layout": "cover"
+        },
+        {
+          "eyebrow": "UM SINAL CLARO",
+          "title": "Cada pessoa explica a empresa de um jeito.",
+          "body": "Quando não existe uma referência comum, o cliente precisa montar sozinho o que a empresa faz.",
+          "theme": "deep",
+          "sticker": "Enquete: Acontece aqui / Temos clareza"
+        },
+        {
+          "eyebrow": "ARTIGO COMPLETO",
+          "title": "Reconheça os sete sinais.",
+          "body": "Leia na Matéria da Arcaffo.",
+          "layout": "cta",
+          "link": "/artigos/sinais-de-que-a-marca-nao-acompanha-o-crescimento-da-empresa.html"
+        }
       ]
     },
     "como-escolher-agencia-de-branding-em-campo-grande": {
       "caption": "Escolher uma agência de branding exige mais do que comparar portfólios e estilos visuais.\n\nO parceiro adequado precisa compreender o momento da empresa, transformar informação em direção estratégica e fazer essa direção chegar à rotina.\n\nNa primeira conversa, observe se há diagnóstico, método, clareza de papéis e preocupação com implantação. Ao analisar projetos, procure o raciocínio por trás das soluções — não apenas a estética final.\n\nPreparamos um guia para empresas de Campo Grande e Mato Grosso do Sul avaliarem essa escolha com critérios mais consistentes.\n\nLeia em arcaffo.com/artigos — link na bio.\n\n#BrandingCampoGrande #AgênciaDeBranding #CampoGrandeMS #EstratégiaDeMarca #Arcaffo",
       "carousel": [
-        { "eyebrow": "CAMPO GRANDE · MS", "title": "Como escolher uma agência de branding", "body": "Sete critérios para avaliar antes de contratar.", "layout": "cover" },
-        { "number": "01", "title": "Defina o problema", "body": "Posicionamento, identidade, naming, portfólio ou expansão? Uma busca clara melhora a comparação entre propostas." },
-        { "number": "02", "title": "A conversa deve começar por diagnóstico", "body": "História, modelo de negócio, públicos, concorrência, cultura e ambição vêm antes da recomendação." },
-        { "number": "03", "title": "Entenda o método", "body": "Pergunte como pesquisa, entrevistas, oficinas e validações se conectam às decisões do projeto.", "theme": "deep" },
-        { "number": "04", "title": "Leia projetos pelo raciocínio", "body": "Um bom portfólio mostra por que cada solução existe e como responde a desafios diferentes." },
-        { "number": "05–07", "title": "Equipe, implantação e proximidade", "body": "Saiba quem participa, como a marca chega à operação e quando o contexto local melhora o processo.", "image": true },
-        { "eyebrow": "LEIA NA MATÉRIA", "title": "Método, escuta e implantação importam.", "body": "Veja o guia completo em arcaffo.com/artigos", "layout": "cta", "theme": "deep" }
+        {
+          "eyebrow": "CAMPO GRANDE · MS",
+          "title": "Como escolher uma agência de branding",
+          "body": "Sete critérios para avaliar antes de contratar.",
+          "layout": "cover"
+        },
+        {
+          "number": "01",
+          "title": "Defina o problema",
+          "body": "Posicionamento, identidade, naming, portfólio ou expansão? Uma busca clara melhora a comparação entre propostas."
+        },
+        {
+          "number": "02",
+          "title": "A conversa deve começar por diagnóstico",
+          "body": "História, modelo de negócio, públicos, concorrência, cultura e ambição vêm antes da recomendação."
+        },
+        {
+          "number": "03",
+          "title": "Entenda o método",
+          "body": "Pergunte como pesquisa, entrevistas, oficinas e validações se conectam às decisões do projeto.",
+          "theme": "deep"
+        },
+        {
+          "number": "04",
+          "title": "Leia projetos pelo raciocínio",
+          "body": "Um bom portfólio mostra por que cada solução existe e como responde a desafios diferentes."
+        },
+        {
+          "number": "05–07",
+          "title": "Equipe, implantação e proximidade",
+          "body": "Saiba quem participa, como a marca chega à operação e quando o contexto local melhora o processo.",
+          "image": true
+        },
+        {
+          "eyebrow": "LEIA NA MATÉRIA",
+          "title": "Método, escuta e implantação importam.",
+          "body": "Veja o guia completo em arcaffo.com/artigos",
+          "layout": "cta",
+          "theme": "deep"
+        }
       ],
       "stories": [
-        { "eyebrow": "CAMPO GRANDE · MS", "title": "Como escolher uma agência de branding?", "body": "O portfólio é apenas uma parte da decisão.", "layout": "cover" },
-        { "eyebrow": "ANTES DE CONTRATAR", "title": "Pergunte como as decisões são construídas.", "body": "Diagnóstico, método, responsáveis e implantação precisam estar claros.", "theme": "deep", "sticker": "Caixa: Qual é sua principal dúvida?" },
-        { "eyebrow": "GUIA COMPLETO", "title": "Sete critérios para uma escolha mais consciente.", "body": "Leia na Matéria da Arcaffo.", "layout": "cta", "link": "/artigos/como-escolher-agencia-de-branding-em-campo-grande.html" }
+        {
+          "eyebrow": "CAMPO GRANDE · MS",
+          "title": "Como escolher uma agência de branding?",
+          "body": "O portfólio é apenas uma parte da decisão.",
+          "layout": "cover"
+        },
+        {
+          "eyebrow": "ANTES DE CONTRATAR",
+          "title": "Pergunte como as decisões são construídas.",
+          "body": "Diagnóstico, método, responsáveis e implantação precisam estar claros.",
+          "theme": "deep",
+          "sticker": "Caixa: Qual é sua principal dúvida?"
+        },
+        {
+          "eyebrow": "GUIA COMPLETO",
+          "title": "Sete critérios para uma escolha mais consciente.",
+          "body": "Leia na Matéria da Arcaffo.",
+          "layout": "cta",
+          "link": "/artigos/como-escolher-agencia-de-branding-em-campo-grande.html"
+        }
       ]
     },
     "arquitetura-de-marca-como-organizar-produtos-servicos-e-submarcas": {
       "caption": "Quando produtos, serviços e submarcas crescem sem uma lógica comum, o cliente precisa fazer esforço demais para entender o portfólio.\n\nA arquitetura de marca organiza as relações entre a marca principal e suas ofertas. Ela ajuda a decidir o que recebe nome próprio, o que permanece sob a marca-mãe e onde a reputação deve se concentrar.\n\nNão existe um modelo universalmente melhor. Marca monolítica, marcas endossadas, casa de marcas e estruturas híbridas respondem a estratégias diferentes.\n\nNo novo artigo, explicamos quando rever essa arquitetura e quais etapas ajudam a construí-la.\n\nLeia em arcaffo.com/artigos — link na bio.\n\n#ArquiteturaDeMarca #GestãoDePortfólio #Branding #EstratégiaEmpresarial #Arcaffo",
       "carousel": [
-        { "eyebrow": "ORGANIZAÇÃO DE PORTFÓLIO", "title": "Sua empresa tem marcas demais?", "body": "Arquitetura de marca organiza produtos, serviços e submarcas.", "layout": "cover" },
-        { "number": "01", "title": "O crescimento acrescenta complexidade", "body": "Sem critérios, nomes competem entre si, serviços parecem empresas diferentes e a reputação se dispersa." },
-        { "number": "02", "title": "A arquitetura define relações", "body": "Ela esclarece o papel da marca principal e decide quando uma oferta precisa — ou não — de autonomia." },
-        { "number": "03", "title": "Existem quatro caminhos comuns", "body": "Marca monolítica, marcas endossadas, casa de marcas e arquitetura híbrida. A estratégia orienta a escolha.", "theme": "deep" },
-        { "number": "04", "title": "Mapeie antes de nomear", "body": "Liste ofertas, públicos, canais e sobreposições. Avalie quais nomes já concentram reconhecimento e confiança." },
-        { "number": "05", "title": "Evite criar marcas sem necessidade", "body": "Cada novo nome exige gestão, comunicação e investimento. Muitas ofertas funcionam melhor sob a marca principal.", "image": true },
-        { "eyebrow": "LEIA NA MATÉRIA", "title": "Clareza para quem compra. Eficiência para quem administra.", "body": "Leia o artigo completo em arcaffo.com/artigos", "layout": "cta", "theme": "deep" }
+        {
+          "eyebrow": "ORGANIZAÇÃO DE PORTFÓLIO",
+          "title": "Sua empresa tem marcas demais?",
+          "body": "Arquitetura de marca organiza produtos, serviços e submarcas.",
+          "layout": "cover"
+        },
+        {
+          "number": "01",
+          "title": "O crescimento acrescenta complexidade",
+          "body": "Sem critérios, nomes competem entre si, serviços parecem empresas diferentes e a reputação se dispersa."
+        },
+        {
+          "number": "02",
+          "title": "A arquitetura define relações",
+          "body": "Ela esclarece o papel da marca principal e decide quando uma oferta precisa — ou não — de autonomia."
+        },
+        {
+          "number": "03",
+          "title": "Existem quatro caminhos comuns",
+          "body": "Marca monolítica, marcas endossadas, casa de marcas e arquitetura híbrida. A estratégia orienta a escolha.",
+          "theme": "deep"
+        },
+        {
+          "number": "04",
+          "title": "Mapeie antes de nomear",
+          "body": "Liste ofertas, públicos, canais e sobreposições. Avalie quais nomes já concentram reconhecimento e confiança."
+        },
+        {
+          "number": "05",
+          "title": "Evite criar marcas sem necessidade",
+          "body": "Cada novo nome exige gestão, comunicação e investimento. Muitas ofertas funcionam melhor sob a marca principal.",
+          "image": true
+        },
+        {
+          "eyebrow": "LEIA NA MATÉRIA",
+          "title": "Clareza para quem compra. Eficiência para quem administra.",
+          "body": "Leia o artigo completo em arcaffo.com/artigos",
+          "layout": "cta",
+          "theme": "deep"
+        }
       ],
       "stories": [
-        { "eyebrow": "ARQUITETURA DE MARCA", "title": "Sua empresa tem marcas demais?", "body": "Mais nomes também significam mais gestão e investimento.", "layout": "cover" },
-        { "eyebrow": "ANTES DE CRIAR OUTRA MARCA", "title": "A oferta realmente precisa de autonomia?", "body": "Público, promessa, reputação e risco ajudam a responder.", "theme": "deep", "sticker": "Enquete: Precisa / Pode ser integrada" },
-        { "eyebrow": "ARTIGO COMPLETO", "title": "Organize o portfólio com clareza.", "body": "Leia na Matéria da Arcaffo.", "layout": "cta", "link": "/artigos/arquitetura-de-marca-como-organizar-produtos-servicos-e-submarcas.html" }
+        {
+          "eyebrow": "ARQUITETURA DE MARCA",
+          "title": "Sua empresa tem marcas demais?",
+          "body": "Mais nomes também significam mais gestão e investimento.",
+          "layout": "cover"
+        },
+        {
+          "eyebrow": "ANTES DE CRIAR OUTRA MARCA",
+          "title": "A oferta realmente precisa de autonomia?",
+          "body": "Público, promessa, reputação e risco ajudam a responder.",
+          "theme": "deep",
+          "sticker": "Enquete: Precisa / Pode ser integrada"
+        },
+        {
+          "eyebrow": "ARTIGO COMPLETO",
+          "title": "Organize o portfólio com clareza.",
+          "body": "Leia na Matéria da Arcaffo.",
+          "layout": "cta",
+          "link": "/artigos/arquitetura-de-marca-como-organizar-produtos-servicos-e-submarcas.html"
+        }
       ]
     }
   }
