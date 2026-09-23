@@ -49,6 +49,7 @@ export function materiaSitePlugin() {
           index:['Marcas com essência. Negócios com direção.','Acompanhamos empresários na construção de marcas, no desenvolvimento de pessoas e na estruturação de negócios. Conheça a Arcaffo GROUP.'],
           sobre:['Sobre a Arcaffo','Conheça nossa história, nossos valores e as pessoas que acompanham a construção de marcas e negócios desde 2016.'],
           servicos:['Como atuamos','Assessoria estratégica, formação empresarial e relacionamento. Conheça como as frentes da Arcaffo contribuem com sua empresa.'],
+          'branding-local':['Agência de branding em Campo Grande','Branding em Campo Grande para empresas que precisam alinhar posicionamento, identidade e decisões de negócio. Conheça o método da Arcaffo.'],
           projetos:['Projetos','Explore os projetos de branding, posicionamento e identidade visual da Arcaffo GROUP e as histórias por trás de cada marca.'],
           artigos:['Artigos e perspectivas','Reflexões sobre branding, cultura, pessoas e negócios. Um espaço para pensar com profundidade.'],
           contato:['Solicitar uma conversa','Deixe seus dados. Nossa equipe entra em contato para conhecer sua empresa e combinar o horário de uma conversa.'],
@@ -64,7 +65,7 @@ export function materiaSitePlugin() {
         $('[data-site-header]').replaceWith(readFileSync(resolve('templates/header.html'), 'utf8'));
         $('[data-site-footer]').replaceWith(readFileSync(resolve('templates/footer.html'), 'utf8'));
         if ($('body').is('[data-page="contato"], [data-page="obrigado"]')) $('.invitation').remove();
-        const active = ctx.path?.startsWith('/projetos/') ? '/projetos.html' : ctx.path?.startsWith('/artigos/') ? '/artigos.html' : ctx.path;
+        const active = ctx.path?.startsWith('/projetos/') ? '/projetos.html' : ctx.path?.startsWith('/artigos/') ? '/artigos.html' : ctx.path?.startsWith('/agencia-de-branding-campo-grande/') ? '/servicos.html' : ctx.path;
         $('.nav-links a').each((_, el) => { if ($(el).attr('href') === active) $(el).attr('aria-current', 'page'); });
         const content = migrateMateriaContent(data('site-content'));
         $('[data-cms]').each((_, el) => {

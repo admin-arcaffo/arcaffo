@@ -10,6 +10,7 @@ function generateSitemap() {
     '',
     '/sobre.html',
     '/servicos.html',
+    '/agencia-de-branding-campo-grande/',
     '/projetos.html',
     '/artigos.html',
     '/vagas.html',

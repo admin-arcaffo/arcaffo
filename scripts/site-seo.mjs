@@ -6,7 +6,8 @@ export function applySeo($, path) {
  const kind=$('body').attr('data-page');
  const saved=JSON.parse(readFileSync('public/data/site-content.json','utf8'));
  const defaults=editorialContent(saved).seo;
- const route=path==='/'||path==='/index.html'?'/':path.split('?')[0];
+ const cleanPath=path.split('?')[0];
+ const route=cleanPath==='/'||cleanPath==='/index.html'?'/':cleanPath.endsWith('/index.html')?cleanPath.slice(0,-10):cleanPath;
  const url=absoluteUrl(route);
  const set=(name,value,attr='name')=>{let el=$(`meta[${attr}="${name}"]`);if(!el.length){$('head').append(`<meta ${attr}="${name}">`);el=$(`meta[${attr}="${name}"]`);}el.attr('content',value);};
  $('link[rel="icon"],link[rel="shortcut icon"],link[rel="apple-touch-icon"],link[rel="manifest"]').remove();
@@ -27,7 +28,7 @@ export function applySeo($, path) {
  set('og:image',social,'property');set('og:image:alt',detail?$('main h1').text():'Arcaffo GROUP — branding e estratégia empresarial','property');
  if(!detail && social===absoluteUrl('/images/materia/social-home.jpg')){set('og:image:width','1200','property');set('og:image:height','630','property');}
  set('twitter:card','summary_large_image');set('twitter:title',title);set('twitter:description',description);set('twitter:image',social);set('twitter:image:alt',$('meta[property="og:image:alt"]').attr('content'));
- const organization={'@type':'ProfessionalService','@id':`${origin}/#organization`,name:'Arcaffo GROUP',slogan:'Pessoas, valores, Negócios & Marcas.',url:origin+'/',description:'Branding, assessoria estratégica e formação empresarial em Campo Grande, MS.',logo:absoluteUrl('/icon-512.png'),image:absoluteUrl('/images/fachada.webp'),telephone:'+5567982226166',email:'contato@arcaffo.com',address:{'@type':'PostalAddress',streetAddress:'Rua Piratininga, 641, Jardim dos Estados',addressLocality:'Campo Grande',addressRegion:'MS',addressCountry:'BR'},areaServed:['Brasil'],sameAs:['https://www.instagram.com/arcaffo/','https://www.linkedin.com/company/arcaffo','https://www.youtube.com/@arcaffo']};
+ const organization={'@type':'ProfessionalService','@id':`${origin}/#organization`,name:'Arcaffo GROUP',slogan:'Pessoas, valores, Negócios & Marcas.',url:origin+'/',description:'Branding, assessoria estratégica e formação empresarial em Campo Grande, MS.',logo:absoluteUrl('/icon-512.png'),image:absoluteUrl('/images/fachada.webp'),telephone:'+5567982226166',email:'contato@arcaffo.com',address:{'@type':'PostalAddress',streetAddress:'Rua Piratininga, 641, Jardim dos Estados',addressLocality:'Campo Grande',addressRegion:'MS',addressCountry:'BR'},geo:{'@type':'GeoCoordinates',latitude:-20.457099172115935,longitude:-54.5978863988003},hasMap:'https://www.google.com/maps/search/?api=1&query=-20.457099172115935,-54.5978863988003',contactPoint:{'@type':'ContactPoint',telephone:'+5567982226166',email:'contato@arcaffo.com',contactType:'sales',availableLanguage:'Portuguese'},areaServed:[{'@type':'City',name:'Campo Grande'},{'@type':'AdministrativeArea',name:'Mato Grosso do Sul'},{'@type':'Country',name:'Brasil'}],sameAs:['https://www.instagram.com/arcaffo/','https://www.linkedin.com/company/arcaffo','https://www.youtube.com/@arcaffo']};
  // Retain generated Article/CreativeWork/Breadcrumb entities; replace legacy global graphs.
  const entities=[];
  $('script[type="application/ld+json"]').each((_,el)=>{try{const data=JSON.parse($(el).text());if(!data['@graph'] && ['Article','CreativeWork','BreadcrumbList'].includes(data['@type'])){delete data['@context'];if(data.publisher)data.publisher={'@id':organization['@id']};entities.push(data);}}catch{}$(el).remove();});
@@ -35,5 +36,6 @@ export function applySeo($, path) {
  const graph=[organization,{'@type':'WebSite','@id':`${origin}/#website`,url:origin+'/',name:'Arcaffo GROUP',publisher:{'@id':organization['@id']},inLanguage:'pt-BR'},{'@type':type,'@id':url+'#webpage',url,name:title,description,inLanguage:'pt-BR',isPartOf:{'@id':`${origin}/#website`},about:{'@id':organization['@id']}},...entities];
  if(!detail && route!=='/'&&!excluded)graph.push({'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Início',item:origin+'/'},{'@type':'ListItem',position:2,name:$('main h1').text(),item:url}]});
  if(kind==='servicos')graph.push(...[['Assessoria estratégica','advisor'],['Formação empresarial','escola'],['Relacionamento empresarial','ordo-legatum']].map(([name,id])=>({'@type':'Service',name,url:url+'#'+id,provider:{'@id':organization['@id']}})));
+ if(kind==='branding-local')graph.push({'@type':'Service','@id':url+'#service',name:'Branding em Campo Grande',serviceType:'Estratégia de marca, posicionamento e identidade',url,provider:{'@id':organization['@id']},areaServed:[{'@type':'City',name:'Campo Grande'},{'@type':'AdministrativeArea',name:'Mato Grosso do Sul'},{'@type':'Country',name:'Brasil'}]});
  $('head').append(`<script type="application/ld+json">${jsonLd({'@context':'https://schema.org','@graph':graph})}</script>`);
 }

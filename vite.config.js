@@ -25,6 +25,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         sobre: resolve(__dirname, 'sobre.html'),
         servicos: resolve(__dirname, 'servicos.html'),
+        brandingCampoGrande: resolve(__dirname, 'agencia-de-branding-campo-grande/index.html'),
         projetos: resolve(__dirname, 'projetos.html'),
         projeto: resolve(__dirname, 'projeto.html'),
         artigos: resolve(__dirname, 'artigos.html'),
