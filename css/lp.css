@@ -1,0 +1,67 @@
+/* Landing page de campanha (/agencia-de-marketing-campo-grande/).
+   Estende a Matéria: formulário acima da dobra, sem navegação, CTA único. */
+.lp-header { border-bottom: 1px solid var(--arcaffo-linen); background: var(--arcaffo-paper); }
+.lp-header-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 76px; }
+.lp-header-cta { font-size: 13px; text-decoration: underline; text-underline-offset: 4px; }
+
+.lp-hero { padding-block: clamp(40px,6vw,96px); background: var(--arcaffo-sand); }
+.lp-hero-grid { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(320px,.95fr); gap: clamp(40px,6vw,96px); align-items: start; }
+.lp-hero h1 { max-width: 760px; font-size: clamp(40px,5.2vw,76px); }
+.lp-hero .lede { max-width: 620px; margin-top: 28px; font-size: clamp(17px,1.6vw,20px); color: var(--arcaffo-graphite); }
+.lp-proof { list-style: none; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; margin: 40px 0 0; padding: 26px 0 0; border-top: 1px solid var(--arcaffo-linen); max-width: 620px; }
+.lp-proof strong,.lp-proof span { display: block; }
+.lp-proof strong { font: 300 clamp(24px,2.6vw,36px)/1.1 var(--arcaffo-font-display); }
+.lp-proof span { margin-top: 6px; font-size: 12px; color: var(--arcaffo-graphite); }
+
+.lp-form-card { padding: clamp(24px,3vw,44px); background: var(--arcaffo-paper); border: 1px solid var(--arcaffo-linen); scroll-margin-top: 16px; }
+.lp-form-kicker { margin: 0; font: 400 clamp(24px,2.4vw,32px)/1.15 var(--arcaffo-font-display); color: var(--arcaffo-ink); }
+.lp-form-lede { margin: 12px 0 26px; font-size: 14px; color: var(--arcaffo-graphite); }
+.lp-form-card .arcaffo-title { display: none; } /* o título já está no kicker do card */
+.lp-form-card .arcaffo-embed button[type="submit"] { width: 100%; min-height: 54px; font-size: 15px; }
+.lp-form-note,.lp-form-alt { margin: 18px 0 0; font-size: 12px; color: var(--arcaffo-graphite); }
+.lp-form-alt a { text-decoration: underline; }
+
+.lp-fit-title { max-width: 760px; }
+.lp-fit-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px; margin-top: 40px; }
+.lp-fit-grid > div { padding: 30px; border: 1px solid var(--arcaffo-linen); }
+.lp-fit-yes { background: var(--arcaffo-sand); }
+.lp-fit-grid h3 { font-size: 28px; }
+.lp-fit-grid p { margin-top: 14px; color: var(--arcaffo-graphite); }
+.lp-fit-grid a { text-decoration: underline; }
+.lp-fit-note { margin-top: 28px; font-size: 13px; color: var(--arcaffo-graphite); }
+
+.local-case-grid figure { margin: 0; }
+
+.lp-faq-list { border-top: 1px solid var(--arcaffo-linen); }
+.lp-faq-list details { border-bottom: 1px solid var(--arcaffo-linen); padding-block: 22px; }
+.lp-faq-list summary { font: 400 22px/1.3 var(--arcaffo-font-display); list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+.lp-faq-list summary::-webkit-details-marker { display: none; }
+.lp-faq-list summary::after { content: '+'; color: var(--arcaffo-umber); }
+.lp-faq-list details[open] summary::after { content: '–'; }
+.lp-faq-list p { margin-top: 14px; color: var(--arcaffo-graphite); }
+
+.lp-footer { padding-block: 32px; font-size: 12px; color: var(--arcaffo-graphite); }
+.lp-footer p { margin: 0; }
+
+.lp-sticky-cta { display: none; }
+
+@media (max-width: 1000px) {
+  .lp-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+}
+@media (max-width: 760px) {
+  .lp-header-row { min-height: 60px; }
+  .lp-header img { width: 116px; height: auto; }
+  .lp-hero { padding-block: 28px 44px; }
+  .lp-hero h1 { font-size: clamp(32px,9vw,42px); }
+  .lp-hero .lede { margin-top: 16px; font-size: 16px; }
+  .lp-proof { margin-top: 22px; padding-top: 16px; gap: 10px; }
+  .lp-proof strong { font-size: 22px; }
+  .lp-form-card { padding: 22px 18px; }
+  .lp-fit-grid { grid-template-columns: 1fr; }
+  .lp-fit-grid > div { padding: 22px; }
+  .lp-faq-list summary { font-size: 19px; }
+  .lp-footer { padding-bottom: 96px; }
+  .lp-sticky-cta { display: flex; justify-content: center; align-items: center; position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 20; min-height: 52px; background: var(--arcaffo-ink); color: var(--arcaffo-paper); font-size: 15px; text-decoration: none; border-radius: 3px; box-shadow: 0 6px 20px rgb(0 0 0 / .18); transition: opacity var(--arcaffo-dur-quick) var(--arcaffo-ease), transform var(--arcaffo-dur-quick) var(--arcaffo-ease); }
+  .lp-sticky-cta:hover { color: var(--arcaffo-paper); }
+  .lp-sticky-cta.is-hidden { opacity: 0; transform: translateY(12px); pointer-events: none; }
+}

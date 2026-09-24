@@ -14,7 +14,7 @@ export function applySeo($, path) {
  $('head').append('<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">');
  if(!$('link[rel="preload"][href="/design-system/arcaffo-materia/fonts/inter-latin.woff2"]').length)$('head').append('<link rel="preload" href="/design-system/arcaffo-materia/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>');
  set('theme-color','#F7F3EA');set('application-name','Arcaffo GROUP');
- const excluded=['obrigado','404'].includes(kind)||['/artigo.html','/projeto.html'].includes(route);
+ const excluded=['obrigado','404','lp-marketing'].includes(kind)||['/artigo.html','/projeto.html'].includes(route);
  set('robots',excluded?'noindex, follow':'index, follow, max-image-preview:large');
  if(kind==='index'){
   $('title').text(HOME_CAMPAIGN.enabled?HOME_CAMPAIGN.seoTitle:defaults.home_title);

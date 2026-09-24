@@ -67,7 +67,8 @@ const LEAD_KEY = 'arcaffo:lead';
 function initContact() {
   const embed = document.querySelector('[data-arcaffo-form]'); if (!embed) return;
   const contexts = { marca:'Sua marca e seu posicionamento', pessoas:'Sua equipe e sua cultura', negocio:'A estrutura do seu negócio', diagnostico:'Diagnóstico gratuito de Marca e Posicionamento' };
-  const topic = new URLSearchParams(location.search).get('assunto');
+  // Páginas de campanha fixam o assunto no próprio embed (data-assunto); no /contato.html ele vem da URL.
+  const topic = embed.dataset.assunto || new URLSearchParams(location.search).get('assunto');
   const context = document.querySelector('[data-contact-context]');
   if (context && contexts[topic]) { context.textContent = `À nossa mesa: ${contexts[topic]}. Podemos começar nossa conversa por aqui.`; context.hidden = false; }
   const labels = topic === 'diagnostico'
