@@ -65,3 +65,16 @@
   .lp-sticky-cta:hover { color: var(--arcaffo-paper); }
   .lp-sticky-cta.is-hidden { opacity: 0; transform: translateY(12px); pointer-events: none; }
 }
+
+/* Página de branding (orgânica + anúncios): mesma lógica, preservando menu e conteúdo de SEO. */
+.lp-branding-hero .local-service-hero-grid { align-items: start; }
+.lp-branding-hero h1 { font-size: clamp(40px,5.4vw,80px); }
+.lp-branding-more { margin-top: 26px; }
+@media (max-width: 760px) {
+  .lp-branding-hero { padding-block: 32px 48px; }
+  .lp-branding-hero h1 { font-size: clamp(32px,9vw,42px); }
+  .lp-branding-hero .lede { margin-top: 16px; font-size: 16px; }
+  .lp-branding-more { display: none; } /* no celular o CTA fixo cumpre esse papel */
+  .lp-branding-hero .local-service-hero-grid { gap: 24px; }
+  body[data-page="branding-local"] .site-footer { padding-bottom: 96px; }
+}

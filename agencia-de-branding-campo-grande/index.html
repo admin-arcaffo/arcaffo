@@ -14,27 +14,32 @@
   <meta name="twitter:description" content="Estratégia de marca, posicionamento e identidade para empresas em Campo Grande e em todo o Brasil.">
   <meta name="twitter:image" content="https://www.arcaffo.com/images/materia/social-home.jpg">
   <link rel="stylesheet" href="/css/materia.css">
+  <link rel="stylesheet" href="/css/lp.css">
 </head>
 <body data-page="branding-local">
   <div data-site-header></div>
 
   <main id="conteudo" tabindex="-1">
-    <section class="local-service-hero">
+    <section class="local-service-hero lp-branding-hero">
       <div class="container local-service-hero-grid">
         <div>
           <p class="local-kicker">Branding · Campo Grande, MS</p>
           <h1>Branding em Campo Grande para marcas que precisam de direção.</h1>
           <p class="lede">A Arcaffo acompanha empresários na construção de posicionamento, identidade e decisões coerentes com o negócio. Estratégia antes da forma; proximidade durante o processo.</p>
-          <div class="local-service-actions">
-            <a class="btn btn-primary" href="/contato.html?assunto=diagnostico" data-cta="diagnostico" id="cta-branding-local">Pedir diagnóstico de marca</a>
-            <a class="text-link" href="#como-trabalhamos">Conhecer o processo →</a>
-          </div>
+          <ul class="lp-proof" aria-label="Experiência da Arcaffo">
+            <li><strong>Desde 2016</strong><span>trabalhando com marcas e negócios</span></li>
+            <li><strong>+400</strong><span>empresas atendidas</span></li>
+            <li><strong>NPS 97</strong><span>de satisfação</span></li>
+          </ul>
+          <p class="lp-branding-more"><a class="text-link" href="#como-trabalhamos">Conhecer o processo →</a></p>
         </div>
-        <aside class="local-proof" aria-label="Experiência da Arcaffo">
-          <p><strong>Desde 2016</strong><span>trabalhando com marcas e negócios</span></p>
-          <p><strong>+400 empresas</strong><span>atendidas em diferentes momentos</span></p>
-          <p><strong>Campo Grande</strong><span>presença local e atuação nacional</span></p>
-        </aside>
+        <!-- Formulário acima da dobra: o clique para /contato.html era onde o tráfego se perdia. -->
+        <div class="lp-form-card" id="diagnostico">
+          <p class="lp-form-kicker">Diagnóstico gratuito de Marca e Posicionamento</p>
+          <p class="lp-form-lede">Uma conversa de 40 minutos com um estrategista. Sem compromisso e sem proposta comercial nessa primeira conversa.</p>
+          <div data-arcaffo-form="a282b5b2-866d-4111-9e6b-ffa659de8cdf" data-view="all" data-assunto="diagnostico" data-success-redirect="/obrigado.html"><p class="form-loading" role="status">Preparando o formulário…</p></div>
+          <p class="lp-form-note">Leva menos de um minuto. Nossa equipe entra em contato para combinar o horário da conversa.</p>
+        </div>
       </div>
     </section>
 
@@ -51,6 +56,23 @@
           <p>Novos produtos, públicos ou unidades tornaram a arquitetura confusa.</p>
           <p>Marketing, vendas e cultura seguem direções diferentes.</p>
         </div>
+      </div>
+    </section>
+
+    <section class="section-space lp-fit" aria-labelledby="fit-branding">
+      <div class="container">
+        <h2 id="fit-branding" class="lp-fit-title">O diagnóstico é para a sua empresa?</h2>
+        <div class="lp-fit-grid">
+          <div class="lp-fit-yes">
+            <h3>Para quem é.</h3>
+            <p>Empresas de Mato Grosso do Sul com mais de dois anos de operação, equipe própria e que já investem em marketing — com ou sem agência — sem ver o retorno que esperavam.</p>
+          </div>
+          <div class="lp-fit-no">
+            <h3>Para quem não é.</h3>
+            <p>Quem precisa apenas de um logotipo, está abrindo a empresa agora ou trabalha sozinho. Nesses casos, um começo melhor é a <a href="https://enm.arcaffo.com" target="_blank" rel="noopener">Escola de Negócios e Marcas</a>.</p>
+          </div>
+        </div>
+        <p class="lp-fit-note">A agenda é limitada a poucos diagnósticos por semana, para que cada conversa receba o tempo que merece. <a class="text-link" href="#diagnostico" data-cta="diagnostico" id="cta-branding-fit">Pedir o diagnóstico →</a></p>
       </div>
     </section>
 
@@ -127,12 +149,26 @@
     <section class="section-space local-final-cta" aria-labelledby="conversa-branding">
       <div class="container local-split">
         <div><p class="local-kicker">O próximo passo</p><h2 id="conversa-branding">Sua empresa precisa de uma nova identidade ou de uma direção mais clara?</h2></div>
-        <div><p>O diagnóstico inicial ajuda a separar sintomas de causas e a identificar o tipo de trabalho que faz sentido para o momento da marca.</p><a class="btn btn-light" href="/contato.html?assunto=diagnostico" data-cta="diagnostico" id="cta-branding-local-final">Pedir diagnóstico de marca</a></div>
+        <div><p>O diagnóstico inicial ajuda a separar sintomas de causas e a identificar o tipo de trabalho que faz sentido para o momento da marca.</p><a class="btn btn-light" href="#diagnostico" data-cta="diagnostico" id="cta-branding-local-final">Quero o diagnóstico gratuito</a></div>
       </div>
     </section>
   </main>
 
   <div data-site-footer></div>
+  <a class="lp-sticky-cta" href="#diagnostico" data-cta="diagnostico" id="cta-branding-sticky">Quero o diagnóstico gratuito</a>
+
   <script type="module" src="/js/main.js"></script>
+  <script defer src="/embed/arcaffo-form.js"></script>
+  <script>
+    // Botão fixo no celular: some quando o formulário está na tela.
+    (function () {
+      var cta = document.getElementById('cta-branding-sticky');
+      var form = document.getElementById('diagnostico');
+      if (!cta || !form || !('IntersectionObserver' in window)) return;
+      new IntersectionObserver(function (entries) {
+        cta.classList.toggle('is-hidden', entries[0].isIntersecting);
+      }, { threshold: 0.15 }).observe(form);
+    })();
+  </script>
 </body>
 </html>
