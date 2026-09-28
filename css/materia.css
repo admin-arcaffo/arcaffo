@@ -186,9 +186,18 @@ figcaption { font-size: 11px; color: var(--arcaffo-graphite); padding-top: 15px;
 .team-card h3,.mentor-card h3 { margin-top: 22px; margin-bottom: 12px; }
 .team-card p,.mentor-card p { color: var(--arcaffo-graphite); font-size: 14px; }
 .member-photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: top; filter: var(--arcaffo-photo-warm); }
+.leadership-grid > a { display: block; text-decoration: none; }
+.leadership-grid .text-link { margin-top: 10px; }
 .team-member h4 { margin-block: 22px 12px; }
 .team-member p { font-size: 13px; color: var(--arcaffo-graphite); }
 .front-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px 100px; }
+.service-catalog { background: var(--arcaffo-sand); }
+.service-catalog-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+.service-catalog-grid > a { display: grid; grid-template-columns: 1fr 28px; gap: 16px 28px; padding: 34px 34px 34px 0; border-top: 1px solid var(--arcaffo-linen); text-decoration: none; }
+.service-catalog-grid > a:nth-child(even) { padding-left: 34px; }
+.service-catalog-grid h3 { font-size: clamp(27px,3vw,40px); }
+.service-catalog-grid p { grid-column: 1; color: var(--arcaffo-graphite); max-width: 520px; margin: 0; }
+.service-catalog-grid span { grid-column: 2; grid-row: 1; }
 .front-logo { width: 180px; height: 90px; object-fit: contain; object-position: left; filter: brightness(0); margin-bottom: 32px; }
 .front-verb { font-size: 64px; font-weight: 300; margin-bottom: 20px; }
 .front-tagline { color: var(--arcaffo-graphite); max-width: 520px; }
@@ -245,6 +254,12 @@ input[type="search"] { width: min(100%,400px); background: transparent; color: v
 .article-author p { margin: 0; }
 .article-author .author-name { font-weight: 500; }
 .article-author .author-bio { font-size: 13px; color: var(--arcaffo-graphite); }
+.related-content { margin-top: 56px; padding: 36px; background: var(--arcaffo-sand); border-top: 2px solid var(--arcaffo-umber); }
+.related-content h2 { font-size: 32px; margin-bottom: 22px; }
+.related-content ul { list-style: none; padding: 0; margin: 0 0 28px; }
+.related-content li { border-top: 1px solid var(--arcaffo-linen); }
+.related-content li a { display: block; padding-block: 15px; }
+.related-content p { margin: 0; font-size: 14px; color: var(--arcaffo-graphite); }
 .project-detail-hero { padding-block: 70px 44px; }
 .project-detail-header { margin-bottom: 36px; }
 .project-detail-header h1 { margin-top: 24px; }
@@ -258,6 +273,13 @@ input[type="search"] { width: min(100%,400px); background: transparent; color: v
 .meta-label { display: block; font-size: 11px; color: var(--arcaffo-graphite); margin-bottom: 12px; }
 .meta-value { font-size: 14px; }
 .project-gallery { padding-bottom: 64px; }
+.project-related { padding-block: 64px; background: var(--arcaffo-sand); }
+.project-related h2 { margin-bottom: 22px; }
+.project-related h3 { font-size: 28px; margin-bottom: 16px; }
+.project-related p { color: var(--arcaffo-graphite); }
+.project-related ul { list-style: none; padding: 0; margin: 0; }
+.project-related li { border-top: 1px solid var(--arcaffo-linen); }
+.project-related li a { display: block; padding-block: 15px; }
 .gallery-button { background: none; border: 0; padding: 0; display: block; width: 100%; margin-bottom: 28px; cursor: zoom-in !important; }
 .gallery-image { width: 100%; height: auto; filter: none; }
 .gallery-video-wrapper { margin-bottom: 28px; }
@@ -413,6 +435,8 @@ input[type="search"] { width: min(100%,400px); background: transparent; color: v
   .about-band img { height: 400px; }.about-band figcaption { padding-right: 22px; }
   .team-card img,.mentor-card img { max-height: 550px; }
   .front-details { padding-top: 0; }.front-verb { font-size: 52px; }.network-grid { gap: 28px; }
+  .service-catalog-grid { grid-template-columns: 1fr; }
+  .service-catalog-grid > a:nth-child(even) { padding-left: 0; }
   .search-label { align-items: flex-start; flex-direction: column; gap: 8px; }input[type="search"] { width: 100%; }
   .filters { gap: 8px; }.filter-btn { font-size: 11px; padding-inline: 12px; }
   .article-container { padding-top: 36px; }#article-content { font-size: 17px; }

@@ -47,14 +47,14 @@ export function materiaSitePlugin() {
         if (layout) $('main').html(readFileSync(resolve(`templates/${layout}.html`), 'utf8'));
         const pageMeta = {
           index:['Marcas com essência. Negócios com direção.','Acompanhamos empresários na construção de marcas, no desenvolvimento de pessoas e na estruturação de negócios. Conheça a Arcaffo GROUP.'],
-          sobre:['Sobre a Arcaffo','Conheça nossa história, nossos valores e as pessoas que acompanham a construção de marcas e negócios desde 2016.'],
-          servicos:['Como atuamos','Assessoria estratégica, formação empresarial e relacionamento. Conheça como as frentes da Arcaffo contribuem com sua empresa.'],
+          sobre:['Sobre a Arcaffo','Conheça a história, os valores, a liderança e o método da Arcaffo GROUP na construção de marcas, negócios e cultura desde 2016.'],
+          servicos:['Branding e consultoria empresarial','Consultoria de branding, posicionamento, identidade visual, estratégia de marca, gestão de marketing e acompanhamento empresarial.'],
           'branding-local':['Agência de branding em Campo Grande','Branding em Campo Grande para empresas que precisam alinhar posicionamento, identidade e decisões de negócio. Conheça o método da Arcaffo.'],
-          projetos:['Projetos','Explore os projetos de branding, posicionamento e identidade visual da Arcaffo GROUP e as histórias por trás de cada marca.'],
-          artigos:['Artigos e perspectivas','Reflexões sobre branding, cultura, pessoas e negócios. Um espaço para pensar com profundidade.'],
-          contato:['Solicitar uma conversa','Deixe seus dados. Nossa equipe entra em contato para conhecer sua empresa e combinar o horário de uma conversa.'],
+          projetos:['Projetos de branding e identidade','Explore projetos de branding, posicionamento, naming e identidade visual desenvolvidos pela Arcaffo GROUP e as decisões por trás de cada marca.'],
+          artigos:['Artigos e perspectivas','Artigos sobre branding, posicionamento, identidade visual, cultura, marketing e negócios escritos pela equipe e por especialistas da Arcaffo.'],
+          contato:['Solicitar uma conversa','Conte o momento da sua empresa e o desafio de marca ou negócio. A equipe da Arcaffo entra em contato para combinar uma conversa de diagnóstico.'],
           obrigado:['Obrigado pela confiança','Sua solicitação inicia uma conversa. O horário será combinado com nossa equipe.'],
-          vagas:['Trabalhe conosco','Conheça as oportunidades de fazer parte da Arcaffo GROUP e construir marcas e negócios conosco.'],
+          vagas:['Trabalhe conosco','Conheça as oportunidades para integrar a equipe da Arcaffo GROUP em Campo Grande e participar da construção de marcas, negócios e cultura.'],
         }[$('body').attr('data-page')];
         if(pageMeta){
           const [title,description]=pageMeta;$('title').text(`${title} | Arcaffo GROUP`);
@@ -65,7 +65,8 @@ export function materiaSitePlugin() {
         $('[data-site-header]').replaceWith(readFileSync(resolve('templates/header.html'), 'utf8'));
         $('[data-site-footer]').replaceWith(readFileSync(resolve('templates/footer.html'), 'utf8'));
         if ($('body').is('[data-page="contato"], [data-page="obrigado"]')) $('.invitation').remove();
-        const active = ctx.path?.startsWith('/projetos/') ? '/projetos.html' : ctx.path?.startsWith('/artigos/') ? '/artigos.html' : ctx.path?.startsWith('/agencia-de-branding-campo-grande/') ? '/servicos.html' : ctx.path;
+        const servicePaths = ['/agencia-de-branding-campo-grande/','/consultoria-de-branding/','/posicionamento-de-marca/','/identidade-visual/','/estrategia-de-marca/','/consultoria-empresarial/','/gestao-de-marketing/'];
+        const active = ctx.path?.startsWith('/projetos/') ? '/projetos.html' : ctx.path?.startsWith('/artigos/') ? '/artigos.html' : ctx.path?.startsWith('/autores/') ? '/sobre.html' : servicePaths.some(path => ctx.path?.startsWith(path)) ? '/servicos.html' : ctx.path;
         $('.nav-links a').each((_, el) => { if ($(el).attr('href') === active) $(el).attr('aria-current', 'page'); });
         const content = migrateMateriaContent(data('site-content'));
         $('[data-cms]').each((_, el) => {

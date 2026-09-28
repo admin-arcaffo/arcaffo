@@ -38,5 +38,5 @@ export const HOME_CAMPAIGN = Object.freeze({
   whatsappLabel: 'Prefere o WhatsApp? Envie os dados da sua empresa por lá',
   whatsappUrl: `https://wa.me/5567982226166?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`,
   seoTitle: 'Arcaffo GROUP | Agência de branding em Campo Grande',
-  seoDescription: 'Chega de trocar de agência de marketing a cada 6 meses. Agência de branding em Campo Grande há 10 anos: marcas com essência, negócios com direção. Peça um diagnóstico gratuito de marca e posicionamento.',
+  seoDescription: 'Agência de branding em Campo Grande há 10 anos. Posicionamento, identidade e estratégia para marcas com essência e negócios com direção.',
 });
