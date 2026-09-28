@@ -144,12 +144,23 @@ function initAnalytics() {
     if(perfil === 'inicial' && title?.dataset.titleInicial) title.textContent = title.dataset.titleInicial;
   }
   if(!['arcaffo.com','www.arcaffo.com'].includes(location.hostname))return;
-  // Configs enfileiradas já; o script carrega em seguida (sem atraso: cliques rápidos no WhatsApp
-  // vindos de anúncio precisam ser medidos).
+  // As configurações e conversões ficam enfileiradas no dataLayer até o script
+  // carregar. Na página de obrigado a carga é imediata; nas demais, esperamos
+  // a janela ociosa para não disputar a primeira renderização com o conteúdo.
   window.gtag('js',new Date());
   window.gtag('config','G-3FVJTG0EF4');
   window.gtag('config',ADS_ID);
-  const script=document.createElement('script');script.src='https://www.googletagmanager.com/gtag/js?id=G-3FVJTG0EF4';script.async=true;document.head.append(script);
+  let loaded=false;
+  const loadTag=()=>{
+    if(loaded)return;loaded=true;
+    const script=document.createElement('script');script.src='https://www.googletagmanager.com/gtag/js?id=G-3FVJTG0EF4';script.async=true;document.head.append(script);
+  };
+  if(location.pathname === '/obrigado.html')loadTag();
+  else {
+    const schedule=()=>('requestIdleCallback' in window ? requestIdleCallback(loadTag,{timeout:3500}) : setTimeout(loadTag,2000));
+    if(document.readyState === 'complete')schedule();
+    else window.addEventListener('load',schedule,{once:true});
+  }
 }
 function initResponsiveLabels() {
   const cta = document.querySelector('[data-label-full][data-label-mobile]');
