@@ -85,6 +85,46 @@
       "permanent": true
     },
     {
+      "source": "/sobre",
+      "destination": "/sobre.html",
+      "permanent": true
+    },
+    {
+      "source": "/servicos",
+      "destination": "/servicos.html",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/en/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/es/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pages",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/posicionamentodemarcabyarcaffo",
+      "destination": "/posicionamento-de-marca/",
+      "permanent": true
+    },
+    {
       "source": "/contato",
       "destination": "/contato.html",
       "permanent": true
