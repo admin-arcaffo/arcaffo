@@ -15,6 +15,108 @@ import { PEOPLE_BY_NAME } from '../shared/people.mjs';
 const ROOT = process.cwd();
 const DOMAIN = 'https://www.arcaffo.com';
 
+const PROJECT_CASE_NOTES = {
+  'la-parisienne': {
+    question: 'Como atualizar uma pâtisserie francesa sem apagar o reconhecimento construído pela marca?',
+    answer: 'O projeto da La Parisienne reuniu redesign, desenho tipográfico, identidade visual e fotografia. A direção partiu do encontro que já existia no negócio: repertório francês, adaptação ao paladar brasileiro e um espaço que combina referências clássicas com uma presença contemporânea.',
+    decisions: [
+      'Redesenhar a expressão visual preservando a atmosfera francesa reconhecida pelo público.',
+      'Usar o typedesign para dar personalidade própria ao nome La Parisienne.',
+      'Conectar identidade, ambiente e fotografia em uma apresentação coerente da experiência da marca.',
+    ],
+    perspective: 'Este case mostra por que redesign não significa começar do zero. Quando uma marca já possui memória e afeto, o trabalho estratégico é identificar o que merece permanecer e construir um sistema visual capaz de sustentar sua próxima fase.',
+    metaDescription: 'Case La Parisienne: redesign, typedesign, identidade visual e fotografia para uma boulangerie e pâtisserie de Campo Grande, desenvolvido pela Arcaffo.',
+  },
+  iclay: {
+    question: 'Como traduzir uma operação técnica em uma marca percebida como premium?',
+    answer: 'Para a iClay, identidade visual e posicionamento precisavam tornar visível uma combinação específica: assistência certificada IRP, suporte para produtos Apple e comercialização de dispositivos novos e seminovos. O sistema foi orientado para comunicar excelência técnica e uma experiência premium de forma coerente.',
+    decisions: [
+      'Organizar o posicionamento em torno de confiança técnica, excelência e experiência.',
+      'Criar uma identidade compatível com o padrão premium pretendido pela operação.',
+      'Aproximar os diferentes serviços da iClay sob uma mesma percepção de marca.',
+    ],
+    perspective: 'Negócios técnicos costumam explicar bem o que fazem, mas nem sempre comunicam por que devem ser escolhidos. O papel do branding, neste caso, é transformar atributos operacionais em sinais claros de confiança antes mesmo do primeiro atendimento.',
+    metaDescription: 'Case iClay: posicionamento e identidade visual para comunicar assistência certificada, confiança técnica e experiência premium no universo Apple.',
+  },
+  arkete: {
+    question: 'Como criar um nome proprietário para um escritório de arquitetura sustentável?',
+    answer: 'Arkete combina arquitetura com Aketé, termo de origem tupi-guarani associado à maior casa da aldeia dos Asurini. O estudo de naming avaliou significados, sonoridades e tipos de nome para chegar a uma escolha coerente com uma arquitetura moderna, sustentável, minimalista e racionalista.',
+    decisions: [
+      'Construir o nome a partir do território de atuação e de uma referência cultural ligada à moradia.',
+      'Avaliar significado e sonoridade junto da capacidade de diferenciação do nome.',
+      'Traduzir seriedade, sustentabilidade e racionalidade em uma identidade visual integrada.',
+    ],
+    perspective: 'Um bom naming não nasce apenas de uma palavra agradável. Ele precisa criar associações úteis, sustentar uma narrativa verdadeira e funcionar como base para o sistema de identidade que virá depois.',
+    metaDescription: 'Case Arkete: processo de naming e identidade visual para um escritório de arquitetura moderna e sustentável com sede em Sorocaba.',
+  },
+  indreco: {
+    question: 'Como renovar uma empresa industrial com 55 anos de história sem romper com sua origem?',
+    answer: 'A Indreco Motores entrou em uma nova fase mantendo o compromisso que orientou sua trajetória: recuperar motores com qualidade, transparência e integridade. O posicionamento, a identidade visual e a fotografia foram articulados para aproximar a empresa de clientes e interessados do setor.',
+    decisions: [
+      'Preservar a história iniciada por Emiliano e os valores construídos ao longo de 55 anos.',
+      'Apresentar a nova identidade Indreco Motores como evolução, e não como ruptura.',
+      'Usar imagem e linguagem de marca para tornar a operação industrial mais próxima e compreensível.',
+    ],
+    perspective: 'Em marcas longevas, a mudança precisa reconhecer a confiança acumulada. O reposicionamento ganha força quando organiza o legado e o transforma em uma promessa clara para o presente.',
+    metaDescription: 'Case Indreco Motores: posicionamento, identidade visual e fotografia para renovar uma empresa industrial com 55 anos de história.',
+  },
+  kassar: {
+    question: 'Como diferenciar um escritório quando a promessa de qualidade parece igual à dos concorrentes?',
+    answer: 'O reposicionamento da Kassar partiu de uma promessa considerada homogênea e pouco eficiente. Em 20 reuniões realizadas ao longo de cinco meses, o projeto organizou o DNA da marca, a relação entre os três sócios, a comunicação verbal e uma identidade visual precisa, leve, acolhedora e profissional.',
+    decisions: [
+      'Equilibrar a presença e a hierarquia dos três sócios na construção da marca.',
+      'Definir uma comunicação verbal coerente e linear para o escritório.',
+      'Unir precisão técnica e acolhimento na identidade visual.',
+    ],
+    perspective: 'Dizer que um escritório entrega bons projetos não cria diferenciação por si só. A marca passa a competir melhor quando transforma sua forma particular de trabalhar em linguagem, comportamento e sinais reconhecíveis.',
+    metaDescription: 'Case Kassar: cinco meses de posicionamento, comunicação verbal e identidade visual para um escritório de arquitetura, engenharia e interiores.',
+  },
+  sacralita: {
+    question: 'Como transformar uma história pessoal e espiritual em uma marca de galeria de arte?',
+    answer: 'A Sacralità nasceu do encontro entre arquitetura, fotografia, viagens, estudos e a experiência do Caminho de Santiago. Estratégia, naming, posicionamento e identidade visual foram reunidos para expressar beleza, fé e conhecimento em uma galeria de arte clássica concebida como sustento e legado familiar.',
+    decisions: [
+      'Organizar beleza, fé e conhecimento como território central da marca.',
+      'Construir um nome compatível com a dimensão clássica e espiritual do projeto.',
+      'Dar forma visual a uma proposta que também representa legado familiar.',
+    ],
+    perspective: 'Marcas com origem biográfica exigem cuidado para que a história não se torne apenas decoração. O trabalho estratégico seleciona os significados essenciais e cria um sistema capaz de compartilhá-los com outras pessoas.',
+    metaDescription: 'Case Sacralità: estratégia, naming, posicionamento e identidade visual para uma galeria de arte clássica orientada por beleza, fé e conhecimento.',
+  },
+  'cia-do-vidro': {
+    question: 'Como renovar uma vidraçaria sem recorrer aos clichês visuais do segmento?',
+    answer: 'A nova identidade da Cia do Vidro usa tipografia exclusiva com terminações arredondadas para comunicar conforto, segurança e proximidade. O retângulo sintetiza o vidro de forma discreta, enquanto o redesign organiza uma presença mais moderna e compatível com o padrão de qualidade construído em mais de duas décadas.',
+    decisions: [
+      'Desenhar uma tipografia própria para suavizar a percepção de rigidez associada ao vidro.',
+      'Adotar o retângulo como síntese visual do material, evitando símbolos previsíveis.',
+      'Equilibrar sofisticação, segurança, confiança e proximidade no sistema de marca.',
+    ],
+    perspective: 'A diferenciação visual se torna mais consistente quando cada escolha nasce de atributos reais do negócio. Forma, tipografia e composição deixam de ser ornamentos e passam a explicar como a empresa quer ser percebida.',
+    metaDescription: 'Case Cia do Vidro: redesign, typedesign, estratégia e identidade visual para traduzir segurança, proximidade e alto padrão sem clichês.',
+  },
+  profive: {
+    question: 'Como representar performance esportiva sem criar uma marca de academia genérica?',
+    answer: 'A ProFive foi concebida como um centro de treinamento que leva a excelência da performance esportiva ao ambiente de academia. Naming, símbolo e tipografia exclusiva foram construídos para expressar força, velocidade, tecnologia, dinamismo e persistência, com inspiração na tocha olímpica.',
+    decisions: [
+      'Usar a tocha olímpica como referência de performance, persistência e determinação.',
+      'Reinterpretar o símbolo com linhas retas, movimento e energia.',
+      'Desenvolver uma tipografia leve e própria, aplicável nos ambientes digital e físico.',
+    ],
+    perspective: 'Em categorias visualmente saturadas, listar atributos como força e velocidade não basta. Uma identidade memorável precisa condensar esses atributos em um símbolo reconhecível e em um sistema que funcione nos pontos de contato reais.',
+    metaDescription: 'Case ProFive: naming, typedesign e identidade visual inspirada na performance esportiva e na tocha olímpica para um centro de treinamento.',
+  },
+  'rafael-a-obra': {
+    question: 'Como construir uma marca de construção conectada à história e à atuação do fundador?',
+    answer: 'A identidade visual da Rafael à Obra parte da trajetória empreendedora de Rafael e de sua atuação com financiamento de terreno e construção. A marca precisava apoiar uma relação baseada em orientação, segurança e soluções financeiras adaptadas a cada projeto.',
+    decisions: [
+      'Manter o fundador como referência humana e narrativa da marca.',
+      'Aproximar os temas de financiamento, terreno e construção em uma identidade única.',
+      'Comunicar orientação e segurança em uma decisão de alto envolvimento para o cliente.',
+    ],
+    perspective: 'Marcas lideradas pelo fundador ganham força quando a história pessoal se conecta a uma proposta concreta. A narrativa abre a conversa, mas é a clareza sobre o serviço e a experiência prometida que sustenta confiança.',
+    metaDescription: 'Case Rafael à Obra: identidade visual conectada à trajetória do fundador e à orientação segura para financiamento de terreno e construção.',
+  },
+};
+
 function stripHtml(html = '') {
   return html
     .replace(/<[^>]*>/g, ' ')
@@ -29,6 +131,36 @@ function excerptFrom(html, len = 157) {
   const cut = text.slice(0, len);
   const lastSpace = cut.lastIndexOf(' ');
   return (lastSpace > 0 ? cut.slice(0, lastSpace) : cut) + '…';
+}
+
+function projectDescriptionPt(value = '') {
+  return value
+    .replace(/^\s*PT-BR\s*/i, '')
+    .split(/\n\s*EN-US\s*\n/i)[0]
+    .split(/\n\s*Founded in 2017\b/i)[0]
+    .trim();
+}
+
+function projectCaseHtml(project) {
+  const note = PROJECT_CASE_NOTES[project.slug];
+  if (!note) return '';
+  return `<section class="project-case-notes light-theme" aria-labelledby="case-question-${escapeHtml(project.slug)}">
+    <div class="container">
+      <p class="arcaffo-eyebrow">Leitura do case</p>
+      <h2 id="case-question-${escapeHtml(project.slug)}">${escapeHtml(note.question)}</h2>
+      <p class="project-case-answer">${escapeHtml(note.answer)}</p>
+      <div class="project-case-grid">
+        <div>
+          <h3>Decisões do projeto</h3>
+          <ul>${note.decisions.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+        </div>
+        <div>
+          <h3>O que este trabalho evidencia</h3>
+          <p>${escapeHtml(note.perspective)}</p>
+        </div>
+      </div>
+    </div>
+  </section>`;
 }
 
 function toISODate(value) {
@@ -268,7 +400,9 @@ function generateProjetos() {
     let image = projeto.cover || (projeto.images?.[0]?.url) || '';
     if (image && !/^https?:\/\//.test(image)) image = `${DOMAIN}${image}`;
     if (!image) image = `${DOMAIN}/images/brand/og-image.jpg`;
-    const rawDescription = excerptFrom(projeto.description || '', 157);
+    const projectDescription = projectDescriptionPt(projeto.description || '');
+    const caseNote = PROJECT_CASE_NOTES[slug];
+    const rawDescription = excerptFrom(caseNote?.metaDescription || projectDescription, 157);
     const descriptionBase = rawDescription.length >= 120
       ? rawDescription
       : excerptFrom(`${rawDescription ? `${rawDescription} ` : ''}Conheça o contexto, as decisões e as aplicações do projeto ${projeto.title}, desenvolvido pela Arcaffo.`, 157);
@@ -290,6 +424,8 @@ function generateProjetos() {
       image: [image],
       url,
       datePublished: dateISO,
+      keywords: (projeto.tags || []).join(', '),
+      abstract: caseNote?.answer,
       creator: { '@type': 'Organization', name: 'Arcaffo GROUP' },
     });
 
@@ -303,9 +439,9 @@ function generateProjetos() {
       ],
     });
 
-    const descHtml = (projeto.description || '').includes('<')
-      ? richText(projeto.description || '')
-      : escapeHtml(projeto.description || '').replace(/\n/g, '<br>');
+    const descHtml = projectDescription.includes('<')
+      ? richText(projectDescription)
+      : escapeHtml(projectDescription).replace(/\n/g, '<br>');
 
     const [serviceUrl, serviceName] = serviceFor((projeto.tags || []).join(' '));
     const projectArticles = articlesForProject(projeto, artigos);
@@ -341,6 +477,8 @@ function generateProjetos() {
           </div>
         </div>
       </section>
+
+      ${projectCaseHtml(projeto)}
 
       <section class="project-gallery">
         <div class="container">

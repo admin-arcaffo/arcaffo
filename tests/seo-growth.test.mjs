@@ -54,3 +54,18 @@ test('article and project detail pages include contextual internal links', () =>
   assert.ok($project('.project-related a[href^="/artigos/"]').length >= 3);
   assert.ok($project('.project-related a[href^="/"][href$="/"]').length >= 1);
 });
+
+test('priority cases expose factual, extractable project narratives', () => {
+  const slugs = ['la-parisienne','iclay','arkete','indreco','kassar','sacralita','cia-do-vidro','profive','rafael-a-obra'];
+  for (const slug of slugs) {
+    const $ = page(`projetos/${slug}.html`);
+    assert.equal($('.project-case-notes').length, 1, slug);
+    assert.equal($('.project-case-notes h2').length, 1, slug);
+    assert.equal($('.project-case-grid li').length, 3, slug);
+    const creativeWork = graph($).find(item => item['@type'] === 'CreativeWork');
+    assert.ok(creativeWork?.abstract, slug);
+    assert.ok(creativeWork?.keywords, slug);
+  }
+  assert.doesNotMatch(page('projetos/iclay.html')('main').text(), /Founded in 2017/);
+  assert.doesNotMatch(page('projetos/cia-do-vidro.html')('main').text(), /With over two decades/);
+});
