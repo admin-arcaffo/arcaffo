@@ -33,7 +33,7 @@ export async function carregarProjetosDestaque(containerId, limit = 4) {
     // Fallback image
     if (!imgUrl) imgUrl = 'https://via.placeholder.com/800x450/111115/C8A96E?text=' + encodeURIComponent(projeto.title);
 
-    const tagPrincipal = projeto.tags && projeto.tags.length > 0 ? projeto.tags[0] : 'Branding';
+    const segmento = projeto.segment || 'Serviços Profissionais';
     const delay = Math.min(i * 40, 400);
 
     return `
@@ -41,7 +41,7 @@ export async function carregarProjetosDestaque(containerId, limit = 4) {
         <img src="${imgUrl}" alt="${projeto.title}" loading="lazy" />
         <div class="project-overlay">
           <h3 class="project-title">${projeto.title}</h3>
-          <span class="project-tags">${tagPrincipal}</span>
+          <span class="project-tags">${segmento}</span>
         </div>
       </a>
     `;

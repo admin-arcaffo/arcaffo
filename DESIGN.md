@@ -15,7 +15,7 @@ Home: recepção tipográfica/fotográfica → convicção → mesa de trabalho 
 ## Identidade
 
 - Slogan institucional: “Pessoas, valores, Negócios & Marcas.” Usar como assinatura de fechamento no rodapé e como dado estruturado da organização; não repetir em seções onde dispute atenção com mensagens principais.
-- Títulos: Newsreader 300, caixa natural. Corpo: Inter 400; utilidades 500. Fontes locais WOFF2 com licença OFL incluída.
+- Títulos e destaques serifados: Span Compressed Regular 400, caixa natural, entregue pelo Adobe Fonts Web Project `gkr2kbf`. Corpo: Inter 400; utilidades 500. Não solicitar peso 300, ausente no kit publicado, para evitar síntese artificial do navegador.
 - Papel, areia, linho, tinta, grafite, espresso e brasa: somente tokens `--arcaffo-*` do pacote. Preto/branco puros somente nos arquivos de logotipo.
 - Cantos retos; filetes de separação; nenhuma sombra decorativa ou vidro.
 - Materialidade por imagem real, proporção e acabamento. Nenhuma fotografia gerada apresentada como registro da empresa.

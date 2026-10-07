@@ -1,0 +1,140 @@
+{
+  "title": "TORQUE® Soluções Automotivas",
+  "slug": "torque-solucoes-automotivas",
+  "format": "Instagram carousel",
+  "dimensions": "1080x1350",
+  "aspectRatio": "4:5",
+  "rule": "Somente imagens originais da identidade, sem elementos sobrepostos, sem crop e sem cortar assinaturas. Margens usam a cor predominante da própria imagem.",
+  "slides": [
+    {
+      "slide": 1,
+      "file": "01.jpg",
+      "source": "/images/projetos/8bfc5a7688.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 8,
+        "g": 8,
+        "b": 8,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 2,
+      "file": "02.jpg",
+      "source": "/images/projetos/3bd564486e.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 248,
+        "g": 248,
+        "b": 248,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 3,
+      "file": "03.jpg",
+      "source": "/images/projetos/5fa9a2157f.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 248,
+        "g": 248,
+        "b": 248,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 4,
+      "file": "04.jpg",
+      "source": "/images/projetos/34190706ff.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 104,
+        "g": 104,
+        "b": 104,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 5,
+      "file": "05.jpg",
+      "source": "/images/projetos/cb33bec97a.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 24,
+        "g": 24,
+        "b": 24,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 6,
+      "file": "06.jpg",
+      "source": "/images/projetos/9fd5f7fc22.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 8,
+        "g": 8,
+        "b": 8,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 7,
+      "file": "07.jpg",
+      "source": "/images/projetos/95ea44c9fc.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 248,
+        "g": 216,
+        "b": 56,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 8,
+      "file": "08.jpg",
+      "source": "/images/projetos/1fc97bb73d.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 152,
+        "g": 152,
+        "b": 152,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 9,
+      "file": "09.jpg",
+      "source": "/images/projetos/aad302fc43.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 24,
+        "g": 24,
+        "b": 24,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 10,
+      "file": "10.jpg",
+      "source": "/images/projetos/d62efc81dd.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 8,
+        "g": 8,
+        "b": 8,
+        "alpha": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "title": "Casa Santa Thereza",
+  "slug": "casa-santa-thereza",
+  "format": "Instagram carousel",
+  "dimensions": "1080x1350",
+  "aspectRatio": "4:5",
+  "rule": "Somente imagens originais da identidade, sem elementos sobrepostos, sem crop e sem cortar assinaturas. Margens usam a cor predominante da própria imagem.",
+  "slides": [
+    {
+      "slide": 1,
+      "file": "01.jpg",
+      "source": "/images/projetos/9b8c53c695.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 8,
+        "g": 8,
+        "b": 8,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 2,
+      "file": "02.jpg",
+      "source": "/images/projetos/56691bcb9e.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 248,
+        "g": 248,
+        "b": 248,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 3,
+      "file": "03.jpg",
+      "source": "/images/projetos/60ad1558a7.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 24,
+        "g": 24,
+        "b": 24,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 4,
+      "file": "04.jpg",
+      "source": "/images/projetos/40a15072ae.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 200,
+        "g": 200,
+        "b": 184,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 5,
+      "file": "05.jpg",
+      "source": "/images/projetos/f3f5158109.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 248,
+        "g": 184,
+        "b": 24,
+        "alpha": 1
+      }
+    }
+  ]
+}

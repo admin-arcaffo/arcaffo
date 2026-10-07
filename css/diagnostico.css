@@ -1,0 +1,62 @@
+/* /diagnostico-de-marca/ — página de campanha (Meta Ads). Complementa lp.css. */
+
+/* Foto do hero: preenche a coluna ao lado do formulário, só no desktop. */
+.dx-hero-photo { display: block; width: 100%; max-width: 620px; height: auto; aspect-ratio: 3 / 2; object-fit: cover; margin-top: 40px; }
+
+/* Faixa de foto inteira entre o hero e o conteúdo. */
+.dx-band { margin: 0; background: var(--arcaffo-espresso); }
+.dx-band img { display: block; width: 100%; height: clamp(260px, 52vw, 640px); object-fit: cover; object-position: 50% 35%; }
+.dx-band figcaption { padding-block: 14px; font-size: 12px; color: var(--arcaffo-linen); }
+
+/* Antes e depois: duas colunas, a de "depois" em tinta cheia. */
+.dx-shift-list { margin: 0; border-top: 1px solid var(--arcaffo-linen); }
+.dx-shift-list > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 5vw, 80px); padding-block: 26px; border-bottom: 1px solid var(--arcaffo-linen); }
+.dx-shift-list dt { color: var(--arcaffo-graphite); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--arcaffo-graphite) 45%, transparent); text-decoration-thickness: 1px; }
+.dx-shift-list dd { margin: 0; font: 400 clamp(22px, 2.2vw, 30px)/1.2 var(--arcaffo-font-display); color: var(--arcaffo-ink); }
+
+/* Citações da pesquisa: a primeira ocupa a coluna inteira. */
+.dx-voices { background: var(--arcaffo-sand); }
+.dx-quote-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(32px, 5vw, 80px); border-top: 1px solid var(--arcaffo-linen); }
+.dx-quote { margin: 0; padding-block: 32px; border-bottom: 1px solid var(--arcaffo-linen); }
+.dx-quote p { margin: 0; font: 400 clamp(24px, 2.4vw, 34px)/1.2 var(--arcaffo-font-display); color: var(--arcaffo-ink); }
+.dx-quote p::before { content: '“'; }
+.dx-quote p::after { content: '”'; }
+.dx-quote--lead { grid-column: 1 / -1; }
+.dx-quote--lead p { max-width: 24ch; font-size: clamp(32px, 4vw, 58px); }
+
+/* O que sai do processo. */
+.dx-deliver-list { list-style: none; margin: 36px 0 0; padding: 0; border-top: 1px solid var(--arcaffo-linen); }
+.dx-deliver-list li { display: grid; gap: 4px; padding-block: 18px; border-bottom: 1px solid var(--arcaffo-linen); }
+.dx-deliver-list strong { font: 400 24px/1.2 var(--arcaffo-font-display); color: var(--arcaffo-ink); }
+.dx-deliver-list span { color: var(--arcaffo-graphite); }
+.dx-method { margin-top: 28px; color: var(--arcaffo-graphite); }
+.dx-method strong { font-weight: 500; color: var(--arcaffo-ink); }
+.dx-deliver-photos { display: grid; gap: 16px; }
+.dx-deliver-photos img { display: block; width: 100%; height: auto; }
+.dx-deliver-photos img:first-child { aspect-ratio: 4 / 5; object-fit: cover; }
+
+/* Quem conduz. */
+.dx-people-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 3vw, 40px); }
+.dx-people-grid img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+.dx-people-grid h3 { margin-top: 18px; font-size: clamp(22px, 2vw, 28px); }
+.dx-people-grid p { margin: 4px 0 0; font-size: 14px; color: var(--arcaffo-graphite); }
+
+/* Aviso de cookies do Pixel (tracking/meta-pixel.js). */
+.consent-bar { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: 16px; max-width: 760px; margin-inline: auto; padding: 14px 16px; background: var(--arcaffo-espresso); color: var(--arcaffo-paper); border-radius: 3px; box-shadow: 0 6px 20px rgb(0 0 0 / .18); font-size: 13px; }
+.consent-bar p { margin: 0; }
+.consent-bar div { display: flex; gap: 8px; flex-shrink: 0; }
+.consent-bar button { min-height: 40px; padding: 8px 14px; border: 1px solid var(--arcaffo-paper); border-radius: 3px; background: transparent; color: var(--arcaffo-paper); font: 500 12px/1 var(--arcaffo-font-body); cursor: pointer; }
+.consent-bar button[data-consent="granted"] { background: var(--arcaffo-paper); color: var(--arcaffo-ink); }
+.consent-bar button:focus-visible { outline: 2px solid var(--arcaffo-ember); outline-offset: 2px; }
+
+@media (max-width: 1000px) {
+  .dx-hero-photo { display: none; }
+  .dx-quote-grid, .dx-shift-list > div { grid-template-columns: 1fr; }
+  .dx-shift-list > div { gap: 8px; }
+  .dx-people-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .dx-people-grid h3 { font-size: 17px; }
+  .dx-people-grid p { font-size: 12px; }
+  .consent-bar { flex-direction: column; align-items: stretch; }
+  .consent-bar div button { flex: 1; }
+  body.has-consent-bar .lp-sticky-cta { opacity: 0; pointer-events: none; }
+}

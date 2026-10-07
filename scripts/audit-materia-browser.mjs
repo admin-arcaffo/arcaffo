@@ -21,7 +21,7 @@ try {
     await page.setViewportSize({width,height:900});
     for(const path of ['/','/sobre.html','/servicos.html','/projetos.html','/artigos.html','/contato.html','/vagas.html','/obrigado.html','/projetos/indreco.html','/artigos/como-alinhar-a-cultura-organizacional-e-os-objetivos-dos-funciona-rios-nas-pmes.html']){
       await page.goto(base+path);await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].filter(i=>i.getAttribute('src')).map(i=>{i.loading='eager';return i.decode().catch(()=>{});}));await Promise.all(document.getAnimations().map(a=>a.finished.catch(()=>{})));});
-      const state=await page.evaluate(()=>({title:document.querySelector('h1')?.textContent,overflow:document.documentElement.scrollWidth>innerWidth+1,images:[...document.images].filter(i=>i.getAttribute('src')&&i.complete&&i.naturalWidth===0).map(i=>i.src),fonts:document.fonts.check('300 32px Newsreader')}));
+      const state=await page.evaluate(()=>({title:document.querySelector('h1')?.textContent,overflow:document.documentElement.scrollWidth>innerWidth+1,images:[...document.images].filter(i=>i.getAttribute('src')&&i.complete&&i.naturalWidth===0).map(i=>i.src),fonts:document.fonts.check('400 32px span-compressed')}));
       report.pages.push({path,width,...state});assert.ok(!state.overflow,`Overflow ${path} at ${width}`);assert.ok(state.title,`No h1 ${path}`);assert.deepEqual(state.images,[],`Broken image on ${path}`);
       await page.screenshot({path:`${out}/${path==='/'?'home':path.replaceAll('/','_').replace('.html','')}-${width}.png`,fullPage:true});
     }

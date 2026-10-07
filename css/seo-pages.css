@@ -29,7 +29,7 @@
 .seo-reading-list a { display: block; padding-block: 18px; }
 .seo-faq { margin-top: 36px; border-bottom: 1px solid var(--arcaffo-linen); }
 .seo-faq details { border-top: 1px solid var(--arcaffo-linen); padding-block: 22px; }
-.seo-faq summary { font: 300 clamp(21px, 2vw, 28px)/1.3 var(--arcaffo-font-display); }
+.seo-faq summary { font: 400 clamp(21px, 2vw, 28px)/1.22 var(--arcaffo-font-display); }
 .seo-faq p { margin: 18px 0 0; color: var(--arcaffo-graphite); }
 .seo-final-cta { text-align: center; }
 .seo-final-cta p { color: var(--arcaffo-graphite); margin: 28px auto; max-width: 720px; }

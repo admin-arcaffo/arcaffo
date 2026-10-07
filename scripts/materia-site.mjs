@@ -6,8 +6,20 @@ import { sanitizeSlug } from '../api/utils/slug.mjs';
 import { refinePages } from './editorial-render.mjs';
 import { applySeo } from './site-seo.mjs';
 import { projectPicture } from '../shared/responsive-images.mjs';
+import { MILME_ORIGIN, projectHref } from '../shared/milme.mjs';
 
 export const escapeHtml = (s = '') => String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
+const SEGMENT_ORDER = [
+  'Arquitetura e Interiores',
+  'Construção e Engenharia',
+  'Alimentos e Bebidas',
+  'Saúde e Bem-estar',
+  'Moda e Joias',
+  'Cultura e Educação',
+  'Indústria e Automotivo',
+  'Tecnologia e Eletrônicos',
+  'Serviços Profissionais',
+];
 const safeUrl = (s = '') => /^(https?:\/\/|\/(?!\/)|#|mailto:|tel:)/i.test(s) ? s : '';
 function data(name) { return JSON.parse(readFileSync(resolve('public/data', `${name}.json`), 'utf8')); }
 export function richText(html = '') {
@@ -29,7 +41,7 @@ function jobCard(v) {
 function projectCard(p) {
   p = { ...p, slug: sanitizeSlug(p.slug) };
   const img = safeUrl(p.cover || p.images?.[0]?.url || '/images/brand/og-image.jpg');
-  return `<a class="project-card" href="/projetos/${encodeURIComponent(p.slug)}.html" data-filter-item data-tags="${escapeHtml((p.tags || []).join('|'))}" data-title="${escapeHtml(p.title)}"><div class="project-image">${projectPicture(img,p.title,{style:`view-transition-name: project-${p.slug.replace(/[^a-z0-9-]/gi,'')}`})}</div><div class="project-caption"><h3>${escapeHtml(p.title)}</h3><span>${escapeHtml((p.tags || []).join(' · '))}</span><span aria-hidden="true">↗</span></div></a>`;
+  return `<a class="project-card" href="${escapeHtml(projectHref(p.slug))}" data-filter-item data-segment="${escapeHtml(p.segment || '')}" data-title="${escapeHtml(p.title)}"><div class="project-image">${projectPicture(img,p.title,{style:`view-transition-name: project-${p.slug.replace(/[^a-z0-9-]/gi,'')}`})}</div><div class="project-caption"><h3>${escapeHtml(p.title)}</h3><span>${escapeHtml(p.segment || 'Serviços Profissionais')}</span><span aria-hidden="true">↗</span></div></a>`;
 }
 function articleCard(a) {
   a = { ...a, slug: sanitizeSlug(a.slug) };
@@ -50,7 +62,7 @@ export function materiaSitePlugin() {
           sobre:['Sobre a Arcaffo','Conheça a história, os valores, a liderança e o método da Arcaffo GROUP na construção de marcas, negócios e cultura desde 2016.'],
           servicos:['Branding e consultoria empresarial','Consultoria de branding, posicionamento, identidade visual, estratégia de marca, gestão de marketing e acompanhamento empresarial.'],
           'branding-local':['Agência de branding em Campo Grande','Branding em Campo Grande para empresas que precisam alinhar posicionamento, identidade e decisões de negócio. Conheça o método da Arcaffo.'],
-          projetos:['Projetos de branding e identidade','Explore projetos de branding, posicionamento, naming e identidade visual desenvolvidos pela Arcaffo GROUP e as decisões por trás de cada marca.'],
+          projetos:['Projetos de branding e identidade','Projetos de branding, posicionamento e naming da Arcaffo GROUP e de identidade visual do brand studio MILME, com as decisões por trás de cada marca.'],
           artigos:['Artigos e perspectivas','Artigos sobre branding, posicionamento, identidade visual, cultura, marketing e negócios escritos pela equipe e por especialistas da Arcaffo.'],
           contato:['Solicitar uma conversa','Conte o momento da sua empresa e o desafio de marca ou negócio. A equipe da Arcaffo entra em contato para combinar uma conversa de diagnóstico.'],
           obrigado:['Obrigado pela confiança','Sua solicitação inicia uma conversa. O horário será combinado com nossa equipe.'],
@@ -85,9 +97,12 @@ export function materiaSitePlugin() {
           const selected = [...projects].sort((a,b) => (featured.indexOf(a.slug) < 0 ? 99 : featured.indexOf(a.slug)) - (featured.indexOf(b.slug) < 0 ? 99 : featured.indexOf(b.slug))).slice(0,4);
           $('[data-projects-featured]').html(selected.map(projectCard).join(''));
           $('[data-projects-all]').html(projects.map(projectCard).join(''));
-          const tags = [...new Set(projects.flatMap(p => p.tags || []))].sort();
-          $('[data-project-filters]').html(`<button type="button" class="filter-btn" data-filter="" aria-pressed="true">Todos</button>` + tags.map(t => `<button type="button" class="filter-btn" data-filter="${escapeHtml(t)}" aria-pressed="false">${escapeHtml(t)}</button>`).join(''));
+          const availableSegments = new Set(projects.map(p => p.segment).filter(Boolean));
+          const segments = SEGMENT_ORDER.filter(segment => availableSegments.has(segment));
+          $('[data-project-filters]').html(`<button type="button" class="filter-btn" data-filter="" aria-pressed="true">Todos</button>` + segments.map(segment => `<button type="button" class="filter-btn" data-filter="${escapeHtml(segment)}" aria-pressed="false">${escapeHtml(segment)}</button>`).join(''));
           $('[data-project-count]').text(`${projects.length} projetos`);
+          // Identidade visual é feita pelo brand studio MILME: os cards desses projetos levam ao site da MILME.
+          if ($('body').attr('data-page') === 'projetos' && !$('.milme-note').length) $('[data-projects-all]').before(`<p class="milme-note">Os projetos de identidade visual são criados pela <a href="${MILME_ORIGIN}/">MILME</a>, o brand studio da Arcaffo. Ao abrir um deles, você segue para o portfólio completo no site da MILME.</p>`);
         }
         if ($('[data-articles-all]').length) $('[data-articles-all]').html(data('artigos').filter(a => a.status !== 'draft').map(articleCard).join(''));
         if ($('[data-jobs-all]').length) {

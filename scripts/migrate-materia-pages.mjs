@@ -14,7 +14,7 @@ for (const name of pages) {
   if ($('html').attr('data-materia')) continue;
   $('html').attr('data-materia','2'); $('body').attr('data-page',name);
   $('link[rel="stylesheet"], link[rel="preload"], link[rel="preconnect"], style').remove();
-  $('head').append('<link rel="stylesheet" href="/css/materia.css"><link rel="preload" href="/design-system/arcaffo-materia/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>');
+  $('head').append('<link rel="preconnect" href="https://use.typekit.net" crossorigin><link rel="preconnect" href="https://p.typekit.net" crossorigin><link rel="stylesheet" href="https://use.typekit.net/gkr2kbf.css"><link rel="stylesheet" href="/css/materia.css">');
   $('link[rel="icon"]').attr('href','/images/brand/ff-mark.svg');
   if (!$('link[rel="icon"]').length) $('head').append('<link rel="icon" href="/images/brand/ff-mark.svg" type="image/svg+xml">');
   $('.site-header').replaceWith('<div data-site-header></div>');
@@ -35,7 +35,7 @@ for (const name of pages) {
   if(intros[name]) {
     const [label,title,body]=intros[name];
     let controls=''; let listing='';
-    if(name==='projetos') {controls='<div class="collection-controls"><label class="search-label">Buscar projeto<input type="search" data-search placeholder="Nome da marca" autocomplete="off"></label><div class="filters" data-project-filters aria-label="Filtrar por entrega"></div></div><p class="collection-count" data-project-count data-result-count role="status"></p>';listing='<div class="project-grid" data-projects-all></div>';}
+    if(name==='projetos') {controls='<div class="collection-controls"><label class="search-label">Buscar projeto<input type="search" data-search placeholder="Nome da marca" autocomplete="off"></label><div class="filters" data-project-filters aria-label="Filtrar por segmento de atuação"></div></div><p class="collection-count" data-project-count data-result-count role="status"></p>';listing='<div class="project-grid" data-projects-all></div>';}
     if(name==='artigos') {controls='<div class="collection-controls"><label class="search-label">Buscar uma leitura<input type="search" data-search placeholder="Um título ou assunto" autocomplete="off"></label></div><p data-result-count class="collection-count" role="status"></p>';listing='<div class="articles-grid" data-articles-all></div>';}
     if(name==='vagas')listing='<div class="jobs-list" data-jobs-all></div>';
     $('main').html(`<section class="page-intro container"><span class="arcaffo-eyebrow">${label}</span><h1>${title}</h1><p>${body}</p></section><section class="container section-bottom" data-collection>${controls}${listing}<p data-empty hidden>Nenhum resultado para esta busca. Experimente outro termo.</p></section>`);

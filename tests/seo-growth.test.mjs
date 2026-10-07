@@ -23,7 +23,7 @@ test('priority service pages are indexable, self-canonical and expose Service sc
     assert.match($('meta[name="robots"]').attr('content'), /^index, follow/, slug);
     assert.equal($('link[rel="canonical"]').attr('href'), `https://www.arcaffo.com/${slug}/`, slug);
     assert.ok(graph($).some(item => item['@type'] === 'Service'), slug);
-    assert.ok($('a[href^="/projetos/"]').length >= 3, slug);
+    assert.ok($('a[href^="/projetos/"], a[href^="https://milme.arcaffo.com/projetos/"]').length >= 3, slug);
     assert.ok($('a[href^="/artigos/"]').length >= 3, slug);
   }
 });
@@ -50,22 +50,42 @@ test('article and project detail pages include contextual internal links', () =>
   const $article = page('artigos/consultoria-de-branding-o-que-e-como-funciona.html');
   assert.ok($article('.related-content a[href^="/artigos/"]').length >= 3);
   assert.ok($article('.related-content a[href^="/consultoria-de-branding/"]').length >= 1);
-  const $project = page('projetos/indreco.html');
+  const $project = page('projetos/nadyelle-farias-arquiteta.html');
   assert.ok($project('.project-related a[href^="/artigos/"]').length >= 3);
-  assert.ok($project('.project-related a[href^="/"][href$="/"]').length >= 1);
+  assert.ok($project('.project-related a[href$="/"]').length >= 1);
 });
 
-test('priority cases expose factual, extractable project narratives', () => {
-  const slugs = ['la-parisienne','iclay','arkete','indreco','kassar','sacralita','cia-do-vidro','profive','rafael-a-obra'];
-  for (const slug of slugs) {
-    const $ = page(`projetos/${slug}.html`);
-    assert.equal($('.project-case-notes').length, 1, slug);
-    assert.equal($('.project-case-notes h2').length, 1, slug);
-    assert.equal($('.project-case-grid li').length, 3, slug);
-    const creativeWork = graph($).find(item => item['@type'] === 'CreativeWork');
-    assert.ok(creativeWork?.abstract, slug);
-    assert.ok(creativeWork?.keywords, slug);
+test('remaining Behance case keeps source-faithful narrative, credits and provenance', () => {
+  const $ = page('projetos/nadyelle-farias-arquiteta.html');
+  assert.equal($('.project-case-notes').length, 1);
+  assert.equal($('.project-case-grid li').length, 3);
+  assert.equal($('a[href*="behance.net/gallery/"]').length, 1);
+  const creativeWork = graph($).find(item => item['@type'] === 'CreativeWork');
+  assert.match(creativeWork.sameAs, /^https:\/\/www\.behance\.net\/gallery\//);
+  assert.ok(creativeWork.creditText);
+});
+
+test('identity cases moved to MILME: not generated here, 301 configured, links and sitemap point to MILME', async () => {
+  const { MILME_SLUGS, milmeProjectUrl, MILME_ORIGIN } = await import('../shared/milme.mjs');
+  const vercel = JSON.parse(fs.readFileSync(path.join(root, 'vercel.json'), 'utf8'));
+  const sitemap = fs.readFileSync(path.join(root, 'dist', 'sitemap.xml'), 'utf8');
+  assert.equal(MILME_SLUGS.size, 38);
+  for (const slug of MILME_SLUGS) {
+    assert.ok(!fs.existsSync(path.join(root, 'dist', 'projetos', `${slug}.html`)), `${slug} ainda gerado`);
+    for (const source of [`/projetos/${slug}`, `/projetos/${slug}.html`]) {
+      const rule = vercel.redirects.find(r => r.source === source);
+      assert.equal(rule?.destination, milmeProjectUrl(slug), source);
+      assert.equal(rule.permanent, true, source);
+    }
+    assert.doesNotMatch(sitemap, new RegExp(`/projetos/${slug}\\.html`), slug);
   }
-  assert.doesNotMatch(page('projetos/iclay.html')('main').text(), /Founded in 2017/);
-  assert.doesNotMatch(page('projetos/cia-do-vidro.html')('main').text(), /With over two decades/);
+  const firstGeneric = vercel.redirects.findIndex(r => r.source === '/projeto.html' && r.has?.[0]?.value?.includes('?<slug>'));
+  const lastMilme = vercel.redirects.findLastIndex(r => r.source === '/projeto.html' && MILME_SLUGS.has(r.has?.[0]?.value));
+  assert.ok(lastMilme < firstGeneric, 'redirects MILME precisam vir antes do genérico /projeto.html');
+  const $projects = page('projetos.html');
+  assert.ok($projects(`a[href^="${MILME_ORIGIN}/projetos/"]`).length >= 38);
+  assert.equal($projects('a[href="/projetos/nadyelle-farias-arquiteta.html"]').length, 1);
+  const organization = graph(page('index.html')).find(item => item['@id'] === 'https://www.arcaffo.com/#organization');
+  assert.equal(organization.subOrganization['@id'], `${MILME_ORIGIN}/#organization`);
+  assert.doesNotMatch(sitemap, /\/identidade-visual\//);
 });

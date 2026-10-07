@@ -16,6 +16,7 @@ export default async function handler(req, res) {
         id: p.id,
         slug: p.slug,
         title: p.title,
+        segment: p.segment,
         tags: p.tags,
         status: p.status || 'published',
         cover: p.cover

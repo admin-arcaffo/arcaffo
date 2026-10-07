@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { sanitizeSlug } from '../api/utils/slug.mjs';
 import { validDate } from '../shared/seo.mjs';
+import { isMilmeProject } from '../shared/milme.mjs';
 
 function generateSitemap() {
   const domain = 'https://www.arcaffo.com';
@@ -13,7 +14,6 @@ function generateSitemap() {
     '/agencia-de-branding-campo-grande/',
     '/consultoria-de-branding/',
     '/posicionamento-de-marca/',
-    '/identidade-visual/',
     '/estrategia-de-marca/',
     '/consultoria-empresarial/',
     '/gestao-de-marketing/',
@@ -27,7 +27,7 @@ function generateSitemap() {
   ];
 
   const artigos = JSON.parse(fs.readFileSync('public/data/artigos.json', 'utf8')).filter(a => a.status !== 'draft');
-  const projetos = JSON.parse(fs.readFileSync('public/data/projetos.json', 'utf8')).filter(p => p.status !== 'draft');
+  const projetos = JSON.parse(fs.readFileSync('public/data/projetos.json', 'utf8')).filter(p => p.status !== 'draft' && !isMilmeProject(p.slug));
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
 

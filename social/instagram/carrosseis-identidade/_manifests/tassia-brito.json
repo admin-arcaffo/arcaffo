@@ -1,0 +1,88 @@
+{
+  "title": "Tássia Brito",
+  "slug": "tassia-brito",
+  "format": "Instagram carousel",
+  "dimensions": "1080x1350",
+  "aspectRatio": "4:5",
+  "rule": "Somente imagens originais da identidade, sem elementos sobrepostos, sem crop e sem cortar assinaturas. Margens usam a cor predominante da própria imagem.",
+  "slides": [
+    {
+      "slide": 1,
+      "file": "01.jpg",
+      "source": "/images/projetos/0f051199a9.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 24,
+        "g": 24,
+        "b": 24,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 2,
+      "file": "02.jpg",
+      "source": "/images/projetos/832f3ca598.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 248,
+        "g": 248,
+        "b": 248,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 3,
+      "file": "03.jpg",
+      "source": "/images/projetos/55bdc4208f.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 24,
+        "g": 24,
+        "b": 24,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 4,
+      "file": "04.jpg",
+      "source": "/images/projetos/73afec23cd.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 24,
+        "g": 24,
+        "b": 24,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 5,
+      "file": "05.jpg",
+      "source": "/images/projetos/e13e2331dd.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 232,
+        "g": 232,
+        "b": 216,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 6,
+      "file": "06.jpg",
+      "source": "/images/projetos/845fba3865.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 248,
+        "g": 248,
+        "b": 248,
+        "alpha": 1
+      }
+    }
+  ]
+}

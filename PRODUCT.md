@@ -36,7 +36,7 @@ O diferencial não é "fazer a identidade visual de uma empresa" — é a combin
 - Nome público: **Arcaffo GROUP**.
 - Slogan institucional: **Pessoas, valores, Negócios & Marcas.**
 - Identidade vigente: **Matéria v2.0**, fornecida em 13/09/2026. Base de papel e espresso, neutros quentes, tinta e grafite para leitura e acento brasa contido. Substitui expressamente a identidade monocromática anterior.
-- Tipografia: Newsreader Light 300, caixa natural, para títulos; Inter para corpo e controles. Cantos retos, divisões por filetes e fotografia ampla. Especificação web em `DESIGN.md`.
+- Tipografia: Span Compressed Regular 400, caixa natural, para títulos e destaques serifados; Inter para corpo e controles. Cantos retos, divisões por filetes e fotografia ampla. Especificação web em `DESIGN.md`.
 - Fonte da verdade: `public/design-system/arcaffo-materia/styles.css` e tokens oficiais; extensões web em `css/materia.css`.
 - Fotografia institucional segue o tratamento do pacote. **Decisão do usuário: preservar as cores originais dos trabalhos de clientes no portfólio.**
 - Logo: duas variações (wordmark "arcaffo" e símbolo reduzido "ff"), cada uma em preto e branco, SVG+PNG — arquivos atualizados em `logo/ArcaffoGroup_logo_*_1.1.*` no brand kit.

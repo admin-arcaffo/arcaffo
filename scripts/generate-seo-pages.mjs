@@ -3,6 +3,7 @@ import path from 'node:path';
 import { SERVICE_PAGES } from '../shared/service-pages.mjs';
 import { PEOPLE } from '../shared/people.mjs';
 import { sanitizeSlug } from '../api/utils/slug.mjs';
+import { isMilmeProject, projectHref } from '../shared/milme.mjs';
 
 const ROOT = process.cwd();
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
@@ -24,6 +25,9 @@ function shell({ title, description, page, bodyAttributes = '', content }) {
   <meta property="og:image" content="https://www.arcaffo.com/images/materia/social-home.jpg">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+  <link rel="preconnect" href="https://p.typekit.net" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/gkr2kbf.css">
   <link rel="stylesheet" href="/css/materia.css">
   <link rel="stylesheet" href="/css/seo-pages.css">
 </head>
@@ -38,8 +42,8 @@ function shell({ title, description, page, bodyAttributes = '', content }) {
 
 function projectCards(slugs) {
   return slugs.map(slug => projectBySlug.get(slug)).filter(Boolean).map(project => `
-    <a class="seo-reference-card" href="/projetos/${encodeURIComponent(sanitizeSlug(project.slug))}.html">
-      <img src="${esc(project.cover || project.images?.[0]?.url)}" alt="${esc(project.title)} — projeto desenvolvido pela Arcaffo" loading="lazy" width="720" height="480">
+    <a class="seo-reference-card" href="${esc(projectHref(sanitizeSlug(project.slug)))}">
+      <img src="${esc(project.cover || project.images?.[0]?.url)}" alt="${esc(project.title)} — ${isMilmeProject(sanitizeSlug(project.slug)) ? 'identidade visual pela MILME, brand studio da Arcaffo' : 'projeto desenvolvido pela Arcaffo'}" loading="lazy" width="720" height="480">
       <span>${esc((project.tags || []).slice(0, 2).join(' · '))}</span>
       <h3>${esc(project.title)}</h3>
       <p>Conheça o contexto e as decisões deste projeto.</p>

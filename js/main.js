@@ -38,12 +38,12 @@ function initCollections() {
     const items = [...root.querySelectorAll('[data-filter-item]')];
     const filters = [...root.querySelectorAll('[data-filter]')];
     if (!items.length) return;
-    let tag = '';
+    let segment = '';
     const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('pt-BR');
     function update() {
       const term = normalize(search?.value || ''); let count = 0;
       items.forEach(item => {
-        const visible = (!tag || (item.dataset.tags || '').split('|').includes(tag)) && normalize(item.dataset.title || '').includes(term);
+        const visible = (!segment || item.dataset.segment === segment) && normalize(item.dataset.title || '').includes(term);
         item.hidden = !visible; if (visible) count++;
       });
       const status = root.querySelector('[data-result-count]');
@@ -52,8 +52,8 @@ function initCollections() {
     }
     search?.addEventListener('input', update);
     filters.forEach(button => button.addEventListener('click', () => {
-      tag = button.dataset.filter; filters.forEach(b => b.setAttribute('aria-pressed', String(b === button)));
-      update(); track('portfolio_filter',{category:tag || 'todos'});
+      segment = button.dataset.filter; filters.forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+      update(); track('portfolio_filter',{category:segment || 'todos'});
     })); update();
   });
 }
@@ -74,6 +74,9 @@ function initContact() {
   const labels = topic === 'diagnostico'
     ? { title:'Pedir o diagnóstico gratuito', submit:'Quero o diagnóstico gratuito' }
     : { title:'Solicitar uma conversa', submit:'Enviar minha solicitação' };
+  // Páginas de anúncio podem trocar os rótulos pelo próprio embed.
+  if (embed.dataset.formTitle) labels.title = embed.dataset.formTitle;
+  if (embed.dataset.submitLabel) labels.submit = embed.dataset.submitLabel;
   function styleLabels() {
     const title = embed.querySelector('.arcaffo-title');
     if (title && title.textContent !== labels.title) title.textContent = labels.title;

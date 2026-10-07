@@ -1,0 +1,140 @@
+{
+  "title": "Lucas Grisoste",
+  "slug": "lucas-grisoste",
+  "format": "Instagram carousel",
+  "dimensions": "1080x1350",
+  "aspectRatio": "4:5",
+  "rule": "Somente imagens originais da identidade, sem elementos sobrepostos, sem crop e sem cortar assinaturas. Margens usam a cor predominante da própria imagem.",
+  "slides": [
+    {
+      "slide": 1,
+      "file": "01.jpg",
+      "source": "/images/projetos/behance-100127475-03.jpg",
+      "placement": "north",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 200,
+        "g": 184,
+        "b": 168,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 2,
+      "file": "02.jpg",
+      "source": "/images/projetos/behance-100127475-04.jpg",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 232,
+        "g": 232,
+        "b": 232,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 3,
+      "file": "03.jpg",
+      "source": "/images/projetos/behance-100127475-05.jpg",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 232,
+        "g": 232,
+        "b": 232,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 4,
+      "file": "04.jpg",
+      "source": "/images/projetos/behance-100127475-06.jpg",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 184,
+        "g": 168,
+        "b": 152,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 5,
+      "file": "05.jpg",
+      "source": "/images/projetos/behance-100127475-09.jpg",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 248,
+        "g": 248,
+        "b": 232,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 6,
+      "file": "06.jpg",
+      "source": "/images/projetos/behance-100127475-10.jpg",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 248,
+        "g": 248,
+        "b": 232,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 7,
+      "file": "07.jpg",
+      "source": "/images/projetos/behance-100127475-12.jpg",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 232,
+        "g": 232,
+        "b": 232,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 8,
+      "file": "08.jpg",
+      "source": "/images/projetos/behance-100127475-14.jpg",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 232,
+        "g": 232,
+        "b": 232,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 9,
+      "file": "09.jpg",
+      "source": "/images/projetos/behance-100127475-16.jpg",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 232,
+        "g": 232,
+        "b": 232,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 10,
+      "file": "10.jpg",
+      "source": "/images/projetos/behance-100127475-17.jpg",
+      "placement": "north",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 232,
+        "g": 232,
+        "b": 232,
+        "alpha": 1
+      }
+    }
+  ]
+}

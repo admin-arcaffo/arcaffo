@@ -14,7 +14,7 @@ export async function renderProjetos(container) {
           <tr>
             <th>Capa</th>
             <th>Título</th>
-            <th>Tags</th>
+            <th>Segmento</th>
             <th>Status</th>
             <th>Ações</th>
           </tr>
@@ -44,7 +44,7 @@ export async function renderProjetos(container) {
           <div style="font-weight: 500;">${p.title}</div>
           <div style="font-size: 0.8rem; color: var(--text-muted);">${p.slug}</div>
         </td>
-        <td>${(p.tags || []).join(', ')}</td>
+        <td>${p.segment || 'Não definido'}</td>
         <td><span class="badge ${p.status === 'draft' ? 'draft' : 'published'}">${p.status === 'draft' ? 'Rascunho' : 'Publicado'}</span></td>
         <td class="actions-cell">
           <a href="#/projetos/editar/${p.slug}" class="btn btn-outline">Editar</a>
@@ -75,7 +75,7 @@ export async function renderEditorProjeto(container, params) {
   const isEditing = !!(params && params.slug);
   let projeto = {
     title: '', slug: '', description: '', cover: '', 
-    status: 'published', tags: [], team: '', media: []
+    status: 'published', segment: '', tags: [], team: '', media: []
   };
 
   container.innerHTML = `
@@ -127,6 +127,21 @@ export async function renderEditorProjeto(container, params) {
             </select>
           </div>
           <div class="form-group">
+            <label>Segmento de atuação</label>
+            <select id="f-segment">
+              <option value="">Selecione</option>
+              <option value="Arquitetura e Interiores">Arquitetura e Interiores</option>
+              <option value="Construção e Engenharia">Construção e Engenharia</option>
+              <option value="Alimentos e Bebidas">Alimentos e Bebidas</option>
+              <option value="Saúde e Bem-estar">Saúde e Bem-estar</option>
+              <option value="Moda e Joias">Moda e Joias</option>
+              <option value="Cultura e Educação">Cultura e Educação</option>
+              <option value="Indústria e Automotivo">Indústria e Automotivo</option>
+              <option value="Tecnologia e Eletrônicos">Tecnologia e Eletrônicos</option>
+              <option value="Serviços Profissionais">Serviços Profissionais</option>
+            </select>
+          </div>
+          <div class="form-group">
             <label>Tags (separadas por vírgula)</label>
             <input type="text" id="f-tags" value="${projeto.tags.join(', ')}">
           </div>
@@ -150,6 +165,7 @@ export async function renderEditorProjeto(container, params) {
       projeto = await api.getProjeto(params.slug);
       document.getElementById('f-title').value = projeto.title;
       document.getElementById('f-slug').value = projeto.slug;
+      document.getElementById('f-segment').value = projeto.segment || '';
       document.getElementById('f-tags').value = (projeto.tags || []).join(', ');
       document.getElementById('f-team').value = projeto.team || '';
       document.getElementById('f-status').value = projeto.status || 'published';
@@ -241,13 +257,14 @@ export async function renderEditorProjeto(container, params) {
       status: document.getElementById('f-status').value,
       description: richEditor.getContent(),
       cover: currentCover,
+      segment: document.getElementById('f-segment').value,
       tags: document.getElementById('f-tags').value.split(',').map(t => t.trim()).filter(Boolean),
       team: document.getElementById('f-team').value,
       media: mediaItems
     };
 
-    if (!dataToSave.title || !dataToSave.slug) {
-      return window.showToast('Título e Slug são obrigatórios', 'error');
+    if (!dataToSave.title || !dataToSave.slug || !dataToSave.segment) {
+      return window.showToast('Título, Slug e Segmento são obrigatórios', 'error');
     }
 
     try {

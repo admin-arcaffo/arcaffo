@@ -16,7 +16,12 @@
   "headers": [
     {
       "source": "/admin/:path*",
-      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     },
     {
       "source": "/admin/(.*)",
@@ -42,7 +47,12 @@
     },
     {
       "source": "/(images|css|js|fonts)/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
     },
     {
       "source": "/data/(.*)",
@@ -55,6 +65,852 @@
     }
   ],
   "redirects": [
+    {
+      "source": "/projetos/colatto",
+      "destination": "https://milme.arcaffo.com/projetos/colatto/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/colatto.html",
+      "destination": "https://milme.arcaffo.com/projetos/colatto/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "colatto"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/colatto/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/touro-morto",
+      "destination": "https://milme.arcaffo.com/projetos/touro-morto/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/touro-morto.html",
+      "destination": "https://milme.arcaffo.com/projetos/touro-morto/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "touro-morto"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/touro-morto/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/saneflow",
+      "destination": "https://milme.arcaffo.com/projetos/saneflow/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/saneflow.html",
+      "destination": "https://milme.arcaffo.com/projetos/saneflow/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "saneflow"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/saneflow/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/centralle-osteria",
+      "destination": "https://milme.arcaffo.com/projetos/centralle-osteria/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/centralle-osteria.html",
+      "destination": "https://milme.arcaffo.com/projetos/centralle-osteria/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "centralle-osteria"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/centralle-osteria/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/indreco",
+      "destination": "https://milme.arcaffo.com/projetos/indreco/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/indreco.html",
+      "destination": "https://milme.arcaffo.com/projetos/indreco/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "indreco"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/indreco/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/iclay",
+      "destination": "https://milme.arcaffo.com/projetos/iclay/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/iclay.html",
+      "destination": "https://milme.arcaffo.com/projetos/iclay/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "iclay"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/iclay/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/beco",
+      "destination": "https://milme.arcaffo.com/projetos/beco/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/beco.html",
+      "destination": "https://milme.arcaffo.com/projetos/beco/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "beco"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/beco/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/calixto-sandes-e-zabaleta",
+      "destination": "https://milme.arcaffo.com/projetos/calixto-sandes-e-zabaleta/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/calixto-sandes-e-zabaleta.html",
+      "destination": "https://milme.arcaffo.com/projetos/calixto-sandes-e-zabaleta/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "calixto-sandes-e-zabaleta"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/calixto-sandes-e-zabaleta/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/kassar",
+      "destination": "https://milme.arcaffo.com/projetos/kassar/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/kassar.html",
+      "destination": "https://milme.arcaffo.com/projetos/kassar/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "kassar"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/kassar/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/liana-godoy",
+      "destination": "https://milme.arcaffo.com/projetos/liana-godoy/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/liana-godoy.html",
+      "destination": "https://milme.arcaffo.com/projetos/liana-godoy/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "liana-godoy"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/liana-godoy/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/instituto-construindo-um-artista",
+      "destination": "https://milme.arcaffo.com/projetos/instituto-construindo-um-artista/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/instituto-construindo-um-artista.html",
+      "destination": "https://milme.arcaffo.com/projetos/instituto-construindo-um-artista/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "instituto-construindo-um-artista"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/instituto-construindo-um-artista/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/casa-santa-thereza",
+      "destination": "https://milme.arcaffo.com/projetos/casa-santa-thereza/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/casa-santa-thereza.html",
+      "destination": "https://milme.arcaffo.com/projetos/casa-santa-thereza/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "casa-santa-thereza"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/casa-santa-thereza/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/archdesign",
+      "destination": "https://milme.arcaffo.com/projetos/archdesign/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/archdesign.html",
+      "destination": "https://milme.arcaffo.com/projetos/archdesign/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "archdesign"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/archdesign/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/cia-do-vidro",
+      "destination": "https://milme.arcaffo.com/projetos/cia-do-vidro/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/cia-do-vidro.html",
+      "destination": "https://milme.arcaffo.com/projetos/cia-do-vidro/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "cia-do-vidro"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/cia-do-vidro/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/futura",
+      "destination": "https://milme.arcaffo.com/projetos/futura/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/futura.html",
+      "destination": "https://milme.arcaffo.com/projetos/futura/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "futura"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/futura/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/sweet",
+      "destination": "https://milme.arcaffo.com/projetos/sweet/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/sweet.html",
+      "destination": "https://milme.arcaffo.com/projetos/sweet/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "sweet"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/sweet/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/profive",
+      "destination": "https://milme.arcaffo.com/projetos/profive/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/profive.html",
+      "destination": "https://milme.arcaffo.com/projetos/profive/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "profive"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/profive/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/la-parisienne",
+      "destination": "https://milme.arcaffo.com/projetos/la-parisienne/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/la-parisienne.html",
+      "destination": "https://milme.arcaffo.com/projetos/la-parisienne/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "la-parisienne"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/la-parisienne/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/rafael-a-obra",
+      "destination": "https://milme.arcaffo.com/projetos/rafael-a-obra/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/rafael-a-obra.html",
+      "destination": "https://milme.arcaffo.com/projetos/rafael-a-obra/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "rafael-a-obra"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/rafael-a-obra/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/trigou",
+      "destination": "https://milme.arcaffo.com/projetos/trigou/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/trigou.html",
+      "destination": "https://milme.arcaffo.com/projetos/trigou/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "trigou"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/trigou/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/torque-solucoes-automotivas",
+      "destination": "https://milme.arcaffo.com/projetos/torque-solucoes-automotivas/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/torque-solucoes-automotivas.html",
+      "destination": "https://milme.arcaffo.com/projetos/torque-solucoes-automotivas/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "torque-solucoes-automotivas"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/torque-solucoes-automotivas/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/sacralita",
+      "destination": "https://milme.arcaffo.com/projetos/sacralita/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/sacralita.html",
+      "destination": "https://milme.arcaffo.com/projetos/sacralita/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "sacralita"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/sacralita/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/arkete",
+      "destination": "https://milme.arcaffo.com/projetos/arkete/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/arkete.html",
+      "destination": "https://milme.arcaffo.com/projetos/arkete/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "arkete"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/arkete/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/ana-santarelli",
+      "destination": "https://milme.arcaffo.com/projetos/ana-santarelli/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/ana-santarelli.html",
+      "destination": "https://milme.arcaffo.com/projetos/ana-santarelli/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "ana-santarelli"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/ana-santarelli/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/on-joias",
+      "destination": "https://milme.arcaffo.com/projetos/on-joias/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/on-joias.html",
+      "destination": "https://milme.arcaffo.com/projetos/on-joias/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "on-joias"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/on-joias/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/tassia-brito",
+      "destination": "https://milme.arcaffo.com/projetos/tassia-brito/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/tassia-brito.html",
+      "destination": "https://milme.arcaffo.com/projetos/tassia-brito/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "tassia-brito"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/tassia-brito/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/cake67",
+      "destination": "https://milme.arcaffo.com/projetos/cake67/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/cake67.html",
+      "destination": "https://milme.arcaffo.com/projetos/cake67/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "cake67"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/cake67/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/aldraba",
+      "destination": "https://milme.arcaffo.com/projetos/aldraba/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/aldraba.html",
+      "destination": "https://milme.arcaffo.com/projetos/aldraba/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "aldraba"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/aldraba/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/claudia-comparin",
+      "destination": "https://milme.arcaffo.com/projetos/claudia-comparin/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/claudia-comparin.html",
+      "destination": "https://milme.arcaffo.com/projetos/claudia-comparin/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "claudia-comparin"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/claudia-comparin/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/arcaffo",
+      "destination": "https://milme.arcaffo.com/projetos/arcaffo/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/arcaffo.html",
+      "destination": "https://milme.arcaffo.com/projetos/arcaffo/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "arcaffo"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/arcaffo/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/claudia-comparin-papelaria",
+      "destination": "https://milme.arcaffo.com/projetos/claudia-comparin-papelaria/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/claudia-comparin-papelaria.html",
+      "destination": "https://milme.arcaffo.com/projetos/claudia-comparin-papelaria/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "claudia-comparin-papelaria"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/claudia-comparin-papelaria/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/lucas-grisoste",
+      "destination": "https://milme.arcaffo.com/projetos/lucas-grisoste/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/lucas-grisoste.html",
+      "destination": "https://milme.arcaffo.com/projetos/lucas-grisoste/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "lucas-grisoste"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/lucas-grisoste/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/dra-yana",
+      "destination": "https://milme.arcaffo.com/projetos/dra-yana/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/dra-yana.html",
+      "destination": "https://milme.arcaffo.com/projetos/dra-yana/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "dra-yana"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/dra-yana/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/priscila-pieczykolan-arquitetura",
+      "destination": "https://milme.arcaffo.com/projetos/priscila-pieczykolan-arquitetura/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/priscila-pieczykolan-arquitetura.html",
+      "destination": "https://milme.arcaffo.com/projetos/priscila-pieczykolan-arquitetura/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "priscila-pieczykolan-arquitetura"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/priscila-pieczykolan-arquitetura/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/lara-cerantola",
+      "destination": "https://milme.arcaffo.com/projetos/lara-cerantola/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/lara-cerantola.html",
+      "destination": "https://milme.arcaffo.com/projetos/lara-cerantola/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "lara-cerantola"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/lara-cerantola/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/construtora-riwal",
+      "destination": "https://milme.arcaffo.com/projetos/construtora-riwal/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/construtora-riwal.html",
+      "destination": "https://milme.arcaffo.com/projetos/construtora-riwal/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "construtora-riwal"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/construtora-riwal/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/arqdeco",
+      "destination": "https://milme.arcaffo.com/projetos/arqdeco/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/arqdeco.html",
+      "destination": "https://milme.arcaffo.com/projetos/arqdeco/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "arqdeco"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/arqdeco/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/it-decor",
+      "destination": "https://milme.arcaffo.com/projetos/it-decor/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos/it-decor.html",
+      "destination": "https://milme.arcaffo.com/projetos/it-decor/",
+      "permanent": true
+    },
+    {
+      "source": "/projeto.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "it-decor"
+        }
+      ],
+      "destination": "https://milme.arcaffo.com/projetos/it-decor/",
+      "permanent": true
+    },
+    {
+      "source": "/identidade-visual",
+      "destination": "https://milme.arcaffo.com/identidade-visual/",
+      "permanent": true
+    },
+    {
+      "source": "/identidade-visual/",
+      "destination": "https://milme.arcaffo.com/identidade-visual/",
+      "permanent": true
+    },
     {
       "source": "/artigo.html",
       "has": [
@@ -310,118 +1166,8 @@
       "permanent": true
     },
     {
-      "source": "/projetos/ana-santarelli",
-      "destination": "/projetos/ana-santarelli.html",
-      "permanent": true
-    },
-    {
-      "source": "/projetos/on-joias",
-      "destination": "/projetos/on-joias.html",
-      "permanent": true
-    },
-    {
-      "source": "/projetos/cia-do-vidro",
-      "destination": "/projetos/cia-do-vidro.html",
-      "permanent": true
-    },
-    {
       "source": "/projetos/torque%C2%AE-solu%C3%A7%C3%B5es-automotivas",
       "destination": "/projetos.html",
-      "permanent": true
-    },
-    {
-      "source": "/projetos/iclay",
-      "destination": "/projetos/iclay.html",
-      "permanent": true
-    },
-    {
-      "source": "/projetos/instituto-construindo-um-artista",
-      "destination": "/projetos/instituto-construindo-um-artista.html",
-      "permanent": true
-    },
-    {
-      "source": "/projetos/futura",
-      "destination": "/projetos/futura.html",
-      "permanent": true
-    },
-    {
-      "source": "/projetos/kassar",
-      "destination": "/projetos/kassar.html",
-      "permanent": true
-    },
-    {
-      "source": "/projetos/casa-santa-thereza",
-      "destination": "/projetos/casa-santa-thereza.html",
-      "permanent": true
-    },
-    {
-      "source": "/projetos/beco",
-      "destination": "/projetos/beco.html",
-      "permanent": true
-    },
-    {
-      "source": "/projetos/calixto-sandes-e-zabaleta",
-      "destination": "/projetos/calixto-sandes-e-zabaleta.html",
-      "permanent": true
-    },
-    {
-      "source": "/projetos/indreco",
-      "destination": "/projetos/indreco.html",
-      "permanent": true
-    },
-    {
-      "source": "/projetos/rafael-a-obra",
-      "destination": "/projetos/rafael-a-obra.html",
-      "permanent": true
-    },
-    {
-      "source": "/projetos/liana-godoy",
-      "destination": "/projetos/liana-godoy.html",
-      "permanent": true
-    },
-    {
-      "source": "/projetos/trigou",
-      "destination": "/projetos/trigou.html",
-      "permanent": true
-    },
-    {
-      "source": "/projetos/sweet",
-      "destination": "/projetos/sweet.html",
-      "permanent": true
-    },
-    {
-      "source": "/projetos/arkete",
-      "destination": "/projetos/arkete.html",
-      "permanent": true
-    },
-    {
-      "source": "/projetos/tassia-brito",
-      "destination": "/projetos/tassia-brito.html",
-      "permanent": true
-    },
-    {
-      "source": "/projetos/archdesign",
-      "destination": "/projetos/archdesign.html",
-      "permanent": true
-    },
-    {
-      "source": "/projetos/sacralita",
-      "destination": "/projetos/sacralita.html",
-      "permanent": true
-    },
-    {
-      "source": "/projetos/profive",
-      "destination": "/projetos/profive.html",
-      "permanent": true
-    },
-    {
-      "source": "/projetos/la-parisienne",
-      "destination": "/projetos/la-parisienne.html",
-      "permanent": true
-    },
-    {
-      "source": "/projetos/cake67",
-      "destination": "/projetos/cake67.html",
       "permanent": true
     }
   ]

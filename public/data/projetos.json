@@ -1,8 +1,1306 @@
 [
   {
+    "id": "80f0629b-c2bf-4cf2-a446-0ad5daaa72c0",
+    "behanceId": 250277779,
+    "title": "COLATTO",
+    "slug": "colatto",
+    "segment": "Arquitetura e Interiores",
+    "description": "COLATTO ARQUITETURA.\n\nAcreditamos que a arquitetura vai além de simplesmente projetar espaços; é sobre criar ambientes que promovam o bem-estar, o desenvolvimento e a felicidade das pessoas que os habitam. Nosso foco está em projetos de arquitetura e interiores, tanto residenciais quanto comerciais, sempre buscando a excelência e a funcionalidade em cada detalhe.",
+    "cover": "/images/projetos/behance-250277779-cover.webp",
+    "coverWidth": 1636,
+    "coverHeight": 1280,
+    "tags": [
+      "Estratégia",
+      "Identidade Visual",
+      "Typedesign"
+    ],
+    "sourceTags": [
+      "branding",
+      "architecture",
+      "Logo Design",
+      "brand identity",
+      "Graphic Designer",
+      "minimal",
+      "Brand Design",
+      "Logotype",
+      "typography",
+      "brand strategy"
+    ],
+    "team": "Arthur Fava, Fabrício Rodrigues, Carlos Santana",
+    "contributors": [
+      "Arthur Fava",
+      "Fabrício Rodrigues",
+      "Carlos Santana"
+    ],
+    "organizations": [
+      "Arcaffo. Branding"
+    ],
+    "credits": [
+      {
+        "label": "Coautoria",
+        "value": "Arthur Fava, Fabrício Rodrigues, Carlos Santana e Arcaffo. Branding"
+      }
+    ],
+    "sourceUrl": "https://www.behance.net/gallery/250277779/COLATTO",
+    "caseStudy": {
+      "question": "Como construir uma marca para um escritório que entende arquitetura como ferramenta de bem-estar?",
+      "answer": "A COLATTO atua em projetos de arquitetura e interiores, residenciais e comerciais, com foco no bem-estar, no desenvolvimento e na felicidade das pessoas. Estratégia, identidade e expressão tipográfica organizam esse posicionamento em uma presença minimalista orientada por excelência e funcionalidade.",
+      "decisions": [
+        "Reunir arquitetura residencial, comercial e de interiores sob uma identidade única.",
+        "Dar protagonismo ao logotipo e à tipografia no reconhecimento da marca.",
+        "Usar uma linguagem minimalista coerente com excelência, funcionalidade e atenção aos detalhes."
+      ],
+      "perspective": "O projeto evidencia como uma identidade de arquitetura pode comunicar a experiência que pretende criar: ambientes funcionais que também favorecem bem-estar e desenvolvimento.",
+      "metaDescription": "Case COLATTO: estratégia, identidade visual e expressão tipográfica para um escritório de arquitetura e interiores focado em bem-estar e funcionalidade."
+    },
+    "images": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-01.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-02.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "COLATTO — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-03.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-04.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "COLATTO — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-05.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "COLATTO — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-06.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "COLATTO — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-07.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "COLATTO — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-08.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 8"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-09.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 9"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-10.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 10"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-11.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 11"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-12.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 12"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-13.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 13"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-14.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 14"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-15.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 15"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-16.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 16"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-17.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 17"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-18.webp",
+        "width": 1920,
+        "height": 1440,
+        "alt": "COLATTO — aplicação 18"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-19.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 19"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-20.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 20"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-21.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 21"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-22.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 22"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-23.webp",
+        "width": 1920,
+        "height": 1433,
+        "alt": "COLATTO — aplicação 23"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-01.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-02.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "COLATTO — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-03.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-04.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "COLATTO — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-05.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "COLATTO — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-06.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "COLATTO — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-07.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "COLATTO — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-08.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 8"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-09.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 9"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-10.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 10"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-11.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 11"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-12.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 12"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-13.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 13"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-14.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 14"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-15.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 15"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-16.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 16"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-17.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 17"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-18.webp",
+        "width": 1920,
+        "height": 1440,
+        "alt": "COLATTO — aplicação 18"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-19.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 19"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-20.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 20"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-21.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 21"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-22.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "COLATTO — aplicação 22"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-250277779-23.webp",
+        "width": 1920,
+        "height": 1433,
+        "alt": "COLATTO — aplicação 23"
+      }
+    ],
+    "status": "published",
+    "createdAt": "2026-08-06T13:39:08.000Z",
+    "updatedAt": "2026-08-06T13:39:08.000Z"
+  },
+  {
+    "id": "daf0d4ba-5fd5-4f01-a115-f073b3aeaf94",
+    "behanceId": 242872547,
+    "title": "Touro Morto®",
+    "slug": "touro-morto",
+    "segment": "Alimentos e Bebidas",
+    "description": "Feita para repetir. A Touro Morto é a cerveja simples e direta que cabe no bolso. Uma marca que exala força e tradição, sendo a companhia perfeita para quem valoriza sabor de verdade. Provando que ter um bom design não significa ser inacessível, e ser verdadeiramente raiz, não significa ser desleixado.",
+    "cover": "/images/projetos/behance-242872547-cover.webp",
+    "coverWidth": 742,
+    "coverHeight": 580,
+    "tags": [
+      "Estratégia",
+      "Identidade Visual",
+      "Packaging",
+      "Motion"
+    ],
+    "sourceTags": [
+      "Beer Packaging",
+      "beer",
+      "canned beer",
+      "craft beer",
+      "visual identity",
+      "Packaging",
+      "alcoholic",
+      "Label",
+      "drink",
+      "bull logo"
+    ],
+    "team": "Arthur Fava, Fabrício Rodrigues, Luiz Paulo Pacheco, Everton Gargioni, Leandro Ramos",
+    "contributors": [
+      "Arthur Fava",
+      "Fabrício Rodrigues",
+      "Luiz Paulo Pacheco",
+      "Everton Gargioni",
+      "Leandro Ramos"
+    ],
+    "organizations": [
+      "Arcaffo. Branding"
+    ],
+    "credits": [
+      {
+        "label": "Estratégia",
+        "value": "Arthur Fava, Fabrício Rodrigues e Luiz Paulo Pacheco"
+      },
+      {
+        "label": "Identidade visual",
+        "value": "Everton Gargioni"
+      },
+      {
+        "label": "Design de embalagem e motion",
+        "value": "Leandro Ramos"
+      }
+    ],
+    "sourceUrl": "https://www.behance.net/gallery/242872547/Touro-Morto",
+    "caseStudy": {
+      "question": "Como fazer uma cerveja acessível parecer forte e bem cuidada sem perder sua atitude raiz?",
+      "answer": "A Touro Morto foi construída como uma cerveja simples, direta e acessível, com uma marca que exala força e tradição. Estratégia, identidade visual, embalagem e motion demonstram que design bem resolvido pode caber no bolso sem suavizar o sabor ou a personalidade do produto.",
+      "decisions": [
+        "Posicionar a marca em torno de força, tradição, sabor e acessibilidade.",
+        "Transformar a atitude raiz em identidade visual e embalagem cuidadas.",
+        "Levar a mesma presença para peças estáticas e aplicações em movimento."
+      ],
+      "perspective": "A proposta mostra que preço acessível e qualidade de design podem coexistir. A embalagem sustenta essa percepção no ponto de contato mais direto entre a cerveja e o consumidor.",
+      "metaDescription": "Case Touro Morto: estratégia, identidade visual, embalagem e motion para uma cerveja acessível, direta e marcada por força e tradição."
+    },
+    "images": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-01.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Touro Morto® — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-02.webp",
+        "width": 1920,
+        "height": 1289,
+        "alt": "Touro Morto® — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-03.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Touro Morto® — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-04.webp",
+        "width": 1400,
+        "height": 1750,
+        "alt": "Touro Morto® — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-05.webp",
+        "width": 1400,
+        "height": 1750,
+        "alt": "Touro Morto® — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-06.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Touro Morto® — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-07.webp",
+        "width": 1920,
+        "height": 1201,
+        "alt": "Touro Morto® — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-08.webp",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Touro Morto® — aplicação 8"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-09.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Touro Morto® — aplicação 9"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-10.webp",
+        "width": 1400,
+        "height": 1750,
+        "alt": "Touro Morto® — aplicação 10"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-11.webp",
+        "width": 1400,
+        "height": 1750,
+        "alt": "Touro Morto® — aplicação 11"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-12.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Touro Morto® — aplicação 12"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-13.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Touro Morto® — aplicação 13"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-14.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Touro Morto® — aplicação 14"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-15.gif",
+        "width": 1920,
+        "height": 1289,
+        "alt": "Touro Morto® — aplicação 15"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-16.webp",
+        "width": 1920,
+        "height": 1201,
+        "alt": "Touro Morto® — aplicação 16"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-01.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Touro Morto® — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-02.webp",
+        "width": 1920,
+        "height": 1289,
+        "alt": "Touro Morto® — aplicação 2"
+      },
+      {
+        "type": "embed",
+        "url": "https://player.vimeo.com/video/1158943603?autoplay=1&loop=1&autopause=0&controls=0",
+        "width": 2800,
+        "height": 280,
+        "title": "Touro Morto® — peça em movimento"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-03.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Touro Morto® — aplicação 3"
+      },
+      {
+        "type": "embed",
+        "url": "https://player.vimeo.com/video/1159822940?autoplay=1&loop=1&autopause=0&controls=0",
+        "width": 2880,
+        "height": 1800,
+        "title": "Touro Morto® — peça em movimento"
+      },
+      {
+        "type": "collection",
+        "items": [
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-242872547-04.webp",
+            "width": 1400,
+            "height": 1750,
+            "alt": "Touro Morto® — aplicação 4"
+          },
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-242872547-05.webp",
+            "width": 1400,
+            "height": 1750,
+            "alt": "Touro Morto® — aplicação 5"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-06.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Touro Morto® — aplicação 6"
+      },
+      {
+        "type": "embed",
+        "url": "https://player.vimeo.com/video/1159374954?autoplay=1&loop=1&autopause=0&controls=0",
+        "width": 2880,
+        "height": 1800,
+        "title": "Touro Morto® — peça em movimento"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-07.webp",
+        "width": 1920,
+        "height": 1201,
+        "alt": "Touro Morto® — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-08.webp",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Touro Morto® — aplicação 8"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-09.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Touro Morto® — aplicação 9"
+      },
+      {
+        "type": "collection",
+        "items": [
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-242872547-10.webp",
+            "width": 1400,
+            "height": 1750,
+            "alt": "Touro Morto® — aplicação 10"
+          },
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-242872547-11.webp",
+            "width": 1400,
+            "height": 1750,
+            "alt": "Touro Morto® — aplicação 11"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-12.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Touro Morto® — aplicação 12"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-13.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Touro Morto® — aplicação 13"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-14.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Touro Morto® — aplicação 14"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-15.gif",
+        "width": 1920,
+        "height": 1289,
+        "alt": "Touro Morto® — aplicação 15"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-242872547-16.webp",
+        "width": 1920,
+        "height": 1201,
+        "alt": "Touro Morto® — aplicação 16"
+      }
+    ],
+    "status": "published",
+    "createdAt": "2026-01-29T20:47:53.000Z",
+    "updatedAt": "2026-01-29T20:47:53.000Z"
+  },
+  {
+    "id": "316709f7-dd62-49aa-a3db-31aac31f5142",
+    "behanceId": 234442867,
+    "title": "Saneflow®",
+    "slug": "saneflow",
+    "segment": "Construção e Engenharia",
+    "description": "A Saneflow é uma consultoria especializada em soluções estratégicas e personalizadas para operações de saneamento. Com o intuito de fomentar a excelência por meio de projetos que unem conhecimento técnico, eficiência e resultados reais em relação ao controle de perda de água, eficiência energética e de recursos.\n\nAtualizamos a identidade visual para harmonizar com o novo posicionamento. Uma marca institucional comprometida com a ética, excelência, e resultados aplicáveis que de fato resolvem problemas. Uma identidade visual equilibrada, capaz de ser sóbria e clara em contextos institucionais, e vibrante e digital em contextos dentro da comunicação, sem soar fria ou distante.",
+    "cover": "/images/projetos/behance-234442867-cover.webp",
+    "coverWidth": 734,
+    "coverHeight": 574,
+    "tags": [
+      "Posicionamento",
+      "Identidade Visual"
+    ],
+    "sourceTags": [
+      "sanitation",
+      "SANEAMENTO",
+      "Water Treatment",
+      "water",
+      "agua",
+      "consultancy",
+      "consultoria",
+      "branding",
+      "Brand Design",
+      "esgoto"
+    ],
+    "team": "Arthur Fava, Fabrício Rodrigues, Luiz Paulo Pacheco, Leandro Ramos, Yasmin Rodrigues",
+    "contributors": [
+      "Arthur Fava",
+      "Fabrício Rodrigues",
+      "Luiz Paulo Pacheco",
+      "Leandro Ramos",
+      "Yasmin Rodrigues"
+    ],
+    "organizations": [
+      "Arcaffo. Branding",
+      "MILME® Studio"
+    ],
+    "credits": [
+      {
+        "label": "Posicionamento e estratégia",
+        "value": "Arcaffo. Branding — Arthur Fava, Fabrício Rodrigues e Luiz Paulo Pacheco"
+      },
+      {
+        "label": "Identidade visual",
+        "value": "MILME® Studio — direção criativa de Leandro Ramos; design de Leandro Ramos e Yasmin Rodrigues"
+      }
+    ],
+    "sourceUrl": "https://www.behance.net/gallery/234442867/Saneflow-Consultoria-em-Saneamento",
+    "caseStudy": {
+      "question": "Como atualizar uma consultoria de saneamento para expressar conhecimento técnico sem parecer fria ou distante?",
+      "answer": "A Saneflow oferece soluções estratégicas e personalizadas para operações de saneamento, com foco em controle de perdas de água, eficiência energética e uso eficiente de recursos. O novo posicionamento orientou uma identidade institucional, ética e clara, capaz de também ganhar vibração nos contextos digitais e de comunicação.",
+      "decisions": [
+        "Alinhar a identidade visual ao novo posicionamento da consultoria.",
+        "Equilibrar sobriedade institucional e clareza com uma presença digital mais vibrante.",
+        "Comunicar excelência técnica, eficiência e resultados aplicáveis sem criar distanciamento."
+      ],
+      "perspective": "Em serviços técnicos, a identidade precisa sustentar autoridade e tornar a especialização compreensível. A Saneflow combina rigor institucional com uma comunicação mais próxima e adaptável.",
+      "metaDescription": "Case Saneflow: posicionamento pela Arcaffo e identidade visual pela MILME para uma consultoria especializada em eficiência e operações de saneamento."
+    },
+    "images": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-01.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-02.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-03.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-04.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-05.webp",
+        "width": 1920,
+        "height": 1201,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-06.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-07.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-08.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 8"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-09.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 9"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-10.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 10"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-11.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 11"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-12.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 12"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-13.webp",
+        "width": 1920,
+        "height": 1201,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 13"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-14.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 14"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-15.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 15"
+      }
+    ],
+    "media": [
+      {
+        "type": "embed",
+        "url": "https://player.vimeo.com/video/1119532506?autoplay=1&loop=1&autopause=0&controls=0",
+        "width": 1920,
+        "height": 1080,
+        "title": "Saneflow® Consultoria em Saneamento — peça em movimento"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-01.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-02.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-03.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-04.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-05.webp",
+        "width": 1920,
+        "height": 1201,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-06.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-07.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-08.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 8"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-09.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 9"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-10.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 10"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-11.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 11"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-12.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 12"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-13.webp",
+        "width": 1920,
+        "height": 1201,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 13"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-14.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 14"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-234442867-15.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Saneflow® Consultoria em Saneamento — aplicação 15"
+      },
+      {
+        "type": "embed",
+        "url": "https://player.vimeo.com/video/1118117882?autoplay=1&loop=1&autopause=0&controls=0",
+        "width": 1920,
+        "height": 1080,
+        "title": "Saneflow® Consultoria em Saneamento — peça em movimento"
+      }
+    ],
+    "status": "published",
+    "createdAt": "2025-09-17T19:36:57.000Z",
+    "updatedAt": "2025-09-17T19:36:57.000Z"
+  },
+  {
+    "id": "f02135e2-3c23-4915-a451-c8006ffb08ad",
+    "behanceId": 232073823,
+    "title": "Centralle Osteria",
+    "slug": "centralle-osteria",
+    "segment": "Alimentos e Bebidas",
+    "description": "Centralle, a primeira osteria de Campo Grande, nasceu para celebrar a gastronomia italiana de forma autêntica, intensa e simples. Aqui, cada prato conta uma história, unindo tradição e criatividade, combinando ingredientes selecionados, processos precisos e um ambiente que equilibra o rústico e a elegância. Uma marca que, acima de tudo, entrega memórias.\n\nDesde o início, a maior prioridade do projeto foi traduzir o encontro entre sofisticação e a manualidade de pratos preparados com o coração, com atenção minuciosa aos detalhes, incluindo ilustrações e tipografias que harmonizam com um ambiente caoticamente planejado e intencional.",
+    "cover": "/images/projetos/behance-232073823-cover.webp",
+    "coverWidth": 3395,
+    "coverHeight": 2655,
+    "tags": [
+      "Estratégia",
+      "Identidade Visual",
+      "Ilustração"
+    ],
+    "sourceTags": [
+      "osteria",
+      "Italian food",
+      "restaurant",
+      "visual identity",
+      "cuisine",
+      "gastronomy",
+      "Brazil",
+      "sea food",
+      "Pasta",
+      "brand identity"
+    ],
+    "team": "Arthur Fava, Fabrício Rodrigues, Luiz Paulo Pacheco, Leandro Ramos, Yasmin Rodrigues",
+    "contributors": [
+      "Arthur Fava",
+      "Fabrício Rodrigues",
+      "Luiz Paulo Pacheco",
+      "Leandro Ramos",
+      "Yasmin Rodrigues"
+    ],
+    "organizations": [
+      "Arcaffo. Branding",
+      "MILME® Studio"
+    ],
+    "credits": [
+      {
+        "label": "Estratégia",
+        "value": "Arcaffo. Branding — Arthur Fava, Fabrício Rodrigues e Luiz Paulo Pacheco"
+      },
+      {
+        "label": "Identidade visual",
+        "value": "MILME® Studio — direção criativa de Leandro Ramos; design de Leandro Ramos e Yasmin Rodrigues"
+      }
+    ],
+    "sourceUrl": "https://www.behance.net/gallery/232073823/Centralle-Osteria",
+    "caseStudy": {
+      "question": "Como traduzir a primeira osteria de Campo Grande em uma marca ao mesmo tempo sofisticada, manual e memorável?",
+      "answer": "A Centralle nasceu para celebrar a gastronomia italiana de forma autêntica, intensa e simples. A estratégia e a identidade combinam tradição e criatividade, o rústico e a elegância, com ilustrações e tipografias alinhadas a pratos preparados com cuidado e a um ambiente descrito como caoticamente planejado e intencional.",
+      "decisions": [
+        "Equilibrar sofisticação e manualidade em toda a expressão da marca.",
+        "Usar ilustrações e tipografias como parte da atmosfera da osteria.",
+        "Construir uma identidade capaz de comunicar ingredientes, processos e memórias."
+      ],
+      "perspective": "Em hospitalidade, a marca prepara a experiência antes do primeiro prato. O sistema da Centralle conecta cozinha, ambiente e narrativa em torno da memória que cada encontro pode deixar.",
+      "metaDescription": "Case Centralle Osteria: estratégia pela Arcaffo e identidade pela MILME para a primeira osteria de Campo Grande, entre tradição e manualidade."
+    },
+    "images": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-01.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-02.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-03.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-04.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-05.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-06.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-07.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-08.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 8"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-09.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 9"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-10.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 10"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-11.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 11"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-12.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 12"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-13.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 13"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-14.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 14"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-15.webp",
+        "width": 1920,
+        "height": 1201,
+        "alt": "Centralle Osteria — aplicação 15"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-16.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 16"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-01.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-02.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-03.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-04.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-05.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-06.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-07.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-08.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 8"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-09.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 9"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-10.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 10"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-11.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 11"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-12.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 12"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-13.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 13"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-14.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 14"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-15.webp",
+        "width": 1920,
+        "height": 1201,
+        "alt": "Centralle Osteria — aplicação 15"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-232073823-16.webp",
+        "width": 1920,
+        "height": 1200,
+        "alt": "Centralle Osteria — aplicação 16"
+      }
+    ],
+    "status": "published",
+    "createdAt": "2025-08-19T22:04:07.000Z",
+    "updatedAt": "2025-08-19T22:04:07.000Z"
+  },
+  {
     "id": "0a7fec3f-1232-4ac1-be8b-84c97a17e044",
     "title": "INDRECO",
     "slug": "indreco",
+    "segment": "Indústria e Automotivo",
     "description": "\n        Há 55 anos, Emiliano fundou um pequeno negócio de recuperação de motores elétricos em Manaus, aplicando sua experiência na área após um curso em São Caetano do Sul. Com dedicação e qualidade, a empresa expandiu seu atendimento de clientes locais para o distrito industrial, sempre prezando pela transparência, excelência nos serviços e nos materiais utilizados. \n\nHoje, a empresa inicia uma nova fase sob a identidade de Indreco Motores, buscando maior proximidade com clientes e interessados no setor, mantendo seu compromisso de recuperar para produzir com qualidade e integridade.\n      ",
     "cover": "/images/projetos/98d9b2ae85.webp",
     "tags": [
@@ -86,6 +1384,7 @@
     "id": "24e8e7a5-b78c-44c2-b5b8-6c752e6f8ffe",
     "title": "iClay",
     "slug": "iclay",
+    "segment": "Tecnologia e Eletrônicos",
     "description": "Fundada em 2017, a iClay se destaca como referência na venda e reparo de produtos Apple. Especializada em assistência certificada IRP, a iClay oferece suporte técnico de alta qualidade para toda a linha de produtos da marca, além de comercializar dispositivos novos e semi-novos, se posicionando como uma loja premium garantindo a excelência e potencializando a experiência do universo Apple.\n\nFounded in 2017, iClay stands out as a reference in the sale and repair of Apple products. Specializing in IRP certified assistance, iClay offers high-quality technical support for the brand's entire product line, in addition to selling new and pre-owned devices, positioning itself as a premium store ensuring excellence and enhancing the experience of the Apple universe.",
     "cover": "/images/projetos/b892436717.webp",
     "tags": [
@@ -204,6 +1503,7 @@
     "id": "279ee33f-9c86-4715-91df-d00952727461",
     "title": "BÉCO",
     "slug": "beco",
+    "segment": "Moda e Joias",
     "description": "A BÉCO é uma marca de vestuário conservador com design moderno e expressivo, cujo propósito é elevar a moda e provocar uma reflexão crítica sobre a vida.\n\nEm sua identidade visual, foram adotados elementos-chave que transmitem tradição, modernidade, reflexão crítica e sustentabilidade, inspirados na preservação do passado. Esses elementos não apenas representam a beleza construída ao longo do tempo, mas também refletem a evolução contínua através da conservação.\n\nO ponto central da marca é criticar o pensamento moderno, mostrando a sustentabilidade de forma nua e crua, e provando que a verdadeira beleza é construída e evolui por meio da contínua preservação do passado, e não pelo seu rompimento.",
     "cover": "/images/projetos/05381ef9d6.webp",
     "tags": [
@@ -340,6 +1640,7 @@
     "id": "321aaa42-3174-4a75-b77a-c1d2fd9cdc02",
     "title": "Calixto Sandes & Zabaleta",
     "slug": "calixto-sandes-e-zabaleta",
+    "segment": "Serviços Profissionais",
     "description": "",
     "cover": "/images/projetos/5f9aaf505f.webp",
     "tags": [
@@ -404,6 +1705,7 @@
     "id": "35e92fa4-be1f-4e8b-8490-58c337f02b45",
     "title": "Kassar",
     "slug": "kassar",
+    "segment": "Arquitetura e Interiores",
     "description": "A querida família Kassar precisava mostrar toda a sua capacidade de entregar ótimos projetos, mesmo antes dos clientes conhecerem o trabalho realizado — até então, a promessa de resultado era homogênea e ineficiente. Foi então que iniciamos a caminhada para um novo posicionamento, desenvolvendo um DNA de marca que equilibrou a hierarquia dos três sócios, aliado a uma Comunicação Verbal coerente e linear, além de uma Identidade Visual precisa, objetiva, leve e acolhedora, mas ao mesmo tempo séria e profissional.\n\nForam 20 reuniões ao longo de 5 meses de construção. Aprendemos e evoluímos juntos com um projeto que buscou reposicionar o escritório de Arquitetura, Engenharia e Interiores.",
     "cover": "/images/projetos/646be12444.webp",
     "tags": [
@@ -495,6 +1797,7 @@
     "id": "36f95dc5-fd28-4942-9368-272e7c3d945c",
     "title": "Liana Godoy",
     "slug": "liana-godoy",
+    "segment": "Arquitetura e Interiores",
     "description": "Liana Godoy é uma arquiteta cuja prática reflete seu compromisso em transformar espaços em experiências únicas, que combinam funcionalidade e beleza. Guiada por valores de profissionalismo, organização e inovação, Liana acredita que um bom projeto não apenas atende às necessidades estéticas, mas também melhora a qualidade de vida de seus clientes, criando ambientes que inspiram e acolhem.\n\nQuando Liana buscou traduzir sua visão arquitetônica em uma identidade de marca que refletisse sua personalidade e seus princípios, iniciou um processo colaborativo e detalhado conosco. Juntos, exploramos suas ideias e crenças, capturando a essência de seu trabalho e resultando em uma marca que transmite confiança, solidez e um profundo comprometimento com a qualidade.",
     "cover": "/images/projetos/39a31d24a4.webp",
     "tags": [
@@ -604,6 +1907,7 @@
     "id": "4206cf62-7026-4bda-ab83-efd338dd3f53",
     "title": "Instituto Construindo um Artista",
     "slug": "instituto-construindo-um-artista",
+    "segment": "Cultura e Educação",
     "description": "O Instituto Construindo um Artista é um projeto educacional focado no ensino de música e piano de forma descomplicada com o intuito de atingir pessoas de todas as idades, desde crianças e adolescentes até adultos e idosos em idade avançada. O projeto requisitava uma linguagem flexível, com cores sóbrias para o público mais velho e cores mais vibrantes e abertas para os jovens. Apesar da flexibilidade, a marca não abandonou o seu toque tradicional e clássico em seu brasão e tipografia.\n\nThe Instituto Construindo um Artista is an educational project focused on teaching music and piano in an uncomplicated way, with the aim of reaching people of all ages, from children and teenagers to adults and the elderly. The project required a flexible language, with sober colors for the older audience and more vibrant and open colors for the young. Despite the flexibility, the brand did not abandon its traditional and classic touch in its coat of arms and typography.",
     "cover": "/images/projetos/3d74a28036.webp",
     "tags": [
@@ -739,6 +2043,7 @@
     "id": "50859d7d-d321-43e2-861c-83d9c49bd6b5",
     "title": "Casa Santa Thereza",
     "slug": "casa-santa-thereza",
+    "segment": "Alimentos e Bebidas",
     "description": "A Casa Santa Thereza é uma marca apaixonada por criar momentos inesquecíveis por meio de seus deliciosos brownies artesanais. Com o objetivo de ser reconhecida como a melhor marca de brownies do Mato Grosso do Sul, ela se destaca pela qualidade de seus produtos e pelo compromisso com a satisfação de seus clientes.\n\nCom uma comunicação divertida e espontânea, a Casa Santa Thereza aproxima-se de seus clientes e amigos de forma autêntica e descontraída, criando uma conexão verdadeira com todos que experimentam seus produtos. Cada brownie é feito com carinho e dedicação, refletindo a essência de uma marca que nasceu para espalhar felicidade através do sabor.",
     "cover": "/images/projetos/9b8c53c695.webp",
     "tags": [
@@ -806,6 +2111,7 @@
     "id": "66d9b1bb-9b3c-4ab8-865a-f579ed14511b",
     "title": "Archdesign",
     "slug": "archdesign",
+    "segment": "Cultura e Educação",
     "description": "Archdesign é o primeiro anuário de fotografia do Estado de Mato Grosso do Sul (MS). O projeto teve seu pontapé inicial em 2017 e, de lá para cá, desenvolvemos estratégias, naming, identidade visual e editorial para o livro. Foram 2 anos de muitos desafios e aprendizados até que o livro fosse lançado em 01/08/2019.\n\nNosso objetivo era criar algo minimalista que 'falasse alto' e, ao mesmo tempo, permitisse que as imagens dos profissionais e seus projetos se destacassem.\n\nO livro segue o mesmo conceito minimalista, contendo apenas as informações estritamente necessárias. A capa possui a marca aplicada em baixo relevo e é revestida por um tecido emborrachado fosco e levemente reflexivo. Internamente, a diagramação do livro foi planejada para que os profissionais e seus projetos brilhassem. Confira abaixo o resultado final.",
     "cover": "/images/projetos/305b5f6f51.webp",
     "tags": [
@@ -998,6 +2304,7 @@
     "id": "6a062f07-6fbd-40c6-a1d5-842dc3c91157",
     "title": "Cia do Vidro",
     "slug": "cia-do-vidro",
+    "segment": "Construção e Engenharia",
     "description": "PT-BR\n\nCom mais de duas décadas de atuação no mercado, a Cia do Vidro nasceu do compromisso em transformar sonhos em realidade, criando soluções em vidraçaria e esquadrias de alumínio com um toque de sofisticação e alta qualidade. Guiada por valores sólidos como segurança, confiança e proximidade, a marca constrói cada projeto com atenção aos detalhes e dedicação, buscando não apenas atender, mas superar as expectativas de cada cliente.\n\nNa construção da nova identidade visual da marca, desenhamos uma tipografia exclusiva para o logotipo, com terminações arredondadas que promovem uma sensação de conforto e afastam a ideia de que o vidro é apenas um material rígido e potencialmente perigoso. Esse detalhe ajuda a transmitir o cuidado com a segurança e a proximidade da Cia do Vidro com o cliente, ao mesmo tempo em que reflete seu alto padrão. Além disso, a escolha do retângulo como elemento central no logotipo foi uma forma sutil de sintetizar uma representação do vidro, fugindo de formas clichês, adicionando modernidade.\n\nA nova identidade reposiciona a Cia do Vidro, consolidando uma presença que não apenas eleva o valor da marca, mas também a prepara para enfrentar novos desafios no mercado. O resultado é uma representação visual que traduz os valores e o compromisso da empresa com a qualidade e o cuidado presentes em cada detalhe de seus produtos e serviços.\n\nEN-US\n\nWith over two decades of experience in the market, Cia do Vidro was born from the commitment to transform dreams into reality, creating solutions in glazing and aluminum frames with a touch of sophistication and high quality. Guided by solid values ​​such as safety, trust and proximity, the brand builds each project with attention to detail and dedication, seeking not only to meet, but to exceed the expectations of each client.\n\nWhen creating the brand's new visual identity, we designed an exclusive typography for the logo, with rounded edges that promote a sense of comfort and dispel the idea that glass is just a rigid and potentially dangerous material. This detail helps to convey Cia do Vidro's concern for safety and proximity to the customer, while also reflecting its high standards. In addition, choosing the rectangle as the central element in the logo was a subtle way of synthesizing a representation of glass, avoiding cliché shapes and adding modernity.\n\nThe new identity repositions Cia do Vidro, consolidating a presence that not only increases the brand's value, but also prepares it to face new challenges in the market. The result is a visual representation that conveys the company's values ​​and commitment to quality and care present in every detail of its products and services.",
     "cover": "/images/projetos/ff7c565403.webp",
     "tags": [
@@ -1173,6 +2480,7 @@
     "id": "7c979af4-4eb2-4e49-8116-60ca8ee557ac",
     "title": "Futura",
     "slug": "futura",
+    "segment": "Construção e Engenharia",
     "description": "A Futura surgiu da determinação de Renato, um jovem engenheiro civil recém-formado em 2015, que viu em um estágio não remunerado a oportunidade de desenvolver suas habilidades e entender melhor o mercado. Ao longo desse período, Renato começou a traçar sua própria estratégia de vendas e a definir um posicionamento profissional distinto, preparando o terreno para a criação de seu próprio escritório.\n\nLocalizada em Nova Andradina-MS, a Futura se destaca como um escritório de engenharia e arquitetura que combina inovação e tecnologia avançada. Utilizando softwares de última geração, oferece um atendimento ágil, minucioso e de alta qualidade, reduzindo falhas e maximizando a eficiência dos projetos. Comprometida com a total satisfação do cliente, a Futura se dedica a entregar projetos detalhados e personalizados, atendendo cada demanda com exclusividade e excelência.\n",
     "cover": "/images/projetos/27a74abd9d.webp",
     "tags": [
@@ -1229,6 +2537,7 @@
     "id": "7d549ef8-3b46-4306-8451-2a38f027b03a",
     "title": "Sweet",
     "slug": "sweet",
+    "segment": "Alimentos e Bebidas",
     "description": "",
     "cover": "/images/projetos/d35b0208c1.webp",
     "tags": [
@@ -1276,6 +2585,7 @@
     "id": "853815e2-fa3c-468e-8194-d18c704d57bd",
     "title": "ProFive",
     "slug": "profive",
+    "segment": "Saúde e Bem-estar",
     "description": "\n        A ProFive é um Centro de Treinamento inovador que adota uma metodologia única, com a missão de trazer a excelência da performance esportiva para o ambiente de academia. Para expressar essa missão em nossa identidade visual, decidimos que o logotipo deveria incorporar elementos-chave como força, dinamismo, tecnologia, velocidade e performance. Inspiramo-nos na tocha olímpica, que simboliza não apenas a glória do esporte, mas também a persistência e a determinação necessárias para alcançar a excelência.\n\nNa criação do logotipo, o símbolo da tocha olímpica foi reinterpretado de maneira contemporânea e dinâmica. Utilizamos linhas retas e um design que evoca movimento e energia, refletindo a velocidade e o dinamismo do esporte. \n\nA tipografia moderna e leve foi desenvolvida exclusivamente para a marca, complementando o ícone e se adaptando perfeitamente ao universo digital e offline.\n      ",
     "cover": "/images/projetos/f0ae6122ea.webp",
     "tags": [
@@ -1341,6 +2651,7 @@
     "id": "86ac43f9-5e8c-41fb-bcd4-3348bdd90d74",
     "title": "La Parisienne",
     "slug": "la-parisienne",
+    "segment": "Alimentos e Bebidas",
     "description": "A La Parisienne é uma boulangerie e pâtisserie com um toque quase tipicamente francês, situada em Campo Grande, Mato Grosso do Sul, Brasil. \n\nCom pratos franceses delicadamente adaptados ao paladar brasileiro e uma arquitetura que harmoniza o clássico com o moderno disruptivo, a marca se destaca por sua forma única de expressão, conquistando fãs desde o início de suas atividades.",
     "cover": "/images/projetos/fc95b065e1.webp",
     "tags": [
@@ -1497,6 +2808,7 @@
     "id": "892ef48b-38a9-46ec-bb36-9c55ba2c2de2",
     "title": "Rafael à Obra",
     "slug": "rafael-a-obra",
+    "segment": "Construção e Engenharia",
     "description": "Fundada por Rafael, cuja trajetória de vida é marcada pela superação e empreendedorismo, a Rafael à Obra nasceu de um desejo de fazer diferente. Rafael cresceu em meio a desafios e aprendizados, acompanhando de perto o sucesso e as dificuldades do pai no mercado imobiliário. Guiado por essas experiências, decidiu tomar as rédeas de seu destino e, com um espírito empreendedor, começou a investir em projetos próprios.\n\nHoje, Rafael é especialista e investidor no segmento de financiamento de terreno e construção, utilizando seu conhecimento para guiar clientes na realização de seus sonhos, oferecendo soluções financeiras personalizadas e seguras para cada projeto. Com essa abordagem autêntica e inovadora, a Rafael à Obra se consolidou como referência no mercado da construção, sempre pronta para enfrentar novos desafios e criar oportunidades que gerem valor e impacto positivo.",
     "cover": "/images/projetos/f2ebc45282.webp",
     "tags": [
@@ -1560,6 +2872,7 @@
     "id": "95610139-6556-4c87-a166-aa03525ec834",
     "title": "Trigou",
     "slug": "trigou",
+    "segment": "Alimentos e Bebidas",
     "description": "",
     "cover": "/images/projetos/b3db2dd941.webp",
     "tags": [
@@ -1662,6 +2975,7 @@
     "id": "b27d2951-ad8f-4f8d-9066-31d391724417",
     "title": "TORQUE® Soluções Automotivas",
     "slug": "torque-solucoes-automotivas",
+    "segment": "Indústria e Automotivo",
     "description": "\n        A TORQUE® é uma oficina mecânica de Campo Grande especializada em motores, câmbios e suspensões. O projeto de identidade visual se mostrou como um meio de tangibilizar a honestidade, transparência e o bom atendimento percebido pelos seus clientes, além de evidenciar com suas formas e pesos, a sua força.\n\nO caminho escolhido foi evitar os clichês visuais e optar por uma paleta simples e funcional, que destaca a marca no meio urbano semelhante a uma sinalização.\n      ",
     "cover": "/images/projetos/8bfc5a7688.webp",
     "tags": [
@@ -1788,6 +3102,7 @@
     "id": "b8563316-a047-48f5-a41c-0b04ab308999",
     "title": "Sacralità",
     "slug": "sacralita",
+    "segment": "Cultura e Educação",
     "description": "A Sacralità, Galeria de Arte Clássica, é fruto de um sonho compartilhado por um casal que uniu suas paixões e descobertas em um projeto que reflete sua essência de vida. A galeria combina a experiência em arquitetura e fotografia, despertada através de viagens e estudos, com uma profunda transformação espiritual vivida durante o Caminho de Santiago.\n\nO projeto é mais do que um empreendimento; é uma expressão dos valores de beleza, fé e conhecimento que o casal deseja transmitir aos seus filhos e às futuras gerações. A Sacralità representa a busca por um estilo de vida coerente com suas crenças, proporcionando sustento e legado dentro de um ambiente familiar e espiritual.",
     "cover": "/images/projetos/fcb77afed9.webp",
     "tags": [
@@ -2034,6 +3349,7 @@
     "id": "bb88952d-2f7a-4f5e-9a2f-2338ad72d2de",
     "title": "Arkete",
     "slug": "arkete",
+    "segment": "Arquitetura e Interiores",
     "description": "Com sede em Sorocaba, SP, a Arkete é um escritório de arquitetura focado no desenvolvimento de projetos residenciais sustentáveis.\n\nNo estudo de Naming, combinamos as ideias iniciais da empresa com uma análise detalhada sobre os tipos de nomes que uma empresa pode adotar, considerando suas qualidades, significados e sonoridades. Dentre diversas opções, o nome escolhido é uma combinação de 'Aketé' — termo de origem tupi-guarani, que se refere à maior casa da aldeia dos asurini, medindo aproximadamente 30m de comprimento, 12m de largura e 7m de altura, correspondendo à descrição da moradia típica dos Tupi com planta retangular — com a palavra 'arquitetura'.\n\nTrabalhamos na construção de uma marca que transmitisse a imagem de um escritório de arquitetura sério, focado em uma arquitetura moderna e sustentável, guiada por um design minimalista e racionalista.",
     "cover": "/images/projetos/f939aa53ef.webp",
     "tags": [
@@ -2152,6 +3468,7 @@
     "id": "c59b4bfe-96d2-4f1d-8eb2-8e1b6dca1f99",
     "title": "Ana Santarelli",
     "slug": "ana-santarelli",
+    "segment": "Saúde e Bem-estar",
     "description": "A marca nasceu com a missão de promover a transformação física e emocional das mulheres, proporcionando um atendimento exclusivo que une saúde e estética de forma harmoniosa. Mais do que procedimentos, oferecemos uma experiência de acolhimento, excelência e cuidado, sempre respeitando a individualidade de cada cliente.\n\nLEVEZA, EXCELÊNCIA E CUIDADO\n\nPara traduzir essa essência em sua identidade visual, desenvolvemos um conceito que reflete a suavidade e o profissionalismo da marca. As formas e elementos foram cuidadosamente pensados para transmitir um ambiente acolhedor, destacando a leveza no contato com o público e o compromisso com resultados reais e eficazes. A paleta de cores e a tipografia foram escolhidas para reforçar a confiança e a transparência que a Santarelli transmite em cada detalhe do seu atendimento.\n\nA nova identidade posiciona a marca como referência em transformação estética e emocional, destacando seu compromisso com um atendimento humanizado e personalizado. O resultado é uma marca que representa não apenas beleza, mas também o cuidado integral e a dedicação a cada cliente, criando uma conexão genuína e uma experiência que vai além da estética.\n\nEN-US\n\nThe brand was born with the mission of promoting the physical and emotional transformation of women, providing exclusive care that harmoniously combines health and aesthetics. More than just procedures, we offer an experience of welcome, excellence and care, always respecting the individuality of each client.\n\nLIGHTNESS, EXCELLENCE AND CARE\n\nTo translate this essence into its visual identity, we developed a concept that reflects the brand's softness and professionalism. The shapes and elements were carefully thought out to convey a welcoming environment, highlighting the lightness in contact with the public and the commitment to real and effective results. The color palette and typography were chosen to reinforce the trust and transparency that Santarelli conveys in every detail of its service.\n\nThe new identity positions the brand as a reference in aesthetic and emotional transformation, highlighting its commitment to humanized and personalized service. The result is a brand that represents not only beauty, but also comprehensive care and dedication to each client, creating a genuine connection and an experience that goes beyond aesthetics.",
     "cover": "/images/projetos/3be023523f.webp",
     "tags": [
@@ -2290,6 +3607,7 @@
     "id": "d9e90d37-5575-47a6-82c1-5685b180e8fc",
     "title": "ON Joias",
     "slug": "on-joias",
+    "segment": "Moda e Joias",
     "description": "Com uma essência artesanal e foco na personalização, a ON Joias transforma histórias em peças únicas que transcendem o tempo. Criando joias que expressam sentimentos e marcam momentos significativos, a marca se destaca pelo cuidado em cada detalhe e pela busca constante por excelência e sofisticação. Guiada por valores como exclusividade, proximidade e verdade, a marca entrega muito mais do que produtos, proporcionando experiências memoráveis e emocionantes.\n\nEXCLUSIVIDADE, PROXIMIDADE E VERDADE\n\nDesenvolvemos um logotipo elegante e minimalista, utilizando tipografias delicadas que transmitem sofisticação e atenção aos detalhes. As formas geométricas suaves integram-se ao conceito de exclusividade e refletem a harmonia entre o clássico e o contemporâneo.\n\nA nova identidade da ON Joias eleva a percepção da marca, consolidando-a como referência em joias exclusivas e personalizadas. Com um design que traduz sua essência e compromisso com o cliente.\n\nEN-US\n\nWith an artisanal essence and a focus on personalization, ON Joias transforms stories into unique pieces that transcend time. Crafting jewelry that expresses emotions and marks meaningful moments, the brand stands out for its attention to detail and its constant pursuit of excellence and sophistication. Guided by values such as exclusivity, proximity, and truth, ON Joias delivers much more than products, offering memorable and emotional experiences.\n\nEXCLUSIVITY, PROXIMITY, AND TRUTH\n\nWe developed an elegant and minimalist logo, utilizing delicate typography that conveys sophistication and attention to detail. The smooth geometric shapes align with the concept of exclusivity and reflect the harmony between the classic and the contemporary.\n\nThe new identity of ON Joias enhances the brand's perception, establishing it as a reference in exclusive and personalized jewelry. With a design that embodies its essence and commitment to the client.",
     "cover": "/images/projetos/7fb0c35c14.webp",
     "tags": [
@@ -2400,6 +3718,7 @@
     "id": "e5ae2bb7-719f-40f5-beca-fdfdd4d6b95b",
     "title": "Tássia Brito",
     "slug": "tassia-brito",
+    "segment": "Saúde e Bem-estar",
     "description": "",
     "cover": "/images/projetos/55bdc4208f.webp",
     "tags": [
@@ -2474,6 +3793,7 @@
     "id": "e83b4a75-cfce-404a-badb-61f06980e540",
     "title": "Cake67",
     "slug": "cake67",
+    "segment": "Alimentos e Bebidas",
     "description": "CAKE67 é uma confeitaria criativa localizada em Campo Grande-MS, fundada em 1993, especializada em bolos, doces e sobremesas.  A marca se orgulha de suas raízes como confeitaria de bairro. \nBuscando a excelência em tudo que faz, proporciona um ambiente acolhedor e confortável, seja para reuniões, um café com amigos, ou um lanche da tarde. \n\nA CAKE67 possui compromisso com a qualidade, inovação e um atendimento atencioso que reflete a crença de que doces têm um alto valor afetivo e que cada cliente deve se sentir bem-vindo.",
     "cover": "/images/projetos/5f151c0f39.webp",
     "tags": [
@@ -2617,5 +3937,2901 @@
     "status": "published",
     "createdAt": "2026-06-01T18:43:37.978Z",
     "updatedAt": "2026-06-01T18:43:37.978Z"
+  },
+  {
+    "id": "78dc8860-aa95-40dd-ac44-5484a9ccbe4f",
+    "behanceId": 146638359,
+    "title": "Aldraba",
+    "slug": "aldraba",
+    "segment": "Construção e Engenharia",
+    "description": "A Aldraba realiza projetos e construções com metodologia BIM. Os benefícios vão além da economia: maior qualidade das obras, melhores entregas e resultados, com menos imprevistos. A identidade visual foi orientada por minimalismo, inovação, qualificação técnica, autoridade, credibilidade e segurança. A marca atende construtoras, incorporadoras, clientes finais e profissionais de arquitetura e engenharia.",
+    "cover": "/images/projetos/behance-146638359-cover.webp",
+    "coverWidth": 1158,
+    "coverHeight": 906,
+    "tags": [
+      "Estratégia",
+      "Identidade Visual"
+    ],
+    "sourceTags": [
+      "architecture",
+      "brand identity",
+      "branding",
+      "construction",
+      "design",
+      "graphicdesign",
+      "logo",
+      "Logo Design",
+      "visualidentity",
+      "Engenharia"
+    ],
+    "team": "Arthur Fava, Luiz Paulo Pacheco, Everton Gargioni",
+    "contributors": [
+      "Arthur Fava",
+      "Luiz Paulo Pacheco",
+      "Everton Gargioni"
+    ],
+    "organizations": [
+      "Arcaffo. Branding"
+    ],
+    "credits": [
+      {
+        "label": "Branding",
+        "value": "Arcaffo. Branding — Arthur Fava e Luiz Paulo Pacheco"
+      },
+      {
+        "label": "Design",
+        "value": "Everton Gargioni"
+      },
+      {
+        "label": "Imagens",
+        "value": "Unsplash"
+      }
+    ],
+    "sourceUrl": "https://www.behance.net/gallery/146638359/Aldraba",
+    "caseStudy": {
+      "question": "Como comunicar os ganhos da metodologia BIM para públicos técnicos e clientes finais?",
+      "answer": "A Aldraba realiza projetos e construções com metodologia BIM, buscando economia, qualidade, melhores entregas e menos imprevistos. O branding e a identidade visual foram orientados por minimalismo, inovação, autoridade, credibilidade e segurança.",
+      "decisions": [
+        "Traduzir qualificação técnica e inovação em uma presença visual minimalista.",
+        "Construir sinais de autoridade, credibilidade e segurança.",
+        "Criar uma marca capaz de dialogar com construtoras, incorporadoras, clientes finais e profissionais do setor."
+      ],
+      "perspective": "Quando um método técnico é parte central da proposta, a identidade precisa tornar seus benefícios perceptíveis sem depender de uma explicação longa em cada contato.",
+      "metaDescription": "Case Aldraba: branding e identidade visual para uma empresa de projetos e construções com metodologia BIM, foco técnico e menos imprevistos."
+    },
+    "images": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-146638359-01.jpg",
+        "width": 1400,
+        "height": 1830,
+        "alt": "Aldraba — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-146638359-02.jpg",
+        "width": 1400,
+        "height": 1830,
+        "alt": "Aldraba — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-146638359-03.webp",
+        "width": 1920,
+        "height": 1242,
+        "alt": "Aldraba — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-146638359-04.jpg",
+        "width": 1400,
+        "height": 1830,
+        "alt": "Aldraba — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-146638359-05.jpg",
+        "width": 1400,
+        "height": 1830,
+        "alt": "Aldraba — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-146638359-06.webp",
+        "width": 1920,
+        "height": 1242,
+        "alt": "Aldraba — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-146638359-07.jpg",
+        "width": 1400,
+        "height": 1830,
+        "alt": "Aldraba — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-146638359-08.jpg",
+        "width": 1400,
+        "height": 1830,
+        "alt": "Aldraba — aplicação 8"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-146638359-09.webp",
+        "width": 1920,
+        "height": 1242,
+        "alt": "Aldraba — aplicação 9"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-146638359-10.jpg",
+        "width": 1400,
+        "height": 1831,
+        "alt": "Aldraba — aplicação 10"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-146638359-11.jpg",
+        "width": 1400,
+        "height": 1830,
+        "alt": "Aldraba — aplicação 11"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-146638359-12.webp",
+        "width": 1920,
+        "height": 1242,
+        "alt": "Aldraba — aplicação 12"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-146638359-13.gif",
+        "width": 1920,
+        "height": 1242,
+        "alt": "Aldraba — aplicação 13"
+      }
+    ],
+    "media": [
+      {
+        "type": "collection",
+        "items": [
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-146638359-01.jpg",
+            "width": 1400,
+            "height": 1830,
+            "alt": "Aldraba — aplicação 1"
+          },
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-146638359-02.jpg",
+            "width": 1400,
+            "height": 1830,
+            "alt": "Aldraba — aplicação 2"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-146638359-03.webp",
+        "width": 1920,
+        "height": 1242,
+        "alt": "Aldraba — aplicação 3"
+      },
+      {
+        "type": "collection",
+        "items": [
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-146638359-04.jpg",
+            "width": 1400,
+            "height": 1830,
+            "alt": "Aldraba — aplicação 4"
+          },
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-146638359-05.jpg",
+            "width": 1400,
+            "height": 1830,
+            "alt": "Aldraba — aplicação 5"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-146638359-06.webp",
+        "width": 1920,
+        "height": 1242,
+        "alt": "Aldraba — aplicação 6"
+      },
+      {
+        "type": "collection",
+        "items": [
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-146638359-07.jpg",
+            "width": 1400,
+            "height": 1830,
+            "alt": "Aldraba — aplicação 7"
+          },
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-146638359-08.jpg",
+            "width": 1400,
+            "height": 1830,
+            "alt": "Aldraba — aplicação 8"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-146638359-09.webp",
+        "width": 1920,
+        "height": 1242,
+        "alt": "Aldraba — aplicação 9"
+      },
+      {
+        "type": "collection",
+        "items": [
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-146638359-10.jpg",
+            "width": 1400,
+            "height": 1831,
+            "alt": "Aldraba — aplicação 10"
+          },
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-146638359-11.jpg",
+            "width": 1400,
+            "height": 1830,
+            "alt": "Aldraba — aplicação 11"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-146638359-12.webp",
+        "width": 1920,
+        "height": 1242,
+        "alt": "Aldraba — aplicação 12"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-146638359-13.gif",
+        "width": 1920,
+        "height": 1242,
+        "alt": "Aldraba — aplicação 13"
+      }
+    ],
+    "status": "published",
+    "createdAt": "2022-06-23T22:47:54.000Z",
+    "updatedAt": "2022-06-23T22:47:54.000Z"
+  },
+  {
+    "id": "4e10d983-953c-42e0-a31e-e90e08de5341",
+    "behanceId": 94198635,
+    "title": "Claudia Comparin",
+    "slug": "claudia-comparin",
+    "segment": "Arquitetura e Interiores",
+    "description": "Arquitetura, interiores e alma. O escritório acredita que a vida vem de dentro, da alma. Seu trabalho se concentra nas pessoas, em seus sonhos e rotinas, para transformar ambientes simples em mais do que casas: lares.",
+    "cover": "/images/projetos/behance-94198635-cover.webp",
+    "coverWidth": 1150,
+    "coverHeight": 899,
+    "tags": [
+      "Estratégia",
+      "Identidade Visual"
+    ],
+    "sourceTags": [
+      "architecture",
+      "brand",
+      "branding",
+      "design",
+      "graphicdesign",
+      "logo",
+      "monogram",
+      "ARQUITETURA",
+      "identidade visual"
+    ],
+    "team": "Arthur Fava, Luiz Paulo Pacheco, Everton Gargioni",
+    "contributors": [
+      "Arthur Fava",
+      "Luiz Paulo Pacheco",
+      "Everton Gargioni"
+    ],
+    "organizations": [
+      "Arcaffo. Branding"
+    ],
+    "credits": [
+      {
+        "label": "Coautoria",
+        "value": "Arthur Fava, Luiz Paulo Pacheco, Everton Gargioni e Arcaffo. Branding"
+      }
+    ],
+    "sourceUrl": "https://www.behance.net/gallery/94198635/Claudia-Comparin",
+    "caseStudy": {
+      "question": "Como expressar uma arquitetura orientada por pessoas, sonhos e rotinas?",
+      "answer": "A marca Claudia Comparin parte da ideia de arquitetura, interiores e alma. A identidade organiza uma atuação centrada nas pessoas e na transformação de ambientes em lares, conectando espaço, rotina e significado.",
+      "decisions": [
+        "Colocar pessoas, sonhos e rotinas no centro da narrativa da marca.",
+        "Expressar a passagem de casa para lar como dimensão emocional do trabalho.",
+        "Construir uma identidade visual compatível com arquitetura e interiores."
+      ],
+      "perspective": "O projeto evidencia uma distinção importante para marcas de arquitetura: comunicar não apenas os espaços produzidos, mas a vida que esses espaços devem acolher.",
+      "metaDescription": "Case Claudia Comparin: estratégia e identidade visual para um escritório de arquitetura e interiores centrado em pessoas, sonhos, rotinas e lares."
+    },
+    "images": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-01.webp",
+        "width": 1920,
+        "height": 1283,
+        "alt": "Claudia Comparin — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-02.webp",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Claudia Comparin — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-03.jpg",
+        "width": 632,
+        "height": 632,
+        "alt": "Claudia Comparin — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-04.jpg",
+        "width": 632,
+        "height": 632,
+        "alt": "Claudia Comparin — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-05.webp",
+        "width": 1920,
+        "height": 1283,
+        "alt": "Claudia Comparin — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-06.webp",
+        "width": 1920,
+        "height": 680,
+        "alt": "Claudia Comparin — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-07.jpg",
+        "width": 1400,
+        "height": 1591,
+        "alt": "Claudia Comparin — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-08.jpg",
+        "width": 1400,
+        "height": 1591,
+        "alt": "Claudia Comparin — aplicação 8"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-09.jpg",
+        "width": 1400,
+        "height": 1591,
+        "alt": "Claudia Comparin — aplicação 9"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-10.jpg",
+        "width": 1400,
+        "height": 1591,
+        "alt": "Claudia Comparin — aplicação 10"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-11.webp",
+        "width": 1920,
+        "height": 1283,
+        "alt": "Claudia Comparin — aplicação 11"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-12.jpg",
+        "width": 1400,
+        "height": 1591,
+        "alt": "Claudia Comparin — aplicação 12"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-13.jpg",
+        "width": 1400,
+        "height": 1591,
+        "alt": "Claudia Comparin — aplicação 13"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-14.webp",
+        "width": 1920,
+        "height": 1282,
+        "alt": "Claudia Comparin — aplicação 14"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-15.webp",
+        "width": 1920,
+        "height": 1282,
+        "alt": "Claudia Comparin — aplicação 15"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-16.webp",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Claudia Comparin — aplicação 16"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-01.webp",
+        "width": 1920,
+        "height": 1283,
+        "alt": "Claudia Comparin — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-02.webp",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Claudia Comparin — aplicação 2"
+      },
+      {
+        "type": "collection",
+        "items": [
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-94198635-03.jpg",
+            "width": 632,
+            "height": 632,
+            "alt": "Claudia Comparin — aplicação 3"
+          },
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-94198635-04.jpg",
+            "width": 632,
+            "height": 632,
+            "alt": "Claudia Comparin — aplicação 4"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-05.webp",
+        "width": 1920,
+        "height": 1283,
+        "alt": "Claudia Comparin — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-06.webp",
+        "width": 1920,
+        "height": 680,
+        "alt": "Claudia Comparin — aplicação 6"
+      },
+      {
+        "type": "collection",
+        "items": [
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-94198635-07.jpg",
+            "width": 1400,
+            "height": 1591,
+            "alt": "Claudia Comparin — aplicação 7"
+          },
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-94198635-08.jpg",
+            "width": 1400,
+            "height": 1591,
+            "alt": "Claudia Comparin — aplicação 8"
+          }
+        ]
+      },
+      {
+        "type": "collection",
+        "items": [
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-94198635-09.jpg",
+            "width": 1400,
+            "height": 1591,
+            "alt": "Claudia Comparin — aplicação 9"
+          },
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-94198635-10.jpg",
+            "width": 1400,
+            "height": 1591,
+            "alt": "Claudia Comparin — aplicação 10"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-11.webp",
+        "width": 1920,
+        "height": 1283,
+        "alt": "Claudia Comparin — aplicação 11"
+      },
+      {
+        "type": "collection",
+        "items": [
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-94198635-12.jpg",
+            "width": 1400,
+            "height": 1591,
+            "alt": "Claudia Comparin — aplicação 12"
+          },
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-94198635-13.jpg",
+            "width": 1400,
+            "height": 1591,
+            "alt": "Claudia Comparin — aplicação 13"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-14.webp",
+        "width": 1920,
+        "height": 1282,
+        "alt": "Claudia Comparin — aplicação 14"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-15.webp",
+        "width": 1920,
+        "height": 1282,
+        "alt": "Claudia Comparin — aplicação 15"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-94198635-16.webp",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Claudia Comparin — aplicação 16"
+      }
+    ],
+    "status": "published",
+    "createdAt": "2020-06-19T22:33:19.000Z",
+    "updatedAt": "2020-06-19T22:33:19.000Z"
+  },
+  {
+    "id": "3f3fc8d1-ebee-4bd8-a292-a2489278a326",
+    "behanceId": 92185511,
+    "title": "Arcaffo.",
+    "slug": "arcaffo",
+    "segment": "Serviços Profissionais",
+    "description": "Projeto de construção da marca do próprio estúdio de branding Arcaffo, reunindo branding, design gráfico e identidade visual.",
+    "cover": "/images/projetos/behance-92185511-cover.webp",
+    "coverWidth": 1789,
+    "coverHeight": 1400,
+    "tags": [
+      "Estratégia",
+      "Identidade Visual"
+    ],
+    "sourceTags": [
+      "branding",
+      "design gráfico",
+      "visual identity"
+    ],
+    "team": "Arthur Fava, Luiz Paulo Pacheco",
+    "contributors": [
+      "Arthur Fava",
+      "Luiz Paulo Pacheco"
+    ],
+    "organizations": [
+      "Arcaffo. Branding"
+    ],
+    "credits": [
+      {
+        "label": "Coautoria",
+        "value": "Arthur Fava, Luiz Paulo Pacheco e Arcaffo. Branding"
+      }
+    ],
+    "sourceUrl": "https://www.behance.net/gallery/92185511/Arcaffo",
+    "caseStudy": {
+      "question": "Como dar forma à marca do próprio estúdio de branding?",
+      "answer": "O projeto Arcaffo reúne branding, design gráfico e identidade visual na construção da marca do próprio estúdio. O sistema apresenta a linguagem que passou a identificar a empresa e suas aplicações.",
+      "decisions": [
+        "Construir uma identidade para representar o próprio estúdio de branding.",
+        "Integrar estratégia de marca, design gráfico e identidade visual.",
+        "Demonstrar a linguagem por meio de aplicações consistentes."
+      ],
+      "perspective": "Projetar a própria marca exige transformar método e visão em sinais reconhecíveis. Este case registra uma etapa da identidade construída para a Arcaffo.",
+      "metaDescription": "Case Arcaffo: construção da marca e da identidade visual do próprio estúdio de branding, reunindo estratégia e design gráfico."
+    },
+    "images": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-01.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Arcaffo. — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-02.webp",
+        "width": 1920,
+        "height": 987,
+        "alt": "Arcaffo. — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-03.webp",
+        "width": 1920,
+        "height": 1371,
+        "alt": "Arcaffo. — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-04.webp",
+        "width": 1920,
+        "height": 987,
+        "alt": "Arcaffo. — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-05.webp",
+        "width": 1920,
+        "height": 320,
+        "alt": "Arcaffo. — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-06.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Arcaffo. — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-07.webp",
+        "width": 1920,
+        "height": 1371,
+        "alt": "Arcaffo. — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-08.webp",
+        "width": 1920,
+        "height": 2057,
+        "alt": "Arcaffo. — aplicação 8"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-09.webp",
+        "width": 1920,
+        "height": 1371,
+        "alt": "Arcaffo. — aplicação 9"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-10.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Arcaffo. — aplicação 10"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-11.webp",
+        "width": 1920,
+        "height": 1371,
+        "alt": "Arcaffo. — aplicação 11"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-12.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Arcaffo. — aplicação 12"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-13.webp",
+        "width": 1920,
+        "height": 1457,
+        "alt": "Arcaffo. — aplicação 13"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-14.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Arcaffo. — aplicação 14"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-15.webp",
+        "width": 1920,
+        "height": 1371,
+        "alt": "Arcaffo. — aplicação 15"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-16.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Arcaffo. — aplicação 16"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-17.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Arcaffo. — aplicação 17"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-18.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Arcaffo. — aplicação 18"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-19.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Arcaffo. — aplicação 19"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-20.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Arcaffo. — aplicação 20"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-21.webp",
+        "width": 1920,
+        "height": 1371,
+        "alt": "Arcaffo. — aplicação 21"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-01.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Arcaffo. — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-02.webp",
+        "width": 1920,
+        "height": 987,
+        "alt": "Arcaffo. — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-03.webp",
+        "width": 1920,
+        "height": 1371,
+        "alt": "Arcaffo. — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-04.webp",
+        "width": 1920,
+        "height": 987,
+        "alt": "Arcaffo. — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-05.webp",
+        "width": 1920,
+        "height": 320,
+        "alt": "Arcaffo. — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-06.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Arcaffo. — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-07.webp",
+        "width": 1920,
+        "height": 1371,
+        "alt": "Arcaffo. — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-08.webp",
+        "width": 1920,
+        "height": 2057,
+        "alt": "Arcaffo. — aplicação 8"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-09.webp",
+        "width": 1920,
+        "height": 1371,
+        "alt": "Arcaffo. — aplicação 9"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-10.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Arcaffo. — aplicação 10"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-11.webp",
+        "width": 1920,
+        "height": 1371,
+        "alt": "Arcaffo. — aplicação 11"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-12.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Arcaffo. — aplicação 12"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-13.webp",
+        "width": 1920,
+        "height": 1457,
+        "alt": "Arcaffo. — aplicação 13"
+      },
+      {
+        "type": "embed",
+        "url": "https://www-ccv.adobe.io/v1/player/ccv/Ed9RANfPCpz/embed?api_key=behance1&bgcolor=%23191919",
+        "width": 600,
+        "height": 400,
+        "title": "Arcaffo. — peça em movimento"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-14.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Arcaffo. — aplicação 14"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-15.webp",
+        "width": 1920,
+        "height": 1371,
+        "alt": "Arcaffo. — aplicação 15"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-16.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Arcaffo. — aplicação 16"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-17.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Arcaffo. — aplicação 17"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-18.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Arcaffo. — aplicação 18"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-19.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Arcaffo. — aplicação 19"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-20.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Arcaffo. — aplicação 20"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-92185511-21.webp",
+        "width": 1920,
+        "height": 1371,
+        "alt": "Arcaffo. — aplicação 21"
+      }
+    ],
+    "status": "published",
+    "createdAt": "2020-02-13T01:21:04.000Z",
+    "updatedAt": "2020-02-13T01:21:04.000Z"
+  },
+  {
+    "id": "52b7a136-8011-4049-ab81-dd4afad9e3c7",
+    "behanceId": 195270395,
+    "title": "Cláudia Comparin — Papelaria",
+    "slug": "claudia-comparin-papelaria",
+    "segment": "Arquitetura e Interiores",
+    "description": "A papelaria de Cláudia Comparin Architects combina a beleza da impressão em letterpress com o brilho do hot stamping sobre papéis terracota e off-white.",
+    "cover": "/images/projetos/behance-195270395-cover.webp",
+    "coverWidth": 4418,
+    "coverHeight": 3456,
+    "tags": [
+      "Identidade Visual",
+      "Papelaria",
+      "Acabamento Gráfico"
+    ],
+    "sourceTags": [
+      "Stationery",
+      "papercrafts",
+      "design",
+      "brand identity",
+      "marketing",
+      "finepaper",
+      "letterpress",
+      "print",
+      "customised",
+      "Luxury invitations"
+    ],
+    "team": "Arcaffo. Branding, Alma Design & Letterpress",
+    "contributors": [],
+    "organizations": [
+      "Arcaffo. Branding",
+      "Alma Design & Letterpress"
+    ],
+    "credits": [
+      {
+        "label": "Coautoria",
+        "value": "Arcaffo. Branding e Alma Design & Letterpress"
+      }
+    ],
+    "sourceUrl": "https://www.behance.net/gallery/195270395/Claudia-Comparin-Arquitects-Stationery",
+    "caseStudy": {
+      "question": "Como levar a identidade de um escritório de arquitetura para uma papelaria de presença tátil e refinada?",
+      "answer": "A papelaria de Cláudia Comparin Architects combina impressão em letterpress e hot stamping sobre papéis terracota e off-white. O projeto transforma cor, textura, relevo e brilho em elementos materiais da experiência da marca.",
+      "decisions": [
+        "Combinar letterpress e hot stamping na produção das peças.",
+        "Trabalhar com papéis terracota e off-white como base do conjunto.",
+        "Preservar a identidade do escritório na passagem do sistema visual para os materiais impressos."
+      ],
+      "perspective": "A papelaria evidencia como acabamento e suporte podem ampliar uma identidade visual: o reconhecimento deixa de ser apenas visto e passa também pela textura e pelo contato com o material.",
+      "metaDescription": "Case Cláudia Comparin: papelaria com letterpress, hot stamping e papéis terracota e off-white, criada pela Arcaffo com a Alma Design & Letterpress."
+    },
+    "images": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-195270395-01.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Cláudia Comparin Arquitects Stationery — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-195270395-02.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Cláudia Comparin Arquitects Stationery — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-195270395-03.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Cláudia Comparin Arquitects Stationery — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-195270395-04.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Cláudia Comparin Arquitects Stationery — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-195270395-05.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Cláudia Comparin Arquitects Stationery — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-195270395-06.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Cláudia Comparin Arquitects Stationery — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-195270395-07.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Cláudia Comparin Arquitects Stationery — aplicação 7"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-195270395-01.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Cláudia Comparin Arquitects Stationery — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-195270395-02.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Cláudia Comparin Arquitects Stationery — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-195270395-03.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Cláudia Comparin Arquitects Stationery — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-195270395-04.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Cláudia Comparin Arquitects Stationery — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-195270395-05.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Cláudia Comparin Arquitects Stationery — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-195270395-06.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Cláudia Comparin Arquitects Stationery — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-195270395-07.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Cláudia Comparin Arquitects Stationery — aplicação 7"
+      }
+    ],
+    "status": "published",
+    "createdAt": "2024-04-01T17:56:41.000Z",
+    "updatedAt": "2024-04-01T17:56:41.000Z"
+  },
+  {
+    "id": "96a69fc4-d976-4897-a87e-5684e94c2eb7",
+    "behanceId": 109333171,
+    "title": "Nadyelle Farias — Arquiteta",
+    "slug": "nadyelle-farias-arquiteta",
+    "segment": "Arquitetura e Interiores",
+    "description": "Projeto de identidade visual para Nadyelle Farias, arquiteta, apresentado por meio de aplicações que demonstram o funcionamento do sistema de marca.",
+    "cover": "/images/projetos/behance-109333171-cover.webp",
+    "coverWidth": 1192,
+    "coverHeight": 933,
+    "tags": [
+      "Identidade Visual"
+    ],
+    "sourceTags": [],
+    "team": "Ingrid Lima, Gringo Studio, Arcaffo. Branding",
+    "contributors": [
+      "Ingrid Lima"
+    ],
+    "organizations": [
+      "Arcaffo. Branding",
+      "Gringo Studio"
+    ],
+    "credits": [
+      {
+        "label": "Coautoria",
+        "value": "Ingrid Lima — Gringo Studio e Arcaffo. Branding"
+      }
+    ],
+    "sourceUrl": "https://www.behance.net/gallery/109333171/Nadyelle-Farias-Arquiteta",
+    "caseStudy": {
+      "question": "Como construir uma presença visual própria para uma profissional de arquitetura?",
+      "answer": "O projeto desenvolve a identidade visual de Nadyelle Farias e apresenta o sistema em diferentes aplicações. A marca organiza uma assinatura profissional reconhecível para sua atuação como arquiteta.",
+      "decisions": [
+        "Criar uma identidade vinculada diretamente ao nome da arquiteta.",
+        "Demonstrar o sistema visual em aplicações profissionais.",
+        "Manter unidade entre assinatura, composição e materiais da marca."
+      ],
+      "perspective": "Em marcas profissionais, a identidade precisa tornar o nome reconhecível e sustentar consistência nos pontos de contato em que a atuação é apresentada.",
+      "metaDescription": "Case Nadyelle Farias: identidade visual e aplicações de marca para uma profissional de arquitetura, em coautoria com Gringo Studio e Arcaffo."
+    },
+    "images": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-109333171-01.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Nadyelle Farias - Arquiteta — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-109333171-02.webp",
+        "width": 1920,
+        "height": 1320,
+        "alt": "Nadyelle Farias - Arquiteta — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-109333171-03.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Nadyelle Farias - Arquiteta — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-109333171-04.webp",
+        "width": 1920,
+        "height": 1281,
+        "alt": "Nadyelle Farias - Arquiteta — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-109333171-05.webp",
+        "width": 1920,
+        "height": 1286,
+        "alt": "Nadyelle Farias - Arquiteta — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-109333171-06.webp",
+        "width": 1920,
+        "height": 1286,
+        "alt": "Nadyelle Farias - Arquiteta — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-109333171-07.webp",
+        "width": 1920,
+        "height": 1440,
+        "alt": "Nadyelle Farias - Arquiteta — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-109333171-08.webp",
+        "width": 1920,
+        "height": 1286,
+        "alt": "Nadyelle Farias - Arquiteta — aplicação 8"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-109333171-09.webp",
+        "width": 1920,
+        "height": 1286,
+        "alt": "Nadyelle Farias - Arquiteta — aplicação 9"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-109333171-10.webp",
+        "width": 1920,
+        "height": 1286,
+        "alt": "Nadyelle Farias - Arquiteta — aplicação 10"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-109333171-01.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Nadyelle Farias - Arquiteta — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-109333171-02.webp",
+        "width": 1920,
+        "height": 1320,
+        "alt": "Nadyelle Farias - Arquiteta — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-109333171-03.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Nadyelle Farias - Arquiteta — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-109333171-04.webp",
+        "width": 1920,
+        "height": 1281,
+        "alt": "Nadyelle Farias - Arquiteta — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-109333171-05.webp",
+        "width": 1920,
+        "height": 1286,
+        "alt": "Nadyelle Farias - Arquiteta — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-109333171-06.webp",
+        "width": 1920,
+        "height": 1286,
+        "alt": "Nadyelle Farias - Arquiteta — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-109333171-07.webp",
+        "width": 1920,
+        "height": 1440,
+        "alt": "Nadyelle Farias - Arquiteta — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-109333171-08.webp",
+        "width": 1920,
+        "height": 1286,
+        "alt": "Nadyelle Farias - Arquiteta — aplicação 8"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-109333171-09.webp",
+        "width": 1920,
+        "height": 1286,
+        "alt": "Nadyelle Farias - Arquiteta — aplicação 9"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-109333171-10.webp",
+        "width": 1920,
+        "height": 1286,
+        "alt": "Nadyelle Farias - Arquiteta — aplicação 10"
+      }
+    ],
+    "status": "published",
+    "createdAt": "2020-12-10T03:27:38.000Z",
+    "updatedAt": "2020-12-10T03:27:38.000Z"
+  },
+  {
+    "id": "1ba8b10d-8d5d-4c90-aadd-79cd41878f7c",
+    "behanceId": 100127475,
+    "title": "Lucas Grisoste",
+    "slug": "lucas-grisoste",
+    "segment": "Saúde e Bem-estar",
+    "description": "Lucas Grisoste é cirurgião-dentista e coloca-se no lugar das outras pessoas, cuidando dos resultados e da experiência de seus pacientes. Para entregar os melhores e mais bonitos sorrisos, busca bons fornecedores, materiais, parceiros e profissionais.",
+    "cover": "/images/projetos/behance-100127475-cover.webp",
+    "coverWidth": 1195,
+    "coverHeight": 935,
+    "tags": [
+      "Estratégia",
+      "Identidade Visual"
+    ],
+    "sourceTags": [
+      "brand",
+      "branding",
+      "dentist",
+      "design",
+      "graphicdesign",
+      "identidadevisual",
+      "logo",
+      "visualidentity",
+      "Odontology"
+    ],
+    "team": "Everton Gargioni, Arcaffo. Branding",
+    "contributors": [
+      "Everton Gargioni"
+    ],
+    "organizations": [
+      "Arcaffo. Branding"
+    ],
+    "credits": [
+      {
+        "label": "Coautoria",
+        "value": "Everton Gargioni e Arcaffo. Branding"
+      }
+    ],
+    "sourceUrl": "https://www.behance.net/gallery/100127475/Lucas-Grisoste",
+    "caseStudy": {
+      "question": "Como traduzir cuidado, qualidade e experiência em uma marca profissional de odontologia?",
+      "answer": "A marca de Lucas Grisoste parte de uma prática atenta aos resultados e à experiência dos pacientes. A identidade organiza uma proposta profissional que valoriza bons materiais, fornecedores, parceiros e especialistas para entregar sorrisos bem cuidados.",
+      "decisions": [
+        "Colocar o cuidado com a experiência do paciente no centro da narrativa.",
+        "Associar a marca à busca por materiais, fornecedores e profissionais de qualidade.",
+        "Construir uma identidade visual adequada à atuação de um cirurgião-dentista."
+      ],
+      "perspective": "Em serviços de saúde, a marca precisa apoiar confiança antes do atendimento. Qualidade técnica e atenção à experiência tornam-se partes inseparáveis da percepção profissional.",
+      "metaDescription": "Case Lucas Grisoste: estratégia e identidade visual para um cirurgião-dentista orientado por cuidado, qualidade e experiência do paciente."
+    },
+    "images": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-100127475-01.webp",
+        "width": 1920,
+        "height": 1283,
+        "alt": "Lucas Grisoste — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-100127475-02.webp",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Lucas Grisoste — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-100127475-03.jpg",
+        "width": 1400,
+        "height": 1883,
+        "alt": "Lucas Grisoste — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-100127475-04.jpg",
+        "width": 1400,
+        "height": 1883,
+        "alt": "Lucas Grisoste — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-100127475-05.jpg",
+        "width": 1400,
+        "height": 1883,
+        "alt": "Lucas Grisoste — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-100127475-06.jpg",
+        "width": 1400,
+        "height": 1885,
+        "alt": "Lucas Grisoste — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-100127475-07.webp",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Lucas Grisoste — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-100127475-08.webp",
+        "width": 1920,
+        "height": 1283,
+        "alt": "Lucas Grisoste — aplicação 8"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-100127475-09.jpg",
+        "width": 1400,
+        "height": 1400,
+        "alt": "Lucas Grisoste — aplicação 9"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-100127475-10.jpg",
+        "width": 1400,
+        "height": 1400,
+        "alt": "Lucas Grisoste — aplicação 10"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-100127475-11.webp",
+        "width": 1920,
+        "height": 1283,
+        "alt": "Lucas Grisoste — aplicação 11"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-100127475-12.jpg",
+        "width": 1400,
+        "height": 1883,
+        "alt": "Lucas Grisoste — aplicação 12"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-100127475-13.jpg",
+        "width": 1400,
+        "height": 1885,
+        "alt": "Lucas Grisoste — aplicação 13"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-100127475-14.jpg",
+        "width": 1400,
+        "height": 1883,
+        "alt": "Lucas Grisoste — aplicação 14"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-100127475-15.jpg",
+        "width": 1400,
+        "height": 1885,
+        "alt": "Lucas Grisoste — aplicação 15"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-100127475-16.jpg",
+        "width": 1400,
+        "height": 1883,
+        "alt": "Lucas Grisoste — aplicação 16"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-100127475-17.jpg",
+        "width": 1400,
+        "height": 1883,
+        "alt": "Lucas Grisoste — aplicação 17"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-100127475-01.webp",
+        "width": 1920,
+        "height": 1283,
+        "alt": "Lucas Grisoste — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-100127475-02.webp",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Lucas Grisoste — aplicação 2"
+      },
+      {
+        "type": "collection",
+        "items": [
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-100127475-03.jpg",
+            "width": 1400,
+            "height": 1883,
+            "alt": "Lucas Grisoste — aplicação 3"
+          },
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-100127475-04.jpg",
+            "width": 1400,
+            "height": 1883,
+            "alt": "Lucas Grisoste — aplicação 4"
+          }
+        ]
+      },
+      {
+        "type": "collection",
+        "items": [
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-100127475-05.jpg",
+            "width": 1400,
+            "height": 1883,
+            "alt": "Lucas Grisoste — aplicação 5"
+          },
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-100127475-06.jpg",
+            "width": 1400,
+            "height": 1885,
+            "alt": "Lucas Grisoste — aplicação 6"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-100127475-07.webp",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Lucas Grisoste — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-100127475-08.webp",
+        "width": 1920,
+        "height": 1283,
+        "alt": "Lucas Grisoste — aplicação 8"
+      },
+      {
+        "type": "collection",
+        "items": [
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-100127475-09.jpg",
+            "width": 1400,
+            "height": 1400,
+            "alt": "Lucas Grisoste — aplicação 9"
+          },
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-100127475-10.jpg",
+            "width": 1400,
+            "height": 1400,
+            "alt": "Lucas Grisoste — aplicação 10"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-100127475-11.webp",
+        "width": 1920,
+        "height": 1283,
+        "alt": "Lucas Grisoste — aplicação 11"
+      },
+      {
+        "type": "collection",
+        "items": [
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-100127475-12.jpg",
+            "width": 1400,
+            "height": 1883,
+            "alt": "Lucas Grisoste — aplicação 12"
+          },
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-100127475-13.jpg",
+            "width": 1400,
+            "height": 1885,
+            "alt": "Lucas Grisoste — aplicação 13"
+          }
+        ]
+      },
+      {
+        "type": "collection",
+        "items": [
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-100127475-14.jpg",
+            "width": 1400,
+            "height": 1883,
+            "alt": "Lucas Grisoste — aplicação 14"
+          },
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-100127475-15.jpg",
+            "width": 1400,
+            "height": 1885,
+            "alt": "Lucas Grisoste — aplicação 15"
+          }
+        ]
+      },
+      {
+        "type": "collection",
+        "items": [
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-100127475-16.jpg",
+            "width": 1400,
+            "height": 1883,
+            "alt": "Lucas Grisoste — aplicação 16"
+          },
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-100127475-17.jpg",
+            "width": 1400,
+            "height": 1883,
+            "alt": "Lucas Grisoste — aplicação 17"
+          }
+        ]
+      }
+    ],
+    "status": "published",
+    "createdAt": "2020-07-06T03:02:00.000Z",
+    "updatedAt": "2020-07-06T03:02:00.000Z"
+  },
+  {
+    "id": "969bb19e-7eb7-48ad-ab2e-321c66c54fb7",
+    "behanceId": 98886649,
+    "title": "Dra. Yana",
+    "slug": "dra-yana",
+    "segment": "Saúde e Bem-estar",
+    "description": "Projeto de branding e identidade visual para a dermatologista Dra. Yana Almeidinha.",
+    "cover": "/images/projetos/behance-98886649-cover.webp",
+    "coverWidth": 1423,
+    "coverHeight": 1113,
+    "tags": [
+      "Estratégia",
+      "Identidade Visual"
+    ],
+    "sourceTags": [
+      "brand",
+      "branding",
+      "Dermatologista",
+      "design",
+      "design gráfico",
+      "graphicdesign",
+      "identidade visual",
+      "logo",
+      "mark",
+      "Dermatologia"
+    ],
+    "team": "Renato AB, Arcaffo. Branding",
+    "contributors": [
+      "Renato AB"
+    ],
+    "organizations": [
+      "Arcaffo. Branding"
+    ],
+    "credits": [
+      {
+        "label": "Coautoria",
+        "value": "Renato AB e Arcaffo. Branding"
+      }
+    ],
+    "sourceUrl": "https://www.behance.net/gallery/98886649/Dra-Yana",
+    "caseStudy": {
+      "question": "Como construir uma identidade profissional para uma médica dermatologista?",
+      "answer": "O projeto organiza branding e identidade visual para a Dra. Yana Almeidinha. A apresentação demonstra a marca e suas aplicações no contexto de uma atuação profissional em dermatologia.",
+      "decisions": [
+        "Construir a marca a partir do nome profissional da dermatologista.",
+        "Criar um sistema de identidade aplicável à comunicação da prática médica.",
+        "Apresentar a marca de forma consistente em diferentes materiais."
+      ],
+      "perspective": "Uma identidade para saúde precisa tornar a atuação reconhecível e coerente sem substituir a informação clínica ou a relação de confiança construída no atendimento.",
+      "metaDescription": "Case Dra. Yana: projeto de branding e identidade visual para a dermatologista Yana Almeidinha, desenvolvido com participação da Arcaffo."
+    },
+    "images": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-01.webp",
+        "width": 1920,
+        "height": 1135,
+        "alt": "Dra. Yana — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-02.webp",
+        "width": 1920,
+        "height": 524,
+        "alt": "Dra. Yana — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-03.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-04.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-05.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-06.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-07.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-08.webp",
+        "width": 1920,
+        "height": 1009,
+        "alt": "Dra. Yana — aplicação 8"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-09.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 9"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-10.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 10"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-11.webp",
+        "width": 1920,
+        "height": 1153,
+        "alt": "Dra. Yana — aplicação 11"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-12.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 12"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-13.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 13"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-14.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 14"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-15.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 15"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-16.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 16"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-17.webp",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Dra. Yana — aplicação 17"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-18.webp",
+        "width": 1920,
+        "height": 601,
+        "alt": "Dra. Yana — aplicação 18"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-19.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 19"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-01.webp",
+        "width": 1920,
+        "height": 1135,
+        "alt": "Dra. Yana — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-02.webp",
+        "width": 1920,
+        "height": 524,
+        "alt": "Dra. Yana — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-03.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-04.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-05.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-06.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-07.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-08.webp",
+        "width": 1920,
+        "height": 1009,
+        "alt": "Dra. Yana — aplicação 8"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-09.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 9"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-10.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 10"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-11.webp",
+        "width": 1920,
+        "height": 1153,
+        "alt": "Dra. Yana — aplicação 11"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-12.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 12"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-13.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 13"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-14.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 14"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-15.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 15"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-16.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 16"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-17.webp",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Dra. Yana — aplicação 17"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-18.webp",
+        "width": 1920,
+        "height": 601,
+        "alt": "Dra. Yana — aplicação 18"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-98886649-19.webp",
+        "width": 1920,
+        "height": 1081,
+        "alt": "Dra. Yana — aplicação 19"
+      }
+    ],
+    "status": "published",
+    "createdAt": "2020-06-15T13:49:41.000Z",
+    "updatedAt": "2020-06-15T13:49:41.000Z"
+  },
+  {
+    "id": "398d0a2a-5569-4c73-aef7-cea5f9932193",
+    "behanceId": 83322921,
+    "title": "Priscila Pieczykolan Arquitetura",
+    "slug": "priscila-pieczykolan-arquitetura",
+    "segment": "Arquitetura e Interiores",
+    "description": "Projeto de identidade visual para a arquiteta Priscila Pieczykolan.",
+    "cover": "/images/projetos/behance-83322921-cover.webp",
+    "coverWidth": 853,
+    "coverHeight": 667,
+    "tags": [
+      "Identidade Visual"
+    ],
+    "sourceTags": [
+      "visual identity",
+      "brand"
+    ],
+    "team": "Luiz Paulo Pacheco, Arcaffo. Branding",
+    "contributors": [
+      "Luiz Paulo Pacheco"
+    ],
+    "organizations": [
+      "Arcaffo. Branding"
+    ],
+    "credits": [
+      {
+        "label": "Coautoria",
+        "value": "Luiz Paulo Pacheco e Arcaffo. Branding"
+      }
+    ],
+    "sourceUrl": "https://www.behance.net/gallery/83322921/Priscila-Pieczykolan-Arquitetura",
+    "caseStudy": {
+      "question": "Como transformar o nome de uma arquiteta em um sistema visual reconhecível?",
+      "answer": "O projeto desenvolve a identidade visual de Priscila Pieczykolan e apresenta sua aplicação em materiais profissionais. A marca funciona como assinatura para a atuação da arquiteta.",
+      "decisions": [
+        "Usar o nome profissional como núcleo da identidade.",
+        "Criar uma assinatura visual aplicável aos materiais do escritório.",
+        "Demonstrar consistência entre marca e aplicações."
+      ],
+      "perspective": "Para profissionais de arquitetura, a identidade atua como uma assinatura contínua: acompanha projetos, apresentações e contatos sem competir com o próprio trabalho arquitetônico.",
+      "metaDescription": "Case Priscila Pieczykolan Arquitetura: identidade visual e aplicações de marca para uma profissional de arquitetura, desenvolvidas pela Arcaffo."
+    },
+    "images": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-83322921-01.gif",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Priscila Pieczykolan Arquitetura — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-83322921-02.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Priscila Pieczykolan Arquitetura — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-83322921-03.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Priscila Pieczykolan Arquitetura — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-83322921-04.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Priscila Pieczykolan Arquitetura — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-83322921-05.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Priscila Pieczykolan Arquitetura — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-83322921-06.gif",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Priscila Pieczykolan Arquitetura — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-83322921-07.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Priscila Pieczykolan Arquitetura — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-83322921-08.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Priscila Pieczykolan Arquitetura — aplicação 8"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-83322921-09.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Priscila Pieczykolan Arquitetura — aplicação 9"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-83322921-10.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Priscila Pieczykolan Arquitetura — aplicação 10"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-83322921-11.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Priscila Pieczykolan Arquitetura — aplicação 11"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-83322921-01.gif",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Priscila Pieczykolan Arquitetura — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-83322921-02.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Priscila Pieczykolan Arquitetura — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-83322921-03.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Priscila Pieczykolan Arquitetura — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-83322921-04.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Priscila Pieczykolan Arquitetura — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-83322921-05.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Priscila Pieczykolan Arquitetura — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-83322921-06.gif",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Priscila Pieczykolan Arquitetura — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-83322921-07.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Priscila Pieczykolan Arquitetura — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-83322921-08.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Priscila Pieczykolan Arquitetura — aplicação 8"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-83322921-09.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Priscila Pieczykolan Arquitetura — aplicação 9"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-83322921-10.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Priscila Pieczykolan Arquitetura — aplicação 10"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-83322921-11.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Priscila Pieczykolan Arquitetura — aplicação 11"
+      }
+    ],
+    "status": "published",
+    "createdAt": "2019-07-24T18:29:16.000Z",
+    "updatedAt": "2019-07-24T18:29:16.000Z"
+  },
+  {
+    "id": "f3b5ae7f-1563-4a54-a2dd-1d3face13188",
+    "behanceId": 61888515,
+    "title": "Lara Cerantola",
+    "slug": "lara-cerantola",
+    "segment": "Arquitetura e Interiores",
+    "description": "Sistema de identidade de marca desenvolvido para Lara Cerantola.",
+    "cover": "/images/projetos/behance-61888515-cover.webp",
+    "coverWidth": 965,
+    "coverHeight": 755,
+    "tags": [
+      "Identidade Visual"
+    ],
+    "sourceTags": [
+      "architecture",
+      "design",
+      "monogram",
+      "brand",
+      "logo",
+      "business card",
+      "ARQUITETURA",
+      "visual identity",
+      "branding",
+      "graphicdesign"
+    ],
+    "team": "Everton Gargioni, Arcaffo. Branding",
+    "contributors": [
+      "Everton Gargioni"
+    ],
+    "organizations": [
+      "Arcaffo. Branding"
+    ],
+    "credits": [
+      {
+        "label": "Coautoria",
+        "value": "Everton Gargioni e Arcaffo. Branding"
+      }
+    ],
+    "sourceUrl": "https://www.behance.net/gallery/61888515/Lara-Cerantola",
+    "caseStudy": {
+      "question": "Como organizar uma assinatura profissional em um sistema completo de identidade?",
+      "answer": "O projeto apresenta o sistema de identidade de marca de Lara Cerantola, com logotipo, monograma e aplicações ligadas ao universo da arquitetura e da comunicação profissional.",
+      "decisions": [
+        "Estruturar a identidade a partir do nome profissional.",
+        "Articular logotipo e monograma dentro do mesmo sistema.",
+        "Aplicar a marca em materiais de contato e apresentação."
+      ],
+      "perspective": "Um sistema de identidade amplia a utilidade do logotipo ao criar relações consistentes entre assinatura, monograma, composição e aplicações cotidianas.",
+      "metaDescription": "Case Lara Cerantola: sistema de identidade de marca, logotipo, monograma e aplicações profissionais desenvolvido com participação da Arcaffo."
+    },
+    "images": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-01.webp",
+        "width": 1920,
+        "height": 1274,
+        "alt": "Lara Cerantola — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-02.webp",
+        "width": 1920,
+        "height": 1079,
+        "alt": "Lara Cerantola — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-03.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Lara Cerantola — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-04.webp",
+        "width": 1920,
+        "height": 1079,
+        "alt": "Lara Cerantola — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-05.gif",
+        "width": 1920,
+        "height": 1079,
+        "alt": "Lara Cerantola — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-06.webp",
+        "width": 1920,
+        "height": 955,
+        "alt": "Lara Cerantola — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-07.webp",
+        "width": 1920,
+        "height": 955,
+        "alt": "Lara Cerantola — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-08.webp",
+        "width": 1920,
+        "height": 1350,
+        "alt": "Lara Cerantola — aplicação 8"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-09.webp",
+        "width": 1920,
+        "height": 1274,
+        "alt": "Lara Cerantola — aplicação 9"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-10.webp",
+        "width": 1920,
+        "height": 1079,
+        "alt": "Lara Cerantola — aplicação 10"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-11.webp",
+        "width": 1920,
+        "height": 1274,
+        "alt": "Lara Cerantola — aplicação 11"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-12.webp",
+        "width": 1920,
+        "height": 1274,
+        "alt": "Lara Cerantola — aplicação 12"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-01.webp",
+        "width": 1920,
+        "height": 1274,
+        "alt": "Lara Cerantola — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-02.webp",
+        "width": 1920,
+        "height": 1079,
+        "alt": "Lara Cerantola — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-03.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Lara Cerantola — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-04.webp",
+        "width": 1920,
+        "height": 1079,
+        "alt": "Lara Cerantola — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-05.gif",
+        "width": 1920,
+        "height": 1079,
+        "alt": "Lara Cerantola — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-06.webp",
+        "width": 1920,
+        "height": 955,
+        "alt": "Lara Cerantola — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-07.webp",
+        "width": 1920,
+        "height": 955,
+        "alt": "Lara Cerantola — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-08.webp",
+        "width": 1920,
+        "height": 1350,
+        "alt": "Lara Cerantola — aplicação 8"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-09.webp",
+        "width": 1920,
+        "height": 1274,
+        "alt": "Lara Cerantola — aplicação 9"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-10.webp",
+        "width": 1920,
+        "height": 1079,
+        "alt": "Lara Cerantola — aplicação 10"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-11.webp",
+        "width": 1920,
+        "height": 1274,
+        "alt": "Lara Cerantola — aplicação 11"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-61888515-12.webp",
+        "width": 1920,
+        "height": 1274,
+        "alt": "Lara Cerantola — aplicação 12"
+      }
+    ],
+    "status": "published",
+    "createdAt": "2018-02-28T12:54:59.000Z",
+    "updatedAt": "2018-02-28T12:54:59.000Z"
+  },
+  {
+    "id": "0d9cfd08-e557-4905-ab64-ac915307fa20",
+    "behanceId": 66464191,
+    "title": "Construtora RiWal",
+    "slug": "construtora-riwal",
+    "segment": "Construção e Engenharia",
+    "description": "Criação de uma nova marca e identidade visual para a Construtora RiWal, de Maracaju, Mato Grosso do Sul.",
+    "cover": "/images/projetos/behance-66464191-cover.webp",
+    "coverWidth": 405,
+    "coverHeight": 317,
+    "tags": [
+      "Estratégia",
+      "Identidade Visual"
+    ],
+    "sourceTags": [
+      "construtora",
+      "RiWal",
+      "MARACAJU",
+      "Brazil",
+      "architecture",
+      "ARQUITETURA",
+      "construction",
+      "Arcaffo",
+      "marca"
+    ],
+    "team": "Luiz Paulo Pacheco, Arcaffo. Branding",
+    "contributors": [
+      "Luiz Paulo Pacheco"
+    ],
+    "organizations": [
+      "Arcaffo. Branding"
+    ],
+    "credits": [
+      {
+        "label": "Coautoria",
+        "value": "Luiz Paulo Pacheco e Arcaffo. Branding"
+      }
+    ],
+    "sourceUrl": "https://www.behance.net/gallery/66464191/Construtora-RiWal",
+    "caseStudy": {
+      "question": "Como criar uma nova presença de marca para uma construtora de Maracaju?",
+      "answer": "O projeto desenvolve uma nova marca e identidade visual para a Construtora RiWal. O sistema apresenta a empresa por meio de uma assinatura e aplicações coerentes com sua atuação em construção.",
+      "decisions": [
+        "Criar uma nova marca para identificar a construtora.",
+        "Desenvolver um sistema visual aplicável à comunicação da empresa.",
+        "Relacionar a identidade ao contexto de arquitetura e construção."
+      ],
+      "perspective": "Em construção, a identidade ajuda a tornar a empresa reconhecível em materiais institucionais e nos diferentes pontos de contato associados aos empreendimentos.",
+      "metaDescription": "Case Construtora RiWal: criação de marca e identidade visual para uma empresa de construção de Maracaju, Mato Grosso do Sul."
+    },
+    "images": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66464191-01.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Construtora RiWal — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66464191-02.gif",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Construtora RiWal — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66464191-03.gif",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Construtora RiWal — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66464191-04.gif",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Construtora RiWal — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66464191-05.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Construtora RiWal — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66464191-06.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Construtora RiWal — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66464191-07.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Construtora RiWal — aplicação 7"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66464191-01.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Construtora RiWal — aplicação 1"
+      },
+      {
+        "type": "collection",
+        "items": [
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-66464191-02.gif",
+            "width": 1920,
+            "height": 1280,
+            "alt": "Construtora RiWal — aplicação 2"
+          },
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-66464191-03.gif",
+            "width": 1920,
+            "height": 1280,
+            "alt": "Construtora RiWal — aplicação 3"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66464191-04.gif",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Construtora RiWal — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66464191-05.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Construtora RiWal — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66464191-06.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Construtora RiWal — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66464191-07.webp",
+        "width": 1920,
+        "height": 1280,
+        "alt": "Construtora RiWal — aplicação 7"
+      }
+    ],
+    "status": "published",
+    "createdAt": "2018-06-05T21:04:49.000Z",
+    "updatedAt": "2018-06-05T21:04:49.000Z"
+  },
+  {
+    "id": "ad536d75-1395-4515-acd9-0a774c6bd14f",
+    "behanceId": 66044601,
+    "title": "ArqDecô",
+    "slug": "arqdeco",
+    "segment": "Arquitetura e Interiores",
+    "description": "Idealizado por Elayne Felix, o Studio ArqDecô reúne arquitetura e design de interiores em um trabalho multidisciplinar. A equipe interpreta o desejo de cada cliente para transformar espaços em ambientes personalizados, combinando design de qualidade, comprometimento, seriedade e respeito. A identidade foi construída para comunicar clareza, dinamismo, inovação e organização.",
+    "cover": "/images/projetos/behance-66044601-cover.webp",
+    "coverWidth": 1022,
+    "coverHeight": 800,
+    "tags": [
+      "Estratégia",
+      "Identidade Visual",
+      "Papelaria"
+    ],
+    "sourceTags": [
+      "ArqDecô",
+      "ARQUITETURA",
+      "architecture",
+      "Design de Interior",
+      "interior design",
+      "brand",
+      "Minimalism",
+      "clean",
+      "Brazil"
+    ],
+    "team": "Luiz Paulo Pacheco, Arcaffo. Branding",
+    "contributors": [
+      "Luiz Paulo Pacheco"
+    ],
+    "organizations": [
+      "Arcaffo. Branding"
+    ],
+    "credits": [
+      {
+        "label": "Coautoria",
+        "value": "Luiz Paulo Pacheco e Arcaffo. Branding"
+      }
+    ],
+    "sourceUrl": "https://www.behance.net/gallery/66044601/ArqDeco-Projetos-de-ArquiteturaDesign-de-Interiores",
+    "caseStudy": {
+      "question": "Como representar um estúdio multidisciplinar de arquitetura e interiores com clareza e dinamismo?",
+      "answer": "A ArqDecô reúne arquitetura e design de interiores para transformar desejos em ambientes personalizados. A marca foi construída para comunicar organização, multidisciplinaridade, clareza e transparência, com uma estrutura dinâmica entre “Arq” e “Decô”, letras finas e geométricas e uma personalidade minimalista.",
+      "decisions": [
+        "Usar a estrutura entre “Arq” e “Decô” para permitir composições verticais e flexíveis.",
+        "Adotar letras finas e geométricas para expressar profissionalismo, inovação e atualidade.",
+        "Estender o sistema para identidade visual e papelaria do estúdio."
+      ],
+      "perspective": "A solução demonstra como a estrutura do próprio nome pode gerar flexibilidade visual e explicar uma atuação que integra diferentes disciplinas sem perder clareza.",
+      "metaDescription": "Case ArqDecô: estratégia, identidade visual e papelaria para um estúdio multidisciplinar de arquitetura e design de interiores em Campo Grande."
+    },
+    "images": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66044601-01.gif",
+        "width": 1920,
+        "height": 1280,
+        "alt": "ArqDecô - Projetos de Arquitetura/Design de Interiores — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66044601-02.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "ArqDecô - Projetos de Arquitetura/Design de Interiores — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66044601-03.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "ArqDecô - Projetos de Arquitetura/Design de Interiores — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66044601-04.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "ArqDecô - Projetos de Arquitetura/Design de Interiores — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66044601-05.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "ArqDecô - Projetos de Arquitetura/Design de Interiores — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66044601-06.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "ArqDecô - Projetos de Arquitetura/Design de Interiores — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66044601-07.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "ArqDecô - Projetos de Arquitetura/Design de Interiores — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66044601-08.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "ArqDecô - Projetos de Arquitetura/Design de Interiores — aplicação 8"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66044601-01.gif",
+        "width": 1920,
+        "height": 1280,
+        "alt": "ArqDecô - Projetos de Arquitetura/Design de Interiores — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66044601-02.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "ArqDecô - Projetos de Arquitetura/Design de Interiores — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66044601-03.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "ArqDecô - Projetos de Arquitetura/Design de Interiores — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66044601-04.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "ArqDecô - Projetos de Arquitetura/Design de Interiores — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66044601-05.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "ArqDecô - Projetos de Arquitetura/Design de Interiores — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66044601-06.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "ArqDecô - Projetos de Arquitetura/Design de Interiores — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66044601-07.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "ArqDecô - Projetos de Arquitetura/Design de Interiores — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-66044601-08.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "ArqDecô - Projetos de Arquitetura/Design de Interiores — aplicação 8"
+      }
+    ],
+    "status": "published",
+    "createdAt": "2018-05-25T20:48:04.000Z",
+    "updatedAt": "2018-05-25T20:48:04.000Z"
+  },
+  {
+    "id": "dbc21d8d-a05c-4dd7-a70e-d34fbf2af8d0",
+    "behanceId": 48081431,
+    "title": "It Decor",
+    "slug": "it-decor",
+    "segment": "Arquitetura e Interiores",
+    "description": "Redesign de marca realizado para a It Decor, empresa que trabalha para se tornar referência em decoração de interiores.",
+    "cover": "/images/projetos/behance-48081431-cover.webp",
+    "coverWidth": 1198,
+    "coverHeight": 935,
+    "tags": [
+      "Redesign",
+      "Identidade Visual"
+    ],
+    "sourceTags": [
+      "Adobe Portfolio",
+      "serif",
+      "design",
+      "interior design",
+      "decor",
+      "typography",
+      "brand",
+      "architecture",
+      "design de interiores",
+      "itdecor"
+    ],
+    "team": "Luiz Paulo Pacheco, Arcaffo. Branding",
+    "contributors": [
+      "Luiz Paulo Pacheco"
+    ],
+    "organizations": [
+      "Arcaffo. Branding"
+    ],
+    "credits": [
+      {
+        "label": "Coautoria",
+        "value": "Luiz Paulo Pacheco e Arcaffo. Branding"
+      }
+    ],
+    "sourceUrl": "https://www.behance.net/gallery/48081431/It-Decor-Design-de-Interiores",
+    "caseStudy": {
+      "question": "Como atualizar a marca de uma empresa que busca ser referência em decoração de interiores?",
+      "answer": "O projeto redesenha a marca da It Decor e organiza uma identidade visual ligada ao universo da decoração e do design de interiores. A apresentação demonstra a nova assinatura em diferentes aplicações.",
+      "decisions": [
+        "Redesenhar a marca para acompanhar a ambição de referência no segmento.",
+        "Relacionar identidade, tipografia e aplicações ao universo de interiores.",
+        "Criar consistência entre a assinatura e os materiais de comunicação."
+      ],
+      "perspective": "Redesigns ganham sentido quando atualizam a percepção da empresa e aumentam a consistência dos pontos de contato sem apagar o reconhecimento já construído.",
+      "metaDescription": "Case It Decor: redesign e identidade visual para uma empresa que busca se tornar referência em decoração e design de interiores."
+    },
+    "images": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-48081431-01.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "It Decor - Design de Interiores — aplicação 1"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-48081431-02.jpg",
+        "width": 1920,
+        "height": 1920,
+        "alt": "It Decor - Design de Interiores — aplicação 2"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-48081431-03.jpg",
+        "width": 1920,
+        "height": 1920,
+        "alt": "It Decor - Design de Interiores — aplicação 3"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-48081431-04.gif",
+        "width": 1920,
+        "height": 1280,
+        "alt": "It Decor - Design de Interiores — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-48081431-05.gif",
+        "width": 1050,
+        "height": 700,
+        "alt": "It Decor - Design de Interiores — aplicação 5"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-48081431-06.jpg",
+        "width": 1920,
+        "height": 1920,
+        "alt": "It Decor - Design de Interiores — aplicação 6"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-48081431-07.jpg",
+        "width": 1920,
+        "height": 1920,
+        "alt": "It Decor - Design de Interiores — aplicação 7"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-48081431-08.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "It Decor - Design de Interiores — aplicação 8"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-48081431-09.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "It Decor - Design de Interiores — aplicação 9"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-48081431-10.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "It Decor - Design de Interiores — aplicação 10"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-48081431-01.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "It Decor - Design de Interiores — aplicação 1"
+      },
+      {
+        "type": "collection",
+        "items": [
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-48081431-02.jpg",
+            "width": 1920,
+            "height": 1920,
+            "alt": "It Decor - Design de Interiores — aplicação 2"
+          },
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-48081431-03.jpg",
+            "width": 1920,
+            "height": 1920,
+            "alt": "It Decor - Design de Interiores — aplicação 3"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-48081431-04.gif",
+        "width": 1920,
+        "height": 1280,
+        "alt": "It Decor - Design de Interiores — aplicação 4"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-48081431-05.gif",
+        "width": 1050,
+        "height": 700,
+        "alt": "It Decor - Design de Interiores — aplicação 5"
+      },
+      {
+        "type": "collection",
+        "items": [
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-48081431-06.jpg",
+            "width": 1920,
+            "height": 1920,
+            "alt": "It Decor - Design de Interiores — aplicação 6"
+          },
+          {
+            "type": "image",
+            "url": "/images/projetos/behance-48081431-07.jpg",
+            "width": 1920,
+            "height": 1920,
+            "alt": "It Decor - Design de Interiores — aplicação 7"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-48081431-08.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "It Decor - Design de Interiores — aplicação 8"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-48081431-09.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "It Decor - Design de Interiores — aplicação 9"
+      },
+      {
+        "type": "image",
+        "url": "/images/projetos/behance-48081431-10.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "It Decor - Design de Interiores — aplicação 10"
+      }
+    ],
+    "status": "published",
+    "createdAt": "2017-01-29T20:23:32.000Z",
+    "updatedAt": "2017-01-29T20:23:32.000Z"
   }
 ]

@@ -1,0 +1,75 @@
+{
+  "title": "Calixto Sandes & Zabaleta",
+  "slug": "calixto-sandes-e-zabaleta",
+  "format": "Instagram carousel",
+  "dimensions": "1080x1350",
+  "aspectRatio": "4:5",
+  "rule": "Somente imagens originais da identidade, sem elementos sobrepostos, sem crop e sem cortar assinaturas. Margens usam a cor predominante da própria imagem.",
+  "slides": [
+    {
+      "slide": 1,
+      "file": "01.jpg",
+      "source": "/images/projetos/f9c5e31226.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 168,
+        "g": 184,
+        "b": 184,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 2,
+      "file": "02.jpg",
+      "source": "/images/projetos/5f9aaf505f.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 72,
+        "g": 88,
+        "b": 104,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 3,
+      "file": "03.jpg",
+      "source": "/images/projetos/3f8b231244.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 8,
+        "g": 40,
+        "b": 72,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 4,
+      "file": "04.jpg",
+      "source": "/images/projetos/182c2a6204.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 216,
+        "g": 232,
+        "b": 232,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 5,
+      "file": "05.jpg",
+      "source": "/images/projetos/2e4083f9c6.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 8,
+        "g": 40,
+        "b": 72,
+        "alpha": 1
+      }
+    }
+  ]
+}

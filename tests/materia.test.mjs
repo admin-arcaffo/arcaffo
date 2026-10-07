@@ -24,6 +24,27 @@ test('public build includes every published project and article without client f
     assert.equal($('.nav-links [aria-current="page"]').length,1);
   }
 });
+test('portfolio uses a complete, curated segment taxonomy instead of delivery tags',()=>{
+  const segments=[
+    'Arquitetura e Interiores',
+    'Construção e Engenharia',
+    'Alimentos e Bebidas',
+    'Saúde e Bem-estar',
+    'Moda e Joias',
+    'Cultura e Educação',
+    'Indústria e Automotivo',
+    'Tecnologia e Eletrônicos',
+    'Serviços Profissionais',
+  ];
+  const projects=JSON.parse(readFileSync('public/data/projetos.json','utf8')).filter(project=>project.status!=='draft');
+  assert.ok(projects.length>0);
+  assert.equal(projects.filter(project=>segments.includes(project.segment)).length,projects.length);
+  const handler=materiaSitePlugin().transformIndexHtml.handler;
+  const $=cheerio.load(handler(readFileSync('projetos.html','utf8'),{path:'/projetos.html'}));
+  assert.deepEqual($('[data-project-filters] [data-filter]').map((_,el)=>$(el).text()).get(),['Todos',...segments]);
+  assert.equal($('.project-card[data-segment]').length,projects.length);
+  assert.equal($('[data-project-filters]').attr('aria-label'),'Filtrar por segmento de atuação');
+});
 test('every generated detail has actual content, canonical and no legacy redirect script',()=>{
   for(const type of ['projetos','artigos'])for(const file of readdirSync(type).filter(f=>f.endsWith('.html'))){
     const $=cheerio.load(readFileSync(`${type}/${file}`,'utf8'));

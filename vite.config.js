@@ -27,6 +27,8 @@ export default defineConfig({
         servicos: resolve(__dirname, 'servicos.html'),
         brandingCampoGrande: resolve(__dirname, 'agencia-de-branding-campo-grande/index.html'),
         marketingCampoGrande: resolve(__dirname, 'agencia-de-marketing-campo-grande/index.html'),
+        diagnosticoMarca: resolve(__dirname, 'diagnostico-de-marca/index.html'),
+        diagnosticoMarcaObrigado: resolve(__dirname, 'diagnostico-de-marca/obrigado/index.html'),
         consultoriaBranding: resolve(__dirname, 'consultoria-de-branding/index.html'),
         posicionamentoMarca: resolve(__dirname, 'posicionamento-de-marca/index.html'),
         identidadeVisual: resolve(__dirname, 'identidade-visual/index.html'),

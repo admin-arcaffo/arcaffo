@@ -1,11 +1,3 @@
-@font-face {
-  font-family: 'Span';
-  src: url('/fonts/Span-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
   /* Tonalidades Principais (Dark Mode Monocromático) */
   --color-bg-primary: #000000; /* Mortem in Mundum base */
@@ -28,9 +20,9 @@
   --color-border-hover: rgba(255, 255, 255, 0.30);
   
   /* Fontes */
-  --font-heading: 'Span', 'Playfair Display', Georgia, serif;
+  --font-heading: 'span-compressed', Georgia, serif;
   --font-body: 'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-accent: 'Span', 'Playfair Display', Georgia, serif;
+  --font-accent: 'span-compressed', Georgia, serif;
 }
 
 *, *::before, *::after {

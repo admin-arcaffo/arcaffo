@@ -42,14 +42,14 @@ Vercel: projeto `arcaffo-group/arcaffo`, deployment `dpl_H59d1sRqpTzupCJ5v4hPVDP
 
 ## Entregue
 
-- Identidade Matéria aplicada às páginas públicas: cores oficiais, Newsreader e Inter locais, composição editorial, materiais fotográficos reais e acabamento sóbrio.
+- Identidade Matéria aplicada às páginas públicas: cores oficiais, Span Compressed via Adobe Fonts e Inter local, composição editorial, materiais fotográficos reais e acabamento sóbrio.
 - Nova home com mesa de trabalho interativa, seleção de casos, pessoas e ecossistema.
 - Navegação responsiva por teclado e toque, filtros de acervo, galeria ampliada, transições progressivas e respeito à preferência por movimento reduzido.
 - Sobre, serviços, projetos, artigos, vagas, contato e confirmação integrados ao sistema visual.
 - Acervo atualizado a partir dos dados públicos: 23 projetos, 27 artigos e 10 registros de vagas. Publicação/visibilidade respeitam os estados dos registros. Cores dos trabalhos dos clientes preservadas.
 - Contato para solicitar conversa, sem prometer agendamento automático. Campos reais existentes: nome, e-mail e telefone. Confirmação no próprio site após sucesso do provedor.
 - Compatibilidade com o painel: projeção versionada do conteúdo antigo, preservação do conteúdo anterior e persistência da migração no próximo salvamento normal. Nenhuma alteração remota de conteúdo foi feita por esta entrega.
-- HTML dos acervos e detalhes renderizado no build, fontes WOFF2 locais e JavaScript progressivo. Scripts visuais antigos não são mais carregados nas páginas públicas.
+- HTML dos acervos e detalhes renderizado no build, Inter WOFF2 local, Span Compressed licenciada pelo Adobe Fonts e JavaScript progressivo. Scripts visuais antigos não são mais carregados nas páginas públicas.
 
 ## Evidências
 

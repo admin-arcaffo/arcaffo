@@ -57,6 +57,7 @@ function normalizeProjetos(raw) {
     slug: p.slug || '',
     description: p.description || '',
     cover: p.cover || '',
+    segment: p.segment || '',
     tags: p.tags || [],
     team: p.team || '',
     images: p.images || [],

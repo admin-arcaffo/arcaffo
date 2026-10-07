@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import { editorialContent } from '../shared/editorial-content.mjs';
 import { HOME_CAMPAIGN } from '../shared/home-campaign.mjs';
 import { SITE_ORIGIN as origin, absoluteUrl, jsonLd } from '../shared/seo.mjs';
+import { MILME_ORIGIN, MILME_SERVICE_URL } from '../shared/milme.mjs';
 export function applySeo($, path) {
  const kind=$('body').attr('data-page');
  const saved=JSON.parse(readFileSync('public/data/site-content.json','utf8'));
@@ -14,7 +15,7 @@ export function applySeo($, path) {
  $('head').append('<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">');
  if(!$('link[rel="preload"][href="/design-system/arcaffo-materia/fonts/inter-latin.woff2"]').length)$('head').append('<link rel="preload" href="/design-system/arcaffo-materia/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>');
  set('theme-color','#F7F3EA');set('application-name','Arcaffo GROUP');
- const excluded=['obrigado','404','lp-marketing'].includes(kind)||['/artigo.html','/projeto.html'].includes(route);
+ const excluded=['obrigado','404','lp-marketing','lp-diagnostico','lp-diagnostico-obrigado'].includes(kind)||['/artigo.html','/projeto.html'].includes(route);
  set('robots',excluded?'noindex, follow':'index, follow, max-image-preview:large');
  if(kind==='index'){
   $('title').text(HOME_CAMPAIGN.enabled?HOME_CAMPAIGN.seoTitle:defaults.home_title);
@@ -31,7 +32,7 @@ export function applySeo($, path) {
  const serviceItems=[
   ['Consultoria de branding','/consultoria-de-branding/'],
   ['Posicionamento de marca','/posicionamento-de-marca/'],
-  ['Identidade visual','/identidade-visual/'],
+  ['Identidade visual',MILME_SERVICE_URL],
   ['Estratégia de marca','/estrategia-de-marca/'],
   ['Consultoria empresarial','/consultoria-empresarial/'],
   ['Gestão de marketing','/gestao-de-marketing/'],
@@ -47,7 +48,8 @@ export function applySeo($, path) {
   contactPoint:{'@type':'ContactPoint',telephone:'+5567982226166',email:'contato@arcaffo.com',contactType:'sales',availableLanguage:'Portuguese'},
   areaServed:[{'@type':'City',name:'Campo Grande'},{'@type':'AdministrativeArea',name:'Mato Grosso do Sul'},{'@type':'Country',name:'Brasil'}],
   sameAs:['https://www.instagram.com/arcaffo/','https://www.linkedin.com/company/arcaffo','https://www.youtube.com/@arcaffo'],
-  hasOfferCatalog:{'@type':'OfferCatalog',name:'Serviços da Arcaffo',itemListElement:serviceItems.map(([name,path])=>({'@type':'Offer',itemOffered:{'@type':'Service',name,url:absoluteUrl(path),provider:{'@id':`${origin}/#organization`}}}))},
+  subOrganization:{'@type':'ProfessionalService','@id':`${MILME_ORIGIN}/#organization`,name:'MILME',url:`${MILME_ORIGIN}/`,description:'Brand studio da Arcaffo: conceito de marca, identidade visual, enxoval digital e assessoria gráfica.'},
+  hasOfferCatalog:{'@type':'OfferCatalog',name:'Serviços da Arcaffo',itemListElement:serviceItems.map(([name,path])=>({'@type':'Offer',itemOffered:{'@type':'Service',name,url:absoluteUrl(path),provider:{'@id':path===MILME_SERVICE_URL?`${MILME_ORIGIN}/#organization`:`${origin}/#organization`}}}))},
  };
  // Retain generated page-specific entities; replace legacy global graphs.
  const entities=[];

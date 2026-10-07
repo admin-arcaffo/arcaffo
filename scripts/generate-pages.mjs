@@ -6,6 +6,7 @@ import { sanitizeSlug } from '../api/utils/slug.mjs';
 import { escapeHtml, richText } from './materia-site.mjs';
 import { absoluteUrl, validDate, jsonLd } from '../shared/seo.mjs';
 import { PEOPLE_BY_NAME } from '../shared/people.mjs';
+import { isMilmeProject } from '../shared/milme.mjs';
 
 // Pre-renders one static HTML file per artigo/projeto so the real title,
 // description, content and JSON-LD ship in the initial HTML response —
@@ -142,7 +143,7 @@ function projectDescriptionPt(value = '') {
 }
 
 function projectCaseHtml(project) {
-  const note = PROJECT_CASE_NOTES[project.slug];
+  const note = project.caseStudy || PROJECT_CASE_NOTES[project.slug];
   if (!note) return '';
   return `<section class="project-case-notes light-theme" aria-labelledby="case-question-${escapeHtml(project.slug)}">
     <div class="container">
@@ -188,7 +189,7 @@ function relatedArticles(current, all, limit = 3) {
 }
 
 function articlesForProject(project, all, limit = 3) {
-  const source = terms(`${project.title} ${(project.tags || []).join(' ')} ${project.description || ''}`);
+  const source = terms(`${project.title} ${project.segment || ''} ${(project.tags || []).join(' ')} ${project.description || ''}`);
   return all.map(item => {
     const target = terms(`${item.title} ${item.excerpt || ''}`);
     return { item, score: [...source].filter(term => target.has(term)).length };
@@ -374,19 +375,32 @@ function mediaHtml(projeto) {
   return items.map((m, i) => {
     const url = m.url || m;
     const type = m.type || (/\.(mp4|webm)$/i.test(url) ? 'video' : 'image');
+    if (type === 'collection') {
+      return `<div class="gallery-media-grid" role="group" aria-label="Aplicações de ${escapeHtml(projeto.title)}">${(m.items || []).map((item, itemIndex) => `<a href="${escapeHtml(item.url)}" class="gallery-button" data-gallery-image aria-label="Ampliar imagem ${i + 1}.${itemIndex + 1} de ${escapeHtml(projeto.title)}"><img src="${escapeHtml(item.url)}" alt="${escapeHtml(item.alt || `${projeto.title} — aplicação ${i + 1}.${itemIndex + 1}`)}" class="gallery-image" loading="lazy" ${item.width && item.height ? `width="${Number(item.width)}" height="${Number(item.height)}"` : ''}></a>`).join('')}</div>`;
+    }
+    if (type === 'embed') {
+      let embedUrl = '';
+      try {
+        const parsed = new URL(url);
+        if (['player.vimeo.com', 'www-ccv.adobe.io'].includes(parsed.hostname)) embedUrl = parsed.toString();
+      } catch {}
+      if (!embedUrl) return '';
+      return `<div class="gallery-embed-wrapper" style="--embed-ratio:${Number(m.width) || 16}/${Number(m.height) || 9}"><iframe src="${escapeHtml(embedUrl)}" title="${escapeHtml(m.title || `${projeto.title} — peça em movimento`)}" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>`;
+    }
     if (type === 'video') {
       return `<div class="gallery-video-wrapper">
         <video src="${escapeHtml(url)}" controls playsinline preload="metadata" aria-label="${escapeHtml(projeto.title)} — vídeo ${i + 1}"></video>
       </div>`;
     }
-    return `<a href="${escapeHtml(url)}" class="gallery-button" data-gallery-image aria-label="Ampliar imagem ${i + 1} de ${escapeHtml(projeto.title)}"><img src="${escapeHtml(url)}" alt="${escapeHtml(projeto.title)} — imagem ${i + 1}" class="gallery-image" loading="lazy" ${m.width && m.height ? `width="${Number(m.width)}" height="${Number(m.height)}"` : ''}></a>`;
+    return `<a href="${escapeHtml(url)}" class="gallery-button" data-gallery-image aria-label="Ampliar imagem ${i + 1} de ${escapeHtml(projeto.title)}"><img src="${escapeHtml(url)}" alt="${escapeHtml(m.alt || `${projeto.title} — imagem ${i + 1}`)}" class="gallery-image" loading="lazy" ${m.width && m.height ? `width="${Number(m.width)}" height="${Number(m.height)}"` : ''}></a>`;
   }).join('');
 }
 
 function generateProjetos() {
   const template = fs.readFileSync(path.join(ROOT, 'projeto.html'), 'utf8');
+  // Cases de identidade visual vivem no site da MILME (shared/milme.mjs); aqui só ficam os demais.
   const projetos = JSON.parse(fs.readFileSync(path.join(ROOT, 'public/data/projetos.json'), 'utf8'))
-    .filter(p => p.status !== 'draft');
+    .filter(p => p.status !== 'draft' && !isMilmeProject(p.slug));
   const artigos = JSON.parse(fs.readFileSync(path.join(ROOT, 'public/data/artigos.json'), 'utf8'))
     .filter(a => a.status !== 'draft');
 
@@ -397,11 +411,12 @@ function generateProjetos() {
   for (const projeto of projetos) {
     const slug = sanitizeSlug(projeto.slug);
     const url = `${DOMAIN}/projetos/${slug}.html`;
-    let image = projeto.cover || (projeto.images?.[0]?.url) || '';
+    const displayImage = projeto.cover || (projeto.images?.[0]?.url) || '/images/brand/og-image.jpg';
+    let image = displayImage;
     if (image && !/^https?:\/\//.test(image)) image = `${DOMAIN}${image}`;
     if (!image) image = `${DOMAIN}/images/brand/og-image.jpg`;
     const projectDescription = projectDescriptionPt(projeto.description || '');
-    const caseNote = PROJECT_CASE_NOTES[slug];
+    const caseNote = projeto.caseStudy || PROJECT_CASE_NOTES[slug];
     const rawDescription = excerptFrom(caseNote?.metaDescription || projectDescription, 157);
     const descriptionBase = rawDescription.length >= 120
       ? rawDescription
@@ -416,17 +431,29 @@ function generateProjetos() {
     const primaryTags = (projeto.tags || []).slice(0, 2).join(' e ').toLocaleLowerCase('pt-BR');
     setCommonMeta($, { title: seoPageTitle(`${projeto.title}${primaryTags ? `: ${primaryTags}` : ' — projeto'}`), description, url, image, type: 'website' });
 
+    const structuredImages = [projeto.cover, ...(projeto.images || []).map(item => item.url || item)]
+      .filter(Boolean)
+      .slice(0, 12)
+      .map(absoluteUrl);
+    const creators = (projeto.organizations || []).map(name => ({ '@type': 'Organization', name }));
+    const contributors = (projeto.contributors || []).map(name => ({ '@type': 'Person', name }));
     writeJsonLd($, {
       '@context': 'https://schema.org',
       '@type': 'CreativeWork',
       name: projeto.title,
       description,
-      image: [image],
+      image: structuredImages.length ? structuredImages : [image],
       url,
       datePublished: dateISO,
-      keywords: (projeto.tags || []).join(', '),
+      dateModified: toISODate(projeto.updatedAt),
+      inLanguage: 'pt-BR',
+      keywords: [...new Set([projeto.segment, ...(projeto.tags || []), ...(projeto.sourceTags || [])].filter(Boolean))].join(', '),
+      about: projeto.segment ? { '@type': 'Thing', name: projeto.segment } : undefined,
       abstract: caseNote?.answer,
-      creator: { '@type': 'Organization', name: 'Arcaffo GROUP' },
+      creator: creators.length ? creators : { '@type': 'Organization', name: 'Arcaffo GROUP' },
+      contributor: contributors.length ? contributors : undefined,
+      creditText: (projeto.credits || []).map(item => `${item.label}: ${item.value}`).join(' | ') || undefined,
+      sameAs: projeto.sourceUrl || undefined,
     });
 
     writeJsonLd($, {
@@ -452,7 +479,7 @@ function generateProjetos() {
           <h1>${escapeHtml(projeto.title)}</h1>
           <p class="section-subtitle">${escapeHtml((projeto.tags || []).join(' · '))}</p>
         </div>
-        <img class="project-cover" src="${escapeHtml(image)}" alt="${escapeHtml(projeto.title)}" fetchpriority="high" width="1920" height="1280" style="view-transition-name: project-${slug}">
+        <img class="project-cover" src="${escapeHtml(displayImage)}" alt="${escapeHtml(`${projeto.title} — capa do projeto`)}" fetchpriority="high" width="${Number(projeto.coverWidth) || 1920}" height="${Number(projeto.coverHeight) || 1280}" style="view-transition-name: project-${slug}">
       </section>
 
       <section class="project-detail-info light-theme">
@@ -462,6 +489,12 @@ function generateProjetos() {
             <div>${descHtml}</div>
           </div>
           <div class="project-meta animate-on-scroll delay-100">
+            ${projeto.segment ? `
+              <div class="meta-item">
+                <span class="meta-label">Segmento</span>
+                <span class="meta-value">${escapeHtml(projeto.segment)}</span>
+              </div>
+            ` : ''}
             ${projeto.team ? `
               <div class="meta-item">
                 <span class="meta-label">Equipe</span>
@@ -472,6 +505,18 @@ function generateProjetos() {
               <div class="meta-item">
                 <span class="meta-label">Entregas</span>
                 <span class="meta-value">${escapeHtml(projeto.tags.join(', '))}</span>
+              </div>
+            ` : ''}
+            ${(projeto.credits || []).map(item => `
+              <div class="meta-item">
+                <span class="meta-label">${escapeHtml(item.label)}</span>
+                <span class="meta-value">${escapeHtml(item.value)}</span>
+              </div>
+            `).join('')}
+            ${projeto.sourceUrl ? `
+              <div class="meta-item">
+                <span class="meta-label">Fonte do case</span>
+                <a class="meta-value text-link" href="${escapeHtml(projeto.sourceUrl)}" target="_blank" rel="noopener noreferrer">Publicação original no Behance ↗</a>
               </div>
             ` : ''}
           </div>

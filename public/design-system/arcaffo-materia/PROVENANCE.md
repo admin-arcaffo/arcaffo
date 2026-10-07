@@ -2,8 +2,8 @@
 
 Pacote oficial fornecido pelo titular em 13/09/2026, copiado do Design System indicado no plano. Tokens de cor, fotografia, espaço e tipografia e padrões preservados. Adaptações web e exceções documentadas em `DESIGN.md` na raiz do projeto.
 
-As fontes de entrega web substituem o import remoto: Newsreader Light 300 (subset Latin) e Inter 400–600 (subset Latin), obtidas pela API oficial Google Fonts em 13/09/2026. Licenças OFL em `fonts/Newsreader-OFL.txt` e `fonts/Inter-OFL.txt`.
+Inter 400–600 permanece em WOFF2 local, obtido pela API oficial Google Fonts em 13/09/2026, com licença OFL em `fonts/Inter-OFL.txt`. A serifa pública passou a ser Span Compressed Regular 400 em 30/09/2026, entregue pelo Adobe Fonts Web Project `gkr2kbf`.
 
-Origem das fontes: `https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300&family=Inter:wght@400..600&display=swap`.
+Origem da fonte de corpo: `https://fonts.googleapis.com/css2?family=Inter:wght@400..600&display=swap`. Origem da serifa: `https://use.typekit.net/gkr2kbf.css`.
 
-Os arquivos TTF originais do pacote permanecem disponíveis para rastreabilidade; o site carrega apenas os WOFF2 necessários.
+Os arquivos TTF originais do pacote permanecem disponíveis para rastreabilidade. `newsreader-latin.woff2` e sua licença foram mantidos porque o gerador de peças sociais ainda os utiliza; as páginas públicas não carregam Newsreader.

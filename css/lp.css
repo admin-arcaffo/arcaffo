@@ -10,7 +10,7 @@
 .lp-hero .lede { max-width: 620px; margin-top: 28px; font-size: clamp(17px,1.6vw,20px); color: var(--arcaffo-graphite); }
 .lp-proof { list-style: none; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; margin: 40px 0 0; padding: 26px 0 0; border-top: 1px solid var(--arcaffo-linen); max-width: 620px; }
 .lp-proof strong,.lp-proof span { display: block; }
-.lp-proof strong { font: 300 clamp(24px,2.6vw,36px)/1.1 var(--arcaffo-font-display); }
+.lp-proof strong { font: 400 clamp(24px,2.6vw,36px)/1.04 var(--arcaffo-font-display); }
 .lp-proof span { margin-top: 6px; font-size: 12px; color: var(--arcaffo-graphite); }
 
 .lp-form-card { padding: clamp(24px,3vw,44px); background: var(--arcaffo-paper); border: 1px solid var(--arcaffo-linen); scroll-margin-top: 16px; }

@@ -18,14 +18,14 @@ Fontes examinadas: README e AGENTS do Design System v2.0 Matéria, todos os arqu
 
 Constatações:
 
-- A nova identidade substitui expressamente a versão monocromática anterior: Newsreader Light 300, Inter, papel/espresso, formas retas, fotografia quente e luz âmbar discreta.
+- A identidade vigente usa Span Compressed Regular 400, Inter, papel/espresso, formas retas, fotografia quente e luz âmbar discreta.
 - PRODUCT.md e DESIGN.md ainda exigem a identidade antiga. Na implementação, atualizar suas regras visuais para a v2.0, preservando definições de negócio que continuem válidas.
 - O site é HTML/CSS/JavaScript com Vite multipágina e funções na Vercel. A estrutura já gera HTML próprio para artigos e projetos.
 - Há alterações locais preexistentes em páginas e estilos, além de arquivos novos. A execução precisa registrar essa base e preservar o trabalho existente.
 - O painel edita conteúdo por Vercel Blob; o build sincroniza dados remotos e injeta textos por `data-cms`. A home pública e o JSON local apresentam textos diferentes. Alterar somente o HTML ou JSON local não garante que o texto novo chegue à produção.
 - `contato.html` incorpora o Forms Arcaffo e escuta `arcaffo:success`. A presença de `api/contato.mjs` não significa que essa API seja o caminho usado pelo formulário atual.
 - `js/main.js` aplica efeito de luz ligado ao mouse em vários cards. `js/servicos-hero.js` mantém um ciclo contínuo para a luz do símbolo. Esses comportamentos precisam ser reavaliados na nova direção e no orçamento de desempenho.
-- O kit inclui Inter em TTF e importa Newsreader do Google Fonts; preparar entrega de fontes adequada ao site faz parte da implementação.
+- Inter é entregue localmente e Span Compressed pelo Adobe Fonts Web Project `gkr2kbf`, com licença web e cobertura para português.
 - As duas imagens inspecionadas, `mood-01.jpg` e `mood-07-light.jpg`, têm forte presença monocromática. O filtro quente não recupera cores originais nem substitui fotografias com pessoas, materiais e iluminação adequados.
 
 Limites: esta etapa não incluiu auditoria visual completa da produção em navegador, medições de desempenho, envio de formulário, inspeção do painel remoto ou teste em aparelhos físicos. Esses são entregáveis da execução, e não resultados já comprovados.
@@ -41,7 +41,7 @@ Usar o pacote oficial como fonte da verdade, com cópia versionada no projeto e 
 | Tinta `#221C16` e grafite `#574F45` | Texto principal e secundário |
 | Espresso `#17130F` | Momentos de profundidade, convite e fechamento |
 | Brasa `#C99A63` | Pequenos acentos e luz indireta conforme o sistema |
-| Newsreader 300, caixa natural | Títulos e hierarquia editorial |
+| Span Compressed 400, caixa natural | Títulos e hierarquia editorial |
 | Inter | Leitura, controles, legendas e rótulos |
 | Cantos retos e filetes | Botões, campos, divisões e superfícies |
 | Bandas fotográficas | Presença material e pausas entre capítulos |
@@ -73,7 +73,7 @@ Esse percurso orienta a composição, mas não obriga o visitante a concluir eta
 
 Home proposta:
 
-1. **Recepção.** Fotografia real ampla, título Newsreader e apresentação objetiva da atuação. Dois caminhos claros: conhecer a forma de trabalho e iniciar uma conversa. Exemplo de título para avaliação: “Aproximamos a essência da sua empresa do que ela pode se tornar.” A frase de apoio deve explicitar branding, formação e assessoria para não deixar a proposta abstrata.
+1. **Recepção.** Fotografia real ampla, título em Span Compressed e apresentação objetiva da atuação. Dois caminhos claros: conhecer a forma de trabalho e iniciar uma conversa. Exemplo de título para avaliação: “Aproximamos a essência da sua empresa do que ela pode se tornar.” A frase de apoio deve explicitar branding, formação e assessoria para não deixar a proposta abstrata.
 2. **Convicção.** A filosofia “Tudo o que fazemos, fazemos primeiro para o outro”, acompanhada de práticas concretas que a sustentem.
 3. **Mesa de trabalho.** Experiência participativa descrita a seguir.
 4. **Projetos selecionados.** Poucos casos com contexto e decisões visíveis; acesso ao acervo completo.
@@ -158,7 +158,7 @@ Recursos modernos previstos:
 - View Transitions como melhoria progressiva na navegação e nas mudanças de composição. Sem suporte, continuar com links e conteúdo funcionais.
 - IntersectionObserver para ativar efeitos secundários e pausar trabalho fora de tela; usar CSS e Web Animations API quando apropriado à coreografia.
 - Imagens responsivas com dimensões reservadas, formatos eficientes e carregamento adiado abaixo da primeira tela. A imagem principal recebe prioridade.
-- Fontes WOFF2 locais com cobertura do português, licença verificada, `font-display` apropriado e carregamento apenas dos estilos necessários.
+- Fontes com cobertura do português e licença verificada: Inter em WOFF2 local e Span Compressed pelo Adobe Fonts.
 - Componentes compartilhados de cabeçalho, rodapé, convite e padrões editoriais por composição no build, reduzindo divergência entre páginas sem impor um framework no navegador.
 
 Organização sugerida: pacote oficial em `public/design-system/arcaffo-materia/`, adaptações web em CSS próprio, componentes e comportamento em módulos pequenos. Registrar versão e licença dos ativos. Evitar uma terceira camada extensa de sobrescritas sobre `global-v2.css`: migrar por componentes, remover regras antigas quando substituídas e revisar os estilos embutidos no HTML e no gerador.

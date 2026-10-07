@@ -1,0 +1,114 @@
+{
+  "title": "Instituto Construindo um Artista",
+  "slug": "instituto-construindo-um-artista",
+  "format": "Instagram carousel",
+  "dimensions": "1080x1350",
+  "aspectRatio": "4:5",
+  "rule": "Somente imagens originais da identidade, sem elementos sobrepostos, sem crop e sem cortar assinaturas. Margens usam a cor predominante da própria imagem.",
+  "slides": [
+    {
+      "slide": 1,
+      "file": "01.jpg",
+      "source": "/images/projetos/233dd1d35a.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 24,
+        "g": 8,
+        "b": 8,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 2,
+      "file": "02.jpg",
+      "source": "/images/projetos/c286d8d4bb.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 56,
+        "g": 88,
+        "b": 56,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 3,
+      "file": "03.jpg",
+      "source": "/images/projetos/ede9f72d77.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 72,
+        "g": 104,
+        "b": 232,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 4,
+      "file": "04.jpg",
+      "source": "/images/projetos/a02f066fc8.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 248,
+        "g": 248,
+        "b": 248,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 5,
+      "file": "05.jpg",
+      "source": "/images/projetos/02d063888a.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 8,
+        "g": 8,
+        "b": 8,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 6,
+      "file": "06.jpg",
+      "source": "/images/projetos/194ec412aa.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 72,
+        "g": 104,
+        "b": 232,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 7,
+      "file": "07.jpg",
+      "source": "/images/projetos/767516cde9.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 152,
+        "g": 104,
+        "b": 24,
+        "alpha": 1
+      }
+    },
+    {
+      "slide": 8,
+      "file": "08.jpg",
+      "source": "/images/projetos/cba0d75fc1.webp",
+      "placement": "centre",
+      "treatment": "contain-with-source-dominant-margin",
+      "background": {
+        "r": 8,
+        "g": 8,
+        "b": 8,
+        "alpha": 1
+      }
+    }
+  ]
+}

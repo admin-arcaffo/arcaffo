@@ -41,7 +41,7 @@ try {
   await page.evaluate(() => document.fonts.ready);
   report.fields = await page.locator('.arcaffo-fields input').count();
   report.heading = await page.locator('h1').textContent();
-  report.font = await page.evaluate(() => document.fonts.check('300 32px Newsreader'));
+  report.font = await page.evaluate(() => document.fonts.check('400 32px span-compressed'));
   report.overflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1);
   assert.equal(report.providerGetStatus, 200);
   assert.equal(report.fields, 3);

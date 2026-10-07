@@ -1,10 +1,10 @@
 /* Arcaffo — tipografia
-   Display: Newsreader Light — serifa de leitura, baixo contraste, sem data.
+   Display: Span Compressed Regular — serifa escultórica de alta presença.
    Corpo e rótulo: Inter.
    Inter Tight permanece disponível para lockups legados do logotipo. */
 
 :root {
-  --arcaffo-font-display: "Newsreader", Georgia, serif;
+  --arcaffo-font-display: "span-compressed", Georgia, serif;
   --arcaffo-font-body: "Inter", sans-serif;
   --arcaffo-font-label: "Inter", sans-serif;
   --arcaffo-font-legacy: "Inter Tight", sans-serif;
@@ -20,9 +20,9 @@
   --arcaffo-size-small: 13.5px;
   --arcaffo-size-label: 10.5px;
 
-  --arcaffo-leading-display: 1.05;
+  --arcaffo-leading-display: .98;
   --arcaffo-leading-body: 1.65;
-  --arcaffo-tracking-display: -0.008em;
+  --arcaffo-tracking-display: .005em;
   --arcaffo-tracking-label: 0.18em;
 }
 
@@ -41,7 +41,8 @@ h3,
 h4,
 .arcaffo-display {
   font-family: var(--arcaffo-font-display);
-  font-weight: 300;
+  font-weight: 400;
+  font-synthesis: none;
   letter-spacing: var(--arcaffo-tracking-display);
   line-height: var(--arcaffo-leading-display);
   text-transform: none;

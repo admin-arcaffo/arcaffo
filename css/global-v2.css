@@ -11,7 +11,7 @@
 
   --arcaffo-font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --arcaffo-font-heading: 'Inter Tight', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --arcaffo-font-display: 'Instrument Serif', Georgia, serif;
+  --arcaffo-font-display: 'span-compressed', Georgia, serif;
 
   --arcaffo-radius: 16px;
   --arcaffo-radius-sm: 10px;
@@ -902,13 +902,13 @@ section {
 /* Versão "âncora" de .section-title — pra seções que são o ponto emocional
    da página (não rótulo utilitário como "Portfólio" ou "Pilares Culturais").
    Sai do uppercase Inter Tight padrão pro mesmo tratamento que o h2 do CTA
-   final já usava sem nome (peso 300, tracking negativo, caixa normal) — aqui
+   final já usava sem nome (peso regular, caixa normal) — aqui
    vira padrão nomeado, combinado com uma palavra da frase em .font-accent
    pra trazer a serifa de volta ao texto grande sem virar regra geral. Usar
    com moderação: se toda .section-title virar âncora, o contraste que dá
    personalidade à página desaparece. */
 .section-title--anchor {
-  font-weight: 300;
+  font-weight: 400;
   text-transform: none;
   letter-spacing: -1px;
 }
@@ -1049,4 +1049,3 @@ section {
     opacity: 0.8;
   }
 }
-

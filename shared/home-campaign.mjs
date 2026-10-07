@@ -2,7 +2,7 @@
 // formulário de contato, não o WhatsApp: o formulário registra a empresa e o
 // momento do lead antes de a equipe responder.
 const WHATSAPP_MESSAGE = [
-  'Olá! Quero o Diagnóstico gratuito de Marca e Posicionamento.',
+  'Olá! Vim pelo site da Arcaffo e quero o diagnóstico gratuito de marca e posicionamento.',
   'Empresa: ',
   'Segmento: ',
   'Tempo de mercado: ',
